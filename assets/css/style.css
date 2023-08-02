@@ -2576,6 +2576,7 @@ input[type=color] {
   font-size: 50px;
   letter-spacing: 0;
   color: var(--tp-common-black);
+  text-align: justify;
   font-weight: 700;
   letter-spacing: -2px;
 }
