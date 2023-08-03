@@ -39,13 +39,13 @@
 
         // FIXME: Update this to your desired email address.
 
-        $recipient = "basictheme400@gmail.com";
+        $recipient = "subhankar.team@gmail.com";
 
 
 
         // Set the email subject.
 
-        $sender = "New contact from $name";
+        $sender = "New message from $name";
 
 
 
