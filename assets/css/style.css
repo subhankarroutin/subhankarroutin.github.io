@@ -2576,7 +2576,7 @@ input[type=color] {
   font-size: 50px;
   letter-spacing: 0;
   color: var(--tp-common-black);
-  text-align: justify;
+  text-align: left;
   font-weight: 700;
   letter-spacing: -2px;
 }
@@ -8191,6 +8191,10 @@ input[type=color] {
   font-weight: 500;
 }
 
+.ac-about-right p {
+  text-align: justify;
+}
+
 .ac-about-right {
   padding-left: 65px;
 }
@@ -8273,27 +8277,32 @@ input[type=color] {
 .actestimonial__paragraph p {
   font-weight: 400;
   font-size: 26px;
+  text-align: justify;
   color: var(--tp-common-black);
   line-height: 1.6;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .actestimonial__paragraph p {
+    text-align: justify;
     font-size: 21px;
   }
 }
 @media (max-width: 767px) {
   .actestimonial__paragraph p {
+    text-align: justify;
     font-size: 16px;
     margin-bottom: 50px;
   }
 }
 .actestimonial__paragraph p span {
+  text-align: justify;
   color: var(--tp-common-blue);
   font-size: 23px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .actestimonial__paragraph p span {
     font-size: 20px;
+    
   }
 }
 
@@ -8394,6 +8403,7 @@ input[type=color] {
   display: inline-block;
 }
 .amaboutinfo__client-info p {
+  text-align: justify;
   color: #8A90A2;
   font-size: 15px;
   font-weight: 400;
@@ -9911,6 +9921,7 @@ input[type=color] {
 }
 .cd-client-details p {
   font-size: 18px;
+  text-align: justify;
   font-weight: 500;
   margin-bottom: 0;
   padding-bottom: 20px;
