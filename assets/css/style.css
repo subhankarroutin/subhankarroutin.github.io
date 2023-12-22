@@ -74,6 +74,11 @@
   --tp-border-2: #4E4E59;
 }
 
+.youtube-video {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
