@@ -2894,6 +2894,175 @@ input[type=color] {
   transform: rotate(-180deg);
 }
 
+
+/*------------------------------------------------------- portfolio header css--------------------------------------------- */
+
+
+.tp-portfolio-menu ul li {
+  display: inline-block;
+  margin-right: 60px;
+  position: relative;
+}
+@media only screen and (min-width: 1400px) and (max-width: 1600px) {
+  .tp-portfolio-menu ul li {
+    margin-right: 40px;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .tp-portfolio-menu ul li {
+    margin-right: 32px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-portfolio-menu ul li {
+    margin-right: 25px;
+  }
+}
+.tp-portfolio-menu ul li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #8A90A2;
+  text-transform: capitalize;
+  position: relative;
+  padding: 37px 0;
+  display: inline-block;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-portfolio-menu ul li a {
+    font-size: 15px;
+  }
+}
+.tp-portfolio-menu ul li a i {
+  margin-left: 5px;
+  transform: translateY(2px);
+  transition: 0.4s;
+}
+.tp-portfolio-menu ul li a::after {
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--tp-theme-1);
+  border-radius: 33px;
+  opacity: 1;
+  visibility: visible;
+  transition: 0.3s;
+}
+.tp-portfolio-menu ul li a::before {
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  right: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--tp-theme-primary);
+  border-radius: 33px;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+.tp-portfolio-menu ul li:hover a {
+  color: #ffffff;
+}
+.tp-portfolio-menu ul li:hover a::after {
+  visibility: visible;
+  opacity: 1;
+  width: 90%;
+}
+.tp-portfolio-menu ul li:hover a::before {
+  visibility: visible;
+  opacity: 1;
+  width: 50%;
+}
+.tp-portfolio-menu ul li:hover a i {
+  transform: rotate(-180deg);
+}
+.tp-portfolio-menu ul li:hover ul.submenu {
+  opacity: 100;
+  color: #0D88FF;
+  visibility: visible;
+  top: 100%;
+}
+.tp-portfolio-menu ul li ul.submenu {
+  position: absolute;
+  background-color: #6365709f;
+  padding: 40px;
+  width: 270px;
+  transition: 0.3s;
+  top: 110%;
+  opacity: 0;
+  visibility: hidden;
+}
+.tp-portfolio-menu ul li ul.submenu li {
+  margin: 0;
+  margin-bottom: 10px;
+  display: block;
+}
+.tp-portfolio-menu ul li ul.submenu li:last-child {
+  margin-bottom: 0;
+}
+.tp-portfolio-menu ul li ul.submenu li a {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--tp-common-white);
+  display: block;
+  padding: 0;
+}
+.tp-portfolio-menu ul li ul.submenu li a::after, .tp-portfolio-menu ul li ul.submenu li a::before {
+  display: none;
+}
+.tp-portfolio-menu ul li ul.submenu li a:hover {
+  color: var(--tp-theme-primary);
+}
+.tp-portfolio-menu ul li:hover::after {
+  color: #0CD68A;
+  transform: rotate(-180deg);
+}
+
+.corporate-header__left-menu > .tp-portfolio-menu ul li.has-mega-menu ul.submenu {
+  width: 800px;
+  right: 0;
+}
+.tp-portfolio-menu {
+  position: relative;
+}
+
+.tp-portfolio-menu ul li.has-mega-menu {
+  position: static;
+}
+
+.tp-portfolio-menu ul li.has-mega-menu ul.submenu {
+  width: 800px;
+  right: 0;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-portfolio-menu ul li.has-mega-menu ul.submenu {
+    left: -170px;
+  }
+}
+
+.tp-portfolio-menu ul li.has-mega-menu ul.submenu li {
+  width: 33.33%;
+  float: left;
+}
+
+.header-sticky .tp-portfolio-menu ul li a {
+  padding: 35px 0;
+}
+
+.hasdropdown-white.header-sticky .tp-portfolio-menu nav > ul > li > a {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+
+
+/*------------------------------------------------------------------------------*/
+
+
 .hasdropdown-white {
   padding-top: 35px;
   padding-bottom: 35px;
@@ -5278,6 +5447,34 @@ input[type=color] {
 /*----------------------------------------*/
 /*  05. cta css start
 /*----------------------------------------*/
+
+.tp-cta-bottom-wrapper-portfolio {
+  background-color: #2d2e2e;
+  padding-top: 40px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom: 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-top: -115px;
+  position: relative;
+  z-index: 9;
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tp-cta-bottom-wrapper-portfolio {
+    margin-top: -25px;s
+    
+  }
+}
+@media (max-width: 767px) {
+  .tp-cta-bottom-wrapper-portfolio {
+    margin-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+
 .tp-cta-bottom-wrapper {
   background-color: #F9FAFB;
   padding-top: 40px;
