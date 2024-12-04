@@ -28,81 +28,90 @@
 
 <body>
   
-      <!-- Background overlay -->
-    <div id="overlay" style="
-    display: none; 
-    position: fixed; 
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%; 
-    background: rgba(0, 0, 0, 0.5); 
-    z-index: 999;"></div>
+ <!-- Background overlay -->
+<div id="overlay" style="
+display: none; 
+position: fixed; 
+top: 0; 
+left: 0; 
+width: 100%; 
+height: 100%; 
+background: rgba(0, 0, 0, 0.5); 
+z-index: 999;"></div>
 
 <!-- CV Video Card -->
 <div id="cv-video-card" style="
-    display: none; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    width: 90%; 
-    max-width: 740px; 
-    background: #fff; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    z-index: 1000; 
-    border-radius: 8px; 
-    padding: 15px;">
-    <button id="close-card" style="
-        position: absolute; 
-        top: 10px; 
-        right: 10px; 
-        background: #5856E9; 
-        color: white; 
-        border: none; 
-        border-radius: 50%; 
-        width: 35px; 
-        height: 35px; 
-        font-size: 28px; 
-        cursor: pointer; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center;">&times;</button>
-   <div style="text-align: center;">
-      <iframe id="video-iframe" width="100%" height="400" 
-          src="https://www.youtube.com/embed/o5S7uLxBjpw" 
-          title="CV Video" 
-          frameborder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowfullscreen>
-      </iframe>
-  </div>
+display: none; 
+position: fixed; 
+top: 50%; 
+left: 50%; 
+transform: translate(-50%, -50%); 
+width: 90%; 
+max-width: 740px; 
+background: #fff; 
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+z-index: 1000; 
+border-radius: 8px; 
+padding: 15px;">
+<button id="close-card" style="
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background: #5856E9; 
+    color: white; 
+    border: none; 
+    border-radius: 50%; 
+    width: 35px; 
+    height: 35px; 
+    font-size: 28px; 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    z-index: 1001;">&times;</button>
+<div style="position: relative; width: 100%; padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+  <iframe id="video-iframe" style="
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%;" 
+      src="https://www.youtube.com/embed/o5S7uLxBjpw" 
+      title="CV Video" 
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen>
+  </iframe>
+</div>
 </div>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-      const videoCard = document.getElementById("cv-video-card");
-      const overlay = document.getElementById("overlay");
-      const videoIframe = document.getElementById("video-iframe");
+document.addEventListener("DOMContentLoaded", function () {
+  const videoCard = document.getElementById("cv-video-card");
+  const overlay = document.getElementById("overlay");
+  const videoIframe = document.getElementById("video-iframe");
 
-      // Show the card and overlay after 5 seconds
-      setTimeout(function () {
-          overlay.style.display = "block";
-          videoCard.style.display = "block";
-      }, 3599);
+  // Show the card and overlay after 5 seconds
+  setTimeout(function () {
+      overlay.style.display = "block";
+      videoCard.style.display = "block";
+  }, 3599);
 
-      // Close the card and overlay
-      document.getElementById("close-card").addEventListener("click", function () {
-          videoCard.style.display = "none";
-          overlay.style.display = "none";
+  // Close the card and overlay
+  document.getElementById("close-card").addEventListener("click", function () {
+      videoCard.style.display = "none";
+      overlay.style.display = "none";
 
-          // Stop the video playback
-          videoIframe.src = videoIframe.src;
-      });
+      // Stop the video playback
+      videoIframe.src = videoIframe.src;
   });
+});
 </script>
-      
-  
+
+
+
+
+
 
    <!-- tp-header-area-start -->
    <header class="d-none d-lg-block">
