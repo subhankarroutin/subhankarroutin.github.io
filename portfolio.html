@@ -28,6 +28,81 @@
 
 <body>
   
+      <!-- Background overlay -->
+    <div id="overlay" style="
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 999;"></div>
+
+<!-- CV Video Card -->
+<div id="cv-video-card" style="
+    display: none; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 90%; 
+    max-width: 740px; 
+    background: #fff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+    z-index: 1000; 
+    border-radius: 8px; 
+    padding: 15px;">
+    <button id="close-card" style="
+        position: absolute; 
+        top: 10px; 
+        right: 10px; 
+        background: #5856E9; 
+        color: white; 
+        border: none; 
+        border-radius: 50%; 
+        width: 35px; 
+        height: 35px; 
+        font-size: 28px; 
+        cursor: pointer; 
+        display: flex; 
+        align-items: center; 
+        justify-content: center;">&times;</button>
+   <div style="text-align: center;">
+      <iframe id="video-iframe" width="100%" height="400" 
+          src="https://www.youtube.com/embed/o5S7uLxBjpw" 
+          title="CV Video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowfullscreen>
+      </iframe>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const videoCard = document.getElementById("cv-video-card");
+      const overlay = document.getElementById("overlay");
+      const videoIframe = document.getElementById("video-iframe");
+
+      // Show the card and overlay after 5 seconds
+      setTimeout(function () {
+          overlay.style.display = "block";
+          videoCard.style.display = "block";
+      }, 3599);
+
+      // Close the card and overlay
+      document.getElementById("close-card").addEventListener("click", function () {
+          videoCard.style.display = "none";
+          overlay.style.display = "none";
+
+          // Stop the video playback
+          videoIframe.src = videoIframe.src;
+      });
+  });
+</script>
+      
+  
 
    <!-- tp-header-area-start -->
    <header class="d-none d-lg-block">
@@ -373,12 +448,12 @@
                    <div class="col-xl-6 col-lg-12">
                       <div class="tp-project-box mb-20">
                          <div class="tp-project-img fix mb-45">
-                            <img class="w-100" src="assets/img/portfolio/1.png" alt="Bike">
+                            <img class="w-100" src="https://mir-cdn.behance.net/v1/rendition/project_modules/source/e4d5a6213994567.67502b67d9166.png" alt="PlayFactile">
                          </div>
                          <div class="tp-project-content ml-20">
-                            <h2 class="pro-lg-title"><a href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank">Bike Webpage UX Case Study</a></h2>
-                            <p>The objective of this case study is to showcase both commuter and luxury bikes under a single brand, ensuring a seamless and clear user experience.</p>
-                            <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank">Read Case-study</a>
+                            <h2 class="pro-lg-title"><a href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2&node-type=frame&viewport=274%2C940%2C0.07&t=8Dtanc2dR1a7OnUx-1&scaling=min-zoom&content-scaling=fixed" target="_blank">Factile MyGame Dashboard Redesign</a></h2>
+                            <p>This case study highlights the redesign of the Factile dashboard, focusing on simplifying user navigation, enhancing the interface, and improving overall engagement for better usability.</p>
+                            <a class="tp-btn-white-sm" href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2&node-type=frame&viewport=274%2C940%2C0.07&t=8Dtanc2dR1a7OnUx-1&scaling=min-zoom&content-scaling=fixed" target="_blank">Read Case-study</a>
                          </div>
                       </div>
                    </div>
@@ -418,16 +493,16 @@
              <div class="project-tab-main">
                 <div class="row gx-1  ">
                    <div class="col-xl-6 col-lg-12">
-                      <div class="tp-project-box mb-20">
-                         <div class="tp-project-img fix mb-45">
-                            <img class="w-100" src="assets/img/portfolio/3.png" alt="dating web app">
-                         </div>
-                         <div class="tp-project-content ml-20">
-                            <h2 class="pro-lg-title"><a href="https://www.behance.net/gallery/199391713/Landing-Page-Design-Dating-App-Service" target="_blank">DatingApp Web Design</a></h2>
-                            <p>Designed a landing page for a company aiming to sell its dating app to B2B clients, emphasizing key features and benefits.</p>
-                            <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/199391713/Landing-Page-Design-Dating-App-Service" target="_blank">View Project </a>
-                         </div>
-                      </div>
+                     <div class="tp-project-box mb-20">
+                        <div class="tp-project-img fix mb-45">
+                           <img class="w-100" src="assets/img/portfolio/1.png" alt="Bike">
+                        </div>
+                        <div class="tp-project-content ml-20">
+                           <h2 class="pro-lg-title"><a href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank">Bike Webpage UX Case Study</a></h2>
+                           <p>The objective of this case study is to showcase both commuter and luxury bikes under a single brand, ensuring a seamless and clear user experience.</p>
+                           <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank">Read Case-study</a>
+                        </div>
+                     </div>
                    </div>
                    <div class="col-xl-6 col-lg-12">
                       <div class="row">
