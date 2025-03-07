@@ -112,14 +112,14 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script> -->
 
-<!-- Script only Execute Media 360px -->
+<!-- Script only Execute Media 430px -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-    if (window.matchMedia("(max-width: 360px)").matches) {
+    if (window.matchMedia("(max-width: 430px)").matches) {
         const videoCard = document.getElementById("cv-video-card");
         const videoIframe = document.getElementById("video-iframe");
 
-        // Show the card after 3.6 seconds (for 360px screen)
+        // Show the card after 3.6 seconds (for 430px screen)
         setTimeout(function () {
             videoCard.style.display = "block";
         }, 3600);
