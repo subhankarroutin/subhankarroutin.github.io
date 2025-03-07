@@ -39,6 +39,8 @@ height: 100%;
 background: rgba(0, 0, 0, 0.5); 
 z-index: 999;"></div>
 
+
+
 <!-- CV Video Card -->
 <div id="cv-video-card" style="
 display: none; 
@@ -69,7 +71,9 @@ padding: 15px;">
     align-items: center; 
     justify-content: center; 
     z-index: 1001;">&times;</button>
-<div style="position: relative; width: 100%; padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
+
+
+<div style="position: relative; width: 100%; padding-top: 56.25%;"> 
   <iframe id="video-iframe" style="
       position: absolute; 
       top: 0; 
@@ -84,8 +88,8 @@ padding: 15px;">
   </iframe>
 </div>
 </div>
-
-<script>
+<!-- Script Execute for all Screen -->
+<!--<script>
 document.addEventListener("DOMContentLoaded", function () {
   const videoCard = document.getElementById("cv-video-card");
   const overlay = document.getElementById("overlay");
@@ -106,7 +110,33 @@ document.addEventListener("DOMContentLoaded", function () {
       videoIframe.src = videoIframe.src;
   });
 });
-</script>
+</script> -->
+
+<!-- Script only Execute Media 360px -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.matchMedia("(max-width: 360px)").matches) {
+        const videoCard = document.getElementById("cv-video-card");
+        const videoIframe = document.getElementById("video-iframe");
+
+        // Show the card after 3.6 seconds (for 360px screen)
+        setTimeout(function () {
+            videoCard.style.display = "block";
+        }, 3600);
+
+        // Close the card and stop video playback
+        document.getElementById("close-card").addEventListener("click", function () {
+            videoCard.style.display = "none";
+
+            // Stop video playback by resetting the iframe src
+            videoIframe.src = videoIframe.src;
+        });
+    }
+});
+
+</script> 
+
+
 
 
 
@@ -243,11 +273,52 @@ document.addEventListener("DOMContentLoaded", function () {
                      </h3>
                      <p class="wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">A Senior UI/UX Designer skilled in creating impactful product designs, enhancing user experiences, and providing creative solutions across diverse projects.</p>
                      <div class="tp-hero-three-button-box d-flex align-items-center wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".9s">
-                      <a class="tp-btn mr-55" href="Product-Designer-Resume--Subhankar-Rout.pdf"  download="Product-Designer-Resume--Subhankar-Rout.pdf">Download CV <i class="far fa-download"></i></a>
-   
-                        <!-- <div class="tp-hero-paly-button-four">
-                           <a class="popup-video" href="https://www.youtube.com/watch?v=LJbkLdtEW00"><i class="far fa-play"></i> <span>Behind the scenes</span></a>
-                        </div> -->
+                        <a class="tp-btn mr-55" href="Product-Designer-Resume--Subhankar-Rout.pdf"  download="Product-Designer-Resume--Subhankar-Rout.pdf">Download CV <i class="far fa-download"></i></a>
+                    
+                    
+                        <div class="tp-hero-paly-button-four">
+                           <a class="video-trigger" href="https://www.youtube.com/embed/o5S7uLxBjpw?autoplay=1">
+                               <i class="far fa-play"></i> <span>Play Video CV</span>
+                           </a>
+                       </div>
+                       
+                       <!-- Video Popup -->
+                       <div id="videoPopup" class="popup-overlay">
+                           <div class="popup-content">
+                               <span class="popup-close" onclick="closePopup()">&times;</span>
+                               <iframe id="videoFrame" class="popup-video-frame" frameborder="0" allowfullscreen style="display: none;"></iframe>
+                           </div>
+                       </div>
+                       
+                              
+
+                        <script> 
+                              document.addEventListener("DOMContentLoaded", function () {
+                                 const videoTrigger = document.querySelector(".video-trigger");
+                                 const popupOverlay = document.getElementById("videoPopup");
+                                 const videoFrame = document.getElementById("videoFrame");
+
+                                 videoTrigger.addEventListener("click", function (event) {
+                                    event.preventDefault();
+                                    let videoURL = this.getAttribute("href");
+                                    
+                                    // Set video URL and show iframe only when it's ready
+                                    videoFrame.src = videoURL;
+                                    videoFrame.style.display = "block"; // Reveal the iframe only when video URL is set
+                                    popupOverlay.classList.add("active");
+                                 });
+                              });
+
+                              function closePopup() {
+                                 document.getElementById("videoPopup").classList.remove("active");
+                                 document.getElementById("videoFrame").src = "";
+                                 document.getElementById("videoFrame").style.display = "none"; // Hide iframe when closing
+                              }
+
+                        </script>
+
+
+
                      </div>
                   </div>
                  <br><br><br>
