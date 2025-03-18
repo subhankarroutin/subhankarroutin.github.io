@@ -16070,7 +16070,7 @@ blockquote cite::before {
   opacity: 1;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px) {
   .tp-hero-paly-button-four a {
       display: none;
   }
