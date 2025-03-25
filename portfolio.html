@@ -326,11 +326,39 @@ document.addEventListener("DOMContentLoaded", function () {
                   </div>
                  <br><br><br>
                </div>
-               <div class="col-xl-6 col-lg-6 wow fadeInRight"  data-wow-duration=".7s" data-wow-delay=".9s">
+              <!-- <div class="col-xl-6 col-lg-6 wow fadeInRight"  data-wow-duration=".7s" data-wow-delay=".9s">
                   <div class="tp-hero-right-img-four pt-90">
                      <img src="assets/img/workplace.PNG" alt="">
                   </div>
-               </div>
+               </div> -->
+<div class="col-xl-6 col-lg-6 wow fadeInRight" data-wow-duration=".7s" data-wow-delay=".9s">
+    <div class="tp-hero-right-img-four pt-90">
+        <img id="randomImage" src="" alt="Random Workplace Image">
+    </div>
+</div>
+
+<script>
+    // Array of image paths
+    const images = [
+        "../assets/img/workplace.png",
+        "../assets/img/workplace.png",
+        "../assets/img/workplace.png"
+    ];
+
+    function changeImage() {
+        // Select a random image
+        const randomIndex = Math.floor(Math.random() * images.length);
+        document.getElementById("randomImage").src = images[randomIndex];
+    }
+
+    // Change image when page loads
+    changeImage();
+
+    // Change image every 7 seconds
+    setInterval(changeImage, 7000); 
+</script>
+
+
 <center>
                <div class="row">
                 <div class="col-xl-12">
