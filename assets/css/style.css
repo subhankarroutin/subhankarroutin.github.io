@@ -1609,6 +1609,98 @@ input[type=color] {
   right: auto;
 }
 
+
+
+.tp-btn-white-lg-video-popup {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--tp-common-black);
+  background: var(--tp-common-white);
+  height: 90px;
+  line-height: 90px;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 50px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .tp-btn-white-lg-video-popup {
+    height: 80px;
+    line-height: 80px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .tp-btn-white-lg-video-popup {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .tp-btn-white-lg-video-popup {
+    height: 75px;
+    line-height: 75px;
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 767px) {
+  .tp-btn-white-lg-video-popup {
+    height: 70px;
+    line-height: 70px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 15px;
+    display: block;
+  }
+}
+.tp-btn-white-lg-video-popup i {
+  padding-left: 40px;
+}
+.tp-btn-white-lg-video-popup:hover {
+  color: var(--tp-common-white);
+  background-color: var(--tp-theme-1);
+}
+.tp-btn-white-lg-video-popup:hover i {
+  animation: tfLeftToRight 0.5s forwards;
+}
+.tp-btn-white-lg-video-popup::before, .tp-btn-white-lg-video-popup::after {
+  content: "";
+  background: var(--tp-theme-1);
+  height: 50%;
+  width: 0;
+  position: absolute;
+  transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: -1;
+}
+.tp-btn-white-lg-video-popup::before {
+  top: 0;
+  left: 0;
+  right: auto;
+}
+.tp-btn-white-lg-video-popup::after {
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+.tp-btn-white-lg-video-popup:hover::before {
+  width: 100%;
+  right: 0;
+  left: auto;
+}
+.tp-btn-white-lg-video-popup:hover::after {
+  width: 100%;
+  left: 0;
+  right: auto;
+}
+
+
 .tp-btn-border {
   display: inline-block;
   font-size: 16px;
