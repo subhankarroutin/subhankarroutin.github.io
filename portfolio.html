@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -10,738 +11,741 @@
    <meta name="viewport" content="width=device-width, initial-scale=1">
 
    <!-- Place favicon.ico in the root directory -->
-   <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+   <link rel="shortcut icon" type="image/x-icon" href="../assets/img/logo/favicon.png">
 
    <!-- CSS here -->
-   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-   <link rel="stylesheet" href="assets/css/animate.css">
-   <link rel="stylesheet" href="assets/css/custom-animation.css">
-   <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+   <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="../assets/css/animate.css">
+   <link rel="stylesheet" href="../assets/css/custom-animation.css">
+   <link rel="stylesheet" href="../assets/css/swiper-bundle.css">
    
-   <link rel="stylesheet" href="assets/css/flaticon.css">
-   <link rel="stylesheet" href="assets/css/meanmenu.css">
-   <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+   <link rel="stylesheet" href="../assets/css/flaticon.css">
+   <link rel="stylesheet" href="../assets/css/meanmenu.css">
+   <link rel="stylesheet" href="../assets/css/font-awesome-pro.css">
   
-   <link rel="stylesheet" href="assets/css/spacing.css">
-   <link rel="stylesheet" href="assets/css/style.css">
+   <link rel="stylesheet" href="../assets/css/spacing.css">
+   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
   
- <!-- Background overlay -->
-<div id="overlay" style="
-display: none; 
-position: fixed; 
-top: 0; 
-left: 0; 
-width: 100%; 
-height: 100%; 
-background: rgba(0, 0, 0, 0.5); 
-z-index: 999;"></div>
-
-
-<!-- CV Video Card -->
-<div id="cv-video-card" style="
-display: none; 
-position: fixed; 
-top: 50%; 
-left: 50%; 
-transform: translate(-50%, -50%); 
-width: 90%; 
-max-width: 740px; 
-background: #fff; 
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-z-index: 1000; 
-border-radius: 8px; 
-padding: 15px;">
-<button id="close-card" style="
-    position: absolute; 
-    top: 10px; 
-    right: 10px; 
-    background: #5856E9; 
-    color: white; 
-    border: none; 
-    border-radius: 50%; 
-    width: 35px; 
-    height: 35px; 
-    font-size: 28px; 
-    cursor: pointer; 
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    z-index: 1001;">&times;</button>
-
-
-   <div style="position: relative; width: 100%; padding-top: 56.25%;"> 
-      <iframe id="video-iframe" style="
-            position: absolute; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%;" 
-            src="https://www.youtube.com/embed/o5S7uLxBjpw" 
-            title="CV Video" 
-            frameborder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowfullscreen>
-      </iframe>
-   </div>
-</div>
-
-<!-- Script Execute for all Screen -->
-<!--<script>
-document.addEventListener("DOMContentLoaded", function () {
-  const videoCard = document.getElementById("cv-video-card");
-  const overlay = document.getElementById("overlay");
-  const videoIframe = document.getElementById("video-iframe");
-
-  // Show the card and overlay after 5 seconds
-  setTimeout(function () {
-      overlay.style.display = "block";
-      videoCard.style.display = "block";
-  }, 3599);
-
-  // Close the card and overlay
-  document.getElementById("close-card").addEventListener("click", function () {
-      videoCard.style.display = "none";
-      overlay.style.display = "none";
-
-      // Stop the video playback
-      videoIframe.src = videoIframe.src;
-  });
-});
-</script> -->
-
-<!-- Script only Execute Media 480px -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    if (window.matchMedia("(max-width: 480px)").matches) {
-        const videoCard = document.getElementById("cv-video-card");
-        const overlay = document.getElementById("overlay");
-        const videoIframe = document.getElementById("video-iframe");
-
-        // Show the card and overlay after 3.6 seconds
-        setTimeout(function () {
-            overlay.style.display = "block"; // Show the background overlay
-            videoCard.style.display = "block";
-        }, 3600);
-
-        // Close the card and overlay
-        document.getElementById("close-card").addEventListener("click", function () {
-            videoCard.style.display = "none";
-            overlay.style.display = "none"; // Hide the overlay
-
-            // Stop video playback by resetting the iframe src
-            videoIframe.src = videoIframe.src;
-        });
-    }
-});
-
-</script> 
-
-
-
-
-
-
-
-
-   <!-- tp-header-area-start -->
-   <header class="d-none d-lg-block">
-      <div id="header-sticky" class="tp-header-area-two header-transparent header-space-three pl-115 pr-115">
-         <div class="container-fluid">
-            <div class="row align-items-center header-space-two">
-               <div class="col-xxl-3 col-xl-3 col-lg-3">
-                  <div class="tp-logo text-start">
-                     <a href="index.html"><img src="assets/img/logo/logo-blue.png" alt="page-logo"></a>
-                  </div>
-               </div>
-               <div class="col-xxl-6 col-xl-6 col-lg-6">
-                  <div class="tp-main-menu text-center">
-                     <nav id="mobile-menu">
-                        <ul>
-                           <!-- <li><a href="index.html">Home</a> 
-                           </li> -->
-                           <li><a href="about.html">About</a> 
-                              
-                           </li>
-                           <li class="has-dropdown "><a href="#">YouTube Channels</a>
-                              <ul class="submenu text-start">
-                                 <li><a href="odicoder.html">OdiCoder</a></li>
-                                 <li><a href="s4cinesphere.html">S4 Cinesphere</a></li>
-                                
-                              </ul>
-                           </li>
-                           <li><a href="books.html">Publication</a> </li>
-                           <li><a href="pr-award.html">Press Release</a></li>
-                           <!-- <li><a href="contact.html" target="_blank">Contact</a></li> -->
-                          
-                           
-                        </ul>
-                     </nav>
-                  </div>
-               </div>
-               <div class="col-xxl-3 col-xl-3 col-lg-3">
-                  <div class="tp-header-button text-end">
-                     <a class="tp-btn" href="index.html"> Home Page</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </header>
-   <!-- tp-header-area-end -->
-   
-   <!-- tp-md-menu-start -->
-   <div id="header-sticky-mobile" class="tp-md-header-area header-transparent d-lg-none pt-30 ">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-md-6 col-6">
-               <div class="tp-logo">
-                 <a href="index.html"><img src="assets/img/logo/logo-blue.png" alt="page-logo"></a>
-               </div>
-            </div>
-            
-            <div class="col-md-6 col-6">
-               <div class="tp-header-right z-index-1 d-flex align-items-center justify-content-end">
-                  <a class="tp-btn d-none d-md-block" href="index.html"> Home Page</a>
-                  <button class="tp-menu-bar"><i class="fal fa-bars"></i></button>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-   <!-- tp-md-menu-end -->
-
-   <div class="tp-offcanvas-area">
-      <div class="tpoffcanvas">
-         <div class="tpoffcanvas__logo">
-            <a href="index.html">
-               <img src="assets/img/logo/logo-white.png" alt="logo-white">
-            </a>
-         </div>
-         
-         <div class="tpoffcanvas__close-btn">
-            <a class="close-btn" href="javascript:void(0)"><i class="fal fa-times-hexagon"></i></a>
-         </div>
-         
-         <div class="mobile-menu">
-
-         </div>
-
-         <div class="tp-header-button" style="text-align: left;">
-            <a class="tp-btn" href="index.html"> Home Page</a>
-        </div>
-
-         <div class="tpoffcanvas__contact">
-            <br><br>
-            <span>Any Query!</span>
-            <ul>
-               <ul>
-               
-                  <li><i class="fas fa-envelope"></i> <a href="mailto:subhankarrout.kiit@gmail.com">subhankarrout.kiit@gmail.com</a></li>
-               </ul>
-            </ul>
-         </div>
-        
-      </div>
-   </div>
-
-   <div class="body-overlay"></div>
-
+   <!-- Background overlay -->
+  <div id="overlay" style="
+  display: none; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%; 
+  background: rgba(0, 0, 0, 0.5); 
+  z-index: 999;"></div>
   
-    <!-- tp-hero-area-start -->
-   <main>
-      <div class="tp-hero-area-two  pt-130 p-relative fix">
-         <div class="tp-hero-yellow-shape d-none d-lg-block"></div>
-         <div class="ce-hero-shape d-none d-lg-block">
-            <img src="assets/img/hero/hero-shape-4.png" alt="">
-         </div>
-         <div class="ce-hero-shape-two d-none d-lg-block">
-            <img src="assets/img/hero/hero-shape-4.1.png" alt="">
-         </div>
-         <div class="container">
-            <div class="row">
-               <div class="col-xl-6 col-lg-6">
-                  <div class="tp-hero-section-box tp-hero-section-box-four pt-120 pb-140">
-                     <h3 class="tp-hero-bd-title text-black wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".6s"> Crafting Impact for 
-                        <span class="tp-highlight">
-                           <svg width="266" height="12" viewBox="0 0 266 12" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <path d="M0 0L266 12H0V0Z" fill="#FFDC60" />
-                           </svg>
-                           <i>Millions</i>
-                        </span>
-                        
-                     </h3>
-                     <p class="wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">With 4+ years of experience, I design intuitive, scalable digital experiences 
-                        using HCI and design thinking. Specializing in B2B & B2C SaaS, CRM, EdTech, and AI, enhances engagement, reduces drop-offs, and drives impact. </p>
-                     <div class="tp-hero-three-button-box d-flex align-items-center wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".9s">
-                        <a class="tp-btn mr-55" href="#project">View Projects <i class="far fa-briefcase"></i></a>
-               
-                       
-
+  
+  <!-- CV Video Card -->
+  <div id="cv-video-card" style="
+  display: none; 
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 90%; 
+  max-width: 740px; 
+  background: #fff; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  z-index: 1000; 
+  border-radius: 8px; 
+  padding: 15px;">
+  <button id="close-card" style="
+      position: absolute; 
+      top: 10px; 
+      right: 10px; 
+      background: #5856E9; 
+      color: white; 
+      border: none; 
+      border-radius: 50%; 
+      width: 35px; 
+      height: 35px; 
+      font-size: 28px; 
+      cursor: pointer; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      z-index: 1001;">&times;</button>
+  
+  
+     <div style="position: relative; width: 100%; padding-top: 56.25%;"> 
+        <iframe id="video-iframe" style="
+              position: absolute; 
+              top: 0; 
+              left: 0; 
+              width: 100%; 
+              height: 100%;" 
+              src="https://www.youtube.com/embed/o5S7uLxBjpw" 
+              title="CV Video" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+        </iframe>
+     </div>
+  </div>
+  
+  <!-- Script Execute for all Screen -->
+  <!--<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const videoCard = document.getElementById("cv-video-card");
+    const overlay = document.getElementById("overlay");
+    const videoIframe = document.getElementById("video-iframe");
+  
+    // Show the card and overlay after 5 seconds
+    setTimeout(function () {
+        overlay.style.display = "block";
+        videoCard.style.display = "block";
+    }, 3599);
+  
+    // Close the card and overlay
+    document.getElementById("close-card").addEventListener("click", function () {
+        videoCard.style.display = "none";
+        overlay.style.display = "none";
+  
+        // Stop the video playback
+        videoIframe.src = videoIframe.src;
+    });
+  });
+  </script> -->
+  
+  <!-- Script only Execute Media 480px -->
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+      if (window.matchMedia("(max-width: 480px)").matches) {
+          const videoCard = document.getElementById("cv-video-card");
+          const overlay = document.getElementById("overlay");
+          const videoIframe = document.getElementById("video-iframe");
+  
+          // Show the card and overlay after 3.6 seconds
+          setTimeout(function () {
+              overlay.style.display = "block"; // Show the background overlay
+              videoCard.style.display = "block";
+          }, 3600);
+  
+          // Close the card and overlay
+          document.getElementById("close-card").addEventListener("click", function () {
+              videoCard.style.display = "none";
+              overlay.style.display = "none"; // Hide the overlay
+  
+              // Stop video playback by resetting the iframe src
+              videoIframe.src = videoIframe.src;
+          });
+      }
+  });
+  
+  </script> 
+  
+  
+  
+  
+  
+  
+  
+  
+     <!-- tp-header-area-start -->
+     <header class="d-none d-lg-block">
+        <div id="header-sticky" class="tp-header-area-two header-transparent header-space-three pl-115 pr-115">
+           <div class="container-fluid">
+              <div class="row align-items-center header-space-two">
+                 <div class="col-xxl-3 col-xl-3 col-lg-3">
+                    <div class="tp-logo text-start">
+                       <a href="index.html"><img src="../assets/img/logo/logo-blue.png" alt="page-logo"></a>
+                    </div>
+                 </div>
+                 <div class="col-xxl-6 col-xl-6 col-lg-6">
+                    <div class="tp-main-menu text-center">
+                       <nav id="mobile-menu">
+                          <ul>
+                             <!-- <li><a href="index.html">Home</a> 
+                             </li> -->
+                             <li><a href="about.html">About</a> 
+                                
+                             </li>
+                             <li class="has-dropdown "><a href="#">YouTube Channels</a>
+                                <ul class="submenu text-start">
+                                   <li><a href="odicoder.html">OdiCoder</a></li>
+                                   <li><a href="s4cinesphere.html">S4 Cinesphere</a></li>
+                                  
+                                </ul>
+                             </li>
+                             <li><a href="books.html">Publication</a> </li>
+                             <li><a href="pr-award.html">Press Release</a></li>
+                             <!-- <li><a href="contact.html" target="_blank">Contact</a></li> -->
+                            
+                             
+                          </ul>
+                       </nav>
+                    </div>
+                 </div>
+                 <div class="col-xxl-3 col-xl-3 col-lg-3">
+                    <div class="tp-header-button text-end">
+                       <a class="tp-btn" href="index.html"> Home Page</a>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </header>
+     <!-- tp-header-area-end -->
+     
+     <!-- tp-md-menu-start -->
+     <div id="header-sticky-mobile" class="tp-md-header-area header-transparent d-lg-none pt-30 ">
+        <div class="container-fluid">
+           <div class="row">
+              <div class="col-md-6 col-6">
+                 <div class="tp-logo">
+                   <a href="index.html"><img src="../assets/img/logo/logo-blue.png" alt="page-logo"></a>
+                 </div>
+              </div>
+              
+              <div class="col-md-6 col-6">
+                 <div class="tp-header-right z-index-1 d-flex align-items-center justify-content-end">
+                    <a class="tp-btn d-none d-md-block" href="index.html"> Home Page</a>
+                    <button class="tp-menu-bar"><i class="fal fa-bars"></i></button>
+                 </div>
+              </div>
+           </div>
+        </div>
+     </div>
+     <!-- tp-md-menu-end -->
+  
+     <div class="tp-offcanvas-area">
+        <div class="tpoffcanvas">
+           <div class="tpoffcanvas__logo">
+              <a href="index.html">
+                 <img src="../assets/img/logo/logo-white.png" alt="logo-white">
+              </a>
+           </div>
+           
+           <div class="tpoffcanvas__close-btn">
+              <a class="close-btn" href="javascript:void(0)"><i class="fal fa-times-hexagon"></i></a>
+           </div>
+           
+           <div class="mobile-menu">
+  
+           </div>
+  
+           <div class="tp-header-button" style="text-align: left;">
+              <a class="tp-btn" href="index.html"> Home Page</a>
+          </div>
+  
+           <div class="tpoffcanvas__contact">
+              <br><br>
+              <span>Any Query!</span>
+              <ul>
+                 <ul>
+                 
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:subhankarrout.kiit@gmail.com">subhankarrout.kiit@gmail.com</a></li>
+                 </ul>
+              </ul>
+           </div>
+          
+        </div>
+     </div>
+  
+     <div class="body-overlay"></div>
+  
+    
+      <!-- tp-hero-area-start -->
+     <main>
+        <div class="tp-hero-area-two  pt-130 p-relative fix">
+           <div class="tp-hero-yellow-shape d-none d-lg-block"></div>
+           <div class="ce-hero-shape d-none d-lg-block">
+              <img src="../assets/img/hero/hero-shape-4.png" alt="">
+           </div>
+           <div class="ce-hero-shape-two d-none d-lg-block">
+              <img src="../assets/img/hero/hero-shape-4.1.png" alt="">
+           </div>
+           <div class="container">
+              <div class="row">
+                 <div class="col-xl-6 col-lg-6">
+                    <div class="tp-hero-section-box tp-hero-section-box-four pt-120 pb-140">
+                       <h3 class="tp-hero-bd-title text-black wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".6s"> Crafting Impact for 
+                          <span class="tp-highlight">
+                             <svg width="266" height="12" viewBox="0 0 266 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 0L266 12H0V0Z" fill="#FFDC60" />
+                             </svg>
+                             <i>Millions</i>
+                          </span>
+                          
+                       </h3>
+                       <p class="wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">With 4+ years of experience, I design intuitive, scalable digital experiences 
+                          using HCI and design thinking. Specializing in B2B & B2C SaaS, CRM, EdTech, and AI, enhances engagement, reduces drop-offs, and drives impact. </p>
+                       <div class="tp-hero-three-button-box d-flex align-items-center wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".9s">
+                          <a class="tp-btn mr-55" href="#project">View Projects <i class="far fa-briefcase"></i></a>
+                 
+                         
+  
+                       </div>
+                    </div>
+                   <br><br><br>
+                 </div>
+                <div class="col-xl-6 col-lg-6 wow fadeInRight"  data-wow-duration=".7s" data-wow-delay=".9s">
+                    <div class="tp-hero-right-img-four pt-90">
+                       <img src="../assets/img/workdesk.webp" alt="workdesk">
+                    </div>
+                 </div> 
+  
+  
+  
+  <center>
+                 <div class="row">
+                  <div class="col-xl-12">
+                     <div class="tp-cta-bottom-wrapper-portfolio">
+                        <div class="row justify-content-center">
+                          <div class="col-xl-4 col-lg-6 col-md-6 col-10">
+                              <div class="tp-cta-social-info">
+                                 <a class="tp-btn-white-lg" href="https://linkedin.com/in/subhankarrout/" target="_blank"><img class="mr-15" src="../assets/img/cta/linkedinblk.png" alt="Linkedin"> LinkedIn Profile</a>
+                              </div>
+                           </div>
+                           <div class="col-xl-4 col-lg-6 col-md-6 col-10">
+                              <div class="tp-cta-social-info">
+                                 <a class="tp-btn-white-lg" href="../Product-Designer-Resume--Subhankar-Rout.pdf"  download="Product-Designer-Resume--Subhankar-Rout.pdf"><img class="mr-15" src="../assets/img/cta/download.png" alt="Download"> Download Resume</a>
+                              </div> 
+                           </div>
+                           <div class="col-xl-4 col-lg-6 col-md-6 col-10">
+                              <div class="tp-cta-social-info">
+                                <a class="tp-btn-white-lg-video-popup video-trigger" href="https://www.youtube.com/embed/o5S7uLxBjpw?autoplay=1">
+                                   <img class="mr-15" src="../assets/img/cta/play.png" alt="medium"> Watch Video CV
+                               </a>
+                              </div>
+  
+                              <!-- Video Popup -->
+                         <div id="videoPopup" class="popup-overlay">
+                          <div class="popup-content">
+                              <span class="popup-close" onclick="closePopup()">&times;</span>
+                              <iframe id="videoFrame" class="popup-video-frame" frameborder="0" allowfullscreen style="display: none;"></iframe>
+                          </div>
+                      </div>
+                      
+                         
+                                
+  
+                      <script> 
+                       document.addEventListener("DOMContentLoaded", function () {
+                           const videoTriggers = document.querySelectorAll(".tp-btn-white-lg-video-popup");
+                           const popupOverlay = document.getElementById("videoPopup");
+                           const videoFrame = document.getElementById("videoFrame");
+                   
+                           videoTriggers.forEach(trigger => {
+                               trigger.addEventListener("click", function (event) {
+                                   event.preventDefault();
+                                   let videoURL = this.getAttribute("href");
+                                   
+                                   videoFrame.src = videoURL;
+                                   videoFrame.style.display = "block";
+                                   popupOverlay.classList.add("active");
+                               });
+                           });
+                       });
+                   
+                       function closePopup() {
+                           const popupOverlay = document.getElementById("videoPopup");
+                           const videoFrame = document.getElementById("videoFrame");
+                   
+                           popupOverlay.classList.remove("active");
+                           videoFrame.src = "";
+                           videoFrame.style.display = "none";
+                       }
+                   </script>
+                   
+  
+                           </div>
+                           
+                          
+                        </div>
                      </div>
                   </div>
-                 <br><br><br>
-               </div>
-              <div class="col-xl-6 col-lg-6 wow fadeInRight"  data-wow-duration=".7s" data-wow-delay=".9s">
-                  <div class="tp-hero-right-img-four pt-90">
-                     <img src="assets/img/workdesk.webp" alt="workdesk">
-                  </div>
-               </div> 
-
-
-
-<center>
-               <div class="row">
-                <div class="col-xl-12">
-                   <div class="tp-cta-bottom-wrapper-portfolio">
-                      <div class="row justify-content-center">
-                        <div class="col-xl-4 col-lg-6 col-md-6 col-10">
-                            <div class="tp-cta-social-info">
-                               <a class="tp-btn-white-lg" href="https://linkedin.com/in/subhankarrout/" target="_blank"><img class="mr-15" src="assets/img/cta/linkedinblk.png" alt="Linkedin"> LinkedIn Profile</a>
-                            </div>
-                         </div>
-                         <div class="col-xl-4 col-lg-6 col-md-6 col-10">
-                            <div class="tp-cta-social-info">
-                               <a class="tp-btn-white-lg" href="Product-Designer-Resume--Subhankar-Rout.pdf"  download="Product-Designer-Resume--Subhankar-Rout.pdf"><img class="mr-15" src="assets/img/cta/download.png" alt="Download"> Download Resume</a>
-                            </div> 
-                         </div>
-                         <div class="col-xl-4 col-lg-6 col-md-6 col-10">
-                            <div class="tp-cta-social-info">
-                              <a class="tp-btn-white-lg-video-popup video-trigger" href="https://www.youtube.com/embed/o5S7uLxBjpw?autoplay=1">
-                                 <img class="mr-15" src="assets/img/cta/play.png" alt="medium"> Watch Video CV
-                             </a>
-                            </div>
-
-                            <!-- Video Popup -->
-                       <div id="videoPopup" class="popup-overlay">
-                        <div class="popup-content">
-                            <span class="popup-close" onclick="closePopup()">&times;</span>
-                            <iframe id="videoFrame" class="popup-video-frame" frameborder="0" allowfullscreen style="display: none;"></iframe>
-                        </div>
-                    </div>
-                    
-                       
-                              
-
-                    <script> 
-                     document.addEventListener("DOMContentLoaded", function () {
-                         const videoTriggers = document.querySelectorAll(".tp-btn-white-lg-video-popup");
-                         const popupOverlay = document.getElementById("videoPopup");
-                         const videoFrame = document.getElementById("videoFrame");
-                 
-                         videoTriggers.forEach(trigger => {
-                             trigger.addEventListener("click", function (event) {
-                                 event.preventDefault();
-                                 let videoURL = this.getAttribute("href");
-                                 
-                                 videoFrame.src = videoURL;
-                                 videoFrame.style.display = "block";
-                                 popupOverlay.classList.add("active");
-                             });
-                         });
-                     });
-                 
-                     function closePopup() {
-                         const popupOverlay = document.getElementById("videoPopup");
-                         const videoFrame = document.getElementById("videoFrame");
-                 
-                         popupOverlay.classList.remove("active");
-                         videoFrame.src = "";
-                         videoFrame.style.display = "none";
-                     }
-                 </script>
-                 
-
-                         </div>
-                         
-                        
-                      </div>
-                   </div>
-                </div>
-            </center>
-            </div>
-         </div>
-      </div>
-
-
-<!-- exprience-area-start -->
-       <!-- <div class="tp-skill-area">
-          <div class="container">
-             <div class="row feature-bottom-space">
-                <div class="col-xl-4 col-lg-4">
-                   <div class="amfeature">
-                      <div class="amfeature__item">
-                         <h4 class="am-skill-sm-title">Skills</h4>
-                         
-                      </div>
-                      <div class="amfeature__list">
-                         <ul>
-                            <li><i class="fal fa-star"></i> Team Management</li>
-                            <li><i class="fal fa-star"></i> Brand Strategy</li>
-                            <li><i class="fal fa-star"></i> GPX & UI/UX Designer</li>
-                            <li><i class="fal fa-star"></i> Web Development</li>
-                            <li><i class="fal fa-star"></i> Robotic Process Automation</li>
-                         </ul>
-                      </div>
-                   </div>
-                </div>
-                <div class="col-xl-4 col-lg-4">
-                   <div class="amfeature am-fea-space">
-                      <div class="amfeature__item">
-                         <h4 class="am-skill-sm-title">Education</h4>
-                         
-                      </div>
-                      <div class="amfeature__list">
-                         <ul>
-                            <li><i class="fal fa-school"></i> MBA Operations- KIIT University</li>
-                            <li><i class="fal fa-school"></i> Btech - GIET University </li>
-                            <li><i class="fal fa-school"></i> Chinmaya Vidyalaya</li>
+              </center>
+              </div>
+           </div>
+        </div>
+  
+  
+  <!-- exprience-area-start -->
+         <!-- <div class="tp-skill-area">
+            <div class="container">
+               <div class="row feature-bottom-space">
+                  <div class="col-xl-4 col-lg-4">
+                     <div class="amfeature">
+                        <div class="amfeature__item">
+                           <h4 class="am-skill-sm-title">Skills</h4>
                            
-                         </ul>
-                      </div>
-                   </div>
-                </div>
-                <div class="col-xl-4 col-lg-4">
-                   <div class="amfeature am-fea-space-2">
-                      <div class="amfeature__item">
-                         <h4 class="am-skill-sm-title">Awards</h4>
-                        
-                      </div>
-                      <div class="amfeature__list">
-                         <ul>
-                            <li><i class="fal fa-award"></i> Excellence Award</li>
-                            <li><i class="fal fa-award"></i> IEEE 1st Runners-up</li>
-                            <li><i class="fal fa-award"></i> Film Making Champion </li>
-                            <li><i class="fal fa-award"></i> Best Story Maker</li>
-                         </ul>
-                      </div>
-                   </div>
-                </div>
-             </div> </div></div>
-     
-     -->
-       <!-- exprience-area-end -->
-
+                        </div>
+                        <div class="amfeature__list">
+                           <ul>
+                              <li><i class="fal fa-star"></i> Team Management</li>
+                              <li><i class="fal fa-star"></i> Brand Strategy</li>
+                              <li><i class="fal fa-star"></i> GPX & UI/UX Designer</li>
+                              <li><i class="fal fa-star"></i> Web Development</li>
+                              <li><i class="fal fa-star"></i> Robotic Process Automation</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4">
+                     <div class="amfeature am-fea-space">
+                        <div class="amfeature__item">
+                           <h4 class="am-skill-sm-title">Education</h4>
+                           
+                        </div>
+                        <div class="amfeature__list">
+                           <ul>
+                              <li><i class="fal fa-school"></i> MBA Operations- KIIT University</li>
+                              <li><i class="fal fa-school"></i> Btech - GIET University </li>
+                              <li><i class="fal fa-school"></i> Chinmaya Vidyalaya</li>
+                             
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4">
+                     <div class="amfeature am-fea-space-2">
+                        <div class="amfeature__item">
+                           <h4 class="am-skill-sm-title">Awards</h4>
+                          
+                        </div>
+                        <div class="amfeature__list">
+                           <ul>
+                              <li><i class="fal fa-award"></i> Excellence Award</li>
+                              <li><i class="fal fa-award"></i> IEEE 1st Runners-up</li>
+                              <li><i class="fal fa-award"></i> Film Making Champion </li>
+                              <li><i class="fal fa-award"></i> Best Story Maker</li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div> </div></div>
        
-
-      <!-- CREATIVE WORK-->
+       -->
+         <!-- exprience-area-end -->
+  
+         
+<!-- CREATIVE WORK-->
 
    <!-- project-area-start -->
    <div class="tp-project-area p-relative pt-130 pb-100" id="project">
-    <!-- <div class="tp-project-shape">
-       <img src="assets/img/project/project-shape.png" alt="">
-    </div> -->
-    <div class="container">
-       <div class="row align-items-center mb-15">
-          <div class="col-xl-5 col-lg-12 col-md-12">
-             <div class="tp-project-section-box">
-               <h5 class="tp-subtitle">Where Ideas Come Alive</h5>
-               <h2 class="tp-title"> My Projects </h2>
-             </div>
-          </div>
-          <div class="col-xl-7 col-lg-12 col-md-12">
-             <div class="tp-service-tab-button">
-                <nav>
-                   <div class="nav tp-service-tab justify-content-xl-end justify-content-lg-center" id="nav-tab"
-                      role="tablist">
-
-                      <button class="nav-links active mb-10" id="nav-design-tab" data-bs-toggle="tab"
-                      data-bs-target="#design" type="button" role="tab" aria-controls="design"
-                      aria-selected="true">Latest Project</button>
-
-                      <button class="nav-links mb-10" id="nav-branding-tab" data-bs-toggle="tab"
-                      data-bs-target="#branding" type="button" role="tab" aria-controls="branding"
-                      aria-selected="true">WebApp Designing
-                   </button>
-
-                      <button class="nav-links mb-10" id="nav-app-tab" data-bs-toggle="tab" data-bs-target="#app"
-                    type="button" role="tab" aria-controls="app" aria-selected="true">Mob.App Designing</button>
-
-
-                
-
-                   <button class="nav-links mb-10" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#all"
-                   type="button" role="tab" aria-controls="all" aria-selected="true">Animation
-                  </button>
-
-                    
-                    
-                   </div>
-                </nav>
-             </div>
-          </div>
-       </div>
-       <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade " id="all" role="tabpanel" aria-labelledby="nav-all-tab" tabindex="0">
-             <div class="project-tab-main">
-                <div class="row gx-1  ">
-                   <div class="col-xl-6 col-lg-12">
-                      <div class="tp-project-box mb-20">
-                         <div class="tp-project-img fix mb-45">
-                            <img class="w-100" src="assets/img/portfolio/4hd.gif" alt="3D Animation">
-                         </div>
-                         <div class="tp-project-content ml-20">
-                            <h2 class="pro-lg-title"><a href="https://www.behance.net/gallery/134788863/Cinema-4D" target="_blank">3D Animation</a></h2>
-                            <p>Name: 3d Text, Conecpt: 3d Gemotric Text, <br>Tool Used: Cinema 4D, After Effects</p>
-                            <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/134788863/Cinema-4D" target="_blank">View View Project <i class="far fa-arrow-right"></i></a>
-                         </div>
-                      </div>
-                   </div>
-                   <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-
-
-                        <div class="col-xl-12 col-lg-12">
-                          <div class="tp-project-box-sm d-flex align-items-center mb-20"> 
-                              <div class="tp-project-sm-img fix ml-25 mr-35">
-                                 <img src="assets/img/portfolio/4b.gif" alt="Pixar logo Anmation">
-                              </div>
-                              <div class="tp-project-sm-content">
-                                 <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/135269153/Morph-Logo-Animation" target="_blank">Morph Animation</a></h3>
-                                 <p>Name: Pixal Animation, Conecpt: Morph, Tool Used: Aftereffects</p>
-                                 <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/135269153/Morph-Logo-Animation" target="_blank">View Project <i
-                                       class="far fa-arrow-right"></i></a>
-                              </div>
-                           </div>
-                        </div>
-
-
-                         <div class=" col-xl-12 col-lg-12">
-                            <div class="tp-project-box-sm d-flex align-items-center">
-                               <div class="tp-project-sm-img fix ml-25 mr-35">
-                                  <img src="assets/img/portfolio/4c.gif" alt="Apple Music Logo Animation">
-                               </div>
-                               <div class="tp-project-sm-content">
-                                  <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/134788863/Cinema-4D" target="_blank">Frame Animation</a></h3>
-                                  <p>Name: Apple Music Animation, Conecpt: Frame Animation, Tool Used: Procreate</p>
-                                  <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/134788863/Cinema-4D" target="_blank">View Project <i
-                                        class="far fa-arrow-right"></i></a>
-                               </div>
-                            </div>
-                         </div>
-                         
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <div class="tab-pane fade  show active " id="design" role="tabpanel" aria-labelledby="nav-design-tab" tabindex="0">
-             <div class="project-tab-main">
-                <div class="row gx-1  ">
-                   <div class="col-xl-6 col-lg-12">
-                      <div class="tp-project-box mb-20">
-                         <div class="tp-project-img fix mb-45">
-                           <a href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2&node-type=frame&viewport=274%2C940%2C0.07&t=8Dtanc2dR1a7OnUx-1&scaling=min-zoom&content-scaling=fixed" target="_blank"> <img class="w-100" src="./assets/img/portfolio/casestudy3.webp" alt="Project1">
-                         </div>
-                         <div class="tp-project-content ml-20">
-                            <h2 class="pro-lg-title"><a href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2&node-type=frame&viewport=274%2C940%2C0.07&t=8Dtanc2dR1a7OnUx-1&scaling=min-zoom&content-scaling=fixed" target="_blank">Redesigned Dashboard: Increased Game Creations
-                            </a></h2>
-                            <p> 
-                              Improved navigation, refined the interface, and reduced cognitive load, driving a <b>37% increase in new game creation</b>  and a <b>15% reduce in user drop-off</b>.</p>
-                            <a class="tp-btn-white-sm" href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2&node-type=frame&viewport=274%2C940%2C0.07&t=8Dtanc2dR1a7OnUx-1&scaling=min-zoom&content-scaling=fixed" target="_blank">View Project</a>
-                         </div>
-                      </div>
-                   </div>
-
-                   <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-
-
-                         <div class="col-xl-12 col-lg-12">
-                             <div class="tp-project-box-sm d-flex align-items-center mb-20"> 
-                               <div class="tp-project-sm-img fix ml-25 mr-35">
-                                 <a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank"><img src="assets/img/portfolio/teamallocation.webp" alt="Team Allocation Dashboard"></a>
-                               </div>
-                               <div class="tp-project-sm-content">
-                                <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">Smarter Workforce Allocation </a></h3>
-                                <p>Designed a data-driven team allocation dashboard, providing real-time insights into workforce distribution across roles and departments.</p>
-                                <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">View Project </a>
-                               </div>
-                            </div>
-                         </div>
-
-                         <div class=" col-xl-12 col-lg-12">
-                         <div class="tp-project-box-sm d-flex align-items-center">
-                              <div class="tp-project-sm-img fix ml-25 mr-35">
-                                 <a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">  <img src="assets/img/portfolio/fitflow.webp" alt="Fitness App"></a>
-                              </div>
-                              <div class="tp-project-sm-content">
-                                 <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank">FitFlow: Seamless Training</a></h3>
-                                 <p>Personalized fitness application focused on adaptive workouts & goal tracking with fitness community aims to promote healthier lifestyle.</p>
-                                 <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank">View Project</a>
-                              </div>
-                           </div>
-                        </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <div class="tab-pane fade" id="branding" role="tabpanel" aria-labelledby="nav-branding-tab"
-             tabindex="0">
-             <div class="project-tab-main">
-                <div class="row gx-1  ">
-                   <div class="col-xl-6 col-lg-12">
-                     <div class="tp-project-box mb-20">
-                        <div class="tp-project-img fix mb-45">
-                           <a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank"><img class="w-100" src="assets/img/portfolio/cover teammanagement.webp" alt="Bike"></a>
-                        </div>
-                        <div class="tp-project-content ml-20">
-                           <h2 class="pro-lg-title"><a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">Smarter Workforce Allocation</a></h2>
-                           <p>Designed a data-driven team allocation dashboard, providing real-time insights into workforce distribution across roles and departments.</p>
-                           <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">View Project</a>
-                        </div>
-                     </div>
-                   </div>
-                   <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-                         <div class=" col-xl-12 col-lg-12">
-                            <div class="tp-project-box-sm d-flex align-items-center mb-20">
-                               <div class="tp-project-sm-img fix ml-25 mr-35">
-                                 <a href="https://www.behance.net/gallery/182380143/Employee-Time-Tracker-Dashboard-with-activities" target="_blank"><img src="assets/img/portfolio/motherbot.webp" alt="dashboard"></a>
-                               </div>
-                               <div class="tp-project-sm-content">
-                                  <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/182380143/Employee-Time-Tracker-Dashboard-with-activities" target="_blank">MotherBot Dashboard</a></h3>
-                                  <p>Developed a comprehensive dashboard for a time tracking app, incorporating screen monitoring capabilities for enhanced productivity.</p>
-                                  <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/182380143/Employee-Time-Tracker-Dashboard-with-activities"  target="_blank">View Project</a>
-                               </div>
-                            </div>
-                         </div>
-                         <div class="col-xl-12 col-lg-12">
-                            <div class="tp-project-box-sm d-flex align-items-center">
-                               <div class="tp-project-sm-img fix ml-25 mr-35">
-                                 <a href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank"><img src="assets/img/portfolio/bike.webp" alt="Bike Webpage UX Case Study"></a>
-                               </div>
-                               <div class="tp-project-sm-content">
-                                  <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank">Bike Webpage UX Case Study</a></h3>
-                                  <p>The objective of this case study is to showcase both commuter and luxury bikes under a single brand, ensuring a seamless and clear user experience.</p>
-                                  <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank">View Project </a>
-                               </div>
-                            </div>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-             </div>
-          </div>
-          <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="nav-app-tab" tabindex="0">
-             <div class="project-tab-main">
-                <div class="row gx-1  ">
-                   <div class="col-xl-6 col-lg-12">
-                      <div class="tp-project-box mb-20">
-                         <div class="tp-project-img fix mb-45">
-                           <a href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank"><img class="w-100" src="assets/img/portfolio/fitflow cover.webp" alt="fitness app"></a>
-                         </div>
-                         <div class="tp-project-content ml-20">
-                            <h2 class="pro-lg-title"><a href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank">FitFlow: Seamless Training</a></h2>
-                            <p>Created a personalized fitness application focused on adaptive workouts and goal tracking with fitness community aims to promote healthier lifestyle.</p>
-                            <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank">View Project </i></a>
-                         </div>
-                      </div>
-                   </div>
-                   <div class="col-xl-6 col-lg-12">
-                      <div class="row">
-                         <div class=" col-xl-12 col-lg-12">
-                            <div class="tp-project-box-sm d-flex align-items-center mb-20">
-                               <div class="tp-project-sm-img fix ml-25 mr-35">
-                                 <a href="https://www.behance.net/gallery/182630107/Tour-Guide-Travel-app-UX-case-study" target="_blank"> <img src="assets/img/portfolio/tourguide.webp" alt="travel Guide"></a>
-                               </div>
-                               <div class="tp-project-sm-content">
-                                  <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/182630107/Tour-Guide-Travel-app-UX-case-study" target="_blank">TravelApp UI Design</a></h3>
-                                  <p>Travel Guide serves as your comprehensive travel companion, assisting you in navigating unfamiliar destinations effortlessly.</p>
-                                  <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/182630107/Tour-Guide-Travel-app-UX-case-study" target="_blank">View Project </a>
-                               </div>
-                            </div>
-                         </div>
-                         <div class="col-xl-12 col-lg-12">
-                            <div class="tp-project-box-sm d-flex align-items-center">
-                               <div class="tp-project-sm-img fix ml-25 mr-35">
-                                 <a href="https://www.behance.net/gallery/136271175/Audiook-UI-Design" target="_blank"> <img src="assets/img/portfolio/audio book.png" alt="audio book"></a>
-                               </div>
-                               <div class="tp-project-sm-content">
-                                  <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/136271175/Audiook-UI-Design" target="_blank">Audio Book App Design</a></h3>
-                                  <p>Focused on creating an engaging and visually appealing splash screen for the Audio Book app.
-                                </p>
-                                  <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/136271175/Audiook-UI-Design" target="_blank">View Project <i
-                                        class="far fa-arrow-right"></i></a>
-                               </div>
-                            </div>
-                         </div>
-                      </div>    
-                   </div> 
-                </div>
-             </div> 
-          </div> 
-       </div> <br><center> <a class="tp-btn-sm" href="https://www.behance.net/routsubhankar" target="_blank">Explore More Projects<i class="far fa-arrow-right"></i></a> </center>
-    </div> 
- </div>
- <!-- project-area-end -->
- 
-<!-- tp-story-area-start -->
-      <div class="bl-story__area pb-40">
-         <div class="container">
-            <div class="row">
-               <div class="col-12 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                  <div class="bl-blog__section-box text-center mb-60">
-                     <div class="tp-project-section-box">
-                        <h5 class="tp-subtitle">This March 2k25, I turn the fabulous 25! 🎉</h5>
-                        <h2 class="tp-title"> Creative Chronicles </h2>
-                     </div>
-                  </div>
+      <!-- <div class="tp-project-shape">
+         <img src="assets/img/project/project-shape.png" alt="">
+      </div> -->
+      <div class="container">
+         <div class="row align-items-center mb-15">
+            <div class="col-xl-5 col-lg-12 col-md-12">
+               <div class="tp-project-section-box">
+                 <h5 class="tp-subtitle">Where Ideas Come Alive</h5>
+                 <h2 class="tp-title"> My Projects </h2>
                </div>
             </div>
-            <div class="row">
-               <div class="col-xl-3 col-lg-6 col-md-6 mb-40 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                  <div class="bl-blog__item bl-story__item">
-                     <div class="bl-blog__img fix">
-                        <a href="https://www.linkedin.com/posts/subhankarrout_microsoft-uxday2025-theaishift-activity-7308065884785311744-H3KE?utm_source=share&utm_medium=member_ios&rcm=ACoAACZH00oBkIg28cLOcWyfy0MuWggpOj-oFLI" target="_blank"><img class="w-100" src="assets/img/more/story1.webp" alt=""></a>
+            <div class="col-xl-7 col-lg-12 col-md-12">
+               <div class="tp-service-tab-button">
+                  <nav>
+                     <div class="nav tp-service-tab justify-content-xl-end justify-content-lg-center" id="nav-tab"
+                        role="tablist">
+  
+                        <button class="nav-links active mb-10" id="nav-design-tab" data-bs-toggle="tab"
+                        data-bs-target="#design" type="button" role="tab" aria-controls="design"
+                        aria-selected="true">Latest Project</button>
+  
+                        <button class="nav-links mb-10" id="nav-branding-tab" data-bs-toggle="tab"
+                        data-bs-target="#branding" type="button" role="tab" aria-controls="branding"
+                        aria-selected="true">WebApp Designing
+                     </button>
+  
+                        <button class="nav-links mb-10" id="nav-app-tab" data-bs-toggle="tab" data-bs-target="#app"
+                      type="button" role="tab" aria-controls="app" aria-selected="true">Mob.App Designing</button>
+  
+  
+                  
+  
+                     <button class="nav-links mb-10" id="nav-all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                     type="button" role="tab" aria-controls="all" aria-selected="true">Animation
+                    </button>
+  
+                      
+                      
                      </div>
-                     <div class="bl-blog__content">
-                <h4 class="bl-blog__title-sm"><a href="https://www.linkedin.com/posts/subhankarrout_microsoft-uxday2025-theaishift-activity-7308065884785311744-H3KE?utm_source=share&utm_medium=member_ios&rcm=ACoAACZH00oBkIg28cLOcWyfy0MuWggpOj-oFLI" target="_blank">Selected for UXDay-2025 at Microsoft IDC, Hyderabad</a></h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-6 col-md-6 mb-40 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                  <div class="bl-blog__item bl-story__item">
-                     <div class="bl-blog__img fix">
-                        <a href="pr-award.html" target="_blank"><img class="w-100" src="assets/img/more/story2.webp" alt=""></a>
-                     </div>
-                     <div class="bl-blog__content">
-                        
-                        <h4 class="bl-blog__title-sm"><a href="pr-award.html" target="_blank">Media Feature on My New Book Release</a></h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-6 col-md-6 mb-40 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
-                  <div class="bl-blog__item bl-story__item">
-                     <div class="bl-blog__img fix">
-                        <a href="https://www.s4cinesphere.in/achievement.html" target="_blank"><img class="w-100" src="assets/img/more/story 3.webp" alt=""></a>
-                     </div>
-                     <div class="bl-blog__content">
-                       
-                        <h4 class="bl-blog__title-sm"><a href="https://www.s4cinesphere.in/achievement.html" target="_blank">Best Filmmaker Award – GIET University</a></h4>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-xl-3 col-lg-6 col-md-6 mb-40 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
-                  <div class="bl-blog__item bl-story__item">
-                     <div class="bl-blog__img fix">
-                        <a href="https://www.s4cinesphere.in/images/e/Mahiya4.png" target="_blank"><img class="w-100" src="assets/img/more/story4.webp" alt=""></a>
-                     </div>
-                     <div class="bl-blog__content">
-                        
-                        <h4 class="bl-blog__title-sm"><a href="https://www.s4cinesphere.in/images/e/Mahiya4.png" target="_blank">Musical Album Shoot Covered by Dainik Jagran</a></h4>
-                     </div>
-                  </div>
+                  </nav>
                </div>
             </div>
          </div>
-      </div>
-      <!-- tp-story-area-end -->
+         <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade " id="all" role="tabpanel" aria-labelledby="nav-all-tab" tabindex="0">
+               <div class="project-tab-main">
+                  <div class="row gx-1  ">
+                     <div class="col-xl-6 col-lg-12">
+                        <div class="tp-project-box mb-20">
+                           <div class="tp-project-img fix mb-45">
+                              <img class="w-100" src="assets/img/portfolio/4hd.gif" alt="3D Animation">
+                           </div>
+                           <div class="tp-project-content ml-20">
+                              <h2 class="pro-lg-title"><a href="https://www.behance.net/gallery/134788863/Cinema-4D" target="_blank">3D Animation</a></h2>
+                              <p>Name: 3d Text, Conecpt: 3d Gemotric Text, <br>Tool Used: Cinema 4D, After Effects</p>
+                              <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/134788863/Cinema-4D" target="_blank">View View Project <i class="far fa-arrow-right"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-6 col-lg-12">
+                        <div class="row">
+  
+  
+                          <div class="col-xl-12 col-lg-12">
+                            <div class="tp-project-box-sm d-flex align-items-center mb-20"> 
+                                <div class="tp-project-sm-img fix ml-25 mr-35">
+                                   <img src="assets/img/portfolio/4b.gif" alt="Pixar logo Anmation">
+                                </div>
+                                <div class="tp-project-sm-content">
+                                   <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/135269153/Morph-Logo-Animation" target="_blank">Morph Animation</a></h3>
+                                   <p>Name: Pixal Animation, Conecpt: Morph, Tool Used: Aftereffects</p>
+                                   <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/135269153/Morph-Logo-Animation" target="_blank">View Project <i
+                                         class="far fa-arrow-right"></i></a>
+                                </div>
+                             </div>
+                          </div>
+  
+  
+                           <div class=" col-xl-12 col-lg-12">
+                              <div class="tp-project-box-sm d-flex align-items-center">
+                                 <div class="tp-project-sm-img fix ml-25 mr-35">
+                                    <img src="assets/img/portfolio/4c.gif" alt="Apple Music Logo Animation">
+                                 </div>
+                                 <div class="tp-project-sm-content">
+                                    <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/134788863/Cinema-4D" target="_blank">Frame Animation</a></h3>
+                                    <p>Name: Apple Music Animation, Conecpt: Frame Animation, Tool Used: Procreate</p>
+                                    <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/134788863/Cinema-4D" target="_blank">View Project <i
+                                          class="far fa-arrow-right"></i></a>
+                                 </div>
+                              </div>
+                           </div>
+                           
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="tab-pane fade  show active " id="design" role="tabpanel" aria-labelledby="nav-design-tab" tabindex="0">
+               <div class="project-tab-main">
+                  <div class="row gx-1  ">
+                     <div class="col-xl-6 col-lg-12">
+                        <div class="tp-project-box mb-20">
+                           <div class="tp-project-img fix mb-45">
+                             <a href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2&node-type=frame&viewport=274%2C940%2C0.07&t=8Dtanc2dR1a7OnUx-1&scaling=min-zoom&content-scaling=fixed" target="_blank"> <img class="w-100" src="./assets/img/portfolio/casestudy3.webp" alt="Project1">
+                           </div>
+                           <div class="tp-project-content ml-20">
+                              <h2 class="pro-lg-title"><a href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2&node-type=frame&viewport=274%2C940%2C0.07&t=8Dtanc2dR1a7OnUx-1&scaling=min-zoom&content-scaling=fixed" target="_blank">Redesigned Dashboard: Increased Game Creations
+                              </a></h2>
+                              <p> 
+                                Improved navigation, refined the interface, and reduced cognitive load, driving a <b>37% increase in new game creation</b>  and a <b>15% reduce in user drop-off</b>.</p>
+                              <a class="tp-btn-white-sm" href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2&node-type=frame&viewport=274%2C940%2C0.07&t=8Dtanc2dR1a7OnUx-1&scaling=min-zoom&content-scaling=fixed" target="_blank">View Project</a>
+                           </div>
+                        </div>
+                     </div>
+  
+                     <div class="col-xl-6 col-lg-12">
+                        <div class="row">
+  
+  
+                           <div class="col-xl-12 col-lg-12">
+                               <div class="tp-project-box-sm d-flex align-items-center mb-20"> 
+                                 <div class="tp-project-sm-img fix ml-25 mr-35">
+                                   <a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank"><img src="assets/img/portfolio/teamallocation.webp" alt="Team Allocation Dashboard"></a>
+                                 </div>
+                                 <div class="tp-project-sm-content">
+                                  <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">Smarter Workforce Allocation </a></h3>
+                                  <p>Designed a data-driven team allocation dashboard, providing real-time insights into workforce distribution across roles and departments.</p>
+                                  <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">View Project </a>
+                                 </div>
+                              </div>
+                           </div>
+  
+                           <div class=" col-xl-12 col-lg-12">
+                              <div class="tp-project-box-sm d-flex align-items-center">
+                                <div class="tp-project-sm-img fix ml-25 mr-35">
+                                   <a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">  <img src="assets/img/portfolio/fitflow.webp" alt="Fitness App"></a>
+                                </div>
+                                <div class="tp-project-sm-content">
+                                   <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank">FitFlow: Seamless Training</a></h3>
+                                   <p>Personalized fitness application focused on adaptive workouts & goal tracking with fitness community aims to promote healthier lifestyle.</p>
+                                   <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank">View Project</a>
+                                </div>
+                             </div>
+                          </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+              <div class="tab-pane fade" id="branding" role="tabpanel" aria-labelledby="nav-branding-tab"
+                 tabindex="0">
+                 <div class="project-tab-main">
+                    <div class="row gx-1  ">
+                       <div class="col-xl-6 col-lg-12">
+                         <div class="tp-project-box mb-20">
+                            <div class="tp-project-img fix mb-45">
+                               <a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank"><img class="w-100" src="../assets/img/portfolio/cover teammanagement.webp" alt="Bike"></a>
+                            </div>
+                            <div class="tp-project-content ml-20">
+                               <h2 class="pro-lg-title"><a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">Smarter Workforce Allocation</a></h2>
+                               <p>Designed a data-driven team allocation dashboard, providing real-time insights into workforce distribution across roles and departments.</p>
+                               <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">View Project</a>
+                            </div>
+                         </div>
+                       </div>
+                       <div class="col-xl-6 col-lg-12">
+                          <div class="row">
+                             <div class=" col-xl-12 col-lg-12">
+                                <div class="tp-project-box-sm d-flex align-items-center mb-20">
+                                   <div class="tp-project-sm-img fix ml-25 mr-35">
+                                     <a href="https://www.behance.net/gallery/182380143/Employee-Time-Tracker-Dashboard-with-activities" target="_blank"><img src="../assets/img/portfolio/motherbot.webp" alt="dashboard"></a>
+                                   </div>
+                                   <div class="tp-project-sm-content">
+                                      <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/182380143/Employee-Time-Tracker-Dashboard-with-activities" target="_blank">MotherBot Dashboard</a></h3>
+                                      <p>Developed a comprehensive dashboard for a time tracking app, incorporating screen monitoring capabilities for enhanced productivity.</p>
+                                      <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/182380143/Employee-Time-Tracker-Dashboard-with-activities"  target="_blank">View Project</a>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-xl-12 col-lg-12">
+                                <div class="tp-project-box-sm d-flex align-items-center">
+                                   <div class="tp-project-sm-img fix ml-25 mr-35">
+                                     <a href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank"><img src="../assets/img/portfolio/bike.webp" alt="Bike Webpage UX Case Study"></a>
+                                   </div>
+                                   <div class="tp-project-sm-content">
+                                      <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank">Bike Webpage UX Case Study</a></h3>
+                                      <p>The objective of this case study is to showcase both commuter and luxury bikes under a single brand, ensuring a seamless and clear user experience.</p>
+                                      <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/201309669/SpeedRider-UX-Research-for-Motorcycle-website" target="_blank">View Project </a>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="nav-app-tab" tabindex="0">
+                 <div class="project-tab-main">
+                    <div class="row gx-1  ">
+                       <div class="col-xl-6 col-lg-12">
+                          <div class="tp-project-box mb-20">
+                             <div class="tp-project-img fix mb-45">
+                               <a href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank"><img class="w-100" src="../assets/img/portfolio/fitflow cover.webp" alt="fitness app"></a>
+                             </div>
+                             <div class="tp-project-content ml-20">
+                                <h2 class="pro-lg-title"><a href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank">FitFlow: Seamless Training</a></h2>
+                                <p>Created a personalized fitness application focused on adaptive workouts and goal tracking with fitness community aims to promote healthier lifestyle.</p>
+                                <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/183120599/FitFlow-Fitness-App-UIUX-Case-Study" target="_blank">View Project </i></a>
+                             </div>
+                          </div>
+                       </div>
+                       <div class="col-xl-6 col-lg-12">
+                          <div class="row">
+                             <div class=" col-xl-12 col-lg-12">
+                                <div class="tp-project-box-sm d-flex align-items-center mb-20">
+                                   <div class="tp-project-sm-img fix ml-25 mr-35">
+                                     <a href="https://www.behance.net/gallery/182630107/Tour-Guide-Travel-app-UX-case-study" target="_blank"> <img src="../assets/img/portfolio/tourguide.webp" alt="travel Guide"></a>
+                                   </div>
+                                   <div class="tp-project-sm-content">
+                                      <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/182630107/Tour-Guide-Travel-app-UX-case-study" target="_blank">TravelApp UI Design</a></h3>
+                                      <p>Travel Guide serves as your comprehensive travel companion, assisting you in navigating unfamiliar destinations effortlessly.</p>
+                                      <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/182630107/Tour-Guide-Travel-app-UX-case-study" target="_blank">View Project </a>
+                                   </div>
+                                </div>
+                             </div>
+                             <div class="col-xl-12 col-lg-12">
+                                <div class="tp-project-box-sm d-flex align-items-center">
+                                   <div class="tp-project-sm-img fix ml-25 mr-35">
+                                     <a href="https://www.behance.net/gallery/136271175/Audiook-UI-Design" target="_blank"> <img src="../assets/img/portfolio/audio book.png" alt="audio book"></a>
+                                   </div>
+                                   <div class="tp-project-sm-content">
+                                      <h3 class="pro-sm-title"><a href="https://www.behance.net/gallery/136271175/Audiook-UI-Design" target="_blank">Audio Book App Design</a></h3>
+                                      <p>Focused on creating an engaging and visually appealing splash screen for the Audio Book app.
+                                    </p>
+                                      <a class="tp-btn-white-sm" href="https://www.behance.net/gallery/136271175/Audiook-UI-Design" target="_blank">View Project <i
+                                            class="far fa-arrow-right"></i></a>
+                                   </div>
+                                </div>
+                             </div>
+                          </div>    
+                       </div> 
+                    </div>
+                 </div> 
+              </div> 
+           </div> <br><center> <a class="tp-btn-sm" href="https://www.behance.net/routsubhankar" target="_blank">Explore More Projects<i class="far fa-arrow-right"></i></a> </center>
+        </div> 
+     </div>
+     <!-- project-area-end -->
+   
+  <!-- tp-story-area-start -->
+        <div class="bl-story__area pb-40">
+           <div class="container">
+              <div class="row">
+                 <div class="col-12 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
+                    <div class="bl-blog__section-box text-center mb-60">
+                       <div class="tp-project-section-box">
 
+                        <h5 class="tp-subtitle">This March 2k25, I turn the fabulous 25! 🎉</h5>
+                          <h2 class="tp-title"> Creative Chronicles </h2>
+                        
+
+                          </i>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+              <div class="row">
+                 <div class="col-xl-3 col-lg-6 col-md-6 mb-40 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
+                    <div class="bl-blog__item bl-story__item">
+                       <div class="bl-blog__img fix">
+                          <a href="https://www.linkedin.com/posts/subhankarrout_microsoft-uxday2025-theaishift-activity-7308065884785311744-H3KE?utm_source=share&utm_medium=member_ios&rcm=ACoAACZH00oBkIg28cLOcWyfy0MuWggpOj-oFLI" target="_blank"><img class="w-100" src="../assets/img/more/story1.webp" alt=""></a>
+                       </div>
+                       <div class="bl-blog__content">
+                  <h4 class="bl-blog__title-sm"><a href="https://www.linkedin.com/posts/subhankarrout_microsoft-uxday2025-theaishift-activity-7308065884785311744-H3KE?utm_source=share&utm_medium=member_ios&rcm=ACoAACZH00oBkIg28cLOcWyfy0MuWggpOj-oFLI" target="_blank">Selected for UXDay-2025 at Microsoft IDC, Hyderabad</a></h4>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-3 col-lg-6 col-md-6 mb-40 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                    <div class="bl-blog__item bl-story__item">
+                       <div class="bl-blog__img fix">
+                          <a href="pr-award.html" target="_blank"><img class="w-100" src="../assets/img/more/story2.webp" alt=""></a>
+                       </div>
+                       <div class="bl-blog__content">
+                          
+                          <h4 class="bl-blog__title-sm"><a href="pr-award.html" target="_blank">Media Feature on My New Book Release</a></h4>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-3 col-lg-6 col-md-6 mb-40 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
+                    <div class="bl-blog__item bl-story__item">
+                       <div class="bl-blog__img fix">
+                          <a href="https://www.s4cinesphere.in/achievement.html" target="_blank"><img class="w-100" src="../assets/img/more/story 3.webp" alt=""></a>
+                       </div>
+                       <div class="bl-blog__content">
+                         
+                          <h4 class="bl-blog__title-sm"><a href="https://www.s4cinesphere.in/achievement.html" target="_blank">Best Filmmaker Award – GIET University</a></h4>
+                       </div>
+                    </div>
+                 </div>
+                 <div class="col-xl-3 col-lg-6 col-md-6 mb-40 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
+                    <div class="bl-blog__item bl-story__item">
+                       <div class="bl-blog__img fix">
+                          <a href="https://www.s4cinesphere.in/images/e/Mahiya4.png" target="_blank"><img class="w-100" src="../assets/img/more/story4.webp" alt=""></a>
+                       </div>
+                       <div class="bl-blog__content">
+                          
+                          <h4 class="bl-blog__title-sm"><a href="https://www.s4cinesphere.in/images/e/Mahiya4.png" target="_blank">Musical Album Shoot Covered by Dainik Jagran</a></h4>
+                       </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <!-- tp-story-area-end -->
+  
       <!-- tp-instagram-area-start -->
       <div class="bl-instagram__area pb-30">
          <div class="bl-instagram__slider-wrapper p-relative">
@@ -752,70 +756,71 @@ document.addEventListener("DOMContentLoaded", function () {
                <div class="swiper-wrapper">
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/media1.webp" alt="Media">
+                        <img class="w-100" src="../assets/img/more/media1.webp" alt="Media">
                      </div>
                   </div>
 
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/reel1.gif" alt="Media">
+                        <img class="w-100" src="../assets/img/more/reel1.gif" alt="Media">
                      </div>
                   </div>
 
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/media2.webp" alt="Media">
+                        <img class="w-100" src="../assets/img/more/media2.webp" alt="Media">
                      </div>
                   </div>
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/media3.gif" alt="Media">
+                        <img class="w-100" src="../assets/img/more/media3.gif" alt="Media">
                      </div>
                   </div>
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/media4.webp" alt="Media">
+                        <img class="w-100" src="../assets/img/more/media4.webp" alt="Media">
                      </div>
                   </div>
 
                
+
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/reel2.gif" alt="Media">
+                        <img class="w-100" src="../assets/img/more/reel2.gif" alt="Media">
                      </div>
                   </div>
 
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/media5.webp" alt="Media">
+                        <img class="w-100" src="../assets/img/more/media5.webp" alt="Media">
                      </div>
                   </div>
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1.1s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/media6.gif" alt="Media">
+                        <img class="w-100" src="../assets/img/more/media6.gif" alt="Media">
                      </div>
                   </div>
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1.1s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/media7.webp" alt="Media">
+                        <img class="w-100" src="../assets/img/more/media7.webp" alt="Media">
                      </div>
                   </div>
 
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/reel3.gif" alt="Media">
+                        <img class="w-100" src="../assets/img/more/reel3.gif" alt="Media">
                      </div>
                   </div>
 
 
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1.2s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/media8.webp" alt="Media">
+                        <img class="w-100" src="../assets/img/more/media8.webp" alt="Media">
                      </div>
                   </div>
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1.3s">
                      <div class="bl-instagram__img">
-                        <img class="w-100" src="assets/img/more/media9.gif" alt="Media">
+                        <img class="w-100" src="../assets/img/more/media9.gif" alt="Media">
                      </div>
                   </div>
                </div>
@@ -828,6 +833,7 @@ document.addEventListener("DOMContentLoaded", function () {
       </main>
       <!-- tp-instagram-area-end -->
 
+
  <!-- footer-area-start -->
  <footer>
     <div class="tp-footer-area black-bg pt-130 pb-30">
@@ -836,7 +842,7 @@ document.addEventListener("DOMContentLoaded", function () {
              <div class="col-xl-3 col-lg-4 col-md-6">
                 <div class="tp-footer-widget">
                    <div class="tp-footer-widget__logo mb-30">
-                      <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="logo-white"></a>
+                      <a href="../index.html"><img src="../assets/img/logo/logo-white.png" alt="logo-white"></a>
                    </div>
                   
                    <div class="tp-footer-widget__social-link">
@@ -913,8 +919,8 @@ document.addEventListener("DOMContentLoaded", function () {
                    <div class="col-xl-6 col-lg-6 col-12">
                       <div class="tp-copyright-right text-start text-md-center text-lg-end">
                         
-                         <a href="contact.html" target="_blank"> Contact</a>
-                         <a href="privacy-policy.html" target="_blank"> Privacy policy</a>
+                         <a href="../contact.html" target="_blank"> Contact</a>
+                         <a href="../privacy-policy.html" target="_blank"> Privacy policy</a>
 
                        
                       </div>
@@ -933,19 +939,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
  <!-- JS here -->
- <script src="assets/js/jquery.js"></script>
+ <script src="../assets/js/jquery.js"></script>
 
- <script src="assets/js/bootstrap.bundle.min.js"></script>
- <script src="assets/js/swiper-bundle.js"></script>
+ <script src="../assets/js/bootstrap.bundle.min.js"></script>
+ <script src="../assets/js/swiper-bundle.js"></script>
 
- <script src="assets/js/magnific-popup.js"></script>
- <script src="assets/js/counterup.js"></script>
- <script src="assets/js/wow.js"></script>
- <script src="assets/js/meanmenu.js"></script>
+ <script src="../assets/js/magnific-popup.js"></script>
+ <script src="../assets/js/counterup.js"></script>
+ <script src="../assets/js/wow.js"></script>
+ <script src="../assets/js/meanmenu.js"></script>
 
- <script src="assets/js/imagesloaded-pkgd.js"></script>
- <script src="assets/js/ajax-form.js"></script>
- <script src="assets/js/main.js"></script>
+ <script src="../assets/js/imagesloaded-pkgd.js"></script>
+ <script src="../assets/js/ajax-form.js"></script>
+ <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
