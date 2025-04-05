@@ -15659,7 +15659,7 @@ blockquote cite::before {
 .tp-footer-widget__list ul li a {
   font-size: 15px;
   font-weight: 400;
-  color: #707070;
+  color: #B5B5B5;
 }
 .tp-footer-widget__list ul li:hover a {
   color: var(--tp-theme-primary);
