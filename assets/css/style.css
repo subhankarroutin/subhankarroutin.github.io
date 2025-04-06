@@ -16172,7 +16172,6 @@ blockquote cite::before {
 
 
 
-/* Prevent horizontal scroll on all devices */
 /* Prevent horizontal scrolling on mobile */
 html, body {
   max-width: 100%;

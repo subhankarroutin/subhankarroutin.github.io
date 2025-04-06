@@ -12,13 +12,6 @@
    <!-- Place favicon.ico in the root directory -->
    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
 
-   <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
    <link rel="stylesheet" href="assets/css/animate.css">
@@ -285,20 +278,14 @@
       <!-- tp-story-area-end -->
 
    
-    <!-- tp-instagram-area-start -->
-<div class="bl-instagram__area pb-30">
-   <div class="bl-instagram__slider-wrapper p-relative fix-overflow">
-     
-     <!-- Optional Decorative Shape -->
-     <div class="tp-project-shape shape-responsive">
-       <img src="assets/img/project/project-shape.png" alt="Decoration">
-     </div>
- 
-     <!-- Swiper Container -->
-     <div class="swiper-container bl-instagram__slider-active mb-20">
-       <div class="swiper-wrapper">
-              
-                 
+      <!-- tp-instagram-area-start -->
+      <div class="bl-instagram__area pb-30">
+         <div class="bl-instagram__slider-wrapper p-relative">
+            <div class="tp-project-shape">
+               <img src="assets/img/project/project-shape.png" alt="">
+            </div>
+            <div class="swiper-container bl-instagram__slider-active mb-20">
+               <div class="swiper-wrapper">
                   <div class="swiper-slide wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
                      <div class="bl-instagram__img">
                         <img class="w-100" src="assets/img/more/media1.webp" alt="Media">
@@ -367,22 +354,13 @@
                         <img class="w-100" src="assets/img/more/media9.gif" alt="Media">
                      </div>
                   </div>
-                  
                </div>
-            
+            </div>
+            <div class="bl-instagram__slider-tag">
+               <a href="https://instagram.com/subhankarrout.in/" target="_blank"><span>View on Insragram</span></a>
+            </div>
+         </div>
       </div>
-   </div>
-
-   <!-- Instagram Button -->
-   <div class="bl-instagram__slider-tag">
-     <a href="https://instagram.com/subhankarrout.in/" target="_blank">
-       <span>View on Instagram</span>
-     </a>
-   </div>
- </div>
-</div>
-<!-- tp-instagram-area-end -->
-
       </main>
       <!-- tp-instagram-area-end -->
 
@@ -527,36 +505,6 @@
    <!-- JS here -->
 
    
-   <script>
-      var swiper = new Swiper('.bl-instagram__slider-active', {
-        slidesPerView: 5,
-        spaceBetween: 20,
-        loop: true,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        breakpoints: {
-          1200: {
-            slidesPerView: 5
-          },
-          992: {
-            slidesPerView: 4
-          },
-          768: {
-            slidesPerView: 3
-          },
-          576: {
-            slidesPerView: 2
-          },
-          0: {
-            slidesPerView: 1
-          }
-        }
-      });
-    </script>
-
-
    <script src="assets/js/jquery.js"></script>
   
    <script src="assets/js/bootstrap.bundle.min.js"></script>
