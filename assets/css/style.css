@@ -16168,4 +16168,51 @@ blockquote cite::before {
   }
 }
 
+
+
+
+
+/* Prevent horizontal scroll on all devices */
+body {
+  overflow-x: hidden;
+}
+
+.fix-overflow {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+/* Center the slider nicely */
+.bl-instagram__slider-wrapper {
+  padding: 0 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Optional: hide shape on small devices */
+@media (max-width: 768px) {
+  .tp-project-shape {
+    display: none;
+  }
+}
+
+/* Image inside each swiper slide */
+.bl-instagram__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0px;
+  display: block;
+}
+
+/* Ensure slides don't stretch oddly */
+.swiper-slide {
+  width: auto !important;
+  max-width: 280px; /* You can adjust this to 200–250px */
+  flex-shrink: 0;
+}
+
+
+
 /*# sourceMappingURL=style.css.map */
