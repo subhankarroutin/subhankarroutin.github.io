@@ -16173,9 +16173,19 @@ blockquote cite::before {
 
 
 /* Prevent horizontal scroll on all devices */
-body {
-  position: relative;
+/* Prevent horizontal scrolling on mobile */
+html, body {
+  max-width: 100%;
   overflow-x: hidden;
+}
+
+/* Prevent any children from causing overflow */
+* {
+  box-sizing: border-box;
+}
+
+* {
+  outline: 1px solid red;
 }
 
 
