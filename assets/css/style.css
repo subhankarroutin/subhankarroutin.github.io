@@ -15637,7 +15637,7 @@ blockquote cite::before {
   text-align: center;
   background-color: #3E3E45;
   display: inline-block;
-  color: #9E9EA2;
+  color: #707070;
   font-size: 12px;
   margin-right: 10px;
 }
@@ -15673,12 +15673,12 @@ blockquote cite::before {
   border: 0;
   border-radius: 10px;
   height: 60px;
-  color: #96A1B6;
+  color: #949393;
   padding-left: 20px;
   padding-right: 75px;
 }
 .tp-footer-widget__input input::placeholder {
-  color: #96A1B6;
+  color: #707070;
 }
 .tp-footer-widget__input button {
   height: 60px;
