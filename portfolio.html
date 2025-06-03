@@ -285,7 +285,7 @@
                           </span>
                           
                        </h3>
-                       <p class="wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s">With four and a half (4.5) years of experience, I design intuitive and scalable 
+                       <p class="wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".7s"> With <span id="experienceYears">4.1</span> years of experience, I design intuitive and scalable 
                         digital experiences using HCI and design thinking. I specialize in B2B & B2C SaaS, CRM, EdTech, and AI sectors. I excel at
                          enhancing engagement, reducing drop-offs, and driving impact. </p>
                        <div class="tp-hero-three-button-box d-flex align-items-center wow tpfadeUp" data-wow-duration=".7s" data-wow-delay=".9s">
@@ -942,7 +942,28 @@
 
  <!-- JS here -->
  <script src="../assets/js/jquery.js"></script>
+<script>
+  function calculateExperience(startDateStr) {
+    const startDate = new Date(startDateStr);
+    const today = new Date();
 
+    let years = today.getFullYear() - startDate.getFullYear();
+    let months = today.getMonth() - startDate.getMonth();
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    const totalExperience = (years + months / 12).toFixed(1);
+    return totalExperience;
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const experience = calculateExperience("2021-05-01");
+    document.getElementById("experienceYears").textContent = experience;
+  });
+</script>
  <script src="../assets/js/bootstrap.bundle.min.js"></script>
  <script src="../assets/js/swiper-bundle.js"></script>
 
