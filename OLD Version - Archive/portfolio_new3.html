@@ -1,0 +1,2736 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Subhankar Rout — Product Designer</title>
+  <meta name="description" content="Product Designer with 5+ years crafting scalable, intuitive digital experiences for B2B SaaS, CRM, EdTech and AI products.">
+  <meta name="keywords" content="subhankar rout, product designer, ux designer, ui ux, capgemini, alstom, sap, portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "r08p4eibkc");
+  </script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <!-- CSS here -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/custom-animation.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/spacing.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    /* =============================================
+       DESIGN TOKENS — PREMIUM PRODUCT PORTFOLIO
+    ============================================= */
+    :root {
+      --tp-theme-1: #5956E9;
+      --tp-theme-primary: #FFDC60;
+      --tp-common-white: #ffffff;
+      --tp-common-black: #0D0D12;
+      --tp-grey-1: #F7F8FD;
+      --tp-text-body: #6B7280;
+      --tp-border-1: #E8ECF2;
+
+      /* Premium additions */
+      --surface-1: #FAFAFA;
+      --surface-2: #F4F4F6;
+      --surface-dark: #0D0D12;
+      --surface-card: #FFFFFF;
+      --accent-violet: #5956E9;
+      --accent-yellow: #FFDC60;
+      --accent-glow: rgba(89, 86, 233, 0.12);
+      --text-primary: #0D0D12;
+      --text-secondary: #6B7280;
+      --text-tertiary: #9CA3AF;
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --shadow-card: 0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.06);
+      --shadow-hover: 0 4px 24px rgba(89,86,233,.14), 0 1px 4px rgba(0,0,0,.08);
+      --transition: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-primary);
+      background: var(--tp-common-white);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* =============================================
+       CUSTOM CURSOR
+    ============================================= */
+    .cursor-dot {
+      width: 8px; height: 8px;
+      background: var(--accent-violet);
+      border-radius: 50%;
+      position: fixed;
+      top: 0; left: 0;
+      pointer-events: none;
+      z-index: 99999;
+      transition: transform 0.1s ease, opacity 0.3s ease;
+      transform: translate(-50%, -50%);
+    }
+    .cursor-ring {
+      width: 36px; height: 36px;
+      border: 1.5px solid rgba(89,86,233,0.4);
+      border-radius: 50%;
+      position: fixed;
+      top: 0; left: 0;
+      pointer-events: none;
+      z-index: 99998;
+      transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), width 0.3s ease, height 0.3s ease, border-color 0.3s ease;
+      transform: translate(-50%, -50%);
+    }
+    .cursor-ring.hovering {
+      width: 56px; height: 56px;
+      border-color: var(--accent-violet);
+      background: rgba(89,86,233,0.06);
+    }
+
+    /* =============================================
+       HERO — PREMIUM SPLIT LAYOUT
+    ============================================= */
+    .pr-hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 140px 0 80px;
+      background: var(--tp-common-white);
+    }
+
+    /* Subtle grid background */
+    .pr-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(89,86,233,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(89,86,233,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 0%, black 40%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .pr-hero__noise {
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      opacity: 0.4;
+    }
+
+    /* Ambient blobs */
+    .pr-hero__blob {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(80px);
+      opacity: 0.5;
+    }
+    .pr-hero__blob--1 {
+      width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(89,86,233,0.15) 0%, transparent 70%);
+      top: -200px; right: -100px;
+      animation: blobFloat1 12s ease-in-out infinite;
+    }
+    .pr-hero__blob--2 {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(255,220,96,0.2) 0%, transparent 70%);
+      bottom: 0; left: -100px;
+      animation: blobFloat2 15s ease-in-out infinite;
+    }
+    @keyframes blobFloat1 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(-30px, 40px) scale(1.05); }
+      66% { transform: translate(20px, -20px) scale(0.95); }
+    }
+    @keyframes blobFloat2 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(40px, -30px) scale(1.08); }
+    }
+
+    .pr-hero__kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-violet);
+      background: rgba(89,86,233,0.08);
+      border: 1px solid rgba(89,86,233,0.15);
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 28px;
+    }
+    .pr-hero__kicker .dot {
+      width: 6px; height: 6px;
+      background: var(--accent-violet);
+      border-radius: 50%;
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    .pr-hero__headline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(44px, 5.5vw, 80px);
+      line-height: 1.05;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 24px;
+      letter-spacing: -0.02em;
+    }
+    .pr-hero__headline em {
+      font-style: italic;
+      color: var(--accent-violet);
+    }
+    .pr-hero__headline .underline-word {
+      position: relative;
+      display: inline-block;
+    }
+    .pr-hero__headline .underline-word::after {
+      content: '';
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: var(--accent-yellow);
+      border-radius: 3px;
+      z-index: -1;
+      transform: scaleX(0);
+      transform-origin: left;
+      animation: underlineDraw 0.8s 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes underlineDraw {
+      to { transform: scaleX(1); }
+    }
+
+    .pr-hero__sub {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      max-width: 520px;
+      margin-bottom: 44px;
+      font-weight: 400;
+    }
+
+    .pr-hero__actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--text-primary);
+      color: white;
+      padding: 16px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--accent-violet);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition);
+    }
+    .btn-primary-hero:hover::before { transform: scaleX(1); }
+    .btn-primary-hero span, .btn-primary-hero i { position: relative; z-index: 1; }
+    .btn-primary-hero:hover { color: white; }
+
+    .btn-ghost-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-primary);
+      padding: 16px 24px;
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid var(--tp-border-1);
+      transition: var(--transition);
+    }
+    .btn-ghost-hero:hover {
+      border-color: var(--accent-violet);
+      color: var(--accent-violet);
+      background: rgba(89,86,233,0.04);
+    }
+
+    /* Hero stats row */
+    .pr-hero__stats {
+      display: flex;
+      gap: 32px;
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid var(--tp-border-1);
+      flex-wrap: wrap;
+    }
+    .pr-hero__stat-item {}
+    .pr-hero__stat-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .pr-hero__stat-label {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      font-weight: 400;
+    }
+
+    /* Hero right — visual composition */
+    .pr-hero__right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .pr-hero__img-frame {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .pr-hero__img-frame img {
+      width: 100%;
+      border-radius: var(--radius-xl);
+      display: block;
+    }
+
+    /* Floating tag pills */
+    .pr-hero__tag {
+      position: absolute;
+      background: white;
+      border: 1px solid var(--tp-border-1);
+      border-radius: 100px;
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: var(--shadow-card);
+      white-space: nowrap;
+    }
+    .pr-hero__tag--1 {
+      top: 40px; left: -20px;
+      animation: floatA 5s ease-in-out infinite;
+    }
+    .pr-hero__tag--2 {
+      bottom: 80px; right: -10px;
+      animation: floatB 6s ease-in-out infinite;
+    }
+    .pr-hero__tag--3 {
+      bottom: 30px; left: 20px;
+      animation: floatC 7s ease-in-out infinite;
+    }
+    .pr-hero__tag .tag-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+    }
+    @keyframes floatA {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes floatB {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+    @keyframes floatC {
+      0%, 100% { transform: translateY(0) rotate(-1deg); }
+      50% { transform: translateY(-6px) rotate(1deg); }
+    }
+
+    /* CTA row below hero — matches tp-btn-white-lg from theme */
+    .pr-hero__cta-row {
+      margin-top: 44px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pr-hero-link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: white;
+      border: 2px solid var(--tp-border-1);
+      border-radius: 10px;
+      padding: 14px 22px;
+      text-decoration: none;
+      position: relative;
+      overflow: hidden;
+      transition: color 0.3s cubic-bezier(0.785,0.135,0.15,0.86), border-color 0.3s ease;
+      z-index: 0;
+    }
+    .pr-hero-link-btn::before,
+    .pr-hero-link-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background: var(--accent-violet);
+      z-index: -1;
+      transition: width 0.3s cubic-bezier(0.785,0.135,0.15,0.86);
+    }
+    .pr-hero-link-btn::before { left: 0; }
+    .pr-hero-link-btn::after  { right: 0; }
+    .pr-hero-link-btn:hover::before,
+    .pr-hero-link-btn:hover::after { width: 50%; }
+    .pr-hero-link-btn:hover {
+      color: white;
+      border-color: var(--accent-violet);
+    }
+    .pr-hero-link-btn i, .pr-hero-link-btn span { position: relative; z-index: 1; }
+    /* Video CV btn — yellow accent matches the Video CV call-to-action style */
+    .pr-hero-link-btn--video::before,
+    .pr-hero-link-btn--video::after { background: var(--accent-yellow); }
+    .pr-hero-link-btn--video:hover { color: var(--text-primary); border-color: var(--accent-yellow); }
+    .pr-hero__cta-divider { display: none; }
+    @media (max-width: 575px) {
+      .pr-hero-link-btn { font-size: 13px; padding: 12px 16px; gap: 8px; }
+    }
+
+    /* =============================================
+       CLIENTS / COMPANIES — MARQUEE STRIP
+    ============================================= */
+    .pr-clients {
+      padding: 0;
+      overflow: hidden;
+      background: var(--surface-dark);
+      position: relative;
+    }
+    .pr-clients::before,
+    .pr-clients::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .pr-clients::before {
+      left: 0;
+      background: linear-gradient(to right, var(--surface-dark), transparent);
+    }
+    .pr-clients::after {
+      right: 0;
+      background: linear-gradient(to left, var(--surface-dark), transparent);
+    }
+
+    .pr-clients__inner {
+      padding: 40px 0;
+    }
+
+    .pr-clients__label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+      margin-bottom: 24px;
+    }
+
+    .pr-marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 24s linear infinite;
+      width: max-content;
+    }
+    .pr-marquee-track:hover { animation-play-state: paused; }
+
+    .pr-marquee-group {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .pr-client-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 32px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.55);
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      transition: color 0.3s ease;
+      cursor: default;
+      white-space: nowrap;
+    }
+    .pr-client-chip:hover { color: rgba(255,255,255,0.95); }
+    .pr-client-chip .chip-logo {
+      width: 22px; height: 22px;
+      object-fit: contain;
+      opacity: 0.5;
+      filter: brightness(0) invert(1);
+      transition: opacity 0.3s;
+    }
+    .pr-client-chip:hover .chip-logo { opacity: 0.9; }
+    .pr-client-chip .chip-icon {
+      width: 22px; height: 22px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,0.08);
+      border-radius: 6px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* =============================================
+       SECTION LABELS
+    ============================================= */
+    .pr-section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-violet);
+      margin-bottom: 20px;
+    }
+    .pr-section-label::before {
+      content: '';
+      width: 20px; height: 1.5px;
+      background: var(--accent-violet);
+      border-radius: 1px;
+    }
+
+    .pr-section-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(32px, 3.5vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin: 0 0 20px;
+    }
+    .pr-section-title em {
+      font-style: italic;
+      color: var(--accent-violet);
+    }
+
+    .pr-section-body {
+      font-size: 17px;
+      line-height: 1.75;
+      color: var(--text-secondary);
+      max-width: 540px;
+    }
+
+    /* =============================================
+       ABOUT SECTION
+    ============================================= */
+    .pr-about {
+      padding: 120px 0;
+      background: var(--tp-common-white);
+    }
+
+    .pr-about__left { padding-right: 40px; }
+
+    .pr-about__img-stack {
+      position: relative;
+      height: 480px;
+    }
+    .pr-about__img-main {
+      position: absolute;
+      top: 0; right: 0;
+      width: 78%;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .pr-about__img-main img { width: 100%; display: block; }
+
+    .pr-about__img-accent {
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 52%;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 4px solid white;
+      box-shadow: var(--shadow-hover);
+      background: var(--surface-1);
+      padding: 24px;
+    }
+    .pr-about__img-accent-inner {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text-secondary);
+      font-style: italic;
+      line-height: 1.5;
+    }
+    .pr-about__img-accent-inner strong {
+      display: block;
+      font-family: 'DM Sans', sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--accent-violet);
+      margin-bottom: 8px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    /* Experience timeline */
+    .pr-experience {
+      padding: 120px 0;
+      background: var(--surface-1);
+    }
+
+    .pr-exp-timeline {
+      margin-top: 60px;
+    }
+
+    .pr-exp-item {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 40px;
+      padding: 48px 0;
+      border-top: 1px solid var(--tp-border-1);
+      position: relative;
+    }
+    .pr-exp-item:last-child { border-bottom: 1px solid var(--tp-border-1); }
+
+    .pr-exp-item__left {}
+    .pr-exp-item__date {
+      font-size: 13px;
+      color: var(--text-tertiary);
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+    .pr-exp-item__company-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: white;
+      border: 1px solid var(--tp-border-1);
+      padding: 6px 12px;
+      border-radius: 100px;
+      margin-top: 8px;
+    }
+    .pr-exp-item__company-badge .badge-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent-violet);
+    }
+
+    .pr-exp-item__right {}
+    .pr-exp-item__role {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 12px;
+    }
+    .pr-exp-item__desc {
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+    .pr-exp-item__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .pr-exp-tag {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: white;
+      border: 1px solid var(--tp-border-1);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    /* Client spotlight in experience */
+    .pr-exp-item__clients {
+      margin-top: 24px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .pr-client-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 16px;
+      background: white;
+      border: 1px solid var(--tp-border-1);
+      border-radius: var(--radius-sm);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: var(--transition);
+    }
+    .pr-client-badge:hover {
+      border-color: var(--accent-violet);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
+    }
+    .pr-client-badge .cb-logo {
+      width: 24px; height: 24px;
+      background: var(--surface-2);
+      border-radius: 6px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 700;
+      color: var(--accent-violet);
+    }
+
+    /* =============================================
+       COMPANIES ANIMATED SECTION (PREMIUM)
+    ============================================= */
+    .pr-companies {
+      padding: 100px 0;
+      background: var(--tp-common-white);
+      overflow: hidden;
+    }
+
+    .pr-companies__orb-stage {
+      position: relative;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 60px;
+    }
+
+    /* Center pulsing core */
+    .pr-orb-core {
+      position: absolute;
+      width: 96px; height: 96px;
+      border-radius: 50%;
+      background: var(--accent-violet);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 10;
+      box-shadow: 0 0 0 0 rgba(89,86,233,0.4);
+      animation: orbCorePulse 3s ease-in-out infinite;
+    }
+    .pr-orb-core svg { width: 36px; height: 36px; }
+    @keyframes orbCorePulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(89,86,233,0.4), 0 0 0 0 rgba(89,86,233,0.2); }
+      50% { box-shadow: 0 0 0 20px rgba(89,86,233,0.1), 0 0 0 40px rgba(89,86,233,0.05); }
+    }
+
+    /* Orbit rings */
+    .pr-orbit {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px dashed rgba(89,86,233,0.15);
+      top: 50%; left: 50%;
+    }
+    .pr-orbit--1 {
+      width: 220px; height: 220px;
+      margin: -110px 0 0 -110px;
+      animation: orbitSpin1 18s linear infinite;
+    }
+    .pr-orbit--2 {
+      width: 360px; height: 360px;
+      margin: -180px 0 0 -180px;
+      animation: orbitSpin2 28s linear infinite;
+    }
+
+    @keyframes orbitSpin1 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+    @keyframes orbitSpin2 { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+
+    /* Company nodes on orbit */
+    .pr-orbit-node {
+      position: absolute;
+      width: 56px; height: 56px;
+      background: white;
+      border: 1.5px solid var(--tp-border-1);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-card);
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-primary);
+      transition: var(--transition);
+      cursor: default;
+    }
+    .pr-orbit-node:hover {
+      border-color: var(--accent-violet);
+      box-shadow: var(--shadow-hover);
+      transform: scale(1.15);
+    }
+    /* Counter-rotate labels to stay upright */
+    .pr-orbit--1 .pr-orbit-node { animation: counterSpin1 18s linear infinite; }
+    .pr-orbit--2 .pr-orbit-node { animation: counterSpin2 28s linear infinite; }
+    @keyframes counterSpin1 { from { transform: rotate(0deg); } to { transform: rotate(-360deg); } }
+    @keyframes counterSpin2 { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+    /* Position nodes on orbit 1 */
+    .pr-orbit--1 .node-0 { top: -28px; left: 50%; margin-left: -28px; }
+    .pr-orbit--1 .node-1 { bottom: -28px; left: 50%; margin-left: -28px; }
+
+    /* Position nodes on orbit 2 */
+    .pr-orbit--2 .node-0 { top: -28px; left: 50%; margin-left: -28px; }
+    .pr-orbit--2 .node-1 { right: -28px; top: 50%; margin-top: -28px; }
+    .pr-orbit--2 .node-2 { bottom: -28px; left: 50%; margin-left: -28px; }
+    .pr-orbit--2 .node-3 { left: -28px; top: 50%; margin-top: -28px; }
+
+    .pr-orbit-node img {
+      width: 30px; height: 30px;
+      object-fit: contain;
+    }
+
+    /* Company name labels floating below stage */
+    .pr-companies__list {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+    .pr-company-card {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 22px;
+      background: var(--surface-1);
+      border: 1px solid var(--tp-border-1);
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      transition: var(--transition);
+    }
+    .pr-company-card:hover {
+      background: white;
+      border-color: var(--accent-violet);
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+      color: var(--accent-violet);
+    }
+    .pr-company-card .cc-icon {
+      width: 32px; height: 32px;
+      background: white;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 10px; font-weight: 700;
+      color: var(--accent-violet);
+      border: 1px solid var(--tp-border-1);
+    }
+
+    /* =============================================
+       PROJECTS SECTION
+    ============================================= */
+    .pr-projects {
+      padding: 120px 0;
+      background: var(--surface-1);
+    }
+
+    .pr-projects__header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 60px;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    /* Filter tabs — premium pill style */
+    .pr-filter-tabs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .pr-filter-tab {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 18px;
+      border-radius: 100px;
+      border: 1.5px solid var(--tp-border-1);
+      background: transparent;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .pr-filter-tab:hover,
+    .pr-filter-tab.active {
+      background: var(--text-primary);
+      border-color: var(--text-primary);
+      color: white;
+    }
+
+    /* Project grid */
+    .pr-projects__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .pr-project-card {
+      background: white;
+      border: 1px solid var(--tp-border-1);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: var(--transition);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .pr-project-card:hover {
+      border-color: transparent;
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+    }
+    .pr-project-card--lg {
+      grid-column: span 1;
+    }
+    .pr-project-card--featured {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .pr-project-card__img {
+      overflow: hidden;
+      background: var(--surface-2);
+      aspect-ratio: 16/9;
+    }
+    .pr-project-card--featured .pr-project-card__img {
+      aspect-ratio: auto;
+    }
+    .pr-project-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pr-project-card:hover .pr-project-card__img img {
+      transform: scale(1.04);
+    }
+
+    .pr-project-card__body {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .pr-project-card--featured .pr-project-card__body {
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .pr-project-card__category {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-violet);
+      margin-bottom: 10px;
+    }
+    .pr-project-card__title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 10px;
+      line-height: 1.3;
+    }
+    .pr-project-card--featured .pr-project-card__title {
+      font-size: 30px;
+    }
+    .pr-project-card__desc {
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      flex: 1;
+      margin-bottom: 20px;
+    }
+
+    /* Impact metric chips */
+    .pr-project-card__metrics {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .pr-metric {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-primary);
+      background: rgba(89,86,233,0.06);
+      border: 1px solid rgba(89,86,233,0.12);
+      padding: 4px 10px;
+      border-radius: 100px;
+    }
+    .pr-metric .metric-val { color: var(--accent-violet); }
+
+    .pr-project-card__link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: gap 0.2s ease, color 0.2s;
+    }
+    .pr-project-card__link:hover {
+      gap: 10px;
+      color: var(--accent-violet);
+    }
+
+    /* =============================================
+       SKILLS — MODERN TAG CLOUD
+    ============================================= */
+    .pr-skills {
+      padding: 100px 0;
+      background: var(--tp-common-white);
+    }
+
+    .pr-skills__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .pr-skill-group {
+      padding: 32px;
+      background: var(--surface-1);
+      border: 1px solid var(--tp-border-1);
+      border-radius: var(--radius-lg);
+      transition: var(--transition);
+    }
+    .pr-skill-group:hover {
+      border-color: rgba(89,86,233,0.2);
+      box-shadow: var(--shadow-hover);
+      background: white;
+    }
+    .pr-skill-group__icon {
+      width: 44px; height: 44px;
+      background: rgba(89,86,233,0.08);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+      color: var(--accent-violet);
+      font-size: 18px;
+    }
+    .pr-skill-group__title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+    .pr-skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .pr-skill-tag {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      background: white;
+      border: 1px solid var(--tp-border-1);
+      padding: 5px 12px;
+      border-radius: 100px;
+      transition: var(--transition);
+    }
+    .pr-skill-group:hover .pr-skill-tag {
+      background: rgba(89,86,233,0.06);
+      border-color: rgba(89,86,233,0.15);
+      color: var(--accent-violet);
+    }
+
+    /* =============================================
+       PROCESS — NUMBERED STEPS
+    ============================================= */
+    .pr-process {
+      padding: 100px 0;
+      background: var(--surface-dark);
+      position: relative;
+      overflow: hidden;
+    }
+    .pr-process::before {
+      content: '';
+      position: absolute;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 800px; height: 800px;
+      background: radial-gradient(circle, rgba(89,86,233,0.2) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .pr-process .pr-section-label { color: var(--accent-yellow); }
+    .pr-process .pr-section-label::before { background: var(--accent-yellow); }
+    .pr-process .pr-section-title { color: white; }
+
+    .pr-process__steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .pr-step {
+      padding: 32px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: var(--radius-lg);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .pr-step::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(89,86,233,0.1), transparent);
+      opacity: 0;
+      transition: var(--transition);
+    }
+    .pr-step:hover::before { opacity: 1; }
+    .pr-step:hover {
+      border-color: rgba(89,86,233,0.4);
+      transform: translateY(-4px);
+    }
+
+    .pr-step__num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.08);
+      line-height: 1;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .pr-step__icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: rgba(89,86,233,0.3);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.9);
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .pr-step__title {
+      font-size: 17px;
+      font-weight: 600;
+      color: white;
+      margin: 0 0 10px;
+    }
+    .pr-step__desc {
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* =============================================
+       CTA SECTION
+    ============================================= */
+    .pr-cta {
+      padding: 120px 0;
+      background: var(--tp-common-white);
+      text-align: center;
+    }
+
+    .pr-cta__inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .pr-cta__eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-violet);
+      background: rgba(89,86,233,0.08);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 32px;
+    }
+
+    .pr-cta__title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: clamp(40px, 4.5vw, 64px);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.1;
+      margin: 0 0 24px;
+      letter-spacing: -0.02em;
+    }
+    .pr-cta__title em { font-style: italic; color: var(--accent-violet); }
+
+    .pr-cta__sub {
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-secondary);
+      margin-bottom: 48px;
+    }
+
+    .pr-cta__actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-cta-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--accent-violet);
+      color: white;
+      padding: 18px 32px;
+      border-radius: var(--radius-sm);
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 20px rgba(89,86,233,0.3);
+    }
+    .btn-cta-primary:hover {
+      background: #4340e0;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(89,86,233,0.4);
+      color: white;
+    }
+
+    .btn-cta-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-primary);
+      padding: 18px 28px;
+      border-radius: var(--radius-sm);
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1.5px solid var(--tp-border-1);
+      transition: var(--transition);
+    }
+    .btn-cta-secondary:hover {
+      border-color: var(--accent-violet);
+      color: var(--accent-violet);
+      background: rgba(89,86,233,0.04);
+    }
+
+    /* =============================================
+       ACHIEVEMENTS / CREATIVE CHRONICLES
+    ============================================= */
+    .pr-chronicles {
+      padding: 100px 0;
+      background: var(--surface-1);
+    }
+
+    .pr-chronicles__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 60px;
+    }
+
+    .pr-story-card {
+      background: white;
+      border: 1px solid var(--tp-border-1);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: var(--transition);
+    }
+    .pr-story-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-4px);
+      border-color: transparent;
+    }
+    .pr-story-card__img {
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .pr-story-card__img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .pr-story-card:hover .pr-story-card__img img { transform: scale(1.06); }
+    .pr-story-card__body { padding: 20px; }
+    .pr-story-card__title {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      line-height: 1.4;
+      margin: 0;
+    }
+    .pr-story-card__title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .pr-story-card__title a:hover { color: var(--accent-violet); }
+
+    /* =============================================
+       SCROLL ANIMATIONS
+    ============================================= */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    [data-reveal].revealed {
+      opacity: 1;
+      transform: none;
+    }
+    [data-reveal-delay="1"] { transition-delay: 0.1s; }
+    [data-reveal-delay="2"] { transition-delay: 0.2s; }
+    [data-reveal-delay="3"] { transition-delay: 0.3s; }
+    [data-reveal-delay="4"] { transition-delay: 0.4s; }
+
+    /* Hero entrance animation */
+    @keyframes heroFadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: none; }
+    }
+    .hero-anim-1 { animation: heroFadeUp 0.8s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .hero-anim-2 { animation: heroFadeUp 0.8s 0.4s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .hero-anim-3 { animation: heroFadeUp 0.8s 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .hero-anim-4 { animation: heroFadeUp 0.8s 0.7s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .hero-anim-5 { animation: heroFadeUp 0.8s 0.85s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .hero-anim-right { animation: heroFadeRight 0.9s 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    @keyframes heroFadeRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: none; }
+    }
+
+    /* =============================================
+       RESPONSIVE
+    ============================================= */
+    @media (max-width: 1199px) {
+      .pr-projects__grid { grid-template-columns: 1fr; }
+      .pr-project-card--featured { grid-template-columns: 1fr; grid-column: span 1; }
+      .pr-process__steps { grid-template-columns: repeat(2, 1fr); }
+      .pr-skills__grid { grid-template-columns: repeat(2, 1fr); }
+      .pr-chronicles__grid { grid-template-columns: repeat(2, 1fr); }
+      .pr-exp-item { grid-template-columns: 1fr; gap: 16px; }
+    }
+
+    @media (max-width: 767px) {
+      .pr-hero { padding: 120px 0 60px; }
+      .pr-hero__stats { gap: 20px; }
+      .pr-hero__tag { display: none; }
+      .pr-process__steps { grid-template-columns: 1fr; }
+      .pr-skills__grid { grid-template-columns: 1fr; }
+      .pr-chronicles__grid { grid-template-columns: 1fr; }
+      .pr-about__img-stack { height: auto; margin-bottom: 40px; }
+      .pr-about__img-main { position: static; width: 100%; }
+      .pr-about__img-accent { display: none; }
+      .pr-companies__orb-stage { height: 280px; }
+      .pr-orbit--2 { display: none; }
+      .pr-cta__title { font-size: 36px; }
+    }
+
+    /* =============================================
+       VIDEO POPUP
+    ============================================= */
+    .popup-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .popup-overlay.active { display: flex; }
+    .popup-content {
+      position: relative;
+      width: 90%;
+      max-width: 760px;
+      background: #111;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .popup-close {
+      position: absolute;
+      top: -14px; right: -14px;
+      width: 36px; height: 36px;
+      background: white;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--text-primary);
+      z-index: 10;
+      border: none;
+      line-height: 1;
+    }
+    .popup-video-frame {
+      width: 100%;
+      aspect-ratio: 16/9;
+      display: block;
+    }
+  
+    /* Hero right: info card (fills top gap) */
+    .pr-hero__info-card {
+      background: white;
+      border: 1px solid var(--tp-border-1);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-card);
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+    .pr-hero__info-card__row {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+    .pr-hero__info-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      flex: 1;
+    }
+    .pr-hero__info-sep {
+      width: 1px;
+      height: 36px;
+      background: var(--tp-border-1);
+      margin: 0 16px;
+    }
+    .info-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+    .info-val {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ============= HEADER (UNCHANGED) ============= -->
+  <header class="d-none d-lg-block">
+    <div id="header-sticky" class="tp-header-area-two header-transparent header-space-three pl-115 pr-115">
+      <div class="container-fluid">
+        <div class="row align-items-center header-space-two">
+          <div class="col-xxl-3 col-xl-3 col-lg-3">
+            <div class="tp-logo text-start">
+              <a href="index.html"><img src="assets/img/logo/logo-blue.png" alt="page-logo"></a>
+            </div>
+          </div>
+          <div class="col-xxl-6 col-xl-6 col-lg-6">
+            <div class="tp-main-menu text-center">
+              <nav id="mobile-menu">
+                <ul>
+                  <li><a href="about.html">About</a></li>
+                  <li class="has-dropdown"><a href="#">YouTube Channels</a>
+                    <ul class="submenu text-start">
+                      <li><a href="odicoder.html">OdiCoder</a></li>
+                      <li><a href="s4cinesphere.html">S4 Cinesphere</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-dropdown"><a href="#">Publications</a>
+                    <ul class="submenu text-start">
+                      <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
+                      <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="pr-award.html">Press Release</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-xxl-3 col-xl-3 col-lg-3">
+            <div class="tp-header-button text-end">
+              <a class="tp-btn" href="index.html">Home Page</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Header -->
+  <div id="header-sticky-mobile" class="tp-md-header-area header-transparent d-lg-none pt-30">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-6">
+          <div class="tp-logo">
+            <a href="index.html"><img src="assets/img/logo/logo-blue.png" alt="page-logo"></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-6">
+          <div class="tp-header-right z-index-1 d-flex align-items-center justify-content-end">
+            <a class="tp-btn d-none d-md-block" href="index.html">Home Page</a>
+            <button class="tp-menu-bar"><i class="fal fa-bars"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas -->
+  <div class="tp-offcanvas-area">
+    <div class="tpoffcanvas">
+      <div class="tpoffcanvas__logo">
+        <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="logo-white"></a>
+      </div>
+      <div class="tpoffcanvas__close-btn">
+        <a class="close-btn" href="javascript:void(0)"><i class="fal fa-times-hexagon"></i></a>
+      </div>
+      <div class="mobile-menu"></div>
+      <div class="tp-header-button" style="text-align: left;">
+        <a class="tp-btn" href="index.html">Home Page</a>
+      </div>
+      <div class="tpoffcanvas__contact">
+        <br><br>
+        <span>Send Mail</span>
+        <ul>
+          <li><i class="fas fa-envelope"></i> <a href="mailto:subhankarrout.kiit@gmail.com">subhankarrout.kiit@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="body-overlay"></div>
+
+
+  <main>
+    <!-- =============================================
+         HERO SECTION
+    ============================================= -->
+    <section class="pr-hero" id="home">
+      <div class="pr-hero__noise"></div>
+      <div class="pr-hero__blob pr-hero__blob--1"></div>
+      <div class="pr-hero__blob pr-hero__blob--2"></div>
+
+      <div class="container">
+        <div class="row align-items-center" style="gap: 0;">
+          <div class="col-xl-6 col-lg-6">
+            <div class="hero-anim-1">
+              <div class="pr-hero__kicker">
+                <span class="dot"></span>
+                Available for new opportunities
+              </div>
+            </div>
+
+            <h1 class="pr-hero__headline hero-anim-2">
+              Designing products <em>people</em> love to use
+            </h1>
+
+            <p class="pr-hero__sub hero-anim-3">
+              Product Designer with <strong id="experienceYears">5+</strong> years of experience crafting intuitive, scalable digital experiences across B2B SaaS, CRM, EdTech and AI — using HCI and design thinking to drive measurable impact.
+            </p>
+
+            <div class="pr-hero__actions hero-anim-4">
+              <a class="btn-primary-hero" href="#project">
+                <span>View My Work</span>
+                <i class="far fa-arrow-right"></i>
+              </a>
+              <a class="btn-ghost-hero" href="../Product-Designer-Resume--Subhankar-Rout.pdf" download>
+                <i class="far fa-file-pdf"></i>
+                Resume
+              </a>
+            </div>
+
+            <div class="pr-hero__stats hero-anim-5">
+              <div class="pr-hero__stat-item">
+                <div class="pr-hero__stat-num" id="experienceDisplay">5+</div>
+                <div class="pr-hero__stat-label">Years experience</div>
+              </div>
+              <div class="pr-hero__stat-item">
+                <div class="pr-hero__stat-num">20+</div>
+                <div class="pr-hero__stat-label">Projects shipped</div>
+              </div>
+              <div class="pr-hero__stat-item">
+                <div class="pr-hero__stat-num">4</div>
+                <div class="pr-hero__stat-label">Companies</div>
+              </div>
+              <div class="pr-hero__stat-item">
+                <div class="pr-hero__stat-num">5</div>
+                <div class="pr-hero__stat-label">Certifications</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-6 col-lg-6">
+            <div class="pr-hero__right hero-anim-right" style="padding-top:20px;">
+              <!-- Top info card — fills the gap above the image -->
+              <div class="pr-hero__info-card">
+                <div class="pr-hero__info-card__row">
+                  <div class="pr-hero__info-item">
+                    <span class="info-label">Currently at</span>
+                    <span class="info-val"><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:6px;"></span>Capgemini</span>
+                  </div>
+                  <div class="pr-hero__info-sep"></div>
+                  <div class="pr-hero__info-item">
+                    <span class="info-label">Location</span>
+                    <span class="info-val">Bangalore, IN</span>
+                  </div>
+                  <div class="pr-hero__info-sep"></div>
+                  <div class="pr-hero__info-item">
+                    <span class="info-label">Open to</span>
+                    <span class="info-val" style="color:var(--accent-violet);">Senior roles</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pr-hero__img-frame" style="margin-top:20px;">
+                <img src="./assets/img/workplace.png" alt="Subhankar Rout — Product Designer workspace">
+
+                <!-- Floating tags -->
+                <div class="pr-hero__tag pr-hero__tag--1">
+                  <span class="tag-dot" style="background:#5956E9;"></span>
+                  Product Designer II
+                </div>
+                <div class="pr-hero__tag pr-hero__tag--2">
+                  <span class="tag-dot" style="background:#22c55e;"></span>
+                  SAP Fiori · Alstom
+                </div>
+                <div class="pr-hero__tag pr-hero__tag--3">
+                  <i class="fab fa-figma" style="color:#F24E1E;"></i>
+                  Figma MCP
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick links row -->
+        <div class="row mt-50">
+          <div class="col-12">
+            <div class="pr-hero__cta-row">
+              <a class="pr-hero-link-btn" href="https://linkedin.com/in/subhankarrout/" target="_blank">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+              </a>
+              <a class="pr-hero-link-btn" href="https://behance.net/routsubhankar" target="_blank">
+                <i class="fab fa-behance"></i>
+                <span>Behance</span>
+              </a>
+              <a class="pr-hero-link-btn pr-hero-link-btn--video video-trigger" href="https://www.youtube.com/embed/o5S7uLxBjpw?autoplay=1">
+                <i class="far fa-play-circle"></i>
+                <span>Watch Video CV</span>
+              </a>
+              <a class="pr-hero-link-btn" href="../Product-Designer-Resume--Subhankar-Rout.pdf" download>
+                <i class="far fa-file-pdf"></i>
+                <span>Download Resume</span>
+              </a>
+              <a class="pr-hero-link-btn" href="mailto:subhankarrout.kiit@gmail.com">
+                <i class="fas fa-envelope"></i>
+                <span>Say Hello</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         CLIENTS MARQUEE STRIP
+    ============================================= -->
+    <div class="pr-clients">
+      <div class="pr-clients__inner">
+        <div class="pr-clients__label">Companies &amp; clients I've worked with</div>
+        <div class="pr-marquee-track">
+          <div class="pr-marquee-group">
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#0070AD;background:rgba(0,112,173,0.1);">C</div>Capgemini</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#009de0;background:rgba(0,158,224,0.1);">A</div>Alstom</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#0070AD;background:rgba(0,112,173,0.1);">S</div>SAP</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#5956E9;background:rgba(89,86,233,0.12);">D</div>Droisys Inc.</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#e63946;background:rgba(230,57,70,0.1);">R</div>RPATech</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#22c55e;background:rgba(34,197,94,0.1);">DT</div>Deligence Technologies</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#009de0;background:rgba(0,158,224,0.08);">EJ</div>E. &amp; J. Gallo Winery</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#8B5CF6;background:rgba(139,92,246,0.1);">RN</div>RNDC</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#f59e0b;background:rgba(245,158,11,0.1);">H</div>Heidelberg Distributing</div>
+          </div>
+          <div class="pr-marquee-group" aria-hidden="true">
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#0070AD;background:rgba(0,112,173,0.1);">C</div>Capgemini</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#009de0;background:rgba(0,158,224,0.1);">A</div>Alstom</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#0070AD;background:rgba(0,112,173,0.1);">S</div>SAP</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#5956E9;background:rgba(89,86,233,0.12);">D</div>Droisys Inc.</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#e63946;background:rgba(230,57,70,0.1);">R</div>RPATech</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#22c55e;background:rgba(34,197,94,0.1);">DT</div>Deligence Technologies</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#009de0;background:rgba(0,158,224,0.08);">EJ</div>E. &amp; J. Gallo Winery</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#8B5CF6;background:rgba(139,92,246,0.1);">RN</div>RNDC</div>
+            <div class="pr-client-chip"><div class="chip-icon" style="color:#f59e0b;background:rgba(245,158,11,0.1);">H</div>Heidelberg Distributing</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- =============================================
+         ABOUT SECTION
+    ============================================= -->
+    <section class="pr-about" id="about">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-xl-5 col-lg-5 mb-60 mb-lg-0">
+            <div class="pr-about__img-stack" data-reveal>
+              <div class="pr-about__img-main">
+                <img src="assets/img/hero/hero-img-2.png" alt="Subhankar Rout" onerror="this.style.background='#F4F4F6';this.style.minHeight='320px';">
+              </div>
+              <div class="pr-about__img-accent">
+                <div class="pr-about__img-accent-inner">
+                  <strong>Design Philosophy</strong>
+                  "Design is not just what it looks like — it's how it works, how it feels, and the value it creates."
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-7 col-lg-7 pl-xl-5">
+            <div data-reveal data-reveal-delay="2">
+              <div class="pr-section-label">About Me</div>
+              <h2 class="pr-section-title">Bridging the gap between <em>user needs</em> and business goals</h2>
+              <p class="pr-section-body mb-30">
+                I'm Subhankar — a Product Designer at Capgemini, working on enterprise-scale digital products for global clients like Alstom and SAP. With a foundation in HCI and design thinking, I obsess over the intersection of clarity, delight and measurable impact.
+              </p>
+              <p class="pr-section-body mb-40">
+                Previously I've shipped across B2B SaaS platforms, CRM systems, AI-powered tools and consumer apps — always with a focus on reducing complexity and elevating human-computer interaction.
+              </p>
+              <div style="display:flex; gap:16px; flex-wrap:wrap;">
+                <a class="btn-primary-hero" href="about.html">
+                  <span>Full Story</span>
+                  <i class="far fa-arrow-right"></i>
+                </a>
+                <a class="btn-ghost-hero" href="https://linkedin.com/in/subhankarrout/" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                  Connect
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- =============================================
+         SKILLS
+    ============================================= -->
+    <section class="pr-skills">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-5" data-reveal>
+            <div class="pr-section-label">Capabilities</div>
+            <h2 class="pr-section-title">Skills &amp; <em>tools</em> I use daily</h2>
+            <p class="pr-section-body">
+              A toolkit built over 5+ years of real-world product design — spanning research, systems, interaction and visual craft.
+            </p>
+          </div>
+        </div>
+
+        <div class="pr-skills__grid">
+          <div class="pr-skill-group" data-reveal data-reveal-delay="1">
+            <div class="pr-skill-group__icon"><i class="fal fa-search"></i></div>
+            <div class="pr-skill-group__title">Research &amp; Strategy</div>
+            <div class="pr-skill-tags">
+              <span class="pr-skill-tag">User Research</span>
+              <span class="pr-skill-tag">Usability Testing</span>
+              <span class="pr-skill-tag">Heuristic Evaluation</span>
+              <span class="pr-skill-tag">Competitive Analysis</span>
+              <span class="pr-skill-tag">HCI</span>
+              <span class="pr-skill-tag">Jobs-to-be-Done</span>
+            </div>
+          </div>
+
+          <div class="pr-skill-group" data-reveal data-reveal-delay="2">
+            <div class="pr-skill-group__icon"><i class="fal fa-pen-nib"></i></div>
+            <div class="pr-skill-group__title">Design &amp; Interaction</div>
+            <div class="pr-skill-tags">
+              <span class="pr-skill-tag">Wireframing</span>
+              <span class="pr-skill-tag">Prototyping</span>
+              <span class="pr-skill-tag">Interaction Design</span>
+              <span class="pr-skill-tag">Visual Design</span>
+              <span class="pr-skill-tag">Design Systems</span>
+              <span class="pr-skill-tag">Information Architecture</span>
+            </div>
+          </div>
+
+          <div class="pr-skill-group" data-reveal data-reveal-delay="3">
+            <div class="pr-skill-group__icon"><i class="fab fa-figma"></i></div>
+            <div class="pr-skill-group__title">Tools &amp; Software</div>
+            <div class="pr-skill-tags">
+              <span class="pr-skill-tag">Figma</span>
+              <span class="pr-skill-tag">FigJam</span>
+              <span class="pr-skill-tag">Adobe XD</span>
+              <span class="pr-skill-tag">After Effects</span>
+              <span class="pr-skill-tag">Cinema 4D</span>
+              <span class="pr-skill-tag">Procreate</span>
+              <span class="pr-skill-tag">Zeplin</span>
+            </div>
+          </div>
+
+          <div class="pr-skill-group" data-reveal data-reveal-delay="1">
+            <div class="pr-skill-group__icon"><i class="fal fa-chart-bar"></i></div>
+            <div class="pr-skill-group__title">Product &amp; Analytics</div>
+            <div class="pr-skill-tags">
+              <span class="pr-skill-tag">Product Thinking</span>
+              <span class="pr-skill-tag">OKR Alignment</span>
+              <span class="pr-skill-tag">A/B Testing</span>
+              <span class="pr-skill-tag">Metrics-driven Design</span>
+              <span class="pr-skill-tag">Agile / Scrum</span>
+            </div>
+          </div>
+
+          <div class="pr-skill-group" data-reveal data-reveal-delay="2">
+            <div class="pr-skill-group__icon"><i class="fal fa-layer-group"></i></div>
+            <div class="pr-skill-group__title">Domain Expertise</div>
+            <div class="pr-skill-tags">
+              <span class="pr-skill-tag">B2B SaaS</span>
+              <span class="pr-skill-tag">Enterprise Software</span>
+              <span class="pr-skill-tag">CRM</span>
+              <span class="pr-skill-tag">EdTech</span>
+              <span class="pr-skill-tag">AI Products</span>
+              <span class="pr-skill-tag">HealthTech</span>
+            </div>
+          </div>
+
+          <div class="pr-skill-group" data-reveal data-reveal-delay="3">
+            <div class="pr-skill-group__icon"><i class="fal fa-users"></i></div>
+            <div class="pr-skill-group__title">Collaboration</div>
+            <div class="pr-skill-tags">
+              <span class="pr-skill-tag">Cross-functional Teams</span>
+              <span class="pr-skill-tag">Stakeholder Presentations</span>
+              <span class="pr-skill-tag">Design Critiques</span>
+              <span class="pr-skill-tag">Dev Handoff</span>
+              <span class="pr-skill-tag">Mentoring</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         SELECTED WORK
+    ============================================= -->
+    <section class="pr-projects" id="project">
+      <div class="container">
+        <div class="pr-projects__header">
+          <div data-reveal>
+            <div class="pr-section-label">Selected Work</div>
+            <h2 class="pr-section-title">Projects that <em>moved</em> the needle</h2>
+          </div>
+          <div data-reveal data-reveal-delay="2">
+            <a href="https://www.behance.net/routsubhankar" target="_blank" class="btn-ghost-hero" style="display:inline-flex;font-size:14px;padding:12px 20px;">
+              All Projects <i class="fab fa-behance ml-10"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="pr-projects__grid" id="projectGrid">
+
+          <!-- 1: Featured — MyGame Redesign -->
+          <div class="pr-project-card pr-project-card--featured" data-cat="saas" data-reveal>
+            <div class="pr-project-card__img">
+              <a href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2" target="_blank">
+                <img src="./assets/img/portfolio/casestudy3.webp" alt="MyGame Page Redesign">
+              </a>
+            </div>
+            <div class="pr-project-card__body">
+              <div class="pr-project-card__category">Case Study · Gaming SaaS · UX Research</div>
+              <h3 class="pr-project-card__title">37% More Game Creations</h3>
+              <p class="pr-project-card__desc">Complete UX overhaul of the game creation flow — reduced cognitive load by restructuring information architecture, simplifying onboarding, and clarifying CTAs. Result: 37% increase in new game creation, 15% reduction in drop-off.</p>
+              <div class="pr-project-card__metrics">
+                <span class="pr-metric">+37% game creation</span>
+                <span class="pr-metric">-15% drop-off</span>
+              </div>
+              <a class="pr-project-card__link" href="https://www.figma.com/proto/3rb9s8cxtvX96JOIfXnbAP/MyGame-Page-Redesign---Case-Study?page-id=0%3A1&node-id=1-2" target="_blank">View Case Study <i class="far fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- 2: Account360 / Droisys -->
+          <div class="pr-project-card" data-cat="saas" data-reveal data-reveal-delay="1">
+            <div class="pr-project-card__img">
+              <a href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">
+                <img src="assets/img/portfolio/teamallocation.webp" alt="CRM Dashboard — Alcohol Beverage Industry">
+              </a>
+            </div>
+            <div class="pr-project-card__body">
+              <div class="pr-project-card__category">CRM UX · SaaS · Alcohol &amp; Beverage</div>
+              <h3 class="pr-project-card__title">Account360.ai — Industry CRM</h3>
+              <p class="pr-project-card__desc">UX for a specialist CRM serving E. &amp; J. Gallo Winery, RNDC, and Heidelberg Distributing. Modular UI components cut customisation turnaround by 20%.</p>
+              <div class="pr-project-card__metrics">
+                <span class="pr-metric">-20% turnaround</span>
+                <span class="pr-metric">Modular system</span>
+              </div>
+              <a class="pr-project-card__link" href="https://www.behance.net/gallery/217392167/Team-Overview-Dashboard" target="_blank">View Project <i class="far fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <!-- 3: ChronicCare -->
+          <div class="pr-project-card" data-cat="saas" data-reveal data-reveal-delay="2">
+            <div class="pr-project-card__img">
+              <a href="https://www.figma.com/proto/fnPmTyiboTblrLMrZXQY8r/Design-Exercise?page-id=110%3A5935&node-id=110-12622" target="_blank">
+                <img src="assets/img/portfolio/chronicare.webp" alt="ChronicCare — Diabetes Management App">
+              </a>
+            </div>
+            <div class="pr-project-card__body">
+              <div class="pr-project-card__category">HealthTech · Mobile App · AI-powered</div>
+              <h3 class="pr-project-card__title">Chronic Care Simplified</h3>
+              <p class="pr-project-card__desc">Diabetes management companion with personalised health tracking, AI-powered insights and smart reminders — designed with accessibility-first principles.</p>
+              <div class="pr-project-card__metrics">
+                <span class="pr-metric">AI-powered insights</span>
+                <span class="pr-metric">Accessibility-first</span>
+              </div>
+              <a class="pr-project-card__link" href="https://www.figma.com/proto/fnPmTyiboTblrLMrZXQY8r/Design-Exercise?page-id=110%3A5935&node-id=110-12622" target="_blank">View Project <i class="far fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-50" data-reveal>
+          <a href="https://www.behance.net/routsubhankar" target="_blank" class="btn-ghost-hero" style="display:inline-flex;">
+            Explore all projects on Behance <i class="fab fa-behance" style="margin-left:10px;"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         EXPERIENCE TIMELINE
+    ============================================= -->
+        <!-- =============================================
+         EXPERIENCE TIMELINE
+    ============================================= -->
+    <section class="pr-experience" id="experience">
+      <div class="container">
+        <div data-reveal>
+          <div class="pr-section-label">Experience</div>
+          <h2 class="pr-section-title">Where I've built <em>real-world</em> impact</h2>
+        </div>
+
+        <div class="pr-exp-timeline">
+
+          <!-- Capgemini -->
+          <div class="pr-exp-item" data-reveal>
+            <div class="pr-exp-item__left">
+              <div class="pr-exp-item__date">Jul 2025 — Present</div>
+              <div class="pr-exp-item__company-badge">
+                <span class="badge-dot" style="background:#0070AD;"></span>
+                Capgemini
+              </div>
+            </div>
+            <div class="pr-exp-item__right">
+              <h3 class="pr-exp-item__role">Product Designer II</h3>
+              <p class="pr-exp-item__desc">Designing enterprise B2B eCommerce platforms for global clients Alstom and SAP. Deployed on-site at SAP to enhance the SAP Fiori Design System with scalable, reusable, accessibility-first UI components. Driving Gen AI and Figma MCP-powered POC initiatives — turning AI capabilities into production-ready design workflows.</p>
+              <div class="pr-exp-item__tags">
+                <span class="pr-exp-tag">SAP Fiori Design System</span>
+                <span class="pr-exp-tag">Enterprise B2B eCommerce</span>
+                <span class="pr-exp-tag">Gen AI POC</span>
+                <span class="pr-exp-tag">Figma MCP</span>
+                <span class="pr-exp-tag">Accessibility</span>
+                <span class="pr-exp-tag">Agile / Scrum</span>
+              </div>
+              <div class="pr-exp-item__clients">
+                <div class="pr-client-badge"><div class="cb-logo" style="color:#009de0;">A</div>Alstom — Global Transport &amp; Rail</div>
+                <div class="pr-client-badge"><div class="cb-logo" style="color:#0070AD;">S</div>SAP — Enterprise ERP &amp; Fiori</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Droisys -->
+          <div class="pr-exp-item" data-reveal data-reveal-delay="1">
+            <div class="pr-exp-item__left">
+              <div class="pr-exp-item__date">Feb 2025 — Jun 2025</div>
+              <div class="pr-exp-item__company-badge">
+                <span class="badge-dot" style="background:#5956E9;"></span>
+                Droisys Inc.
+              </div>
+            </div>
+            <div class="pr-exp-item__right">
+              <h3 class="pr-exp-item__role">Sr. UI/UX Designer</h3>
+              <p class="pr-exp-item__desc">Led UX/UI for <strong>Account360.ai</strong> — a specialist CRM for the U.S. alcohol beverage industry, used by major players including <strong>E. &amp; J. Gallo Winery</strong>, <strong>Republic National Distributing Company (RNDC)</strong>, and <strong>Heidelberg Distributing Company</strong> — connecting suppliers, distributors and makers on one platform. Reduced customisation turnaround by 20% and introduced modular UI components that cut UI bugs and sped up delivery cycles.</p>
+              <div class="pr-exp-item__tags">
+                <span class="pr-exp-tag">CRM / SaaS UX</span>
+                <span class="pr-exp-tag">Modular Design System</span>
+                <span class="pr-exp-tag">Account360.ai</span>
+                <span class="pr-exp-tag">Alcohol &amp; Beverage Industry</span>
+                <span class="pr-exp-tag">Figma</span>
+                <span class="pr-exp-tag">Dev Handoff</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Deligence Technologies -->
+          <div class="pr-exp-item" data-reveal data-reveal-delay="2">
+            <div class="pr-exp-item__left">
+              <div class="pr-exp-item__date">Jan 2024 — Feb 2025</div>
+              <div class="pr-exp-item__company-badge">
+                <span class="badge-dot" style="background:#22c55e;"></span>
+                Deligence Technologies
+              </div>
+            </div>
+            <div class="pr-exp-item__right">
+              <h3 class="pr-exp-item__role">Senior User Experience Designer</h3>
+              <p class="pr-exp-item__desc">Revamped a leading educational gaming platform's UI/UX — driving a <strong>20% increase in user engagement</strong> and <strong>15% reduction in drop-off rates</strong>. Designed end-to-end wireframes, prototypes, user flows and conducted research cycles. Cross-functional collaboration resulted in a <strong>30% improvement in user satisfaction scores</strong>.</p>
+              <div class="pr-exp-item__tags">
+                <span class="pr-exp-tag">EdTech &amp; Gaming UX</span>
+                <span class="pr-exp-tag">User Research</span>
+                <span class="pr-exp-tag">Prototyping</span>
+                <span class="pr-exp-tag">Usability Testing</span>
+                <span class="pr-exp-tag">Wireframing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- RPATech -->
+          <div class="pr-exp-item" data-reveal data-reveal-delay="3">
+            <div class="pr-exp-item__left">
+              <div class="pr-exp-item__date">May 2021 — Jan 2024</div>
+              <div class="pr-exp-item__company-badge">
+                <span class="badge-dot" style="background:#FFDC60; border: 1px solid #ccc;"></span>
+                RPATech, Gurugram
+              </div>
+            </div>
+            <div class="pr-exp-item__right">
+              <h3 class="pr-exp-item__role">Visual Interaction Designer</h3>
+              <p class="pr-exp-item__desc">Created visual and interaction design for top-rated online courses published on <strong>Udemy</strong>, <strong>Coursera</strong>, and <strong>UiPath Academy</strong> — resulting in a <strong>40% increase in course enrollment</strong>. Automation was baked into the workflow from day one: from RPA-powered content pipelines to AI-assisted design templates, efficiency was always the goal.</p>
+              <div class="pr-exp-item__tags">
+                <span class="pr-exp-tag">Udemy</span>
+                <span class="pr-exp-tag">Coursera</span>
+                <span class="pr-exp-tag">UiPath Academy</span>
+                <span class="pr-exp-tag">Visual Design</span>
+                <span class="pr-exp-tag">Interaction Design</span>
+                <span class="pr-exp-tag">RPA / Automation</span>
+                <span class="pr-exp-tag">Adobe Creative Suite</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+<!-- =============================================
+         COMPANIES
+    ============================================= -->
+    <section class="pr-companies">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-xl-7" data-reveal>
+            <div class="pr-section-label" style="justify-content:center;">Companies &amp; Clients</div>
+            <h2 class="pr-section-title">A career across <em>diverse</em> industries</h2>
+            <p class="pr-section-body" style="margin:0 auto;">
+              From enterprise ERP at SAP to alcohol beverage CRM at Droisys, EdTech platforms to RPA-powered course design — every role brought a different domain, a different challenge.
+            </p>
+          </div>
+        </div>
+
+        <!-- Orbit animation -->
+        <div class="pr-companies__orb-stage" data-reveal data-reveal-delay="2">
+          <div class="pr-orb-core">
+            <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="10" width="24" height="16" rx="3" stroke="white" stroke-width="2"/>
+              <path d="M12 10V8a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2" stroke="white" stroke-width="2"/>
+              <line x1="6" y1="18" x2="30" y2="18" stroke="white" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="pr-orbit pr-orbit--1">
+            <div class="pr-orbit-node node-0"><span style="font-size:9px;font-weight:700;color:#009de0;">ALSTOM</span></div>
+            <div class="pr-orbit-node node-1"><span style="font-size:9px;font-weight:700;color:#0070AD;">SAP</span></div>
+          </div>
+          <div class="pr-orbit pr-orbit--2">
+            <div class="pr-orbit-node node-0"><span style="font-size:8px;font-weight:700;color:#0070AD;">Capgemini</span></div>
+            <div class="pr-orbit-node node-1"><span style="font-size:8px;font-weight:700;color:#5956E9;">Droisys</span></div>
+            <div class="pr-orbit-node node-2"><span style="font-size:8px;font-weight:700;color:#22c55e;">Deligence</span></div>
+            <div class="pr-orbit-node node-3"><span style="font-size:8px;font-weight:700;color:#e63946;">RPATech</span></div>
+          </div>
+        </div>
+
+        <div class="pr-companies__list" data-reveal data-reveal-delay="3">
+          <div class="pr-company-card">
+            <div class="cc-icon" style="color:#0070AD;">C</div>
+            <span>Capgemini</span>
+            <small style="color:var(--text-tertiary);font-size:12px;margin-left:4px;">— Enterprise Design</small>
+          </div>
+          <div class="pr-company-card">
+            <div class="cc-icon" style="color:#009de0;">A</div>
+            <span>Alstom</span>
+            <small style="color:var(--text-tertiary);font-size:12px;margin-left:4px;">— Transport &amp; Rail</small>
+          </div>
+          <div class="pr-company-card">
+            <div class="cc-icon" style="color:#0070AD;">S</div>
+            <span>SAP</span>
+            <small style="color:var(--text-tertiary);font-size:12px;margin-left:4px;">— ERP &amp; Fiori</small>
+          </div>
+          <div class="pr-company-card">
+            <div class="cc-icon" style="color:#5956E9;">D</div>
+            <span>Droisys Inc.</span>
+            <small style="color:var(--text-tertiary);font-size:12px;margin-left:4px;">— CRM / SaaS</small>
+          </div>
+          <div class="pr-company-card">
+            <div class="cc-icon" style="color:#22c55e;">DT</div>
+            <span>Deligence Technologies</span>
+            <small style="color:var(--text-tertiary);font-size:12px;margin-left:4px;">— EdTech</small>
+          </div>
+          <div class="pr-company-card">
+            <div class="cc-icon" style="color:#e63946;">R</div>
+            <span>RPATech</span>
+            <small style="color:var(--text-tertiary);font-size:12px;margin-left:4px;">— Visual Design &amp; RPA</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         AI TOOLS — DESIGNER IN THE AGE OF AI
+    ============================================= -->
+    <section style="padding:100px 0; background:var(--surface-dark); overflow:hidden; position:relative;" id="ai-tools">
+      <div style="position:absolute;top:-120px;right:-80px;width:550px;height:550px;background:radial-gradient(circle,rgba(89,86,233,0.18) 0%,transparent 70%);pointer-events:none;border-radius:50%;"></div>
+      <div style="position:absolute;bottom:-80px;left:-60px;width:420px;height:420px;background:radial-gradient(circle,rgba(255,220,96,0.1) 0%,transparent 70%);pointer-events:none;border-radius:50%;"></div>
+      <div class="container" style="position:relative;z-index:1;">
+
+        <div class="row justify-content-center text-center mb-60">
+          <div class="col-xl-8" data-reveal>
+            <div class="pr-section-label" style="justify-content:center;color:rgba(255,220,96,0.85);">
+              <span style="background:rgba(255,220,96,0.85);width:20px;height:1.5px;border-radius:1px;display:inline-block;"></span>
+              AI-Powered Design
+            </div>
+            <h2 class="pr-section-title" style="color:white;">Designing <em style="color:var(--accent-yellow);">with AI</em> — not just about it</h2>
+            <p style="font-size:17px;line-height:1.75;color:rgba(255,255,255,0.5);max-width:620px;margin:0 auto;">
+              Automation has been in my workflow since day one — from RPA pipelines at RPATech to Gen AI POCs at Capgemini. Here's the AI stack that makes me faster, sharper, and ahead of the curve.
+            </p>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="ai-tools-grid">
+
+          <!-- Claude -->
+          <div class="pr-ai-card" data-reveal data-reveal-delay="1">
+            <div class="ai-card-head">
+              <div class="ai-card-icon" style="background:linear-gradient(135deg,#CC785C,#D4A27F);">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="white" opacity=".9"/></svg>
+              </div>
+              <div>
+                <div class="ai-card-name">Claude (Anthropic)</div>
+                <div class="ai-card-role">UX Thinking Partner</div>
+              </div>
+            </div>
+            <p class="ai-card-desc">My go-to for UX copy refinement, accessibility audits, design critique, and structuring research insights. Claude helps me stress-test user flows with research-backed reasoning — like having a senior design strategist on call.</p>
+            <div class="ai-card-tags">
+              <span class="ai-tag" style="background:rgba(204,120,92,0.15);color:rgba(220,140,100,0.9);border-color:rgba(204,120,92,0.25);">UX Copy</span>
+              <span class="ai-tag" style="background:rgba(204,120,92,0.15);color:rgba(220,140,100,0.9);border-color:rgba(204,120,92,0.25);">A11y Audits</span>
+              <span class="ai-tag" style="background:rgba(204,120,92,0.15);color:rgba(220,140,100,0.9);border-color:rgba(204,120,92,0.25);">Design Critique</span>
+            </div>
+          </div>
+
+          <!-- Figma AI + MCP -->
+          <div class="pr-ai-card" data-reveal data-reveal-delay="2">
+            <div class="ai-card-head">
+              <div class="ai-card-icon" style="background:linear-gradient(135deg,#F24E1E,#FF7262);">
+                <i class="fab fa-figma" style="color:white;font-size:18px;"></i>
+              </div>
+              <div>
+                <div class="ai-card-name">Figma AI + MCP</div>
+                <div class="ai-card-role">AI-Native Production Design</div>
+              </div>
+            </div>
+            <p class="ai-card-desc">My primary tool at Capgemini for Gen AI POCs. Figma MCP connects design directly to AI workflows — automating component generation, design tokens, and content. This is where design meets engineering at speed.</p>
+            <div class="ai-card-tags">
+              <span class="ai-tag" style="background:rgba(242,78,30,0.15);color:rgba(255,100,60,0.9);border-color:rgba(242,78,30,0.25);">MCP Workflows</span>
+              <span class="ai-tag" style="background:rgba(242,78,30,0.15);color:rgba(255,100,60,0.9);border-color:rgba(242,78,30,0.25);">Component Gen</span>
+              <span class="ai-tag" style="background:rgba(242,78,30,0.15);color:rgba(255,100,60,0.9);border-color:rgba(242,78,30,0.25);">Token Automation</span>
+            </div>
+          </div>
+
+          <!-- ChatGPT -->
+          <div class="pr-ai-card" data-reveal data-reveal-delay="3">
+            <div class="ai-card-head">
+              <div class="ai-card-icon" style="background:linear-gradient(135deg,#19C37D,#0DA37F);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M22.2 10.6c.3-.9.3-1.9 0-2.8-.4-1.4-1.5-2.6-2.9-3.1-.5-1.5-1.7-2.7-3.2-3.1-1-.3-2.1-.2-3.1.2-.7-.5-1.5-.9-2.3-1-.9-.2-1.9 0-2.7.5C6.7 1.7 5.8 2.3 5.2 3.2 3.6 3.5 2.3 4.6 1.8 6c-.3.9-.3 1.9 0 2.8-.9 1.3-1.2 3-.7 4.5.4 1.4 1.5 2.6 2.9 3.1.5 1.5 1.7 2.7 3.2 3.1 1 .3 2.1.2 3.1-.2.7.5 1.5.9 2.4 1 1 .2 2 0 2.8-.5.8-.5 1.5-1.2 2-2 1.6-.3 2.9-1.4 3.5-2.8.4-1.5.1-3.1-.8-4.5zm-7.4 6.7c-.5.3-1.1.5-1.7.4-.6 0-1.1-.2-1.6-.5l.1-.1 2.8-1.6.3-.2.1 2zm.5-1.1L13 14.7l-1.5.9-1.5-.9-2.3-1.4v-2.8l2.3-1.3 1.5-.9 1.5.9 2.3 1.3v2.8l-2.2 1.2z"/></svg>
+              </div>
+              <div>
+                <div class="ai-card-name">ChatGPT (OpenAI)</div>
+                <div class="ai-card-role">Certified Prompt Engineer</div>
+              </div>
+            </div>
+            <p class="ai-card-desc">Certified in Prompt Engineering (Udemy). Used for generating persona narratives, user story drafts, structured design briefs and research summaries. First AI I integrated into my design process — and still indispensable.</p>
+            <div class="ai-card-tags">
+              <span class="ai-tag" style="background:rgba(25,195,125,0.15);color:rgba(25,195,125,0.9);border-color:rgba(25,195,125,0.25);">Certified</span>
+              <span class="ai-tag" style="background:rgba(25,195,125,0.15);color:rgba(25,195,125,0.9);border-color:rgba(25,195,125,0.25);">Persona Gen</span>
+              <span class="ai-tag" style="background:rgba(25,195,125,0.15);color:rgba(25,195,125,0.9);border-color:rgba(25,195,125,0.25);">User Stories</span>
+            </div>
+          </div>
+
+          <!-- Grok -->
+          <div class="pr-ai-card" data-reveal data-reveal-delay="1">
+            <div class="ai-card-head">
+              <div class="ai-card-icon" style="background:linear-gradient(135deg,#1a1a1a,#333);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </div>
+              <div>
+                <div class="ai-card-name">Grok (xAI)</div>
+                <div class="ai-card-role">Real-time Trend Intelligence</div>
+              </div>
+            </div>
+            <p class="ai-card-desc">Live feed into UX discourse on X/Twitter — Grok surfaces emerging design patterns, user pain points, and industry debate in real time. Essential for staying ahead of design trends and understanding what users are actually talking about.</p>
+            <div class="ai-card-tags">
+              <span class="ai-tag" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.12);">Trend Analysis</span>
+              <span class="ai-tag" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.12);">Real-time</span>
+              <span class="ai-tag" style="background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.12);">UX Insights</span>
+            </div>
+          </div>
+
+          <!-- Gemini -->
+          <div class="pr-ai-card" data-reveal data-reveal-delay="2">
+            <div class="ai-card-head">
+              <div class="ai-card-icon" style="background:linear-gradient(135deg,#4285F4,#1a73e8);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+              </div>
+              <div>
+                <div class="ai-card-name">Gemini (Google)</div>
+                <div class="ai-card-role">Multimodal Research</div>
+              </div>
+            </div>
+            <p class="ai-card-desc">Multimodal capability means I can feed competitor UI screenshots directly and get structured competitive analysis back. Used for research synthesis across large design documents and generating structured audit reports.</p>
+            <div class="ai-card-tags">
+              <span class="ai-tag" style="background:rgba(66,133,244,0.15);color:rgba(100,160,255,0.9);border-color:rgba(66,133,244,0.25);">Image Analysis</span>
+              <span class="ai-tag" style="background:rgba(66,133,244,0.15);color:rgba(100,160,255,0.9);border-color:rgba(66,133,244,0.25);">Competitive Research</span>
+              <span class="ai-tag" style="background:rgba(66,133,244,0.15);color:rgba(100,160,255,0.9);border-color:rgba(66,133,244,0.25);">Multimodal</span>
+            </div>
+          </div>
+
+          <!-- Midjourney + DALL·E -->
+          <div class="pr-ai-card" data-reveal data-reveal-delay="3">
+            <div class="ai-card-head">
+              <div class="ai-card-icon" style="background:linear-gradient(135deg,#6366F1,#8B5CF6);">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M21 6.5C21 8.43 19.43 10 17.5 10S14 8.43 14 6.5 15.57 3 17.5 3 21 4.57 21 6.5zM3 6.5C3 8.43 4.57 10 6.5 10S10 8.43 10 6.5 8.43 3 6.5 3 3 4.57 3 6.5zM21 17.5C21 19.43 19.43 21 17.5 21S14 19.43 14 17.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5zm-18 0C3 19.43 4.57 21 6.5 21S10 19.43 10 17.5 8.43 14 6.5 14 3 15.57 3 17.5z"/></svg>
+              </div>
+              <div>
+                <div class="ai-card-name">Midjourney + DALL·E</div>
+                <div class="ai-card-role">Visual Ideation at 10x Speed</div>
+              </div>
+            </div>
+            <p class="ai-card-desc">AI image tools let me explore visual directions in minutes instead of hours — moodboarding, concept art, illustration references, and marketing visuals. Rapid visual exploration before committing to Figma.</p>
+            <div class="ai-card-tags">
+              <span class="ai-tag" style="background:rgba(99,102,241,0.15);color:rgba(130,130,255,0.9);border-color:rgba(99,102,241,0.25);">Moodboarding</span>
+              <span class="ai-tag" style="background:rgba(99,102,241,0.15);color:rgba(130,130,255,0.9);border-color:rgba(99,102,241,0.25);">Concept Visuals</span>
+              <span class="ai-tag" style="background:rgba(99,102,241,0.15);color:rgba(130,130,255,0.9);border-color:rgba(99,102,241,0.25);">Rapid Ideation</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center mt-50" data-reveal>
+          <p style="font-size:15px;color:rgba(255,255,255,0.28);font-style:italic;max-width:480px;margin:0 auto;">"Automation has been in my blood since day one — AI is just the next evolution of that."</p>
+        </div>
+
+      </div>
+
+      <style>
+        .ai-tools-grid { grid-template-columns: repeat(3,1fr); }
+        @media(max-width:991px){ .ai-tools-grid { grid-template-columns:repeat(2,1fr)!important; } }
+        @media(max-width:575px){ .ai-tools-grid { grid-template-columns:1fr!important; } }
+        .pr-ai-card {
+          background: rgba(255,255,255,0.04);
+          border: 1px solid rgba(255,255,255,0.08);
+          border-radius: 16px;
+          padding: 28px;
+          transition: var(--transition);
+        }
+        .pr-ai-card:hover {
+          background: rgba(255,255,255,0.07);
+          border-color: rgba(89,86,233,0.45);
+          transform: translateY(-4px);
+          box-shadow: 0 12px 40px rgba(89,86,233,0.2);
+        }
+        .ai-card-head {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          margin-bottom: 16px;
+        }
+        .ai-card-icon {
+          width: 46px; height: 46px;
+          border-radius: 12px;
+          display: flex; align-items: center; justify-content: center;
+          flex-shrink: 0;
+        }
+        .ai-card-name { font-size: 16px; font-weight: 700; color: white; line-height: 1.2; }
+        .ai-card-role { font-size: 12px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+        .ai-card-desc { font-size: 14px; line-height: 1.65; color: rgba(255,255,255,0.5); margin: 0 0 16px; }
+        .ai-card-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+        .ai-tag {
+          font-size: 11px; font-weight: 500;
+          padding: 4px 10px;
+          border-radius: 100px;
+          border: 1px solid;
+        }
+      </style>
+    </section>
+
+    <!-- =============================================
+         DESIGN PROCESS
+    ============================================= -->
+    <section class="pr-process">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-xl-6" data-reveal>
+            <div class="pr-section-label" style="justify-content:center;">My Approach</div>
+            <h2 class="pr-section-title">How I <em>solve</em> design problems</h2>
+          </div>
+        </div>
+
+        <div class="pr-process__steps">
+          <div class="pr-step" data-reveal data-reveal-delay="1">
+            <div class="pr-step__num">01</div>
+            <div class="pr-step__icon"><i class="fal fa-search"></i></div>
+            <div class="pr-step__title">Discover &amp; Research</div>
+            <div class="pr-step__desc">User interviews, competitive audits, analytics deep-dives and stakeholder alignment to define the real problem.</div>
+          </div>
+          <div class="pr-step" data-reveal data-reveal-delay="2">
+            <div class="pr-step__num">02</div>
+            <div class="pr-step__icon"><i class="fal fa-lightbulb"></i></div>
+            <div class="pr-step__title">Define &amp; Frame</div>
+            <div class="pr-step__desc">Synthesize insights into clear problem statements, personas, journey maps and measurable success criteria.</div>
+          </div>
+          <div class="pr-step" data-reveal data-reveal-delay="3">
+            <div class="pr-step__num">03</div>
+            <div class="pr-step__icon"><i class="fal fa-pencil-ruler"></i></div>
+            <div class="pr-step__title">Design &amp; Prototype</div>
+            <div class="pr-step__desc">Rapid iteration — from low-fi wireframes to high-fidelity prototypes — validated through usability testing at every stage.</div>
+          </div>
+          <div class="pr-step" data-reveal data-reveal-delay="4">
+            <div class="pr-step__num">04</div>
+            <div class="pr-step__icon"><i class="fal fa-rocket"></i></div>
+            <div class="pr-step__title">Deliver &amp; Measure</div>
+            <div class="pr-step__desc">Pixel-perfect dev handoff with design systems, followed by post-launch metric tracking and iterative improvement.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         CREATIVE CHRONICLES
+    ============================================= -->
+    <section class="pr-chronicles">
+      <div class="container">
+        <div class="row justify-content-between align-items-end mb-20">
+          <div class="col-xl-5" data-reveal>
+            <div class="pr-section-label">Beyond Design</div>
+            <h2 class="pr-section-title"><em>Creative</em> Chronicles</h2>
+            <p class="pr-section-body">Milestones, media features and moments that shaped my creative journey.</p>
+          </div>
+        </div>
+
+        <div class="pr-chronicles__grid">
+          <div class="pr-story-card" data-reveal data-reveal-delay="1">
+            <div class="pr-story-card__img">
+              <a href="https://www.linkedin.com/posts/subhankarrout_microsoft-uxday2025-theaishift-activity-7308065884785311744-H3KE" target="_blank">
+                <img src="assets/img/more/story1.webp" alt="SAP Impulse Design Event — Coordinator" onerror="this.parentElement.parentElement.style.background='linear-gradient(135deg,#0070AD,#004E7C)';this.style.display='none'">
+              </a>
+            </div>
+            <div class="pr-story-card__body">
+              <div style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--accent-violet);margin-bottom:8px;">
+                <span style="width:6px;height:6px;border-radius:50%;background:var(--accent-violet);display:inline-block;"></span>
+                Event Coordinator
+              </div>
+              <h4 class="pr-story-card__title">
+                <a href="https://www.linkedin.com/posts/subhankarrout_microsoft-uxday2025-theaishift-activity-7308065884785311744-H3KE" target="_blank">
+                  SAP Impulse Design Event — Coordinated the SAP Design Community event, facilitating sessions on enterprise UX and Fiori design systems
+                </a>
+              </h4>
+            </div>
+          </div>
+          <div class="pr-story-card" data-reveal data-reveal-delay="2">
+            <div class="pr-story-card__img">
+              <a href="https://www.linkedin.com/posts/subhankarrout_microsoft-uxday2025-theaishift-activity-7308065884785311744-H3KE" target="_blank">
+                <img src="assets/img/more/story1.webp" alt="Selected for UXDay 2025 at Microsoft IDC">
+              </a>
+            </div>
+            <div class="pr-story-card__body">
+              <div style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:#22c55e;margin-bottom:8px;">
+                <span style="width:6px;height:6px;border-radius:50%;background:#22c55e;display:inline-block;"></span>
+                Attendee · Microsoft IDC
+              </div>
+              <h4 class="pr-story-card__title"><a href="https://www.linkedin.com/posts/subhankarrout_microsoft-uxday2025-theaishift-activity-7308065884785311744-H3KE" target="_blank">Selected for UXDay-2025 at Microsoft IDC, Hyderabad — The AI Shift in Design</a></h4>
+            </div>
+          </div>
+
+          <div class="pr-story-card" data-reveal data-reveal-delay="2">
+            <div class="pr-story-card__img">
+              <a href="pr-award.html" target="_blank">
+                <img src="assets/img/more/story2.webp" alt="Media Feature Book Release">
+              </a>
+            </div>
+            <div class="pr-story-card__body">
+              <h4 class="pr-story-card__title"><a href="pr-award.html" target="_blank">Media Feature on My New Book Release</a></h4>
+            </div>
+          </div>
+
+          <div class="pr-story-card" data-reveal data-reveal-delay="3">
+            <div class="pr-story-card__img">
+              <a href="https://www.s4cinesphere.in/achievement.html" target="_blank">
+                <img src="assets/img/more/story 3.webp" alt="Best Filmmaker Award">
+              </a>
+            </div>
+            <div class="pr-story-card__body">
+              <h4 class="pr-story-card__title"><a href="https://www.s4cinesphere.in/achievement.html" target="_blank">Best Filmmaker Award – GIET University</a></h4>
+            </div>
+          </div>
+
+          <div class="pr-story-card" data-reveal data-reveal-delay="4">
+            <div class="pr-story-card__img">
+              <a href="https://www.s4cinesphere.in/images/e/Mahiya4.png" target="_blank">
+                <img src="assets/img/more/story4.webp" alt="Musical Album Shoot — Dainik Jagran">
+              </a>
+            </div>
+            <div class="pr-story-card__body">
+              <h4 class="pr-story-card__title"><a href="https://www.s4cinesphere.in/images/e/Mahiya4.png" target="_blank">Musical Album Shoot Covered by Dainik Jagran</a></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =============================================
+         CTA
+    ============================================= -->
+    <section class="pr-cta">
+      <div class="container">
+        <div class="pr-cta__inner" data-reveal>
+          <div class="pr-cta__eyebrow">
+            <i class="fas fa-hand-wave"></i>
+            Open to opportunities
+          </div>
+          <h2 class="pr-cta__title">Let's build something <em>great</em> together</h2>
+          <p class="pr-cta__sub">
+            I'm actively looking for senior product design roles where I can drive meaningful user impact at scale. Let's connect and explore what we can create.
+          </p>
+          <div class="pr-cta__actions">
+            <a class="btn-cta-primary" href="mailto:subhankarrout.kiit@gmail.com">
+              <i class="fas fa-envelope"></i>
+              Say Hello
+            </a>
+            <a class="btn-cta-secondary" href="../Product-Designer-Resume--Subhankar-Rout.pdf" download>
+              <i class="far fa-file-pdf"></i>
+              Download Resume
+            </a>
+            <a class="btn-cta-secondary" href="https://linkedin.com/in/subhankarrout/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+  </main>
+
+  </main>
+  <!-- main end -->
+
+
+  <!-- VIDEO POPUP -->
+  <div id="videoPopup" class="popup-overlay">
+    <div class="popup-content">
+      <button class="popup-close" onclick="closePopup()">&times;</button>
+      <iframe id="videoFrame" class="popup-video-frame" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+
+  <!-- ============= FOOTER (UNCHANGED) ============= -->
+  <footer>
+    <div class="tp-footer-area black-bg pt-130 pb-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="tp-footer-widget">
+              <div class="tp-footer-widget__logo mb-30">
+                <a href="index.html"><img src="assets/img/logo/logo-white.png" alt=""></a>
+              </div>
+              <div class="tp-footer-widget__social-link">
+                <a href="https://linkedin.com/in/subhankarrout/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/subhankarrout.in/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/subhankarrout.in/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://behance.net/routsubhankar/" target="_blank"><i class="fab fa-behance"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-2 col-md-6 d-flex justify-content-lg-center">
+            <div class="tp-footer-widget">
+              <div class="tp-footer-widget__title pb-15">
+                <h3 class="footer-title">Useful Links</h3>
+              </div>
+              <div class="tp-footer-widget__list">
+                <ul>
+                  <li><a href="https://youtube.com/@s4cinesphere" target="_blank">S4 Cinesphere (YouTube)</a></li>
+                  <li><a href="pr-award.html">Press Release</a></li>
+                  <li><a href="https://www.imdb.com/name/nm14332046/" target="_blank">IMDb Profile</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-2 col-md-6">
+            <div class="tp-footer-widget pl-20">
+              <div class="tp-footer-widget__title pb-15">
+                <h3 class="footer-title">Publications</h3>
+              </div>
+              <div class="tp-footer-widget__list">
+                <ul>
+                  <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
+                  <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="tp-footer-widget">
+              <div class="tp-footer-widget__title pb-15">
+                <h3 class="footer-title">Get Update</h3>
+              </div>
+              <div class="tp-footer-widget__input">
+                <iframe name="contact-form" id="contact-form" style="display:none;"
+                  onload="if(submitted) {alert('Successfully Subscribed. \nCheck your mail inbox or spam folder to get confirmation.')} {window.location.reload();}"></iframe>
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScICZPA3CSLtSqmiNNhgq7ERnTxgB7XJeNwq7k-0xgDfRcIBw/formResponse" method="post" target="contact-form" onsubmit="submitted=true">
+                  <input name="entry.1313508329" type="email" required placeholder="Enter Mail">
+                  <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tp-copyright-area">
+        <div class="container">
+          <div class="copyright-border pt-40">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-12">
+                <div class="tp-copyright-left text-lg-start text-start text-md-center">
+                  <p>&copy; Copyright <script>document.write(new Date().getFullYear());</script>, All rights reserved</p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-12">
+                <div class="tp-copyright-right text-start text-md-center text-lg-end">
+                  <a href="contact.html" target="_blank">Contact</a>
+                  <a href="privacy-policy.html" target="_blank">Privacy policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top scroll-to-target d-md-none" data-target="html">
+    <i class="far fa-angle-double-up"></i>
+  </button>
+
+
+  <!-- JS -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/waypoints.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/magnific-popup.js"></script>
+  <script src="assets/js/counterup.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/isotope-pkgd.js"></script>
+  <script src="assets/js/imagesloaded-pkgd.js"></script>
+  <script src="assets/js/ajax-form.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    // ---- Experience calculator ----
+    function calculateExperience(startDateStr) {
+      const start = new Date(startDateStr);
+      const now = new Date();
+      let years = now.getFullYear() - start.getFullYear();
+      let months = now.getMonth() - start.getMonth();
+      if (months < 0) { years--; months += 12; }
+      return (years + months / 12).toFixed(1);
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      const exp = calculateExperience('2021-05-20');
+      const els = document.querySelectorAll('#experienceYears, #experienceDisplay');
+      els.forEach(el => el.textContent = exp + '+');
+    });
+
+    // ---- Custom cursor ----
+    const dot = document.getElementById('cursorDot');
+    const ring = document.getElementById('cursorRing');
+    let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+    document.addEventListener('mousemove', e => {
+      mouseX = e.clientX; mouseY = e.clientY;
+      dot.style.left = mouseX + 'px'; dot.style.top = mouseY + 'px';
+    });
+
+    function animateCursor() {
+      ringX += (mouseX - ringX) * 0.14;
+      ringY += (mouseY - ringY) * 0.14;
+      ring.style.left = ringX + 'px'; ring.style.top = ringY + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    document.querySelectorAll('a, button, .pr-project-card, .pr-company-card, .pr-filter-tab').forEach(el => {
+      el.addEventListener('mouseenter', () => ring.classList.add('hovering'));
+      el.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
+    });
+
+    // ---- Scroll reveal ----
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
+
+    // ---- Project filter tabs ----
+    document.querySelectorAll('.pr-filter-tab').forEach(tab => {
+      tab.addEventListener('click', function () {
+        document.querySelectorAll('.pr-filter-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('#projectGrid .pr-project-card').forEach(card => {
+          if (filter === 'all' || card.dataset.cat === filter) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        // Re-trigger reveal on visible cards
+        document.querySelectorAll('#projectGrid .pr-project-card:not([style*="none"])').forEach(card => {
+          card.classList.remove('revealed');
+          setTimeout(() => card.classList.add('revealed'), 50);
+        });
+      });
+    });
+
+    // ---- Video popup ----
+    document.querySelectorAll('.video-trigger').forEach(trigger => {
+      trigger.addEventListener('click', function (e) {
+        e.preventDefault();
+        const url = this.getAttribute('href');
+        document.getElementById('videoFrame').src = url;
+        document.getElementById('videoPopup').classList.add('active');
+      });
+    });
+    function closePopup() {
+      document.getElementById('videoPopup').classList.remove('active');
+      document.getElementById('videoFrame').src = '';
+    }
+    document.getElementById('videoPopup').addEventListener('click', function (e) {
+      if (e.target === this) closePopup();
+    });
+
+    // ---- Mobile video card (preserve original behavior) ----
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.matchMedia('(max-width: 480px)').matches) {
+        // Original mobile video pop already removed in favor of unified popup
+      }
+    });
+  </script>
+
+</body>
+</html>

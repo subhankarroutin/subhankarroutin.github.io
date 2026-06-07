@@ -1,0 +1,1284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subhankar Rout — About</title>
+  <meta name="description" content="Learn about Subhankar Rout, a Senior UI/UX Designer with a passion for filmmaking and authorship.">
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- CSS — same load order as pr-award_new.html -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/spacing.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/spacing-ux.css">
+  <link rel="stylesheet" href="assets/css/visual-polish.css">
+  <style>
+    /* =====================================================
+       COLLAX DESIGN SYSTEM — CSS VARIABLES
+    ===================================================== */
+    :root {
+      --tp-ff-body: 'DM Sans', sans-serif;
+      --tp-common-white: #ffffff;
+      --tp-common-black: #292930;
+      --tp-common-black-2: #3A3A42;
+      --tp-common-blue: #82CEFD;
+      --tp-common-pink: #FFADAD;
+      --tp-common-dpink: #FD346E;
+      --tp-common-paste: #1EE2CF;
+      --tp-grey-1: #F7F8FD;
+      --tp-grey-2: #f8f8f8;
+      --tp-text-body: #707070;
+      --tp-theme-1: #5956E9;
+      --tp-theme-2: #423EF3;
+      --tp-theme-primary: #FFDC60;
+      --tp-theme-secondary: #57c9da;
+      --tp-border-1: #E8ECF2;
+      --tp-border-2: #4E4E59;
+      --ease-btn: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    }
+
+    /* =====================================================
+       RESET & BASE
+    ===================================================== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--tp-ff-body);
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--tp-text-body);
+      background: var(--tp-common-white);
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; transition: all .3s ease; }
+    img { max-width: 100%; display: block; }
+    ul { list-style: none; }
+    ::selection { background: var(--tp-common-black); color: #fff; }
+
+    /* =====================================================
+       KEYFRAMES
+    ===================================================== */
+    @keyframes jumpTwo   { 0%,100%{transform:translateY(0)}  50%{transform:translateY(24px)} }
+    @keyframes jumpThree { 0%,100%{transform:translateY(0)}  50%{transform:translateY(-16px)} }
+    @keyframes rotated   { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+    @keyframes scale-upOne { 0%,100%{transform:scale(1)} 50%{transform:scale(.88)} }
+    @keyframes gradShift { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+    @keyframes heroLineGrow { from{width:0} to{width:100%} }
+    @keyframes tpfadeUp  { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+    @keyframes preloaderOut { 0%{opacity:1} 80%{opacity:1} 100%{opacity:0;pointer-events:none} }
+    @keyframes ripple-pulse { 0%{box-shadow:0 0 0 0 rgba(89,86,233,.4)} 70%{box-shadow:0 0 0 20px rgba(89,86,233,0)} 100%{box-shadow:0 0 0 0 rgba(89,86,233,0)} }
+    @keyframes dotBlink  { 0%,100%{opacity:.3;transform:scale(1)} 50%{opacity:1;transform:scale(1.4)} }
+    @keyframes roadEndPulse { 0%,100%{box-shadow:0 0 0 12px rgba(89,86,233,.15),0 0 0 24px rgba(89,86,233,.07)} 50%{box-shadow:0 0 0 18px rgba(89,86,233,.1),0 0 0 36px rgba(89,86,233,.04)} }
+
+    /* =====================================================
+       PRELOADER
+    ===================================================== */
+    #preloader {
+      position: fixed; inset: 0; z-index: 9999;
+      background: var(--tp-common-black);
+      display: flex; align-items: center; justify-content: center;
+      animation: preloaderOut 1.6s ease forwards;
+    }
+    .preloader-inner {
+      width: 56px; height: 56px;
+      border: 3px solid transparent;
+      border-top-color: var(--tp-theme-1);
+      border-right-color: var(--tp-theme-primary);
+      border-radius: 50%;
+      animation: rotated .8s linear infinite;
+    }
+
+    /* =====================================================
+       HEADER — identical override to pr-award page
+    ===================================================== */
+    .about-page .tp-header-area-two.header-white {
+      position: relative;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+    }
+    .about-page #header-sticky.header-sticky,
+    .about-page #header-sticky-mobile.header-sticky {
+      position: fixed !important;
+      top: 0 !important; left: 0 !important; right: 0 !important;
+      z-index: 99999 !important;
+      box-shadow: 0px 2px 55px rgba(168,182,218,0.32) !important;
+      background: var(--tp-common-white) !important;
+    }
+    .about-page .tp-header-area-two.header-white .tp-main-menu { text-align: center; }
+    .about-page .tp-header-area-two.header-white .tp-main-menu ul {
+      display: inline-flex; justify-content: center; flex-wrap: wrap; padding: 0; margin: 0;
+    }
+    .about-page .tp-header-area-two.header-white .tp-main-menu ul li {
+      margin-right: 40px; position: relative;
+    }
+    .about-page .tp-header-area-two.header-white .tp-main-menu ul li a {
+      padding: 28px 0; color: #707070;
+    }
+    .about-page .header-sticky .tp-main-menu ul li a { padding: 28px 0; }
+    .about-page .tp-header-area-two.header-white .tp-main-menu ul li ul.submenu { top: 100%; }
+    .about-page .tp-header-area-two.header-white .tp-header-button { text-align: left; }
+    @media (max-width: 1199px) {
+      .about-page .tp-header-area-two.header-white .tp-main-menu ul li a { padding: 20px 0; }
+      .about-page .tp-header-area-two.header-white .tp-main-menu ul li { margin-right: 22px; }
+    }
+    @media (max-width: 991px) {
+      .about-page .tp-header-area-two.header-white .tp-main-menu ul li a { padding: 16px 0; }
+      .about-page #header-sticky-mobile { padding-top: 8px; padding-bottom: 8px; }
+      .about-page .tp-header-area-two.header-white .tp-main-menu ul li { margin-right: 12px; }
+    }
+    .about-page .scroll-top { right: auto; left: 20px; }
+    @media (max-width: 767px) { .about-page .scroll-top { left: 16px; right: auto; } }
+
+    /* =====================================================
+       HERO — ABOUT
+    ===================================================== */
+    .about-hero {
+      min-height: 520px;
+      background: linear-gradient(135deg, var(--tp-common-black) 0%, #1a1a2e 50%, #16213e 100%);
+      position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+      padding-top: 90px;
+    }
+    .about-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(89,86,233,.25) 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: gradShift 8s ease infinite;
+    }
+    .about-hero-content {
+      position: relative; z-index: 2; text-align: center;
+      animation: tpfadeUp .8s ease both;
+    }
+    .about-hero-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(89,86,233,.18); border: 1px solid rgba(89,86,233,.4);
+      border-radius: 50px; padding: 8px 22px; margin-bottom: 28px;
+      color: var(--tp-common-blue); font-size: 13px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+    }
+    .about-hero-label span { width: 6px; height: 6px; border-radius: 50%; background: var(--tp-common-blue); animation: scale-upOne 1.5s ease infinite; }
+    .about-hero h1 {
+      font-size: clamp(40px, 6vw, 80px); font-weight: 700; color: #fff;
+      line-height: 1.1; letter-spacing: -1px;
+    }
+    .about-hero h1 em {
+      font-style: normal; color: var(--tp-theme-primary); position: relative;
+    }
+    .about-hero h1 em::after {
+      content: '';
+      position: absolute; bottom: -4px; left: 0; right: 0; height: 4px;
+      background: var(--tp-theme-primary); border-radius: 2px;
+      animation: heroLineGrow 1s .8s ease both;
+    }
+    .about-hero p { margin-top: 20px; font-size: 18px; color: rgba(255,255,255,.6); max-width: 480px; margin-left: auto; margin-right: auto; }
+    .about-hero-back {
+      margin-top: 36px; display: inline-flex; align-items: center; gap: 10px;
+      color: rgba(255,255,255,.7); font-size: 14px; font-weight: 500;
+      border: 1px solid rgba(255,255,255,.2); border-radius: 50px; padding: 10px 24px;
+      transition: all .3s ease;
+    }
+    .about-hero-back:hover { background: rgba(255,255,255,.1); color: #fff; }
+    .hero-shape { position: absolute; border-radius: 50%; opacity: .12; pointer-events: none; }
+    .hero-shape-1 { width: 500px; height: 500px; background: var(--tp-theme-1); top: -200px; right: -150px; animation: jumpTwo 6s ease-in-out infinite; }
+    .hero-shape-2 { width: 300px; height: 300px; background: var(--tp-common-paste); bottom: -100px; left: -100px; animation: jumpThree 5s ease-in-out infinite; }
+    .hero-shape-3 { width: 150px; height: 150px; background: var(--tp-theme-primary); top: 40%; left: 10%; animation: jumpTwo 4s 1s ease-in-out infinite; }
+
+    /* =====================================================
+       SHARED SECTION STYLES
+    ===================================================== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
+    .section-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--tp-theme-1); margin-bottom: 16px;
+    }
+    .section-label::before { content: ''; width: 30px; height: 2px; background: var(--tp-theme-1); }
+    .section-title { font-size: clamp(28px, 3.5vw, 46px); font-weight: 700; color: var(--tp-common-black); line-height: 1.2; margin-bottom: 0; }
+    .section-title em { font-style: normal; color: var(--tp-theme-1); }
+
+    /* Scroll reveal */
+    .reveal { opacity: 0; transform: translateY(40px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.from-left { transform: translateX(-40px); }
+    .reveal.from-right { transform: translateX(40px); }
+    .reveal.visible { opacity: 1; transform: none; }
+    .stagger-children > * { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+    .stagger-children.visible > *:nth-child(1){opacity:1;transform:none;transition-delay:.1s}
+    .stagger-children.visible > *:nth-child(2){opacity:1;transform:none;transition-delay:.2s}
+    .stagger-children.visible > *:nth-child(3){opacity:1;transform:none;transition-delay:.3s}
+    .stagger-children.visible > *:nth-child(4){opacity:1;transform:none;transition-delay:.4s}
+    .stagger-children.visible > *:nth-child(5){opacity:1;transform:none;transition-delay:.5s}
+    .stagger-children.visible > *:nth-child(6){opacity:1;transform:none;transition-delay:.6s}
+
+    /* =====================================================
+       IDENTITY SECTION
+    ===================================================== */
+    .about-identity { padding: 120px 0; background: var(--tp-common-white); }
+    .about-identity-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 80px; align-items: center; }
+    .about-img-wrap { position: relative; }
+    .about-img-frame { border-radius: 30px; overflow: hidden; position: relative; z-index: 1; box-shadow: 0 40px 100px rgba(89,86,233,.2); }
+    .about-img-frame img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+    .about-img-badge {
+      position: absolute; bottom: -30px; right: -30px; z-index: 2;
+      background: var(--tp-theme-primary); border-radius: 20px;
+      padding: 24px 28px; text-align: center;
+      box-shadow: 0 20px 50px rgba(255,220,96,.3);
+      animation: jumpThree 3s ease-in-out infinite;
+    }
+    .about-img-badge strong { display: block; font-size: 40px; font-weight: 700; color: var(--tp-common-black); line-height: 1; }
+    .about-img-badge span { font-size: 13px; font-weight: 600; color: var(--tp-common-black); opacity: .7; }
+    .about-img-decor { position: absolute; top: -20px; left: -20px; z-index: 0; width: calc(100% + 40px); height: calc(100% + 40px); border: 2px dashed rgba(89,86,233,.2); border-radius: 38px; animation: rotated 20s linear infinite; }
+    .about-img-dot { position: absolute; top: 30px; right: -40px; width: 80px; height: 80px; background: radial-gradient(circle, var(--tp-common-paste) 0%, transparent 70%); animation: scale-upOne 2s ease-in-out infinite; }
+    .about-tag { display: inline-block; background: rgba(89,86,233,.08); color: var(--tp-theme-1); padding: 6px 18px; border-radius: 50px; font-size: 13px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+    .about-name { font-size: clamp(32px, 4vw, 52px); font-weight: 700; color: var(--tp-common-black); line-height: 1.15; margin-bottom: 12px; }
+    .about-title-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: var(--tp-theme-2); margin-bottom: 24px; }
+    .about-title-badge i { color: var(--tp-common-paste); }
+    .about-bio { font-size: 17px; line-height: 1.8; color: var(--tp-text-body); margin-bottom: 30px; }
+    .about-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 36px; }
+    .about-meta-item { background: var(--tp-grey-1); border-radius: 16px; padding: 20px; border-left: 3px solid var(--tp-theme-1); }
+    .about-meta-item .label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--tp-theme-1); margin-bottom: 6px; }
+    .about-meta-item .value { font-size: 15px; font-weight: 600; color: var(--tp-common-black); }
+    .about-socials { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px; }
+    .social-pill { display: inline-flex; align-items: center; gap: 8px; padding: 10px 20px; border-radius: 50px; font-size: 14px; font-weight: 600; border: 2px solid var(--tp-border-1); color: var(--tp-common-black); transition: all .3s ease; }
+    .social-pill:hover { border-color: var(--tp-theme-1); color: var(--tp-theme-1); transform: translateY(-3px); }
+    .social-pill.linkedin:hover { border-color: #0077B5; color: #0077B5; }
+    .social-pill.instagram:hover { border-color: #E1306C; color: #E1306C; }
+    .social-pill.behance:hover { border-color: #1769FF; color: #1769FF; }
+
+    /* =====================================================
+       STATS
+    ===================================================== */
+    .about-stats { padding: 80px 0; background: var(--tp-common-black); position: relative; overflow: hidden; }
+    .about-stats::before { content: ''; position: absolute; inset: 0; background-image: radial-gradient(rgba(89,86,233,.2) 1px, transparent 1px); background-size: 32px 32px; opacity: .5; }
+    .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; position: relative; z-index: 1; }
+    .stat-item { text-align: center; padding: 50px 30px; border-right: 1px solid rgba(255,255,255,.06); }
+    .stat-item:last-child { border-right: none; }
+    .stat-num { font-size: clamp(40px, 5vw, 64px); font-weight: 700; color: var(--tp-theme-primary); line-height: 1; display: block; margin-bottom: 10px; }
+    .stat-label { font-size: 14px; color: rgba(255,255,255,.5); font-weight: 500; text-transform: uppercase; letter-spacing: 1.5px; }
+
+    /* =====================================================
+       STORY SECTION
+    ===================================================== */
+    .about-story { padding: 100px 0; background: var(--tp-grey-1); position: relative; overflow: hidden; }
+    .about-story::before { content: ''; position: absolute; top: -100px; right: -100px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(89,86,233,.06), transparent 70%); }
+    .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; align-items: start; }
+    .story-text p { font-size: 16px; line-height: 1.9; color: var(--tp-text-body); margin-bottom: 20px; }
+    .story-text a { color: var(--tp-theme-1); font-weight: 600; }
+    .story-text a:hover { color: var(--tp-theme-2); }
+    .story-highlights { display: flex; flex-direction: column; gap: 20px; }
+    .highlight-card { background: #fff; border-radius: 20px; padding: 28px; box-shadow: 0 4px 24px rgba(0,0,0,.06); border: 1px solid var(--tp-border-1); display: flex; gap: 20px; align-items: flex-start; transition: all .3s ease; }
+    .highlight-card:hover { transform: translateY(-4px); box-shadow: 0 16px 50px rgba(89,86,233,.12); border-color: var(--tp-theme-1); }
+    .hc-icon { width: 52px; height: 52px; border-radius: 14px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+    .hc-icon.purple { background: rgba(89,86,233,.1); color: var(--tp-theme-1); }
+    .hc-icon.yellow { background: rgba(255,220,96,.2); color: #b8900a; }
+    .hc-icon.teal   { background: rgba(30,226,207,.15); color: #0a9e8f; }
+    .hc-icon.pink   { background: rgba(253,52,110,.1); color: var(--tp-common-dpink); }
+    .hc-body h4 { font-size: 16px; font-weight: 700; color: var(--tp-common-black); margin-bottom: 6px; }
+    .hc-body p  { font-size: 14px; color: var(--tp-text-body); line-height: 1.6; margin: 0; }
+
+    /* =====================================================
+       SKILLS
+    ===================================================== */
+    .about-skills { padding: 120px 0; background: var(--tp-common-white); }
+    .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 60px; }
+    .skill-col-title { font-size: 20px; font-weight: 700; color: var(--tp-common-black); margin-bottom: 28px; }
+    .skill-tag-cloud { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-tag { padding: 8px 18px; border-radius: 50px; font-size: 14px; font-weight: 500; border: 2px solid var(--tp-border-1); color: var(--tp-common-black); transition: all .3s ease; cursor: default; }
+    .skill-tag:hover { background: var(--tp-theme-1); border-color: var(--tp-theme-1); color: #fff; transform: translateY(-2px); }
+    .timeline { position: relative; padding-left: 30px; }
+    .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, var(--tp-theme-1), var(--tp-theme-primary)); border-radius: 2px; }
+    .tl-item { position: relative; margin-bottom: 32px; }
+    .tl-item::before { content: ''; position: absolute; left: -26px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--tp-theme-1); border: 3px solid #fff; box-shadow: 0 0 0 3px var(--tp-theme-1); }
+    .tl-item h4 { font-size: 16px; font-weight: 700; color: var(--tp-common-black); margin-bottom: 4px; }
+    .tl-item span { font-size: 13px; color: var(--tp-theme-1); font-weight: 600; }
+    .tl-item p { font-size: 14px; color: var(--tp-text-body); margin-top: 4px; }
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+    .about-contact { padding: 120px 0; background: linear-gradient(135deg, var(--tp-grey-1), var(--tp-common-white)); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; margin-top: 60px; }
+    .contact-info-title { font-size: 26px; font-weight: 700; color: var(--tp-common-black); margin-bottom: 16px; }
+    .contact-info-text { font-size: 16px; color: var(--tp-text-body); line-height: 1.8; margin-bottom: 36px; }
+    .contact-links { display: flex; flex-direction: column; gap: 16px; }
+    .contact-link-item { display: flex; align-items: center; gap: 16px; background: #fff; border-radius: 16px; padding: 18px 22px; box-shadow: 0 4px 20px rgba(0,0,0,.05); border: 1px solid var(--tp-border-1); transition: all .3s ease; }
+    .contact-link-item:hover { border-color: var(--tp-theme-1); transform: translateX(6px); }
+    .cli-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(89,86,233,.1); display: flex; align-items: center; justify-content: center; color: var(--tp-theme-1); font-size: 18px; }
+    .cli-text strong { display: block; font-size: 14px; font-weight: 700; color: var(--tp-common-black); }
+    .cli-text span { font-size: 13px; color: var(--tp-text-body); }
+    .contact-form-wrap { background: #fff; border-radius: 28px; padding: 48px; box-shadow: 0 20px 60px rgba(0,0,0,.07); border: 1px solid var(--tp-border-1); }
+    .cf-title { font-size: 22px; font-weight: 700; color: var(--tp-common-black); margin-bottom: 32px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+    .form-field { margin-bottom: 0; }
+    .form-field label { display: block; font-size: 13px; font-weight: 600; color: var(--tp-common-black); margin-bottom: 8px; letter-spacing: .5px; }
+    .form-field input, .form-field textarea { width: 100%; padding: 14px 18px; border-radius: 12px; border: 2px solid var(--tp-border-1); background: var(--tp-grey-1); font-family: var(--tp-ff-body); font-size: 15px; color: var(--tp-common-black); transition: border-color .3s ease; outline: none; }
+    .form-field input:focus, .form-field textarea:focus { border-color: var(--tp-theme-1); background: #fff; }
+    .form-field textarea { resize: vertical; min-height: 130px; }
+    .form-mb { margin-bottom: 16px; }
+    .tp-btn-submit { width: 100%; height: 56px; border-radius: 12px; background: var(--tp-theme-1); color: #fff; font-family: var(--tp-ff-body); font-size: 16px; font-weight: 700; border: none; cursor: pointer; transition: all .3s var(--ease-btn); margin-top: 8px; }
+    .tp-btn-submit:hover { background: var(--tp-theme-primary); color: var(--tp-common-black); transform: translateY(-2px); }
+
+    /* =====================================================
+       HORIZONTAL JOURNEY / ROADMAP
+    ===================================================== */
+    .journey-section {
+      padding: 120px 0 100px;
+      background: var(--tp-common-black);
+      position: relative; overflow: hidden;
+    }
+    .journey-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: radial-gradient(rgba(89,86,233,.12) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+    .journey-header { text-align: center; position: relative; z-index: 2; margin-bottom: 70px; }
+    .journey-header .section-label { color: var(--tp-theme-primary); justify-content: center; }
+    .journey-header .section-label::before { background: var(--tp-theme-primary); }
+    .journey-header .section-title { color: #fff; }
+    .journey-header .section-title em { color: var(--tp-theme-primary); font-style: normal; }
+    .journey-header p { color: rgba(255,255,255,.45); font-size: 16px; margin-top: 12px; max-width: 480px; margin-left: auto; margin-right: auto; }
+
+    /* Scroll hint */
+    .journey-scroll-hint {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      margin-bottom: 36px; color: rgba(255,255,255,.35); font-size: 13px; font-weight: 500;
+      letter-spacing: 1px; text-transform: uppercase;
+      position: relative; z-index: 2;
+    }
+    .journey-scroll-hint i { animation: arrowBounce 1.5s ease-in-out infinite; }
+    @keyframes arrowBounce { 0%,100%{transform:translateX(0)} 50%{transform:translateX(6px)} }
+
+    /* Outer scroll wrapper */
+    .journey-scroll-outer {
+      position: relative; z-index: 2;
+      overflow: hidden;
+      padding: 20px 0 50px;
+    }
+    /* Fade edges */
+    .journey-scroll-outer::before,
+    .journey-scroll-outer::after {
+      content: '';
+      position: absolute; top: 0; bottom: 0; width: 80px; z-index: 10; pointer-events: none;
+    }
+    .journey-scroll-outer::before { left: 0; background: linear-gradient(to right, var(--tp-common-black), transparent); }
+    .journey-scroll-outer::after  { right: 0; background: linear-gradient(to left,  var(--tp-common-black), transparent); }
+
+    /* Inner scrollable track */
+    .journey-track {
+      display: flex; gap: 0;
+      overflow-x: auto;
+      padding: 0 80px 24px;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab;
+    }
+    .journey-track::-webkit-scrollbar { height: 4px; }
+    .journey-track::-webkit-scrollbar-track { background: rgba(255,255,255,.05); border-radius: 4px; }
+    .journey-track::-webkit-scrollbar-thumb { background: var(--tp-theme-1); border-radius: 4px; }
+    .journey-track.grabbing { cursor: grabbing; }
+
+    /* The horizontal road line */
+    .journey-road-line {
+      position: absolute;
+      left: 80px; right: 80px;
+      height: 4px;
+      background: linear-gradient(to right, var(--tp-theme-1), var(--tp-theme-primary), var(--tp-common-paste), var(--tp-theme-1));
+      background-size: 200% 100%;
+      animation: gradShift 4s ease infinite;
+      border-radius: 4px;
+      top: calc(50% + 40px); /* aligned to node center */
+      pointer-events: none; z-index: 3;
+    }
+
+    /* Each stop item */
+    .journey-item {
+      flex: 0 0 280px;
+      scroll-snap-align: center;
+      display: flex; flex-direction: column; align-items: center;
+      padding: 0 8px;
+      position: relative;
+      opacity: 0; transform: translateY(30px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .journey-item.jv { opacity: 1; transform: translateY(0); }
+
+    /* Alternating card above/below */
+    .journey-item:nth-child(odd)  { flex-direction: column; }
+    .journey-item:nth-child(even) { flex-direction: column-reverse; }
+
+    /* Node dot */
+    .journey-node {
+      width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+      background: var(--tp-theme-primary);
+      border: 3px solid var(--tp-common-black);
+      box-shadow: 0 0 0 4px var(--tp-theme-1);
+      position: relative; z-index: 4;
+      margin: 0;
+      transition: transform .3s ease, box-shadow .3s ease;
+    }
+    .journey-item:hover .journey-node {
+      transform: scale(1.4);
+      box-shadow: 0 0 0 6px var(--tp-theme-1), 0 0 20px rgba(89,86,233,.5);
+    }
+
+    /* Connector line from card to node */
+    .journey-connector {
+      width: 2px; height: 48px; flex-shrink: 0;
+      background: linear-gradient(to bottom, rgba(89,86,233,.5), rgba(255,220,96,.6));
+    }
+    .journey-item:nth-child(even) .journey-connector {
+      background: linear-gradient(to top, rgba(89,86,233,.5), rgba(255,220,96,.6));
+    }
+
+    /* Card */
+    .journey-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 20px; padding: 22px 22px 20px;
+      backdrop-filter: blur(8px);
+      transition: all .3s ease; width: 100%;
+      position: relative;
+    }
+    .journey-card:hover {
+      background: rgba(89,86,233,.12);
+      border-color: rgba(89,86,233,.5);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 50px rgba(89,86,233,.25);
+    }
+    .journey-item:nth-child(even) .journey-card:hover { transform: translateY(6px); }
+
+    .journey-icon { font-size: 26px; margin-bottom: 10px; display: block; }
+    .journey-year {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase;
+      color: var(--tp-theme-primary); margin-bottom: 8px;
+      background: rgba(255,220,96,.1); padding: 3px 10px; border-radius: 50px;
+    }
+    .journey-card h4 { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 6px; line-height: 1.35; }
+    .journey-card p  { font-size: 12px; color: rgba(255,255,255,.45); line-height: 1.65; margin: 0; }
+
+    /* Active card highlight */
+    .journey-item.active .journey-card {
+      border-color: var(--tp-theme-primary);
+      background: rgba(255,220,96,.07);
+    }
+    .journey-item.active .journey-node {
+      background: #fff; box-shadow: 0 0 0 5px var(--tp-theme-primary);
+    }
+
+    /* Navigation dots below track */
+    .journey-dots {
+      display: flex; justify-content: center; gap: 8px;
+      margin-top: 16px; position: relative; z-index: 2;
+    }
+    .journey-dot {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(255,255,255,.2);
+      transition: all .3s ease; cursor: pointer; border: none;
+      padding: 0;
+    }
+    .journey-dot.active { background: var(--tp-theme-primary); width: 24px; border-radius: 4px; }
+
+    /* Journey end cap */
+    .journey-end-cap {
+      flex: 0 0 200px; scroll-snap-align: center;
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      padding: 0 20px; text-align: center; position: relative; z-index: 2;
+    }
+    .journey-end-dot {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--tp-theme-1), var(--tp-common-paste));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; margin-bottom: 16px;
+      box-shadow: 0 0 0 12px rgba(89,86,233,.15), 0 0 0 24px rgba(89,86,233,.07);
+      animation: roadEndPulse 2s ease-in-out infinite;
+    }
+    .journey-end-cap h3 { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .journey-end-cap p  { font-size: 12px; color: rgba(255,255,255,.4); line-height: 1.6; }
+    .journey-end-dots { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
+    .journey-end-dots span { width: 7px; height: 7px; border-radius: 50%; background: var(--tp-theme-primary); opacity: .3; animation: dotBlink 1.4s ease-in-out infinite; }
+    .journey-end-dots span:nth-child(2){animation-delay:.2s}
+    .journey-end-dots span:nth-child(3){animation-delay:.4s}
+
+    /* Mobile: revert to vertical stack for narrow */
+    @media (max-width: 767px) {
+      .journey-track { flex-direction: column; overflow-x: visible; overflow-y: visible; padding: 0 20px; gap: 0; }
+      .journey-road-line { display: none; }
+      .journey-item, .journey-item:nth-child(even) { flex-direction: row; flex: none; width: 100%; padding: 0 0 32px 56px; align-items: flex-start; opacity: 1; transform: none; }
+      .journey-node { position: absolute; left: 16px; top: 8px; margin: 0; }
+      .journey-connector { display: none; }
+      .journey-card { width: 100%; }
+      .journey-card:hover, .journey-item:nth-child(even) .journey-card:hover { transform: none; box-shadow: none; }
+      .journey-scroll-outer::before, .journey-scroll-outer::after { display: none; }
+      .journey-scroll-outer { padding-bottom: 0; }
+    }
+
+    /* =====================================================
+       BACK TO TOP
+    ===================================================== */
+    .back-top { position: fixed; bottom: 30px; right: 30px; z-index: 998; width: 48px; height: 48px; border-radius: 14px; background: var(--tp-theme-1); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 18px; cursor: pointer; border: none; opacity: 0; transform: translateY(20px); transition: all .3s ease; box-shadow: 0 8px 24px rgba(89,86,233,.35); }
+    .back-top.visible { opacity: 1; transform: translateY(0); }
+    .back-top:hover { background: var(--tp-theme-primary); color: #000; transform: translateY(-4px); }
+
+    /* =====================================================
+       RESPONSIVE
+    ===================================================== */
+    @media (max-width: 1024px) {
+      .about-identity-grid { grid-template-columns: 1fr; gap: 50px; }
+      .about-img-badge { right: 0; bottom: -20px; }
+      .story-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2,1fr); }
+      .skills-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 767px) {
+      .about-hero h1 { font-size: 36px; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .stat-item { padding: 36px 20px; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 28px 22px; }
+    }
+  </style>
+</head>
+<body class="about-page">
+
+<!-- ===== PRELOADER ===== -->
+<div id="preloader"><div class="preloader-inner"></div></div>
+
+<!-- tp-header-area-start — identical structure to pr-award_new.html -->
+<header class="d-none d-lg-block">
+  <div id="header-sticky" class="tp-header-area-two header-white header-space-three pl-115 pr-115">
+    <div class="container-fluid">
+      <div class="row align-items-center header-space-two">
+        <div class="col-xxl-3 col-xl-3 col-lg-3">
+          <div class="tp-logo text-start">
+            <a href="index.html"><img src="assets/img/logo/logo-blue.png" alt=""></a>
+          </div>
+        </div>
+        <div class="col-xxl-6 col-xl-6 col-lg-6">
+          <div class="tp-main-menu text-center">
+            <nav id="mobile-menu">
+              <ul>
+                <li><a href="about.html" class="active">About</a></li>
+                <li class="has-dropdown"><a href="#">YouTube Channels</a>
+                  <ul class="submenu text-start">
+                    <li><a href="odicoder.html">OdiCoder</a></li>
+                    <li><a href="s4cinesphere.html">S4 Cinesphere</a></li>
+                  </ul>
+                </li>
+                <li class="has-dropdown"><a href="#">Publications</a>
+                  <ul class="submenu text-start">
+                    <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
+                    <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
+                  </ul>
+                </li>
+                <li><a href="pr-award.html">Press Release</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="col-xxl-3 col-xl-3 col-lg-3">
+          <div class="tp-header-button text-end">
+            <a class="tp-btn" href="portfolio.html">Portfolio</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- tp-header-area-end -->
+
+<!-- tp-md-menu-start -->
+<div id="header-sticky-mobile" class="tp-md-header-area header-white d-lg-none pt-30">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6 col-6">
+        <div class="tp-logo">
+          <a href="index.html"><img src="assets/img/logo/logo-blue.png" alt="page-logo"></a>
+        </div>
+      </div>
+      <div class="col-md-6 col-6">
+        <div class="tp-header-right z-index-1 d-flex align-items-center justify-content-end">
+          <a class="tp-btn d-none d-md-block" href="portfolio.html">Portfolio</a>
+          <button class="tp-menu-bar"><i class="fal fa-bars"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- tp-md-menu-end -->
+
+<div class="tp-offcanvas-area">
+  <div class="tpoffcanvas">
+    <div class="tpoffcanvas__logo">
+      <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="logo-white"></a>
+    </div>
+    <div class="tpoffcanvas__close-btn">
+      <a class="close-btn" href="javascript:void(0)"><i class="fal fa-times-hexagon"></i></a>
+    </div>
+    <div class="mobile-menu"></div>
+    <div class="tp-header-button">
+      <a class="tp-btn" href="portfolio.html">Portfolio</a>
+    </div>
+    <div class="tpoffcanvas__contact">
+      <br><br>
+      <span>Any Query!</span>
+      <ul>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:subhankarrout.kiit@gmail.com">subhankarrout.kiit@gmail.com</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="body-overlay"></div>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="about-hero">
+  <div class="hero-shape hero-shape-1"></div>
+  <div class="hero-shape hero-shape-2"></div>
+  <div class="hero-shape hero-shape-3"></div>
+  <div class="about-hero-content">
+    <div class="about-hero-label"><span></span>Personal Portfolio</div>
+    <h1>About <em>Him</em></h1>
+    <p>Designer. Filmmaker. Author. A multidisciplinary creative shaping digital experiences.</p>
+    <a href="index.html" class="about-hero-back"><i class="fas fa-home"></i> Back to Home</a>
+  </div>
+</section>
+
+<!-- ===== IDENTITY ===== -->
+<section class="about-identity">
+  <div class="container">
+    <div class="about-identity-grid">
+      <!-- Image -->
+      <div class="about-img-wrap reveal from-left">
+        <div class="about-img-decor"></div>
+        <div class="about-img-frame">
+          <img src="assets/img/about/subhankar.png" alt="Subhankar Rout">
+        </div>
+        <div class="about-img-badge">
+          <strong>3+</strong>
+          <span>Years<br>Experience</span>
+        </div>
+        <div class="about-img-dot"></div>
+      </div>
+      <!-- Text -->
+      <div class="reveal from-right">
+        <div class="about-tag">Meet the Creator</div>
+        <h2 class="about-name">Er. Subhankar<br>Rout</h2>
+        <div class="about-title-badge">
+          <i class="fas fa-circle" style="font-size:8px;"></i>
+          Sr. UI/UX Developer &nbsp;·&nbsp; Author &nbsp;·&nbsp; Filmmaker
+        </div>
+        <p class="about-bio">
+          Meet Subhankar Rout — a dedicated UI/UX Developer with a passion for creativity and storytelling. Balancing a dynamic professional life with his artistic pursuits, he excels in filmmaking, creating engaging YouTube content, and sharing his insights as a published author.
+        </p>
+        <div class="about-meta-grid">
+          <div class="about-meta-item">
+            <div class="label">Profession</div>
+            <div class="value">Sr. UI/UX Developer</div>
+          </div>
+          <div class="about-meta-item">
+            <div class="label">Passion</div>
+            <div class="value">Author · Filmmaker · YouTuber</div>
+          </div>
+          <div class="about-meta-item">
+            <div class="label">Education</div>
+            <div class="value">MBA — KIIT University</div>
+          </div>
+          <div class="about-meta-item">
+            <div class="label">Contact</div>
+            <div class="value"><a href="mailto:subhankar.team@gmail.com" style="color:var(--tp-theme-1)">Send Mail</a></div>
+          </div>
+        </div>
+        <div class="about-socials">
+          <a href="https://linkedin.com/in/subhankarrout" target="_blank" class="social-pill linkedin"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+          <a href="https://instagram.com/subhankarrout.in" target="_blank" class="social-pill instagram"><i class="fab fa-instagram"></i> Instagram</a>
+          <a href="https://behance.net/routsubhankar" target="_blank" class="social-pill behance"><i class="fab fa-behance"></i> Behance</a>
+          <a href="https://facebook.com/subhankarrout.in" target="_blank" class="social-pill"><i class="fab fa-facebook-f"></i> Facebook</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="about-stats">
+  <div class="container">
+    <div class="stats-grid stagger-children">
+      <div class="stat-item">
+        <span class="stat-num" data-count="3">0</span>
+        <div class="stat-label">Years of Experience</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="150">0</span>
+        <div class="stat-label">Projects Delivered</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="5">0</span>
+        <div class="stat-label">Awards & Recognition</div>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num" data-count="2">0</span>
+        <div class="stat-label">Published Books</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STORY ===== -->
+<section class="about-story">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">My Journey</div>
+      <h2 class="section-title">A Story of <em>Creativity</em><br>& Dedication</h2>
+    </div>
+    <div class="story-grid">
+      <div class="story-text reveal from-left">
+        <p>Subhankar Rout excels as a Senior UI/UX Designer, renowned for crafting intuitive and impactful consumer experiences worldwide. With over three years in the field, he is awarded and recognized for his commitment to excellence and ethical design practices.</p>
+        <p>Beyond his professional achievements, Subhankar is a passionate storyteller across various mediums. As a filmmaker, YouTuber, and author of a published English novel, he merges technical expertise with innovative narrative skills, captivating audiences and inspiring creativity.</p>
+        <p>Additionally, Subhankar has made significant cultural contributions recognized by the Commissioner of Municipality, Rourkela. His leadership of the <a href="./odicoder.html"><strong>OdiCoder</strong></a> YouTube channel and management of <a href="./s4cinesphere.html"><strong>S4 Cinesphere</strong></a> during college underscore his commitment to sharing knowledge.</p>
+      </div>
+      <div class="story-highlights stagger-children reveal from-right">
+        <div class="highlight-card">
+          <div class="hc-icon purple"><i class="fas fa-palette"></i></div>
+          <div class="hc-body">
+            <h4>UI/UX Design Excellence</h4>
+            <p>Crafting intuitive consumer experiences used by millions globally, with a focus on ethical design.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="hc-icon yellow"><i class="fas fa-film"></i></div>
+          <div class="hc-body">
+            <h4>Film Making Champion</h4>
+            <p>Award-winning filmmaker who has directed and produced multiple short films and music videos.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="hc-icon teal"><i class="fas fa-book-open"></i></div>
+          <div class="hc-body">
+            <h4>Published Author</h4>
+            <p>Amazon Kindle bestseller "The Uncharted Romance" — a debut English novel exploring love and life.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="hc-icon pink"><i class="fab fa-youtube"></i></div>
+          <div class="hc-body">
+            <h4>Content Creator</h4>
+            <p>Running two YouTube channels — OdiCoder (tech, local language) and S4 Cinesphere (cinema).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SKILLS & EDUCATION ===== -->
+<section class="about-skills">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Expertise</div>
+      <h2 class="section-title">Skills & <em>Education</em></h2>
+    </div>
+    <div class="skills-grid">
+      <div class="reveal from-left">
+        <div class="skill-col-title">Core Skills</div>
+        <div class="skill-tag-cloud stagger-children">
+          <span class="skill-tag">UI/UX Design</span>
+          <span class="skill-tag">Web Development</span>
+          <span class="skill-tag">Brand Strategy</span>
+          <span class="skill-tag">Team Management</span>
+          <span class="skill-tag">Graphic Design</span>
+          <span class="skill-tag">Digital Marketing</span>
+          <span class="skill-tag">Film Making</span>
+          <span class="skill-tag">Video Editing</span>
+          <span class="skill-tag">RPA Automation</span>
+          <span class="skill-tag">Storytelling</span>
+          <span class="skill-tag">Logo Design</span>
+          <span class="skill-tag">Project Management</span>
+        </div>
+      </div>
+      <div class="reveal from-right">
+        <div class="skill-col-title">Education & Milestones</div>
+        <div class="timeline">
+          <div class="tl-item">
+            <h4>MBA Operations</h4>
+            <span>KIIT University, Bhubaneswar</span>
+            <p>Specialization in Operations &amp; Supply Chain Management</p>
+          </div>
+          <div class="tl-item">
+            <h4>B.Tech Engineering</h4>
+            <span>GIET University, Gunupur</span>
+            <p>Bachelor of Technology — Engineering Graduate</p>
+          </div>
+          <div class="tl-item">
+            <h4>Chinmaya Vidyalaya</h4>
+            <span>High School &amp; Secondary Education</span>
+            <p>Foundation of discipline, creativity, and leadership</p>
+          </div>
+          <div class="tl-item">
+            <h4>IEE 1st Runner-Up</h4>
+            <span>GIETU — Sep 2020</span>
+            <p>IEEE competition achievement in electronics engineering</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="about-contact">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-label">Let's Connect</div>
+      <h2 class="section-title">Want to <em>Connect?</em></h2>
+    </div>
+    <div class="contact-grid">
+      <div class="reveal from-left">
+        <h3 class="contact-info-title">Let's Start a Conversation</h3>
+        <p class="contact-info-text">Whether it's a design collaboration, film project, or just a hello — Subhankar loves connecting with passionate people.</p>
+        <div class="contact-links">
+          <a href="mailto:subhankarrout.kiit@gmail.com" class="contact-link-item">
+            <div class="cli-icon"><i class="fas fa-envelope"></i></div>
+            <div class="cli-text"><strong>Email</strong><span>subhankarrout.kiit@gmail.com</span></div>
+          </a>
+          <a href="https://linkedin.com/in/subhankarrout" target="_blank" class="contact-link-item">
+            <div class="cli-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="cli-text"><strong>LinkedIn</strong><span>Connect professionally</span></div>
+          </a>
+          <a href="https://instagram.com/subhankarrout.in" target="_blank" class="contact-link-item">
+            <div class="cli-icon"><i class="fab fa-instagram"></i></div>
+            <div class="cli-text"><strong>Instagram</strong><span>@subhankarrout.in</span></div>
+          </a>
+        </div>
+      </div>
+      <div class="reveal from-right">
+        <div class="contact-form-wrap">
+          <div class="cf-title">Send a Message</div>
+          <iframe name="contact-form1" id="contact-form1" style="display:none;" onload="if(submitted){alert('Your message has been sent successfully!')}"></iframe>
+          <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfmYWADDPOVQwtwddcAj8W5rUVipxQilfdGCB_yMwU1sOaFYQ/formResponse" method="post" target="contact-form1" onsubmit="submitted=true">
+            <div class="form-row">
+              <div class="form-field">
+                <label>Your Name</label>
+                <input name="entry.301413949" type="text" placeholder="Ravi Kumar" required>
+              </div>
+              <div class="form-field">
+                <label>Email Address</label>
+                <input name="entry.1313508329" type="email" placeholder="hello@example.com" required>
+              </div>
+            </div>
+            <div class="form-field form-mb">
+              <label>Message</label>
+              <textarea name="entry.151259240" placeholder="Tell me about your project or idea..." required></textarea>
+            </div>
+            <button type="submit" class="tp-btn-submit">Send Message &nbsp; <i class="fas fa-paper-plane"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HORIZONTAL JOURNEY / ROADMAP ===== -->
+<section class="journey-section">
+  <div class="container">
+    <div class="journey-header reveal">
+      <div class="section-label">My Story</div>
+      <h2 class="section-title">The Road I've <em>Travelled</em></h2>
+      <p>Every milestone, every achievement — a journey driven by creativity, discipline and passion.</p>
+    </div>
+  </div>
+
+  <div class="journey-scroll-hint reveal">
+    <i class="fas fa-arrow-right"></i> Scroll to explore the timeline
+  </div>
+
+  <div class="journey-scroll-outer">
+    <!-- Static road line behind the track -->
+    <div class="journey-road-line" id="journeyRoadLine"></div>
+
+    <div class="journey-track" id="journeyTrack">
+
+      <!-- Stop 1 — odd: card above, node, connector below -->
+      <div class="journey-item" data-index="0">
+        <div class="journey-card">
+          <span class="journey-icon">🏫</span>
+          <span class="journey-year">2014 – 2018</span>
+          <h4>School Days — Chinmaya Vidyalaya</h4>
+          <p>Where it all began. Discipline, curiosity, and the first sparks of creativity ignited.</p>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div style="height:80px;"></div>
+      </div>
+
+      <!-- Stop 2 — even: card below -->
+      <div class="journey-item" data-index="1">
+        <div style="height:80px;"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card">
+          <span class="journey-icon">🎬</span>
+          <span class="journey-year">2018</span>
+          <h4>First Film Making Award — SNTEXPO</h4>
+          <p>Won the Best Filmmaker award, proving storytelling through a lens was a calling.</p>
+        </div>
+      </div>
+
+      <!-- Stop 3 — odd -->
+      <div class="journey-item" data-index="2">
+        <div class="journey-card">
+          <span class="journey-icon">🎓</span>
+          <span class="journey-year">2018 – 2022</span>
+          <h4>B.Tech Engineering — GIET University</h4>
+          <p>Graduated while building S4 Cinesphere and discovering deep love for UI/UX design.</p>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div style="height:80px;"></div>
+      </div>
+
+      <!-- Stop 4 — even -->
+      <div class="journey-item" data-index="3">
+        <div style="height:80px;"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card">
+          <span class="journey-icon">🏆</span>
+          <span class="journey-year">Sep 2020</span>
+          <h4>IEE 1st Runner-Up — GIETU</h4>
+          <p>Secured 1st runner-up in the IEEE competition — technical excellence during college.</p>
+        </div>
+      </div>
+
+      <!-- Stop 5 — odd -->
+      <div class="journey-item" data-index="4">
+        <div class="journey-card">
+          <span class="journey-icon">📺</span>
+          <span class="journey-year">2020 – Present</span>
+          <h4>OdiCoder — Tech YouTube Channel</h4>
+          <p>Founded OdiCoder — teaching coding in Odia, making tech accessible to regional India.</p>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div style="height:80px;"></div>
+      </div>
+
+      <!-- Stop 6 — even -->
+      <div class="journey-item" data-index="5">
+        <div style="height:80px;"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card">
+          <span class="journey-icon">🎵</span>
+          <span class="journey-year">Jan 2023</span>
+          <h4>Music Album "Mahiya" — Press Coverage</h4>
+          <p>Regional media coverage in Dainik Jagran &amp; The Sambad, reaching thousands of listeners.</p>
+        </div>
+      </div>
+
+      <!-- Stop 7 — odd -->
+      <div class="journey-item" data-index="6">
+        <div class="journey-card">
+          <span class="journey-icon">🏅</span>
+          <span class="journey-year">Nov 2022</span>
+          <h4>Excellence Award — RPATech</h4>
+          <p>Recognised for outstanding contribution and innovative design solutions at RPATech Annual Day.</p>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div style="height:80px;"></div>
+      </div>
+
+      <!-- Stop 8 — even -->
+      <div class="journey-item" data-index="7">
+        <div style="height:80px;"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card">
+          <span class="journey-icon">📖</span>
+          <span class="journey-year">Dec 2023</span>
+          <h4>Published "The Uncharted Romance"</h4>
+          <p>Debuted as a published English fiction author — covered by Newswires, American Times &amp; Daily Times.</p>
+        </div>
+      </div>
+
+      <!-- Stop 9 — odd -->
+      <div class="journey-item" data-index="8">
+        <div class="journey-card">
+          <span class="journey-icon">🌟</span>
+          <span class="journey-year">May 2024</span>
+          <h4>Amazon Kindle Bestseller</h4>
+          <p>"The Uncharted Romance" topped Amazon Kindle charts — a milestone for a first-time author.</p>
+        </div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div style="height:80px;"></div>
+      </div>
+
+      <!-- Stop 10 — even -->
+      <div class="journey-item" data-index="9">
+        <div style="height:80px;"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-node"></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card">
+          <span class="journey-icon">🎯</span>
+          <span class="journey-year">Dec 2024</span>
+          <h4>Top 1% Learner — ADPList</h4>
+          <p>Recognised as a Top-1% Learner for mentorship activities and continuous upskilling in UI/UX.</p>
+        </div>
+      </div>
+
+      <!-- End cap -->
+      <div class="journey-end-cap">
+        <div class="journey-end-dot">🚀</div>
+        <h3>The Journey Continues…</h3>
+        <p>New designs, new stories, new milestones ahead.</p>
+        <div class="journey-end-dots"><span></span><span></span><span></span></div>
+      </div>
+
+    </div><!-- journey-track -->
+  </div><!-- journey-scroll-outer -->
+
+  <!-- Navigation dots -->
+  <div class="journey-dots" id="journeyDots"></div>
+
+</section>
+
+</main>
+
+<!-- footer-area-start — identical to pr-award_new.html -->
+<footer>
+   <div class="tp-footer-area black-bg pt-130 pb-30">
+      <div class="container">
+         <div class="row">
+            <div class="col-xl-3 col-lg-4 col-md-6">
+               <div class="tp-footer-widget">
+                  <div class="tp-footer-widget__logo mb-30">
+                     <a href="index.html"><img src="assets/img/logo/logo-white.png" alt=""></a>
+                  </div>
+                  <div class="tp-footer-widget__social-link">
+                     <a href="https://linkedin.com/in/subhankarrout/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                     <a href="https://www.instagram.com/subhankarrout.in/" target="_blank"><i class="fab fa-instagram"></i></a>
+                     <a href="https://www.facebook.com/subhankarrout.in/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                     <a href="https://behance.net/routsubhankar/" target="_blank"><i class="fab fa-behance"></i></a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-3 col-lg-2 col-md-6 d-flex justify-content-lg-center">
+               <div class="tp-footer-widget">
+                  <div class="tp-footer-widget__title pb-15">
+                     <h3 class="footer-title">Usefull Links</h3>
+                  </div>
+                  <div class="tp-footer-widget__list">
+                     <ul>
+                        <li><a href="https://youtube.com/@s4cinesphere" target="_blank">S4 Cinesphere (YouTube)</a></li>
+                        <li><a href="pr-award.html">Press Release</a></li>
+                        <li><a href="https://www.imdb.com/name/nm14332046/" target="_blank">IMDb Profile</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-3 col-lg-2 col-md-6">
+               <div class="tp-footer-widget pl-20">
+                  <div class="tp-footer-widget__title pb-15">
+                     <h3 class="footer-title">Publications</h3>
+                  </div>
+                  <div class="tp-footer-widget__list">
+                     <ul>
+                        <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
+                        <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6">
+               <div class="tp-footer-widget">
+                  <div class="tp-footer-widget__title pb-15">
+                     <h3 class="footer-title">Get Update</h3>
+                  </div>
+                  <div class="tp-footer-widget__input">
+                     <iframe name="contact-form" id="contact-form" onload="if(submitted){alert('Sucessfully Subscribed. \nCheck your mail inbox or spam folder to get confirmation.')} {window.location.reload();}"></iframe>
+                     <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScICZPA3CSLtSqmiNNhgq7ERnTxgB7XJeNwq7k-0xgDfRcIBw/formResponse" method="post" target="contact-form" onsubmit="submitted=true">
+                        <input name="entry.1313508329" type="email" required placeholder="Enter Mail">
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="tp-copyright-area">
+         <div class="container">
+            <div class="copyright-border pt-40">
+               <div class="row">
+                  <div class="col-xl-6 col-lg-6 col-12">
+                     <div class="tp-copyright-left text-lg-start text-start text-md-center">
+                        <p>&copy; Copyright <script>document.write(new Date().getFullYear());</script>, All rights reserved</p>
+                     </div>
+                  </div>
+                  <div class="col-xl-6 col-lg-6 col-12">
+                     <div class="tp-copyright-right text-start text-md-center text-lg-end">
+                        <a href="contact.html" target="_blank"> Contact</a>
+                        <a href="privacy-policy.html" target="_blank"> Privacy policy</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<!-- footer-area-end -->
+
+<!-- backto-top-area-start -->
+<button class="scroll-top scroll-to-target d-md-none" data-target="html">
+   <i class="far fa-angle-double-up"></i>
+</button>
+<!-- backto-top-area-end -->
+
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="d8z_zNMZtnWawsBTGQ_uJ";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+</script>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/waypoints.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/swiper-bundle.js"></script>
+<script src="assets/js/slick.js"></script>
+<script src="assets/js/magnific-popup.js"></script>
+<script src="assets/js/counterup.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/meanmenu.js"></script>
+<script src="assets/js/isotope-pkgd.js"></script>
+<script src="assets/js/imagesloaded-pkgd.js"></script>
+<script src="assets/js/ajax-form.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+  // ── Reveal observer ─────────────────────────────────────
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal, .stagger-children').forEach(el => revealObs.observe(el));
+
+  // ── Counter animation ────────────────────────────────────
+  function animateCounter(el) {
+    const target = +el.dataset.count, duration = 1600, start = performance.now();
+    const update = (now) => {
+      const e = Math.min((now - start) / duration, 1);
+      el.textContent = Math.floor((1 - Math.pow(1 - e, 3)) * target) + '+';
+      if (e < 1) requestAnimationFrame(update); else el.textContent = target + '+';
+    };
+    requestAnimationFrame(update);
+  }
+  const statsSection = document.querySelector('.about-stats');
+  if (statsSection) {
+    let counted = false;
+    new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !counted) {
+        counted = true;
+        document.querySelectorAll('.stat-num[data-count]').forEach(animateCounter);
+      }
+    }, { threshold: .4 }).observe(statsSection);
+  }
+
+  // ── Horizontal Journey — reveal items on scroll ──────────
+  const journeyItems = document.querySelectorAll('.journey-item');
+  const journeyObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const idx = +entry.target.dataset.index;
+        setTimeout(() => entry.target.classList.add('jv'), idx * 80);
+      }
+    });
+  }, { threshold: 0.1 });
+  journeyItems.forEach(item => journeyObs.observe(item));
+
+  // ── Journey dots navigation ──────────────────────────────
+  const track = document.getElementById('journeyTrack');
+  const dotsContainer = document.getElementById('journeyDots');
+  const TOTAL = journeyItems.length;
+
+  // Build dots
+  journeyItems.forEach((_, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'journey-dot' + (i === 0 ? ' active' : '');
+    btn.onclick = () => scrollToItem(i);
+    dotsContainer.appendChild(btn);
+  });
+
+  function scrollToItem(idx) {
+    const items = document.querySelectorAll('.journey-item');
+    if (!items[idx]) return;
+    const itemLeft = items[idx].offsetLeft;
+    const trackWidth = track.offsetWidth;
+    const itemWidth = items[idx].offsetWidth;
+    track.scrollTo({ left: itemLeft - trackWidth / 2 + itemWidth / 2, behavior: 'smooth' });
+  }
+
+  function updateActiveDot() {
+    const scrollLeft = track.scrollLeft;
+    const trackWidth = track.offsetWidth;
+    const viewCenter = scrollLeft + trackWidth / 2;
+    let closest = 0, closestDist = Infinity;
+    document.querySelectorAll('.journey-item').forEach((item, i) => {
+      const itemCenter = item.offsetLeft + item.offsetWidth / 2;
+      const dist = Math.abs(viewCenter - itemCenter);
+      if (dist < closestDist) { closestDist = dist; closest = i; }
+    });
+    document.querySelectorAll('.journey-dot').forEach((dot, i) => {
+      dot.classList.toggle('active', i === closest);
+    });
+    document.querySelectorAll('.journey-item').forEach((item, i) => {
+      item.classList.toggle('active', i === closest);
+    });
+  }
+
+  track.addEventListener('scroll', updateActiveDot, { passive: true });
+
+  // ── Drag to scroll ────────────────────────────────────────
+  let isDown = false, startX, scrollLeftStart;
+  track.addEventListener('mousedown', e => {
+    isDown = true; startX = e.pageX - track.offsetLeft;
+    scrollLeftStart = track.scrollLeft; track.classList.add('grabbing');
+  });
+  document.addEventListener('mouseup', () => { isDown = false; track.classList.remove('grabbing'); });
+  track.addEventListener('mousemove', e => {
+    if (!isDown) return; e.preventDefault();
+    const x = e.pageX - track.offsetLeft;
+    track.scrollLeft = scrollLeftStart - (x - startX);
+  });
+
+  // ── Keyboard navigation ────────────────────────────────────
+  let activeIdx = 0;
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight') { activeIdx = Math.min(activeIdx + 1, TOTAL - 1); scrollToItem(activeIdx); }
+    if (e.key === 'ArrowLeft')  { activeIdx = Math.max(activeIdx - 1, 0); scrollToItem(activeIdx); }
+  });
+</script>
+</body>
+</html>
+
+

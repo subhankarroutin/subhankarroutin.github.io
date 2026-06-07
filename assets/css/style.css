@@ -55,7 +55,7 @@
   */
   @fa-amazon: #ff9900;
   --tp-common-white: #ffffff;
-  --tp-common-black: #292930;
+  --tp-common-black: #282831;
   --tp-common-black-2: #3A3A42;
   --tp-common-blue: #82CEFD;
   --tp-common-pink: #FFADAD;
@@ -2776,10 +2776,6 @@ input[type=color] {
 }
 
 /* mean menu customize */
-.mean-container a.meanmenu-reveal {
-  display: none;
-}
-
 .mean-container .mean-nav {
   background: none;
   margin-top: 0;
@@ -2795,69 +2791,90 @@ input[type=color] {
   padding: 0;
   margin: 0;
   width: 100%;
-  list-style-type: none;
-  display: block !important;
+  list-style: none;
 }
 
-.mean-container a.meanmenu-reveal {
-  display: none !important;
+.mean-container .mean-nav {
+  opacity: 1 !important;
+  visibility: visible !important;
+  height: auto !important;
+  overflow: visible !important;
 }
 
-.mean-container .mean-nav ul li a {
+.mean-container .mean-nav li {
+  position: relative;
+}
+
+.mean-container .mean-nav li a {
+  display: block;
   width: 100%;
-  padding: 15px 0;
-  color: #fff;
-  border-top: 1px solid #353535;
+  padding: 18px 60px 18px 0;
+  color: #fff !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.2;
   font-weight: 700;
-}
-.mean-container .mean-nav ul li a:hover {
-  color: var(--tp-theme-primary);
-}
-
-.mean-container .mean-nav ul li a.mean-expand {
-  margin-top: 10px;
-  padding: 0 !important;
-  line-height: 14px;
-  border: 1px solid #888888 !important;
-  height: 30px;
-  width: 30px;
-  line-height: 30px;
-  color: #fff;
-  line-height: 30px;
-  top: 0;
-  font-weight: 400;
-}
-.mean-container .mean-nav ul li a.mean-expand:hover {
-  background: var(--clr-theme-1);
-  color: var(--clr-common-white);
-  border-color: #888888;
-}
-
-.mean-container .mean-nav ul li > a > i {
-  display: none;
-}
-
-.mean-container .mean-nav ul li > a.mean-expand i {
-  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  text-decoration: none;
 }
 
 .mean-container .mean-nav > ul > li:first-child > a {
   border-top: 0;
 }
 
-.mean-container .mean-nav ul li a.mean-expand.mean-clicked {
-  color: var(--clr-common-black);
+.mean-container .mean-nav li li a,
+.mean-container .mean-nav li li li a {
+  padding-left: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: none;
+  border-top: 0;
 }
 
-.mean-container .mean-nav ul li a.mean-expand.mean-clicked i {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  color: var(--tp-common-white);
+.mean-container .mean-nav li a:hover {
+  color: var(--tp-theme-primary);
+}
+
+.mean-container .mean-nav ul li a.mean-expand {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  padding: 0;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.25) !important;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.mean-container .mean-nav ul li a.mean-expand:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.mean-container .mean-nav ul li a.mean-expand.mean-clicked {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mean-container .mean-nav ul li a.mean-expand i {
+  display: inline-block;
+}
+
+.mean-container .mean-nav ul ul {
+  padding-left: 15px;
+}
+
+.mean-container .mean-nav ul ul li a {
+  padding: 12px 0 12px 16px;
 }
 
 /*----------------------------------------*/
@@ -3299,30 +3316,118 @@ input[type=color] {
   left: 0;
   right: 0;
   z-index: 999;
+  background: transparent;
 }
 @media only screen and (min-width: 1601px) and (max-width: 1800px) {
   .header-transparent {
     padding-left: 40px;
     padding-right: 40px;
+    background: transparent;
   }
 }
 @media only screen and (min-width: 1400px) and (max-width: 1600px) {
   .header-transparent {
     padding-left: 50px;
     padding-right: 50px;
+    background: transparent;
   }
 }
 @media only screen and (min-width: 1200px) and (max-width: 1399px) {
   .header-transparent {
     padding-left: 15px;
     padding-right: 15px;
+    background: transparent;
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .header-transparent {
     padding-left: 0px;
     padding-right: 0px;
+    background: transparent;
   }
+}
+
+.header-white {
+  background: #fff;
+}
+.header-white .tp-main-menu ul li a {
+  color: #707070;
+}
+.header-white .tp-main-menu ul li:hover a {
+  color: var(--tp-common-black);
+}
+.pr-award-page .tp-header-area-two.header-white {
+  position: relative;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+.pr-award-page .header-white .tp-main-menu {
+  text-align: center;
+}
+.pr-award-page .tp-main-menu ul {
+  display: inline-flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+.pr-award-page .tp-main-menu ul li {
+  margin-right: 40px;
+}
+.pr-award-page .tp-header-button {
+  text-align: left;
+}
+.pr-award-page .tp-header-button .tp-btn {
+  padding: 0 48px;
+  min-width: 140px;
+}
+.pr-award-page .pr-hero {
+  padding: 0;
+  padding-top: 100px;
+  margin-top: 0;
+}
+@media (max-width: 1200px) {
+  .pr-award-page .pr-hero {
+    padding-top: 80px;
+  }
+}
+@media (max-width: 768px) {
+  .pr-award-page .pr-hero {
+    padding-top: 70px;
+  }
+}
+.pr-award-page .pr-hero-badge i {
+  font-size: 8px;
+}
+.pr-award-page .reveal {
+  text-align: center;
+}
+.pr-award-page .section-label {
+  justify-content: center;
+}
+.pr-award-page .section-title {
+  color: var(--tp-common-black);
+  text-align: center;
+}
+.pr-award-page .section-title em {
+  color: var(--tp-theme-primary);
+}
+.lb-close {
+  position: absolute; top: 16px; right: 16px;
+  background: rgba(0,0,0,.5);
+  border: none; color: #fff; font-size: 28px; cursor: pointer;
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2; transition: all .3s ease;
+}
+.lb-close:hover {
+  background: rgba(0,0,0,.7);
+}
+#contact-form {
+  display: none;
+}
+@media (max-width: 992px) {
+  .pr-award-page .tp-header-button .tp-btn { padding: 0 30px; }
+  .pr-award-page .tp-main-menu ul li { margin-right: 20px; }
 }
 
 @media only screen and (min-width: 1400px) and (max-width: 1600px), only screen and (min-width: 1200px) and (max-width: 1399px) {
@@ -3331,6 +3436,7 @@ input[type=color] {
     margin-right: 30px;
     padding-left: 5px;
     padding-right: 5px;
+    background: #fff;
   }
 }
 
@@ -16183,9 +16289,663 @@ html, body {
   box-sizing: border-box;
 }
 
+/* =====================================================
+   PR AWARD PAGE — KEYFRAME ANIMATIONS
+===================================================== */
+@keyframes tpfadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes jumpTwo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(22px); }
+}
+@keyframes jumpThree {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+@keyframes rotated {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes scale-upOne {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(.88); }
+}
+@keyframes heroLineGrow {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes gradShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes preloaderOut {
+  0% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { opacity: 0; pointer-events: none; }
+}
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+@keyframes cardPop {
+  from { opacity: 0; transform: scale(.95) translateY(20px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(89, 86, 233, .4); }
+  70% { box-shadow: 0 0 0 14px rgba(89, 86, 233, 0); }
+}
 
+/* =====================================================
+   PR AWARD PAGE — HERO SECTION
+===================================================== */
+.pr-award-page .pr-hero {
+  min-height: 560px;
+  background: linear-gradient(135deg, #0d0d14 0%, #1a1028 40%, #12102e 100%);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.pr-award-page .pr-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(89, 86, 233, .2) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+.pr-award-page .pr-hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.pr-award-page .orb-1 {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(89, 86, 233, .35), transparent);
+  top: -200px;
+  right: -150px;
+  animation: jumpTwo 8s ease-in-out infinite;
+}
+.pr-award-page .orb-2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 220, 96, .15), transparent);
+  bottom: -100px;
+  left: -50px;
+  animation: jumpThree 6s ease-in-out infinite;
+}
+.pr-award-page .orb-3 {
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(30, 226, 207, .2), transparent);
+  top: 30%;
+  left: 5%;
+  animation: scale-upOne 4s ease-in-out infinite;
+}
+.pr-award-page .pr-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  animation: tpfadeUp .9s ease both;
+  max-width: 700px;
+  padding: 0 20px;
+}
+.pr-award-page .pr-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(89, 86, 233, .15);
+  border: 1px solid rgba(89, 86, 233, .4);
+  border-radius: 50px;
+  padding: 8px 22px;
+  margin-bottom: 30px;
+  color: var(--tp-common-blue);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+}
+.pr-award-page .pr-hero-badge i {
+  font-size: 10px;
+  animation: scale-upOne 1.5s ease infinite;
+  color: currentColor;
+}
+.pr-award-page body,
+.pr-award-page {
+  font-family: 'DM Sans', sans-serif;
+}
+.pr-award-page .pr-hero h1 {
+  font-size: clamp(38px, 6vw, 76px);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  margin-bottom: 20px;
+}
+.pr-award-page .pr-hero h1 em {
+  font-style: normal;
+  color: var(--tp-theme-primary);
+  position: relative;
+}
+.pr-award-page .pr-hero h1 em::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--tp-theme-primary);
+  border-radius: 2px;
+  animation: heroLineGrow 1s .8s ease both;
+}
+.pr-award-page .pr-hero p {
+  font-size: 18px;
+  color: rgba(255, 255, 255, .55);
+  margin-bottom: 36px;
+  line-height: 1.8;
+}
+.pr-award-page .pr-hero-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, .7);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, .2);
+  border-radius: 50px;
+  padding: 10px 24px;
+  transition: all .3s ease;
+}
+.pr-award-page .pr-hero-back:hover {
+  background: rgba(255, 255, 255, .1);
+  color: #fff;
+}
 
+/* =====================================================
+   PR AWARD PAGE — SLIDER SECTION
+===================================================== */
+.pr-award-page .pr-slider-section {
+  padding: 100px 0 80px;
+  background: var(--tp-grey-1);
+  position: relative;
+  overflow: hidden;
+}
+.pr-award-page .carousel-wrap {
+  margin-top: 50px;
+  position: relative;
+}
+.pr-award-page .carousel-viewport {
+  overflow: hidden;
+  border-radius: 24px;
+  cursor: grab;
+  user-select: none;
+}
+.pr-award-page .carousel-viewport:active {
+  cursor: grabbing;
+}
+.pr-award-page .carousel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform .7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
+}
+.pr-award-page .carousel-track.dragging {
+  transition: none;
+}
+.pr-award-page .pr-slide {
+  flex: 0 0 calc(33.333% - 16px);
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, .07);
+  border: 1px solid var(--tp-border-1);
+  transition: transform .4s ease, box-shadow .4s ease, border-color .4s ease;
+  pointer-events: auto !important;
+  cursor: pointer;
+}
+.pr-award-page .pr-slide:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(89, 86, 233, .15);
+  border-color: var(--tp-theme-1);
+  pointer-events: auto;
+}
+.pr-award-page .pr-slide-img {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+.pr-award-page .pr-slide-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+  pointer-events: none;
+}
+.pr-award-page .pr-slide:hover .pr-slide-img img {
+  transform: scale(1.06);
+}
+.pr-award-page .pr-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, .65), transparent);
+}
+.pr-award-page .pr-slide-source {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--tp-theme-1);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 5px 14px;
+  border-radius: 50px;
+}
+.pr-award-page .pr-slide-body {
+  padding: 22px;
+}
+.pr-award-page .pr-slide-body h4 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--tp-common-black);
+  margin-bottom: 6px;
+}
+.pr-award-page .pr-slide-body h4 a:hover {
+  color: var(--tp-theme-1);
+}
+.pr-award-page .pr-slide-body p {
+  font-size: 13px;
+  color: var(--tp-text-body);
+}
+.pr-award-page .pr-slide-body .pr-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--tp-theme-1);
+  transition: gap .2s;
+}
+.pr-award-page .pr-slide-body .pr-link:hover {
+  gap: 10px;
+}
+.pr-award-page .carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 36px;
+}
+.pr-award-page .carousel-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.pr-award-page .carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tp-border-1);
+  border: none;
+  cursor: pointer;
+  transition: all .3s ease;
+  padding: 0;
+}
+.pr-award-page .carousel-dot.active {
+  width: 28px;
+  border-radius: 4px;
+  background: var(--tp-theme-1);
+}
+@media (max-width: 1024px) {
+  .pr-award-page .pr-slide {
+    flex: 0 0 calc(50% - 12px);
+  }
+}
+@media (max-width: 640px) {
+  .pr-award-page .pr-slide {
+    flex: 0 0 calc(100%);
+  }
+}
 
+/* =====================================================
+   PR AWARD PAGE — GRID & MASONRY
+===================================================== */
+.pr-award-page .pr-grid-section {
+  padding: 100px 0 120px;
+  background: var(--tp-common-white);
+}
+.pr-award-page .filter-bar {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
+.pr-award-page .filter-btn {
+  padding: 10px 26px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  border: 2px solid var(--tp-border-1);
+  background: transparent;
+  color: var(--tp-common-black);
+  cursor: pointer;
+  transition: all .3s ease;
+}
+.pr-award-page .filter-btn.active,
+.pr-award-page .filter-btn:hover {
+  background: var(--tp-theme-1);
+  border-color: var(--tp-theme-1);
+  color: #fff;
+}
+.pr-award-page .pr-masonry {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.pr-award-page .pr-card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, .07);
+  border: 1px solid var(--tp-border-1);
+  transition: all .4s ease;
+  animation: cardPop .5s ease both;
+}
+.pr-award-page .pr-card.hidden {
+  display: none;
+}
+.pr-award-page .pr-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 60px rgba(89, 86, 233, .15);
+  border-color: var(--tp-theme-1);
+}
+.pr-award-page .pr-card-thumb {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.pr-award-page .pr-card-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+.pr-award-page .pr-card:hover .pr-card-thumb img {
+  transform: scale(1.08);
+}
+.pr-award-page .pr-card-thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(41, 41, 48, .85) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+.pr-award-page .pr-card:hover .pr-card-thumb-overlay {
+  opacity: 1;
+}
+.pr-award-page .pr-card-type {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+.pr-award-page .pr-card-type.pr {
+  background: rgba(89, 86, 233, .9);
+  color: #fff;
+}
+.pr-award-page .pr-card-type.awd {
+  background: rgba(255, 220, 96, .9);
+  color: var(--tp-common-black);
+}
+.pr-award-page .pr-card-zoom {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--tp-theme-primary);
+  color: var(--tp-common-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  opacity: 0;
+  transform: scale(.8);
+  transition: all .3s ease;
+}
+.pr-award-page .pr-card:hover .pr-card-zoom {
+  opacity: 1;
+  transform: scale(1);
+}
+.pr-award-page .pr-card-body {
+  padding: 22px;
+}
+.pr-award-page .pr-card-body h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--tp-common-black);
+  margin-bottom: 6px;
+}
+.pr-award-page .pr-card-body h3 a:hover {
+  color: var(--tp-theme-1);
+}
+.pr-award-page .pr-card-body span {
+  font-size: 13px;
+  color: var(--tp-text-body);
+}
+.pr-award-page .pr-card-video .pr-card-thumb {
+  aspect-ratio: 16/9;
+}
+.pr-award-page .pr-card-play-btn {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pr-award-page .play-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, .4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  transition: all .3s ease;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+.pr-award-page .pr-card-video:hover .play-circle {
+  background: var(--tp-theme-1);
+  border-color: var(--tp-theme-1);
+  transform: scale(1.1);
+}
+@media (max-width: 1024px) {
+  .pr-award-page .pr-masonry {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .pr-award-page .pr-masonry {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================
+   PR AWARD PAGE — AWARDS SECTION
+===================================================== */
+.pr-award-page .awards-highlight {
+  padding: 80px 0;
+  background: var(--tp-common-black);
+  position: relative;
+  overflow: hidden;
+}
+.pr-award-page .awards-highlight::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(89, 86, 233, .18) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: .6;
+}
+.pr-award-page .awards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+}
+.pr-award-page .award-stat {
+  text-align: center;
+  padding: 50px 30px;
+  border-right: 1px solid rgba(255, 255, 255, .06);
+}
+.pr-award-page .award-stat:last-child {
+  border-right: none;
+}
+.pr-award-page .award-stat-icon {
+  font-size: 36px;
+  margin-bottom: 16px;
+  color: rgba(255, 255, 255, .7);
+  display: block;
+  min-height: 40px;
+  line-height: 1;
+}
+.pr-award-page .award-stat-icon i {
+  color: rgba(255, 255, 255, .7);
+  font-size: 36px;
+}
+.pr-award-page .award-stat-num {
+  font-size: clamp(36px, 4vw, 56px);
+  font-weight: 700;
+  color: var(--tp-theme-primary);
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.pr-award-page .award-stat-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, .45);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+@media (max-width: 1024px) {
+  .pr-award-page .awards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 767px) {
+  .pr-award-page .awards-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =====================================================
+   PR AWARD PAGE — LIGHTBOX
+===================================================== */
+.pr-award-page .lb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9990;
+  background: rgba(0, 0, 0, .92);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease;
+}
+.pr-award-page .lb-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+.pr-award-page .lb-img-wrap {
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.pr-award-page .lb-img-wrap img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 16px;
+}
+
+/* =====================================================
+   PR AWARD PAGE — REVEAL ANIMATIONS
+===================================================== */
+.pr-award-page .reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.pr-award-page .reveal.from-left {
+  transform: translateX(-40px);
+}
+.pr-award-page .reveal.from-right {
+  transform: translateX(40px);
+}
+.pr-award-page .reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* =====================================================
+   PR AWARD PAGE — BACK TO TOP
+===================================================== */
+.pr-award-page .back-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 998;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--tp-theme-1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all .3s ease;
+  box-shadow: 0 8px 24px rgba(89, 86, 233, .35);
+}
+.pr-award-page .back-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.pr-award-page .back-top:hover {
+  background: var(--tp-theme-primary);
+  color: #000;
+  transform: translateY(-4px);
+}
 
 
 /*# sourceMappingURL=style.css.map */

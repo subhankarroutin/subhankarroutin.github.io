@@ -1,0 +1,837 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Books &amp; Publications — Subhankar Rout</title>
+  <meta name="description" content="Explore published books by Subhankar Rout — The Uncharted Romance and One Year, Many Lessons. One voice, two genres.">
+  <meta name="keywords" content="subhankar rout books, the uncharted romance, one year many lessons, author, novel, startup book">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5956E9">
+
+  <script>
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","r08p4eibkc");
+  </script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/custom-animation.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/spacing.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+  /* ================================================================
+     BOOKS PAGE — Aesthetic upgrades over the Collax base theme
+     Keeps tp-hero-area / tp-product-details-area / tp-testimonial-area
+     intact; adds Playfair Display, colour accents, and polish.
+  ================================================================ */
+
+  /* Playfair for hero title and book titles */
+  .tp-hero-title,
+  .pd-title,
+  .productdetails__ratting h4 {
+    font-family: 'Playfair Display', Georgia, serif !important;
+  }
+
+  /* Gradient italic em in hero */
+  .bk-em {
+    font-style: italic;
+    background: linear-gradient(90deg, #E91E8C 0%, #F59E0B 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+
+  /* Book cover hover lift */
+  .tp-product-img img {
+    border-radius: 16px;
+    box-shadow: 0 20px 64px rgba(0,0,0,.13), 0 4px 16px rgba(0,0,0,.07);
+    transition: transform .45s cubic-bezier(.22,.61,.36,1), box-shadow .45s ease;
+    display: block; max-width: 320px; margin: 0 auto;
+  }
+  .tp-product-img img:hover {
+    transform: scale(1.025) translateY(-6px);
+    box-shadow: 0 36px 80px rgba(0,0,0,.16), 0 8px 24px rgba(0,0,0,.09);
+  }
+
+  /* Book section alternating tints */
+  .bk-prod-tur  { background: #ffffff; }
+  .bk-prod-oyml { background: #fffcf5; }
+
+  /* Genre pill tags */
+  .productdetails__model { margin-bottom: 18px; }
+  .productdetails__model h5 {
+    font-size: 12px; font-weight: 800; letter-spacing: .1em;
+    text-transform: uppercase; margin-bottom: 10px;
+    color: rgba(15,12,41,.45);
+  }
+  .productdetails__model a {
+    display: inline-block; margin: 3px 4px;
+    padding: 5px 14px; border-radius: 100px;
+    font-size: 12px; font-weight: 600; letter-spacing: .04em;
+    border: 1.5px solid; text-decoration: none;
+    transition: background .2s, color .2s;
+    cursor: default;
+  }
+
+  /* TUR — rose genre tags */
+  .bk-prod-tur .productdetails__model a {
+    border-color: rgba(233,30,140,.22);
+    color: #c8187a; background: rgba(233,30,140,.06);
+  }
+  .bk-prod-tur .productdetails__model a:hover {
+    background: rgba(233,30,140,.13); color: #a51265;
+  }
+  .bk-prod-tur .productdetails__ratting h4,
+  .bk-prod-tur .pd-title { color: #0f0c29; }
+  .bk-prod-tur .productdetails__ratting h4 del { opacity: .45; }
+
+  /* OYML — amber genre tags */
+  .bk-prod-oyml .productdetails__model a {
+    border-color: rgba(245,158,11,.28);
+    color: #b45309; background: rgba(245,158,11,.07);
+  }
+  .bk-prod-oyml .productdetails__model a:hover {
+    background: rgba(245,158,11,.15); color: #92400e;
+  }
+  .bk-prod-oyml .productdetails__ratting h4,
+  .bk-prod-oyml .pd-title { color: #0f0c29; }
+
+  /* Price badges */
+  .productdetails__ratting h4 span {
+    font-size: 13px; font-weight: 700;
+    background: #e6f9f0; color: #15803d;
+    padding: 3px 10px; border-radius: 100px;
+    vertical-align: middle; margin-left: 6px;
+  }
+
+  /* Hero social platform links — pill style */
+  .tp-hero-social .social-icon-1,
+  .tp-hero-social .social-icon-2,
+  .tp-hero-social .social-icon-3,
+  .tp-hero-social .social-icon-4 {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 18px; border-radius: 100px;
+    font-size: 13px; font-weight: 600;
+    background: rgba(255,255,255,.12);
+    border: 1.5px solid rgba(255,255,255,.2);
+    color: rgba(255,255,255,.85) !important;
+    text-decoration: none; margin-right: 8px; margin-bottom: 8px;
+    transition: background .25s, border-color .25s, transform .25s;
+  }
+  .tp-hero-social .social-icon-1:hover,
+  .tp-hero-social .social-icon-2:hover,
+  .tp-hero-social .social-icon-3:hover,
+  .tp-hero-social .social-icon-4:hover {
+    background: rgba(255,255,255,.22);
+    border-color: rgba(255,255,255,.45);
+    transform: translateY(-2px);
+    color: #fff !important;
+  }
+  .tp-hero-social span { color: rgba(255,255,255,.85) !important; }
+
+  /* Testimonial card upgrade */
+  .tp-testimonial-item {
+    border-radius: 20px;
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+  .tp-testimonial-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 60px rgba(0,0,0,.35) !important;
+  }
+
+  /* Review form section */
+  .bk-review-area { background: #f9f9fb; padding: 80px 0; }
+  .bk-review-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(28px, 3.5vw, 44px);
+    font-weight: 700; color: #0f0c29;
+    margin-bottom: 8px;
+  }
+  .bk-review-sub { font-size: 15px; color: rgba(15,12,41,.55); margin-bottom: 36px; }
+
+  /* Responsive tweaks */
+  @media (max-width: 991px) {
+    .tp-product-img { margin-bottom: 40px; }
+    .tp-product-img img { max-width: 280px; }
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <a class="skip-link" href="#bk-main">Skip to main content</a>
+
+  <!-- ============================================================
+       DESKTOP HEADER
+  ============================================================ -->
+  <header class="d-none d-lg-block" role="banner">
+    <div id="header-sticky" class="tp-header-area-two header-transparent header-space-three pl-115 pr-115">
+      <div class="container-fluid">
+        <div class="row align-items-center header-space-two">
+          <div class="col-xxl-3 col-xl-3 col-lg-3">
+            <div class="tp-logo text-start">
+              <a href="index.html" aria-label="Subhankar Rout — Home">
+                <img src="assets/img/logo/logo-blue.png" alt="Subhankar Rout logo" width="140" height="40">
+              </a>
+            </div>
+          </div>
+          <div class="col-xxl-6 col-xl-6 col-lg-6">
+            <nav id="mobile-menu" class="tp-main-menu text-center" aria-label="Primary navigation">
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li class="has-dropdown"><a href="#">YouTube Channels</a>
+                  <ul class="submenu text-start">
+                    <li><a href="odicoder.html">OdiCoder</a></li>
+                    <li><a href="odidesigner.html">OdiDesigner</a></li>
+                    <li><a href="s4cinesphere.html">S4 Cinesphere</a></li>
+                  </ul>
+                </li>
+                <li class="has-dropdown active"><a href="books.html" class="active">Publications</a>
+                  <ul class="submenu text-start">
+                    <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
+                    <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
+                  </ul>
+                </li>
+                <li><a href="pr.html">Press Release</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xxl-3 col-xl-3 col-lg-3">
+            <div class="tp-header-button text-end">
+              <a class="tp-btn" href="portfolio.html">Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       MOBILE HEADER
+  ============================================================ -->
+  <div id="header-sticky-mobile" class="tp-md-header-area header-transparent d-lg-none pt-30" role="banner">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-6">
+          <div class="tp-logo">
+            <a href="index.html" aria-label="Subhankar Rout — Home">
+              <img src="assets/img/logo/logo-blue.png" alt="Subhankar Rout logo" width="120" height="34">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-6">
+          <div class="tp-header-right z-index-1 d-flex align-items-center justify-content-end">
+            <a class="tp-btn d-none d-md-block" href="portfolio.html">Portfolio</a>
+            <button class="tp-menu-bar" aria-label="Open navigation menu" aria-expanded="false" aria-controls="offcanvas-menu">
+              <i class="fal fa-bars" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       OFFCANVAS MENU
+  ============================================================ -->
+  <div class="tp-offcanvas-area" id="offcanvas-menu" role="dialog" aria-label="Mobile navigation menu" aria-modal="true">
+    <div class="tpoffcanvas">
+      <div class="tpoffcanvas__logo">
+        <a href="index.html" aria-label="Subhankar Rout — Home">
+          <img src="assets/img/logo/logo-white.png" alt="Subhankar Rout logo" width="140" height="40">
+        </a>
+      </div>
+      <div class="tpoffcanvas__close-btn">
+        <a class="close-btn" href="javascript:void(0)" aria-label="Close navigation menu">
+          <i class="fal fa-times-hexagon" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="mobile-menu" aria-label="Mobile navigation"></div>
+      <div class="tp-header-button" style="text-align:left;">
+        <a class="tp-btn" href="portfolio.html">Portfolio</a>
+      </div>
+      <div class="tpoffcanvas__contact">
+        <br><br>
+        <span>Send Mail</span>
+        <ul>
+          <li>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:subhankarrout.kiit@gmail.com">subhankarrout.kiit@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="body-overlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main id="bk-main">
+
+    <!-- =================== HERO =================== -->
+    <div class="tp-hero-area tp-hero-space p-relative z-index-1 fix">
+      <div class="tp-hero-shape">
+        <div class="shape-circle-yellow d-none"></div>
+        <div class="shape-circle-blue"></div>
+        <div class="shape-one"><img src="assets/img/hero/shape-1.png" alt="" aria-hidden="true"></div>
+      </div>
+      <div class="tp-hero-wapper">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xl-7 col-lg-7">
+              <div class="tp-hero-content">
+                <div class="tp-hero-text">
+                  <h1 class="tp-hero-title wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".6s">
+                    One Voice,<br><em class="bk-em">Two Genres</em>
+                  </h1>
+                  <p class="wow tpfadeUp" data-wow-duration=".5s" data-wow-delay=".8s">
+                    Writing across fiction and nonfiction, Subhankar explores emotions, experiences, and
+                    real-life learnings. From romantic storytelling to lessons shaped by startups and college
+                    life — his books reflect one journey told in two genres.
+                  </p>
+                  <div class="tp-hero-button mb-60 wow tpfadeUp" data-wow-duration=".7s" data-wow-delay="1s">
+                    <a class="tp-btn mr-20" href="#book-tur">The Uncharted Romance <i class="far fa-arrow-right"></i></a>
+                    <a class="tp-btn-grey" href="#book-oyml">One Year, Many Lessons <i class="far fa-arrow-right"></i></a>
+                  </div>
+                  <div class="tp-hero-social pb-30 wow tpfadeIn" data-wow-duration=".7s" data-wow-delay="1.2s">
+                    <div class="tp-hero-social">
+                      <a class="social-icon-1" href="https://www.amazon.in/dp/B0CQTLCLX8/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-amazon" aria-hidden="true"></i><span>Amazon</span>
+                      </a>
+                      <a class="social-icon-4" href="https://www.flipkart.com/uncharted-romance-story-love-inspiration/p/itmf614a0655f106" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-shopping-bag" aria-hidden="true"></i><span>Flipkart</span>
+                      </a>
+                      <a class="social-icon-3" href="https://books.apple.com/us/author/subhankar-rout/id1722411972" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-apple" aria-hidden="true"></i><span>Apple Books</span>
+                      </a>
+                      <a class="social-icon-2" href="https://play.google.com/store/books/details?id=qNjpEAAAQBAJ" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-google-play" aria-hidden="true"></i><span>Google Play</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 col-lg-5">
+              <div class="tp-hero-big-img wow fadeInRight" data-wow-duration=".7s" data-wow-delay="1.2s">
+                <img src="assets/img/oyml/author img.webp" alt="Subhankar Rout — Author">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /hero -->
+
+
+    <!-- =================== BOOK 1 — THE UNCHARTED ROMANCE =================== -->
+    <div class="tp-product-details-area pt-130 pb-80 bk-prod-tur" id="book-tur">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+          <!-- Cover -->
+          <div class="col-xl-5 col-lg-5 col-12 mb-50 mb-lg-0">
+            <div class="tp-product-img wow fadeInLeft" data-wow-duration=".6s">
+              <img src="assets/img/book/Product1-tur.png" alt="The Uncharted Romance — book cover">
+            </div>
+          </div>
+
+          <!-- Details -->
+          <div class="col-xl-6 col-lg-6 col-12 offset-xl-1 offset-lg-1">
+            <div class="productdetails wow tpfadeUp" data-wow-duration=".6s" data-wow-delay=".2s">
+
+              <div class="productdetails__content">
+                <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#E91E8C;margin-bottom:10px;">Book One &nbsp;·&nbsp; 2023</span>
+                <h2 class="pd-title">The Uncharted Romance</h2>
+                <p>Can love truly defy age? Anshuman and Kavya's unexpected bond — a younger boy and an elder girl — defies every social script. From genuine friendship to a deeply felt relationship, their journey navigates judgment, family pressure, and the quiet fear of being different.</p>
+              </div>
+
+              <div class="productdetails__ratting">
+                <h4>₹199 <del>₹299</del> <span>Free Delivery</span></h4>
+              </div>
+
+              <div class="productdetails__model">
+                <h5>Book Genre</h5>
+                <a>Fiction</a>
+                <a>Romance</a>
+                <a>Humor</a>
+                <a>Friendship</a>
+                <a>Contemporary Fiction</a>
+                <a>Tragedy</a>
+                <a>Love &amp; Inspiration</a>
+              </div>
+
+              <div class="productdetails__button d-flex flex-wrap gap-3 mt-10">
+                <a href="https://linktr.ee/buy.tur/" target="_blank" rel="noopener noreferrer">
+                  <button class="tp-btn-yellow">Order Now &nbsp;<i class="far fa-shopping-cart"></i></button>
+                </a>
+                <a href="the_uncharted_romance.html">
+                  <button class="tp-btn-sm-sky">Know More &nbsp;<i class="far fa-arrow-right"></i></button>
+                </a>
+              </div>
+
+              <!-- Platform links -->
+              <div class="mt-25" style="display:flex;gap:10px;flex-wrap:wrap;">
+                <a href="https://www.amazon.in/dp/B0CQTLCLX8/" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;background:#FF9900;color:#fff;font-size:12px;font-weight:600;text-decoration:none;">
+                  <i class="fab fa-amazon"></i> Amazon
+                </a>
+                <a href="https://www.flipkart.com/uncharted-romance-story-love-inspiration/p/itmf614a0655f106" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;background:#2874F0;color:#fff;font-size:12px;font-weight:600;text-decoration:none;">
+                  <i class="fas fa-shopping-bag"></i> Flipkart
+                </a>
+                <a href="https://books.apple.com/us/book/the-uncharted-romance/id6474724991" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;background:#1c1c1e;color:#fff;font-size:12px;font-weight:600;text-decoration:none;">
+                  <i class="fab fa-apple"></i> Apple Books
+                </a>
+                <a href="https://play.google.com/store/books/details?id=qNjpEAAAQBAJ" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;background:#4285F4;color:#fff;font-size:12px;font-weight:600;text-decoration:none;">
+                  <i class="fab fa-google-play"></i> Google Play
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- /book-1 -->
+
+
+    <!-- =================== BOOK 2 — ONE YEAR, MANY LESSONS =================== -->
+    <div class="tp-product-details-area pt-130 pb-80 bk-prod-oyml" id="book-oyml">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+          <!-- Details (left on desktop) -->
+          <div class="col-xl-6 col-lg-6 col-12 order-2 order-lg-1">
+            <div class="productdetails wow tpfadeUp" data-wow-duration=".6s" data-wow-delay=".2s">
+
+              <div class="productdetails__content">
+                <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#b45309;margin-bottom:10px;">Book Two &nbsp;·&nbsp; 2024</span>
+                <h2 class="pd-title">One Year, Many Lessons</h2>
+                <p>What happens when college students with zero investment, big dreams, and pure <strong>#Jugadu</strong> spirit set out to build a B2B startup? This is the raw, honest account of HonourCreators — from forming the team to navigating every failure and breakthrough. Not every exit is a failure.</p>
+              </div>
+
+              <div class="productdetails__ratting">
+                <h4>₹199 <del>₹299</del> <span>Free Delivery</span></h4>
+              </div>
+
+              <div class="productdetails__model">
+                <h5>Book Genre</h5>
+                <a>Non Fiction</a>
+                <a>Entrepreneurship</a>
+                <a>Startup</a>
+                <a>Business</a>
+                <a>College Life</a>
+                <a>Real-Life Experience</a>
+                <a>Motivation</a>
+              </div>
+
+              <div class="productdetails__button d-flex flex-wrap gap-3 mt-10">
+                <a href="https://linktr.ee/buy.OYML" target="_blank" rel="noopener noreferrer">
+                  <button class="tp-btn-yellow">Order Now &nbsp;<i class="far fa-shopping-cart"></i></button>
+                </a>
+                <a href="one_year_many_lessons.html">
+                  <button class="tp-btn-sm-sky">Know More &nbsp;<i class="far fa-arrow-right"></i></button>
+                </a>
+              </div>
+
+              <!-- Platform links -->
+              <div class="mt-25" style="display:flex;gap:10px;flex-wrap:wrap;">
+                <a href="https://amzn.to/4srgkeM" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;background:#FF9900;color:#fff;font-size:12px;font-weight:600;text-decoration:none;">
+                  <i class="fab fa-amazon"></i> Amazon
+                </a>
+                <a href="https://dl.flipkart.com/s/pQdLpDuuuN" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;background:#2874F0;color:#fff;font-size:12px;font-weight:600;text-decoration:none;">
+                  <i class="fas fa-shopping-bag"></i> Flipkart
+                </a>
+                <a href="https://books.apple.com/us/book/one-year-many-lessons/id6757214738" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;background:#1c1c1e;color:#fff;font-size:12px;font-weight:600;text-decoration:none;">
+                  <i class="fab fa-apple"></i> Apple Books
+                </a>
+                <a href="https://books.google.co.in/books?id=xf2kEQAAQBAJ" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:6px;padding:7px 14px;border-radius:8px;background:#4285F4;color:#fff;font-size:12px;font-weight:600;text-decoration:none;">
+                  <i class="fab fa-google-play"></i> Google Play
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Cover (right on desktop) -->
+          <div class="col-xl-5 col-lg-5 col-12 order-1 order-lg-2 mb-50 mb-lg-0 offset-xl-1 offset-lg-1">
+            <div class="tp-product-img wow fadeInRight" data-wow-duration=".6s">
+              <img src="assets/img/oyml/oyml book.png" alt="One Year, Many Lessons — book cover">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- /book-2 -->
+
+
+    <!-- =================== TESTIMONIALS =================== -->
+    <div class="tp-testimonial-area black-bg pt-130 pb-130 fix">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-12">
+            <div class="tp-testimonial-section-box text-center pb-25">
+              <h5 class="tp-subtitle">Reading Experience</h5>
+              <h2 class="tp-title tp-white-text" style="font-family:'Playfair Display',Georgia,serif;">
+                What <em style="font-style:italic;color:#FF6B9D;">Readers Say</em>
+              </h2>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 1 -->
+        <div class="tp-testimonial-slider-section d-flex justify-content-center mb-50">
+          <div class="swiper-container testimonial-slider-active">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="tp-testimonial-item">
+                  <div class="tp-testi-meta d-flex justify-content-between mb-40">
+                    <div class="tp-testi-icon-box d-flex align-items-center">
+                      <div class="tp-testi-img mr-20"><img src="assets/img/testimonial/testi-1.png" alt="Priya Malhotra"></div>
+                      <div class="tp-testi-client-position"><h3>Priya Malhotra</h3><h6>Reader</h6></div>
+                    </div>
+                    <div class="tp-testi-ratting">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="tp-testi-p-text"><p>"This book took me by surprise! Anshuman and Kavya's unexpected love story won my heart. The way they navigate through challenges is so relatable."</p></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="tp-testimonial-item">
+                  <div class="tp-testi-meta d-flex justify-content-between mb-40">
+                    <div class="tp-testi-icon-box d-flex align-items-center">
+                      <div class="tp-testi-img mr-20"><img src="assets/img/testimonial/testi-2.jpg" alt="Neha Reddy"></div>
+                      <div class="tp-testi-client-position"><h3>Neha Reddy</h3><h6>Reader</h6></div>
+                    </div>
+                    <div class="tp-testi-ratting">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fal fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="tp-testi-p-text"><p>"Unique plots. It sends a positive message about overcoming challenges in a relationship — modern, relatable and genuinely moving."</p></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="tp-testimonial-item">
+                  <div class="tp-testi-meta d-flex justify-content-between mb-40">
+                    <div class="tp-testi-icon-box d-flex align-items-center">
+                      <div class="tp-testi-img mr-20"><img src="assets/img/testimonial/testi-3.png" alt="Arjun Patel"></div>
+                      <div class="tp-testi-client-position"><h3>Arjun Patel</h3><h6>Reader</h6></div>
+                    </div>
+                    <div class="tp-testi-ratting">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="tp-testi-p-text"><p>"This book really touched my heart. The love story between Anshuman and Kavya is so genuine and beautiful. Highly recommend!"</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="tp-testimonial-slider-section-2 d-flex justify-content-center">
+          <div class="swiper-container testimonial-slider-active-2">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="tp-testimonial-item">
+                  <div class="tp-testi-meta d-flex justify-content-between mb-40">
+                    <div class="tp-testi-icon-box d-flex align-items-center">
+                      <div class="tp-testi-img mr-20"><img src="assets/img/testimonial/testi-4.jpg" alt="Aniket Sharma"></div>
+                      <div class="tp-testi-client-position"><h3>Aniket Sharma</h3><h6>Reader</h6></div>
+                    </div>
+                    <div class="tp-testi-ratting">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fal fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="tp-testi-p-text"><p>"A contemporary take on modern relationships — light, humorous, with a touch of genuine emotion that stays with you long after the last page."</p></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="tp-testimonial-item">
+                  <div class="tp-testi-meta d-flex justify-content-between mb-40">
+                    <div class="tp-testi-icon-box d-flex align-items-center">
+                      <div class="tp-testi-img mr-20"><img src="assets/img/testimonial/testi-5.jpg" alt="Pooja Khanna"></div>
+                      <div class="tp-testi-client-position"><h3>Pooja Khanna</h3><h6>Reader</h6></div>
+                    </div>
+                    <div class="tp-testi-ratting">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="tp-testi-p-text"><p>"This book is all about overcoming obstacles in love. Their story teaches us that love can conquer anything — I couldn't put it down."</p></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="tp-testimonial-item">
+                  <div class="tp-testi-meta d-flex justify-content-between mb-40">
+                    <div class="tp-testi-icon-box d-flex align-items-center">
+                      <div class="tp-testi-img mr-20"><img src="assets/img/testimonial/testi-6.jpg" alt="Aditya Kapoor"></div>
+                      <div class="tp-testi-client-position"><h3>Aditya Kapoor</h3><h6>Reader</h6></div>
+                    </div>
+                    <div class="tp-testi-ratting">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="tp-testi-p-text"><p>"A feel-good romance that left me with a smile on my face. The characters are lovable and the storyline is genuinely heartwarming."</p></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="tp-testimonial-item">
+                  <div class="tp-testi-meta d-flex justify-content-between mb-40">
+                    <div class="tp-testi-icon-box d-flex align-items-center">
+                      <div class="tp-testi-img mr-20"><img src="assets/img/testimonial/testi-4.jpg" alt="Siddharth Rao"></div>
+                      <div class="tp-testi-client-position"><h3>Siddharth Rao</h3><h6>Reader</h6></div>
+                    </div>
+                    <div class="tp-testi-ratting">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="tp-testi-p-text"><p>"Anshuman and Kavya's journey is a testament to the enduring power of love. If you want a love story that stands the test of time, this is it."</p></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="tp-testimonial-item">
+                  <div class="tp-testi-meta d-flex justify-content-between mb-40">
+                    <div class="tp-testi-icon-box d-flex align-items-center">
+                      <div class="tp-testi-img mr-20"><img src="assets/img/testimonial/testi-5.jpg" alt="Shruti Chatterjee"></div>
+                      <div class="tp-testi-client-position"><h3>Shruti Chatterjee</h3><h6>Reader</h6></div>
+                    </div>
+                    <div class="tp-testi-ratting">
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="tp-testi-p-text"><p>"Doubt may cast its shadow, but love shines through. Their story is a triumph of love over doubt — it left me with a warm feeling."</p></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /testimonials -->
+
+
+    <!-- =================== REVIEW FORM =================== -->
+    <div class="bk-review-area">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-8 col-lg-10 col-12">
+            <div class="text-center mb-50">
+              <h5 class="tp-subtitle">Share Your Thoughts</h5>
+              <h2 class="bk-review-title">Leave a Review</h2>
+              <p class="bk-review-sub">Loved the book? Share your experience — it means the world to the author.</p>
+            </div>
+            <div class="contact-form">
+              <iframe name="bk-review-frame" id="bk-review-frame" style="display:none;"
+                onload="if(submitted){alert('Thank you! Your review was received successfully.')}"></iframe>
+              <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfmYWADDPOVQwtwddcAj8W5rUVipxQilfdGCB_yMwU1sOaFYQ/formResponse"
+                method="post" target="bk-review-frame" onsubmit="submitted=true">
+                <div class="row">
+                  <div class="col-md-6 col-12">
+                    <div class="input">
+                      <input name="entry.301413949" required type="text" placeholder="Your Name">
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-12">
+                    <div class="input">
+                      <input name="entry.1313508329" required type="email" placeholder="Your Email">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="textarea">
+                      <textarea name="entry.151259240" required placeholder="Write your review…"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-center">
+                  <input class="tp-btn-lg-yellow" type="submit" value="Submit Review">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /review -->
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER — same as portfolio
+  ============================================================ -->
+  <footer class="tp-footer-area" role="contentinfo">
+    <div class="black-bg pt-130 pb-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="tp-footer-widget">
+              <div class="tp-footer-widget__logo mb-30">
+                <a href="index.html" aria-label="Subhankar Rout — Home">
+                  <img src="assets/img/logo/logo-white.png" alt="Subhankar Rout logo" width="140" height="40" loading="lazy">
+                </a>
+              </div>
+              <nav class="tp-footer-widget__social-link" aria-label="Social media links">
+                <a href="https://linkedin.com/in/subhankarrout/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/subhankarrout.in/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/subhankarrout.in/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://behance.net/routsubhankar/" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="fab fa-behance" aria-hidden="true"></i></a>
+              </nav>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-2 col-md-6 d-flex justify-content-lg-center">
+            <div class="tp-footer-widget">
+              <div class="tp-footer-widget__title pb-15">
+                <h3 class="footer-title">Useful Links</h3>
+              </div>
+              <nav class="tp-footer-widget__list" aria-label="Useful links">
+                <ul>
+                  <li><a href="https://youtube.com/@s4cinesphere" target="_blank" rel="noopener noreferrer">S4 Cinesphere (YouTube)</a></li>
+                  <li><a href="pr.html">Press Release</a></li>
+                  <li><a href="https://www.imdb.com/name/nm14332046/" target="_blank" rel="noopener noreferrer">IMDb Profile</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-2 col-md-6">
+            <div class="tp-footer-widget pl-20">
+              <div class="tp-footer-widget__title pb-15">
+                <h3 class="footer-title">Publications</h3>
+              </div>
+              <nav class="tp-footer-widget__list" aria-label="Publications">
+                <ul>
+                  <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
+                  <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="tp-footer-widget">
+              <div class="tp-footer-widget__title pb-15">
+                <h3 class="footer-title">Get Update</h3>
+              </div>
+              <div class="tp-footer-widget__input">
+                <iframe name="newsletter-frame" id="newsletter-frame" style="display:none;"
+                  onload="if(submitted){alert('Successfully Subscribed. Check your mail inbox or spam folder to get confirmation.')}{window.location.reload();}"></iframe>
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScICZPA3CSLtSqmiNNhgq7ERnTxgB7XJeNwq7k-0xgDfRcIBw/formResponse"
+                  method="post" target="newsletter-frame" onsubmit="submitted=true">
+                  <input name="entry.1313508329" type="email" required placeholder="Enter Mail">
+                  <button type="submit"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tp-copyright-area">
+        <div class="container">
+          <div class="copyright-border pt-40">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-12">
+                <div class="tp-copyright-left text-lg-start text-start text-md-center">
+                  <p>&copy; Copyright <span id="bk-year"></span>, All rights reserved</p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-12">
+                <div class="tp-copyright-right text-start text-md-center text-lg-end">
+                  <a href="contact.html" target="_blank" rel="noopener noreferrer">Contact</a>
+                  <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy policy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="scroll-top scroll-to-target d-md-none" data-target="html" href="#bk-main" aria-label="Back to top">
+    <i class="far fa-angle-double-up" aria-hidden="true"></i>
+  </a>
+
+
+  <!-- ============================================================
+       JAVASCRIPT
+  ============================================================ -->
+  <script>(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...a)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(a)};window.chatbase=new Proxy(window.chatbase,{get(t,p){if(p==="q")return t.q;return(...a)=>t(p,...a)}})}const o=()=>{const s=document.createElement("script");s.src="https://www.chatbase.co/embed.min.js";s.id="d8z_zNMZtnWawsBTGQ_uJ";s.domain="www.chatbase.co";document.body.appendChild(s)};document.readyState==="complete"?o():window.addEventListener("load",o)})();</script>
+
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/waypoints.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/magnific-popup.js"></script>
+  <script src="assets/js/counterup.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/isotope-pkgd.js"></script>
+  <script src="assets/js/imagesloaded-pkgd.js"></script>
+  <script src="assets/js/ajax-form.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+  (function () {
+    /* Copyright year */
+    var yr = document.getElementById('bk-year');
+    if (yr) yr.textContent = new Date().getFullYear();
+
+    /* Testimonial Swiper — initialise if main.js hasn't done it already */
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.Swiper) {
+        if (!document.querySelector('.testimonial-slider-active .swiper-slide-active')) {
+          new Swiper('.testimonial-slider-active', {
+            loop: true, slidesPerView: 1, spaceBetween: 30, speed: 800,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            breakpoints: {
+              576:  { slidesPerView: 1 },
+              768:  { slidesPerView: 2 },
+              1200: { slidesPerView: 3 }
+            }
+          });
+        }
+        if (!document.querySelector('.testimonial-slider-active-2 .swiper-slide-active')) {
+          new Swiper('.testimonial-slider-active-2', {
+            loop: true, slidesPerView: 1, spaceBetween: 30, speed: 800,
+            autoplay: { delay: 5000, disableOnInteraction: false, reverseDirection: true },
+            breakpoints: {
+              576:  { slidesPerView: 1 },
+              768:  { slidesPerView: 2 },
+              1200: { slidesPerView: 3 }
+            }
+          });
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>

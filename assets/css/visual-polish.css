@@ -1,0 +1,503 @@
+/* ============================================
+   SENIOR UI/UX - VISUAL ENHANCEMENTS & POLISH
+   Professional Design System Refinements
+============================================ */
+
+/* ============================================
+   ENHANCED COLOR & CONTRAST HIERARCHY
+============================================ */
+
+.pr-award-page {
+  background: var(--tp-common-white);
+  color: var(--tp-common-black);
+}
+
+/* ============================================
+   IMPROVED HERO SECTION
+============================================ */
+
+.pr-hero {
+  background: linear-gradient(135deg, #f0efff 0%, #e8e7fd 50%, #f5f4ff 100%) !important;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 15% 60%, rgba(89, 86, 233, 0.10) 0%, transparent 55%),
+      radial-gradient(circle at 85% 30%, rgba(255, 220, 96, 0.14) 0%, transparent 50%);
+    pointer-events: none;
+  }
+}
+
+.pr-hero-orb {
+  filter: blur(40px);
+  opacity: 0.3;
+}
+
+.pr-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* ============================================
+   ENHANCED TEXT READABILITY
+============================================ */
+
+.section-header--light .section-title,
+.section-header--dark .section-title {
+  font-weight: 700;
+  word-break: break-word;
+}
+
+.section-header--light .section-title em,
+.section-header--dark .section-title em {
+  display: inline-block;
+  font-style: italic;
+}
+
+/* Better font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============================================
+   ENHANCED CARD VISUAL HIERARCHY
+============================================ */
+
+.pr-card {
+  background: var(--tp-common-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    box-shadow: 0 16px 40px rgba(89, 86, 233, 0.12);
+  }
+}
+
+.pr-slide {
+  background: var(--tp-common-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    box-shadow: 0 16px 40px rgba(89, 86, 233, 0.12);
+  }
+}
+
+/* ============================================
+   BADGE & LABEL REFINEMENT
+============================================ */
+
+.section-label {
+  background: rgba(89, 86, 233, 0.08) !important;
+  color: var(--tp-theme-1) !important;
+  border: 1px solid rgba(89, 86, 233, 0.2);
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.pr-slide-source,
+.pr-card-type {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ============================================
+   BUTTON & CTA STYLING
+============================================ */
+
+.filter-btn {
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  background: var(--tp-common-white);
+  border: 2px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--tp-theme-1);
+    background: rgba(89, 86, 233, 0.05);
+  }
+
+  &.active {
+    background: var(--tp-theme-1);
+    border-color: var(--tp-theme-1);
+    color: white;
+    box-shadow: 0 8px 20px rgba(89, 86, 233, 0.3);
+  }
+}
+
+.tp-btn,
+.pr-hero-back {
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ============================================
+   CAROUSEL REFINEMENTS
+============================================ */
+
+.carousel-dot {
+  background: rgba(41, 41, 48, 0.2);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &:hover {
+    background: rgba(41, 41, 48, 0.4);
+  }
+
+  &.active {
+    background: var(--tp-theme-1);
+    box-shadow: 0 4px 16px rgba(89, 86, 233, 0.4);
+  }
+}
+
+/* ============================================
+   AWARD STAT REFINEMENT
+============================================ */
+
+.award-stat {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  &:hover {
+    background: rgba(255, 220, 96, 0.08);
+  }
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.award-stat-num {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ============================================
+   LINK & ANCHOR IMPROVEMENTS
+============================================ */
+
+a {
+  color: var(--tp-theme-1);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--tp-theme-2);
+  }
+
+  &.pr-link {
+    color: var(--tp-theme-1);
+    font-weight: 600;
+    transition: gap 0.3s ease;
+
+    &:hover {
+      gap: 12px !important;
+    }
+  }
+}
+
+/* ============================================
+   SECTION BACKGROUND REFINEMENT
+============================================ */
+
+.pr-slider-section {
+  background: linear-gradient(180deg, var(--tp-grey-1) 0%, rgba(247, 248, 253, 0.5) 100%);
+}
+
+.awards-highlight {
+  background: linear-gradient(135deg, #0a0e27 0%, #1a1f45 50%, #0f1835 100%);
+}
+
+/* ============================================
+   FOCUS & ACCESSIBILITY
+============================================ */
+
+button:focus,
+a:focus,
+.filter-btn:focus,
+input:focus {
+  outline: 2px solid var(--tp-theme-1);
+  outline-offset: 2px;
+}
+
+/* ============================================
+   SMOOTH SCROLL BEHAVIOR
+============================================ */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================================
+   LIGHTBOX REFINEMENT
+============================================ */
+
+#lbImg {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.lb-close {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(10px);
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.6) !important;
+  }
+}
+
+/* ============================================
+   VIDEO CARD SPECIAL STYLING
+============================================ */
+
+.pr-card-video {
+  background: linear-gradient(135deg, rgba(89, 86, 233, 0.05) 0%, rgba(255, 220, 96, 0.05) 100%);
+  border: 2px solid rgba(89, 86, 233, 0.15);
+
+  &:hover {
+    border-color: var(--tp-theme-1);
+    background: linear-gradient(135deg, rgba(89, 86, 233, 0.1) 0%, rgba(255, 220, 96, 0.08) 100%);
+  }
+}
+
+.play-circle {
+  width: 64px;
+  height: 64px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pr-card-video:hover .play-circle {
+  background: var(--tp-theme-1);
+  border-color: var(--tp-theme-1);
+  transform: scale(1.12);
+  box-shadow: 0 8px 24px rgba(89, 86, 233, 0.4);
+}
+
+/* ============================================
+   OVERLAY & GRADIENT REFINEMENT
+============================================ */
+
+.pr-card-thumb-overlay {
+  background: linear-gradient(to top, rgba(41, 41, 48, 0.8) 0%, transparent 60%);
+}
+
+.pr-slide-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 60%);
+}
+
+/* ============================================
+   ENHANCED ANIMATIONS - STAGGERING
+============================================ */
+
+.pr-slide:nth-child(1) { animation-delay: 0.05s; }
+.pr-slide:nth-child(2) { animation-delay: 0.1s; }
+.pr-slide:nth-child(3) { animation-delay: 0.15s; }
+.pr-slide:nth-child(4) { animation-delay: 0.2s; }
+.pr-slide:nth-child(5) { animation-delay: 0.25s; }
+
+.pr-card:nth-child(1) { animation-delay: 0.05s; }
+.pr-card:nth-child(2) { animation-delay: 0.1s; }
+.pr-card:nth-child(3) { animation-delay: 0.15s; }
+.pr-card:nth-child(4) { animation-delay: 0.2s; }
+.pr-card:nth-child(5) { animation-delay: 0.25s; }
+.pr-card:nth-child(6) { animation-delay: 0.3s; }
+
+/* ============================================
+   IMPROVED READABILITY ON DARK BACKGROUNDS
+============================================ */
+
+.awards-highlight {
+  .section-label {
+    background: rgba(255, 220, 96, 0.12) !important;
+    border-color: rgba(255, 220, 96, 0.3);
+    color: var(--tp-theme-primary) !important;
+  }
+
+  .section-title {
+    color: #ffffff;
+  }
+
+  .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+/* ============================================
+   IMPROVED FORM ELEMENTS
+============================================ */
+
+input {
+  border-radius: 8px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 16px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+
+  &:focus {
+    border-color: var(--tp-theme-1);
+    box-shadow: 0 0 0 3px rgba(89, 86, 233, 0.1);
+  }
+}
+
+/* ============================================
+   RESPONSIVE IMAGE QUALITY
+============================================ */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ============================================
+   SECTION SEPARATOR LINES
+============================================ */
+
+.copyright-border {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ============================================
+   ENHANCED SHADOWS & DEPTH
+============================================ */
+
+.pr-card,
+.pr-slide {
+  /* Subtle default shadow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  /* Enhanced hover shadow */
+  &:hover {
+    box-shadow: 0 16px 40px rgba(89, 86, 233, 0.12);
+  }
+}
+
+/* ============================================
+   MOBILE OPTIMIZATION - TOUCH FRIENDLY
+============================================ */
+
+@media (max-width: 768px) {
+  /* Larger touch targets */
+  button,
+  .filter-btn,
+  a {
+    min-height: 48px;
+    min-width: 48px;
+  }
+
+  /* Better spacing on mobile */
+  .section-header--light,
+  .section-header--dark {
+    margin-bottom: 48px;
+  }
+
+  /* Simplified shadows on mobile */
+  .pr-card,
+  .pr-slide {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+
+    &:hover {
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+/* ============================================
+   SCROLL PERFORMANCE OPTIMIZATION
+============================================ */
+
+.pr-card,
+.pr-slide,
+.award-stat {
+  will-change: transform;
+}
+
+/* ============================================
+   CONSISTENT BORDER RADIUS SYSTEM
+============================================ */
+
+.pr-card {
+  border-radius: 16px;
+}
+
+.pr-slide {
+  border-radius: 16px;
+}
+
+.filter-btn {
+  border-radius: 50px;
+}
+
+.pr-hero-back {
+  border-radius: 50px;
+}
+
+.carousel-dot {
+  border-radius: 50%;
+
+  &.active {
+    border-radius: 4px;
+  }
+}
+
+/* ============================================
+   REFINED TYPOGRAPHY SYSTEM
+============================================ */
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.section-label {
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+.section-subtitle {
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  line-height: 1.75;
+}
+
+/* ============================================
+   EMPHASIS & VISUAL FOCUS
+============================================ */
+
+em {
+  font-style: italic;
+  font-weight: 700;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* ============================================
+   COLOR HARMONY ADJUSTMENTS
+============================================ */
+
+.awards-grid {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2px;
+}
+
+.award-stat {
+  background: rgba(255, 255, 255, 0.04);
+
+  &:hover {
+    background: rgba(255, 220, 96, 0.12);
+  }
+}

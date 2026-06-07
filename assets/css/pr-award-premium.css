@@ -1,0 +1,854 @@
+/* =============================================================
+   PR AWARD PAGE — PREMIUM DESIGN SYSTEM
+   Namespace: pra-*  |  Loaded last for max specificity
+   Design tokens inherited from styles.css custom properties
+============================================================= */
+
+/* -------------------------------------------------------
+   1. RESET / BASE
+------------------------------------------------------- */
+.pr-award-page *,
+.pr-award-page *::before,
+.pr-award-page *::after {
+  box-sizing: border-box;
+}
+
+/* -------------------------------------------------------
+   2. HERO
+------------------------------------------------------- */
+.pra-hero {
+  position: relative;
+  min-height: 580px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0D0D12 0%, #1a1930 55%, #0f1729 100%);
+  padding-top: 140px;
+  padding-bottom: 80px;
+}
+
+/* dot-grid texture */
+.pra-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(89, 86, 233, 0.22) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 30%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 30%, transparent 100%);
+  pointer-events: none;
+}
+
+/* radial colour blobs */
+.pra-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse at 10% 70%, rgba(89, 86, 233, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse at 90% 20%, rgba(255, 220, 96, 0.15) 0%, transparent 48%);
+  pointer-events: none;
+}
+
+.pra-hero__canvas {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Animated gradient orbs */
+.pra-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(72px);
+  opacity: 0;
+  animation: praOrbFloat 10s ease-in-out infinite;
+}
+
+.pra-orb--a {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(89, 86, 233, 0.22) 0%, transparent 70%);
+  top: -100px;
+  left: -80px;
+  animation-delay: 0s;
+  animation-duration: 12s;
+}
+
+.pra-orb--b {
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(255, 220, 96, 0.28) 0%, transparent 70%);
+  top: 30%;
+  right: -60px;
+  animation-delay: 3s;
+  animation-duration: 14s;
+}
+
+.pra-orb--c {
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(89, 86, 233, 0.16) 0%, transparent 70%);
+  bottom: -60px;
+  left: 40%;
+  animation-delay: 6s;
+  animation-duration: 10s;
+}
+
+/* Subtle grid overlay (low z) */
+.pra-hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(89, 86, 233, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(89, 86, 233, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+.pra-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.pra-hero__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Eyebrow pill */
+.pra-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.8px;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  background: rgba(89, 86, 233, 0.18);
+  border: 1px solid rgba(89, 86, 233, 0.4);
+  border-radius: 100px;
+  padding: 8px 20px;
+  margin-bottom: 28px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.pra-eyebrow__dot {
+  display: block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--tp-theme-primary, #FFDC60);
+  flex-shrink: 0;
+  animation: praEyeDotPulse 2.4s ease-in-out infinite;
+}
+
+/* Hero heading */
+.pra-hero__title {
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  margin-bottom: 22px;
+}
+
+.pra-hero__title em {
+  font-style: italic;
+  color: var(--tp-theme-primary, #FFDC60);
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+}
+
+/* Hero description */
+.pra-hero__desc {
+  font-size: 17px;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 36px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Back link */
+.pra-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 100px;
+  padding: 11px 26px;
+  background: rgba(255, 255, 255, 0.07);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+}
+
+.pra-hero__back:hover {
+  background: var(--tp-theme-1, #5956E9);
+  border-color: var(--tp-theme-1, #5956E9);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(89, 86, 233, 0.35);
+  text-decoration: none;
+}
+
+/* Scroll indicator */
+.pra-hero__scroll {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+
+.pra-hero__scroll.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pra-hero__scroll-line {
+  display: block;
+  width: 1.5px;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), transparent);
+  border-radius: 2px;
+  animation: praScrollPulse 2s ease-in-out infinite;
+}
+
+.pra-hero__scroll-text {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* -------------------------------------------------------
+   3. STATS STRIP
+------------------------------------------------------- */
+.pra-stats {
+  background: var(--tp-common-white, #fff);
+  border-top: 1px solid rgba(89, 86, 233, 0.08);
+  border-bottom: 1px solid rgba(89, 86, 233, 0.08);
+  padding: 64px 0;
+}
+
+.pra-stats__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pra-stats__item {
+  text-align: center;
+  padding: 28px 16px;
+  position: relative;
+}
+
+.pra-stats__item + .pra-stats__item::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: rgba(89, 86, 233, 0.12);
+}
+
+.pra-stats__num {
+  display: block;
+  font-size: clamp(44px, 5vw, 60px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--tp-theme-1, #5956E9);
+  line-height: 1;
+  margin-bottom: 10px;
+  font-variant-numeric: tabular-nums;
+  transition: transform 0.3s ease;
+}
+
+.pra-stats__item:hover .pra-stats__num {
+  transform: translateY(-3px);
+}
+
+.pra-stats__lbl {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tp-text-body, #6B7280);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------------
+   4. SHARED SECTION HEADER
+------------------------------------------------------- */
+.pra-section-hd {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.pra-section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--tp-theme-1, #5956E9);
+  background: rgba(89, 86, 233, 0.07);
+  border: 1px solid rgba(89, 86, 233, 0.16);
+  border-radius: 100px;
+  padding: 6px 16px;
+  margin-bottom: 16px;
+}
+
+.pra-section-title {
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--tp-common-black, #0D0D12);
+  margin-bottom: 14px;
+  line-height: 1.12;
+}
+
+.pra-section-title em {
+  font-style: italic;
+  color: var(--tp-theme-1, #5956E9);
+}
+
+.pra-section-desc {
+  font-size: 16px;
+  line-height: 1.72;
+  color: var(--tp-text-body, #6B7280);
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* -------------------------------------------------------
+   5. BRANDS SECTION
+------------------------------------------------------- */
+.pra-brands {
+  background: var(--tp-grey-1, #F7F8FD);
+  padding: 96px 0;
+}
+
+.pra-brands__reel .swiper-wrapper {
+  align-items: center;
+}
+
+.pra-brands__reel .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  background: var(--tp-common-white, #fff);
+  border: 1px solid rgba(89, 86, 233, 0.1);
+  border-radius: 16px;
+  padding: 16px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pra-brands__reel .swiper-slide:hover {
+  box-shadow: 0 4px 24px rgba(89, 86, 233, 0.14), 0 1px 4px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+  border-color: rgba(89, 86, 233, 0.2);
+}
+
+.pra-brands__reel .swiper-slide img {
+  max-height: 56px;
+  max-width: 150px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: grayscale(80%) opacity(0.65);
+  transition: filter 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pra-brands__reel .swiper-slide:hover img {
+  filter: grayscale(0%) opacity(1);
+  transform: scale(1.06);
+}
+
+/* -------------------------------------------------------
+   6. SHOWCASE SECTION
+------------------------------------------------------- */
+.pra-showcase {
+  padding: 100px 0 120px;
+  background: var(--tp-common-white, #fff);
+}
+
+/* -------------------------------------------------------
+   7. FILTER BAR — glassmorphism pill
+------------------------------------------------------- */
+.pra-filterbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(89, 86, 233, 0.12);
+  border-radius: 100px;
+  padding: 5px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  /* centre it */
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.pra-filter-btn {
+  padding: 10px 26px;
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--tp-text-body, #6B7280);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  letter-spacing: 0.3px;
+  line-height: 1;
+  min-height: unset;
+  min-width: unset;
+}
+
+.pra-filter-btn:hover {
+  color: var(--tp-theme-1, #5956E9);
+  background: rgba(89, 86, 233, 0.06);
+}
+
+.pra-filter-btn--active,
+.pra-filter-btn--active:hover {
+  background: var(--tp-theme-1, #5956E9);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(89, 86, 233, 0.32);
+}
+
+/* -------------------------------------------------------
+   8. CARD GRID
+------------------------------------------------------- */
+.pra-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Hide filtered cards */
+.pra-card--filtered {
+  display: none !important;
+}
+
+/* -------------------------------------------------------
+   9. PREMIUM CARD
+------------------------------------------------------- */
+.pra-card {
+  background: var(--tp-common-white, #fff);
+  border: 1px solid rgba(89, 86, 233, 0.07);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04), 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  /* entrance animation */
+  opacity: 0;
+  transform: translateY(32px);
+}
+
+.pra-card.pra-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pra-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 32px rgba(89, 86, 233, 0.14), 0 2px 8px rgba(0, 0, 0, 0.06);
+  border-color: rgba(89, 86, 233, 0.16);
+}
+
+/* Figure */
+.pra-card__fig {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: 16 / 11;
+  background: var(--tp-grey-1, #F7F8FD);
+}
+
+.pra-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pra-card:hover .pra-card__img {
+  transform: scale(1.06);
+}
+
+/* Hover overlay with action buttons */
+.pra-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13, 13, 18, 0.72) 0%,
+    rgba(13, 13, 18, 0.25) 55%,
+    transparent 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pra-card:hover .pra-card__overlay {
+  opacity: 1;
+}
+
+/* Action buttons in overlay */
+.pra-card__act {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #fff;
+  font-size: 15px;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform: translateY(10px);
+  opacity: 0;
+}
+
+.pra-card:hover .pra-card__act {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.pra-card:hover .pra-card__act:nth-child(1) { transition-delay: 0.04s; }
+.pra-card:hover .pra-card__act:nth-child(2) { transition-delay: 0.09s; }
+
+.pra-card__act:hover {
+  background: var(--tp-theme-1, #5956E9);
+  border-color: var(--tp-theme-1, #5956E9);
+  transform: translateY(-2px) scale(1.08);
+  color: #fff;
+  text-decoration: none;
+}
+
+.pra-card__act--play {
+  width: 58px;
+  height: 58px;
+  font-size: 18px;
+  background: rgba(89, 86, 233, 0.85);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.pra-card__act--play:hover {
+  background: var(--tp-theme-1, #5956E9);
+  transform: scale(1.12);
+}
+
+/* Card type badge */
+.pra-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  padding: 4px 12px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  line-height: 1.6;
+}
+
+.pra-badge--pr {
+  background: rgba(89, 86, 233, 0.85);
+  color: #fff;
+}
+
+.pra-badge--awd {
+  background: rgba(255, 193, 7, 0.9);
+  color: #0D0D12;
+}
+
+.pra-badge--video {
+  background: rgba(220, 38, 38, 0.85);
+  color: #fff;
+}
+
+/* Card body */
+.pra-card__body {
+  padding: 20px 22px 22px;
+}
+
+.pra-card__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.35;
+  margin: 0 0 8px;
+  color: var(--tp-common-black, #0D0D12);
+}
+
+.pra-card__title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.pra-card__title a:hover {
+  color: var(--tp-theme-1, #5956E9);
+  text-decoration: none;
+}
+
+.pra-card__meta {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  color: var(--tp-text-body, #6B7280);
+  margin: 0;
+}
+
+.pra-card__meta i {
+  color: var(--tp-theme-1, #5956E9);
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Video card special */
+.pra-card--video {
+  border-color: rgba(89, 86, 233, 0.16);
+  background: linear-gradient(135deg, rgba(89, 86, 233, 0.03) 0%, rgba(255, 220, 96, 0.04) 100%);
+}
+
+.pra-card--video:hover {
+  border-color: rgba(89, 86, 233, 0.28);
+}
+
+/* -------------------------------------------------------
+   10. CUSTOM LIGHTBOX
+------------------------------------------------------- */
+.pra-lb {
+  position: fixed;
+  inset: 0;
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.pra-lb[hidden] {
+  display: none;
+}
+
+.pra-lb__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(13, 13, 18, 0.88);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+
+.pra-lb__panel {
+  position: relative;
+  z-index: 1;
+  max-width: 90vw;
+  max-height: 90vh;
+  animation: praLbOpen 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pra-lb__img {
+  display: block;
+  max-width: 90vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 24px 72px rgba(0, 0, 0, 0.5);
+}
+
+.pra-lb__close {
+  position: absolute;
+  top: -16px;
+  right: -16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  min-height: unset;
+  min-width: unset;
+}
+
+.pra-lb__close:hover {
+  background: rgba(220, 38, 38, 0.8);
+  border-color: transparent;
+}
+
+/* -------------------------------------------------------
+   11. ENTRANCE ANIMATION SYSTEM
+------------------------------------------------------- */
+
+/* Elements with [data-pra-reveal] start hidden */
+[data-pra-reveal] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-pra-reveal].pra-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* -------------------------------------------------------
+   12. KEYFRAMES
+------------------------------------------------------- */
+@keyframes praOrbFloat {
+  0%   { opacity: 0; transform: translate(0, 0) scale(1); }
+  25%  { opacity: 1; }
+  50%  { transform: translate(24px, -20px) scale(1.06); }
+  75%  { opacity: 0.7; }
+  100% { opacity: 0; transform: translate(0, 0) scale(1); }
+}
+
+@keyframes praEyeDotPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.5; transform: scale(0.75); }
+}
+
+@keyframes praScrollPulse {
+  0%, 100% { opacity: 0.5; transform: scaleY(1); }
+  50%       { opacity: 1;   transform: scaleY(0.65); }
+}
+
+@keyframes praLbOpen {
+  from { opacity: 0; transform: scale(0.92) translateY(10px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* -------------------------------------------------------
+   13. RESPONSIVE
+------------------------------------------------------- */
+@media (max-width: 1199px) {
+  .pra-hero { padding-top: 120px; padding-bottom: 70px; min-height: 520px; }
+}
+
+@media (max-width: 991px) {
+  .pra-hero { padding-top: 110px; padding-bottom: 64px; min-height: 460px; }
+  .pra-hero__title { font-size: clamp(32px, 7vw, 52px); }
+  .pra-hero__desc { font-size: 16px; }
+
+  .pra-stats__list { grid-template-columns: repeat(2, 1fr); }
+  .pra-stats__item:nth-child(3)::before { display: none; }
+  .pra-stats__item:nth-child(2)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 10%;
+    width: 80%;
+    height: 1px;
+    background: rgba(89, 86, 233, 0.1);
+  }
+
+  .pra-grid { grid-template-columns: repeat(2, 1fr); gap: 22px; }
+  .pra-brands { padding: 72px 0; }
+  .pra-showcase { padding: 80px 0 96px; }
+}
+
+@media (max-width: 767px) {
+  .pra-hero { padding-top: 120px; padding-bottom: 56px; min-height: auto; }
+  .pra-hero__title { font-size: clamp(30px, 8vw, 42px); }
+  .pra-hero__desc { font-size: 15px; }
+  .pra-hero__scroll { display: none; }
+
+  .pra-stats { padding: 48px 0; }
+  .pra-stats__num { font-size: 42px; }
+
+  .pra-section-hd { margin-bottom: 40px; }
+
+  .pra-filterbar { flex-wrap: wrap; justify-content: center; border-radius: 16px; padding: 8px; }
+  .pra-filter-btn { padding: 9px 20px; font-size: 13px; }
+
+  .pra-grid { grid-template-columns: 1fr; gap: 20px; }
+
+  .pra-brands { padding: 56px 0; }
+  .pra-showcase { padding: 64px 0 80px; }
+}
+
+@media (max-width: 479px) {
+  .pra-hero { padding-top: 110px; padding-bottom: 48px; }
+  .pra-stats__list { grid-template-columns: repeat(2, 1fr); }
+  .pra-stats__num { font-size: 36px; }
+}
+
+/* -------------------------------------------------------
+   14. PREFERS REDUCED MOTION
+------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .pra-orb,
+  .pra-eyebrow__dot,
+  .pra-hero__scroll-line {
+    animation: none;
+  }
+  [data-pra-reveal],
+  .pra-card,
+  .pra-card__img,
+  .pra-card__overlay,
+  .pra-card__act {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+  .pra-card { opacity: 1; transform: none; }
+}

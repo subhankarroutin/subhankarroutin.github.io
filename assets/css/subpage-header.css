@@ -1,0 +1,202 @@
+/* ============================================================
+   SUBPAGE HEADER & FOOTER — assets/css/subpage-header.css
+
+   Shared styles for every Subhankar Rout subpage.
+   Include this in all subpages (about, odicoder, s4cinesphere,
+   publications, pr-award, etc.) for a consistent header and footer.
+
+   Load order: after styles.css, before any page-specific CSS.
+   Requires: CSS variables defined in styles.css (:root block).
+============================================================ */
+
+
+/* ----------------------------------------------------------
+   1. Desktop white header
+      Selector is intentionally unscoped — works on any page
+      that uses #header-sticky.header-white.
+---------------------------------------------------------- */
+#header-sticky.header-white {
+  position: relative;
+  z-index: 9999;
+  background: var(--tp-common-white, #ffffff);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, .06);
+}
+
+#header-sticky.header-white .header-space-two {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Nav list — centered flex row */
+#header-sticky.header-white .tp-main-menu ul {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+#header-sticky.header-white .tp-main-menu ul li {
+  margin-right: 40px;
+}
+#header-sticky.header-white .tp-main-menu ul li:last-child {
+  margin-right: 0;
+}
+
+/* Nav link height */
+#header-sticky.header-white .tp-main-menu ul li a {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+/* Underline animation offset for 24px padding */
+#header-sticky.header-white .tp-main-menu ul li a::after,
+#header-sticky.header-white .tp-main-menu ul li a::before {
+  bottom: 12px;
+}
+
+/* Home Page button */
+#header-sticky.header-white .tp-header-button {
+  text-align: right;
+}
+#header-sticky.header-white .tp-header-button .tp-btn {
+  padding: 0 40px;
+  min-width: 130px;
+}
+
+/* Dropdown — centred under its parent li */
+#header-sticky.header-white .tp-main-menu ul li ul.submenu {
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 0;
+}
+#header-sticky.header-white .tp-main-menu ul li ul.submenu li {
+  padding: 0;
+}
+#header-sticky.header-white .tp-main-menu ul li ul.submenu li a {
+  color: var(--tp-common-white, #ffffff) !important;
+  padding: 9px 22px !important;
+  display: block;
+  white-space: nowrap;
+}
+#header-sticky.header-white .tp-main-menu ul li ul.submenu li a:hover {
+  color: var(--tp-theme-primary, #FFDC60) !important;
+}
+
+
+/* ----------------------------------------------------------
+   2. Sticky (fixed on scroll) behaviour
+      main.js adds .header-sticky when the user scrolls past
+      the header. Works on any subpage.
+---------------------------------------------------------- */
+#header-sticky.header-sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 99999 !important;
+  background: var(--tp-common-white, #ffffff) !important;
+  box-shadow: 0 2px 40px rgba(168, 182, 218, .3) !important;
+}
+
+#header-sticky-mobile.header-sticky {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 99999 !important;
+  background: var(--tp-common-white, #ffffff) !important;
+  box-shadow: 0 2px 40px rgba(168, 182, 218, .3) !important;
+}
+
+
+/* ----------------------------------------------------------
+   3. Mobile header (hidden on ≥ lg, shown on < lg)
+---------------------------------------------------------- */
+#header-sticky-mobile.header-white {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: var(--tp-common-white, #ffffff);
+  box-shadow: 0 2px 30px rgba(0, 0, 0, .06);
+}
+#header-sticky-mobile.header-white > .container-fluid {
+  width: 100%;
+}
+#header-sticky-mobile.header-white .tp-logo {
+  display: flex;
+  align-items: center;
+}
+
+
+/* ----------------------------------------------------------
+   4. Offcanvas mobile menu — overrides & fixes
+      meanmenu injects a duplicate hamburger inside .tpoffcanvas;
+      hide it so only the real .tp-menu-bar button is visible.
+---------------------------------------------------------- */
+.tpoffcanvas a.meanmenu-reveal  { display: none !important; }
+.tpoffcanvas .mean-bar          { padding: 0; }
+.tpoffcanvas .mean-nav > ul     { display: block !important; }
+.tpoffcanvas .tp-header-button  { text-align: left; }
+
+/* Newsletter form submits into a hidden iframe */
+#newsletter-frame { display: none; }
+
+
+/* ----------------------------------------------------------
+   5. Footer — responsive adjustments
+---------------------------------------------------------- */
+@media (max-width: 767px) {
+  .tp-footer-area .black-bg {
+    padding-top: 56px;
+    padding-bottom: 24px;
+  }
+  .tp-footer-widget       { margin-bottom: 28px; }
+  .tp-footer-widget__list ul li { margin-bottom: 8px; }
+  .tp-copyright-area      { text-align: center; }
+  .tp-copyright-right     { text-align: center !important; margin-top: 8px; }
+  .copyright-border       { padding-top: 20px; }
+}
+
+
+/* ----------------------------------------------------------
+   6. Scroll-to-top button
+---------------------------------------------------------- */
+.scroll-top.open {
+  opacity: 1 !important;
+  visibility: visible !important;
+  bottom: 24px !important;
+}
+@media (max-width: 767px) {
+  .scroll-top {
+    right: 16px;
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+  }
+}
+
+
+/* ----------------------------------------------------------
+   7. Hamburger / offcanvas fixes
+---------------------------------------------------------- */
+
+/* Hide the Portfolio button inside the offcanvas on tablet+
+   (md ≥ 768px) — it's already visible in the mobile header bar */
+@media (min-width: 768px) {
+  .tpoffcanvas .tp-header-button { display: none !important; }
+}
+
+/* When the offcanvas is open, it must sit above the sticky
+   header (z-index: 99999) so the close button stays visible
+   even after the user scrolls and the nav becomes fixed.
+   The body-overlay is raised just above the sticky header so
+   it masks the page; the offcanvas panel sits one step higher. */
+.body-overlay.apply {
+  z-index: 100000 !important;
+}
+.tpoffcanvas.opened {
+  z-index: 100001 !important;
+}

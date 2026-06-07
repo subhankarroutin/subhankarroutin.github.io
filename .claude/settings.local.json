@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\subha\\\\Downloads\\\\files \\(2\\)\" -Name)",
+      "Bash(Get-ChildItem \"c:\\\\Users\\\\subha\\\\Downloads\\\\files \\(2\\)\" -Filter \"*.md\" -Recurse)",
+      "Bash(Select-Object FullName)",
+      "Bash(Select-String -Pattern \"styles.css\" -Context 2,2)",
+      "Bash(powershell -command \"Get-Content about.html | Select-String -Pattern 'rj-section|rj-sticky-outer|rj-rocket|rjRocket|Still Launching|Product Designer|One Year|Capgemini|Microsoft IDC|Published Author' | Select-Object -First 20\")",
+      "Bash(powershell -command \"\\(Get-Content styles.css | Select-String -Pattern 'rj-section|rj-sticky-outer|rjFlameO|rjNodeRipple|rj-ml-item'\\).Count\")",
+      "Bash(powershell -command \"Get-Content about.html | Select-String -Pattern 'Rocket Journey|initDesktopJourney|rjStickyOuter|requestAnimationFrame' | Select-Object -First 5\")",
+      "Bash(powershell -command \"Get-Content about.html | Select-String -Pattern 'meta.*description' | Head -3\")",
+      "Bash(powershell -command \"Get-Content styles.css | Select-String -Pattern 'rj-sticky-outer|rj-card-wrap|rj-track|padding: 0 5vw|rj-endcap' | Select-Object -First 12\")",
+      "WebSearch",
+      "WebFetch(domain:s4cinesphere.github.io)",
+      "WebFetch(domain:www.subhankarrout.in)"
+    ]
+  }
+}
