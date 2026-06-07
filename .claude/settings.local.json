@@ -12,7 +12,8 @@
       "Bash(powershell -command \"Get-Content styles.css | Select-String -Pattern 'rj-sticky-outer|rj-card-wrap|rj-track|padding: 0 5vw|rj-endcap' | Select-Object -First 12\")",
       "WebSearch",
       "WebFetch(domain:s4cinesphere.github.io)",
-      "WebFetch(domain:www.subhankarrout.in)"
+      "WebFetch(domain:www.subhankarrout.in)",
+      "Bash(dir \"d:\\\\Web\\\\subhankarroutin.github.io\\\\assets\\\\img\\\\hero\\\\\" /b)"
     ]
   }
 }

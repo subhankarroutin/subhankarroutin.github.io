@@ -17,6 +17,21 @@
   'use strict';
 
   /* ============================================================
+     00. PRELOADER — runs on any page that has #pr-preloader
+  ============================================================ */
+  (function dismissPreloader() {
+    var preloader = document.getElementById('pr-preloader');
+    if (!preloader) return;
+    window.addEventListener('load', function () {
+      setTimeout(function () {
+        preloader.classList.add('is-hidden');
+        setTimeout(function () { preloader.style.display = 'none'; }, 460);
+      }, 280);
+    });
+  })();
+
+
+  /* ============================================================
      01. COPYRIGHT YEAR
   ============================================================ */
   var yearEl = document.getElementById('copyrightYear');
@@ -350,6 +365,71 @@ if (
 
 
   /* ============================================================
+     11. HOME PAGE MODULE
+     Scoped to body.hm-page — never runs on other pages.
+     a) Preloader  b) hm-reveal  c) hm-stagger  d) stat counters
+  ============================================================ */
+  (function initHomePage() {
+    if (!document.body.classList.contains('hm-page')) return;
+
+    /* b) Scroll-reveal (.hm-reveal → .hm-visible) ----------- */
+    var revObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('hm-visible');
+          revObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.hm-reveal').forEach(function (el) {
+      revObs.observe(el);
+    });
+
+    /* c) Stagger reveal (.hm-stagger → .hm-visible) --------- */
+    var stagObs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('hm-visible');
+          stagObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.hm-stagger').forEach(function (el) {
+      stagObs.observe(el);
+    });
+
+    /* d) Animated stat counters ----------------------------- */
+    function runCounter(el) {
+      var target   = +el.dataset.count;
+      var suffix   = el.dataset.suffix || '';
+      var duration = 1800;
+      var start    = performance.now();
+      function tick(now) {
+        var p    = Math.min((now - start) / duration, 1);
+        var ease = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.floor(ease * target) + suffix;
+        if (p < 1) requestAnimationFrame(tick);
+        else el.textContent = target + suffix;
+      }
+      requestAnimationFrame(tick);
+    }
+
+    var statsRibbon = document.querySelector('.hm-stats-ribbon');
+    if (statsRibbon) {
+      var hmCounted = false;
+      new IntersectionObserver(function (entries) {
+        if (entries[0].isIntersecting && !hmCounted) {
+          hmCounted = true;
+          document.querySelectorAll('.hm-stat__num[data-count]').forEach(runCounter);
+        }
+      }, { threshold: 0.4 }).observe(statsRibbon);
+    }
+  })();
+
+
+  /* ============================================================
      07. REDUCED-MOTION GUARD
      Pause CSS animation-based marquees when user prefers
      reduced motion (supplements the CSS @media query).
@@ -377,7 +457,7 @@ if (
      Only initialises when document.body has class "ab-page"
   ============================================================ */
   (function initAboutPage() {
-    if (!document.body.classList.contains('ab-page')) return;
+    if (!document.body.classList.contains('ab-page') && !document.body.classList.contains('hm-page')) return;
 
     /* —— a) Scroll-reveal ————————————————————————————————————— */
     var abRevealObs = new IntersectionObserver(function (entries) {
