@@ -22,7 +22,24 @@
   (function dismissPreloader() {
     var preloader = document.getElementById('pr-preloader');
     if (!preloader) return;
+
+    /* Inject slow-load nudge message */
+    var msg = document.createElement('div');
+    msg.id = 'preloader-slow-msg';
+    msg.setAttribute('aria-live', 'polite');
+    msg.innerHTML =
+      '<span class="preloader-slow-msg__icon">✨</span>' +
+      '<p class="preloader-slow-msg__title">Worth the wait.</p>' +
+      '<p class="preloader-slow-msg__body">This usually loads in a heartbeat. Your browser&rsquo;s security check or connection might need a moment &mdash; and that&rsquo;s okay. Everything worth experiencing does.<br><br>Almost there. Thanks for staying. 💛</p>';
+    preloader.appendChild(msg);
+
+    /* Show message after 3 s if page hasn't loaded yet */
+    var slowTimer = setTimeout(function () {
+      msg.classList.add('preloader-slow-msg--visible');
+    }, 3000);
+
     window.addEventListener('load', function () {
+      clearTimeout(slowTimer);
       setTimeout(function () {
         preloader.classList.add('is-hidden');
         setTimeout(function () { preloader.style.display = 'none'; }, 460);

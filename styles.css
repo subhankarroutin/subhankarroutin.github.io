@@ -6402,6 +6402,28 @@ input:focus-visible,
 }
 @keyframes preloaderSpin { to { transform: rotate(360deg); } }
 
+/* Slow-load nudge message */
+#preloader-slow-msg {
+  position: absolute;
+  bottom: 48px; left: 50%;
+  transform: translateX(-50%);
+  width: min(320px, 88vw);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+}
+#preloader-slow-msg.preloader-slow-msg--visible { opacity: 1; }
+.preloader-slow-msg__icon { font-size: 24px; display: block; margin-bottom: 10px; }
+.preloader-slow-msg__title {
+  font-size: 15px; font-weight: 700; letter-spacing: -.01em;
+  color: var(--text-primary); margin-bottom: 8px;
+}
+.preloader-slow-msg__body {
+  font-size: 13px; line-height: 1.7;
+  color: var(--text-secondary);
+}
+
 
 /* ================================================================
    Â§21  HOME PAGE  (index.html)
