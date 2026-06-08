@@ -6590,9 +6590,16 @@ input:focus-visible,
 }
 .hm-hero__headline .hm-name::after {
   content:''; position:absolute; bottom:-8px; left:0;
-  width:20px; height:2px; border-radius:2px;
+  width:10px; height:3px; border-radius:2px;
   background:var(--tp-theme-primary);
+  max-width:90%;
   animation:hm-lineGrow 1.2s 1s ease both;
+}
+@media (min-width: 768px) and (max-width: 1080px) {
+  .hm-hero__headline .hm-name::after { max-width:90%; }
+}
+@media (max-width: 767px) {
+  .hm-hero__headline .hm-name::after { max-width:100%; }
 }
 
 .hm-hero__roles {
