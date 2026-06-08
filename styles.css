@@ -2707,6 +2707,7 @@ input:focus-visible,
    mean-bar also adds 4px top/bottom padding above the cloned nav
    items; strip it to avoid a blank gap at the top of the menu list.
 ============================================================ */
+.tpoffcanvas { transition: 0.25s !important; }
 .tpoffcanvas a.meanmenu-reveal { display: none !important; }
 .tpoffcanvas .mean-bar { padding: 0; }
 .tpoffcanvas .mean-nav > ul { display: block !important; }
