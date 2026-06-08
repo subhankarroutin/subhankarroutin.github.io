@@ -165,5 +165,5 @@ Note: breakpoint for tablet is `max-width: 1080px` (not 1024 — intentional dec
 
 ## Design System Reference
 
-Full visual design system storybook: `https://subhankarrout.vercel.app/design-system.html`
-Covers: tokens, color, typography, all buttons, components, animations, breakpoints, accessibility, page reference.
+Full visual design system storybook: `chitra-design-system.html` (Chitra Design System v2.0)
+Covers: brand identity, Chitra philosophy, tokens, color, typography, all buttons, components, animations, breakpoints, accessibility, page reference.

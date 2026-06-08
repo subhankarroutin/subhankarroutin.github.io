@@ -1,0 +1,3075 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chitra Design System — subhankarrout.in</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Chitra Design System — Brand guidelines, tokens, components and patterns for subhankarrout.in">
+  <link rel="shortcut icon" type="image/x-icon" href="../assets/img/logo/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/font-awesome-pro.css">
+  <link rel="stylesheet" href="chitra-design-system.css">
+
+  <style>
+    /* ── TOKENS (mirrors styles.css :root) ───────────────────── */
+    :root {
+      --tp-theme-1:       #5956E9;
+      --tp-theme-2:       #423EF3;
+      --tp-theme-primary: #FFDC60;
+      --tp-common-white:  #ffffff;
+      --tp-common-black:  #0D0D12;
+      --tp-grey-1:        #F7F8FD;
+      --tp-text-body:     #6B7280;
+      --tp-border-1:      #E8ECF2;
+      --accent-violet:    #5956E9;
+      --accent-yellow:    #FFDC60;
+      --text-primary:     #0D0D12;
+      --text-secondary:   #6B7280;
+      --text-tertiary:    #9CA3AF;
+      --surface-1:        #FAFAFA;
+      --surface-2:        #F4F4F6;
+      --surface-dark:     #0D0D12;
+      --radius-sm:        10px;
+      --radius-md:        16px;
+      --radius-lg:        24px;
+      --radius-xl:        32px;
+      --shadow-card:      0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.06);
+      --shadow-hover:     0 4px 24px rgba(89,86,233,.14), 0 1px 4px rgba(0,0,0,.08);
+      --transition:       0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-fast:  0.2s ease-out;
+      --transition-btn:   0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+      --ff-body:          'DM Sans', sans-serif;
+      --ff-mono:          'DM Mono', monospace;
+      /* DS page chrome */
+      --ds-sidebar-w:     260px;
+      --ds-bg:            #F7F8FD;
+      --ds-border:        #E8ECF2;
+      --ds-code-bg:       #F0F1F8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--ff-body);
+      background: var(--ds-bg);
+      color: var(--text-primary);
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    /* ── SIDEBAR ─────────────────────────────────────────────── */
+    .ds-sidebar {
+      display: block;         /* explicit block — never inherit row-flex from body */
+      width: var(--ds-sidebar-w);
+      flex-shrink: 0;
+      background: #fff;
+      border-right: 1px solid var(--ds-border);
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 32px 0 48px;
+    }
+    .ds-sidebar__logo {
+      padding: 0 24px 28px;
+      border-bottom: 1px solid var(--ds-border);
+      margin-bottom: 20px;
+    }
+    .ds-sidebar__logo-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+    }
+    .ds-sidebar__logo-sub {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      margin-top: 2px;
+    }
+    .ds-sidebar__badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      background: rgba(89,86,233,.1);
+      color: var(--accent-violet);
+      padding: 2px 8px;
+      border-radius: 100px;
+      margin-top: 6px;
+      letter-spacing: 0.04em;
+    }
+    .ds-nav-group { margin-bottom: 4px; }
+    .ds-nav-group__label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      padding: 12px 24px 6px;
+      display: block;
+    }
+    .ds-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 24px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      transition: all 0.18s ease;
+    }
+    .ds-nav-link:hover,
+    .ds-nav-link.active {
+      color: var(--accent-violet);
+      border-left-color: var(--accent-violet);
+      background: rgba(89,86,233,.04);
+    }
+    .ds-nav-link i { width: 16px; font-size: 12px; flex-shrink: 0; }
+
+    /* ── MAIN CONTENT ────────────────────────────────────────── */
+    .ds-main {
+      flex: 1;
+      min-width: 0;
+      padding: 48px 56px 120px;
+      max-width: 1000px;
+    }
+
+    /* ── SECTION WRAPPER ─────────────────────────────────────── */
+    .ds-section {
+      margin-bottom: 80px;
+      scroll-margin-top: 32px;
+    }
+    .ds-section-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--ds-border);
+    }
+    .ds-section-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background: rgba(89,86,233,.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: var(--accent-violet);
+      flex-shrink: 0;
+    }
+    .ds-section-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+    }
+    .ds-section-desc {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-top: 2px;
+    }
+
+    /* ── SUBSECTION ──────────────────────────────────────────── */
+    .ds-sub { margin-bottom: 40px; }
+    .ds-sub-title {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: 16px;
+    }
+
+    /* ── CODE CHIP ───────────────────────────────────────────── */
+    code {
+      font-family: var(--ff-mono);
+      font-size: 12px;
+      background: var(--ds-code-bg);
+      color: var(--accent-violet);
+      padding: 2px 7px;
+      border-radius: 5px;
+      border: 1px solid rgba(89,86,233,.12);
+    }
+
+    /* ── TOKENS: COLOR SWATCHES ──────────────────────────────── */
+    .ds-swatch-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    .ds-swatch {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--ds-border);
+      background: #fff;
+    }
+    .ds-swatch__color {
+      height: 72px;
+    }
+    .ds-swatch__meta {
+      padding: 10px 12px;
+    }
+    .ds-swatch__name {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-primary);
+      display: block;
+    }
+    .ds-swatch__var {
+      font-family: var(--ff-mono);
+      font-size: 10px;
+      color: var(--text-tertiary);
+      display: block;
+      margin-top: 2px;
+    }
+    .ds-swatch__hex {
+      font-family: var(--ff-mono);
+      font-size: 11px;
+      color: var(--text-secondary);
+      display: block;
+      margin-top: 1px;
+    }
+
+    /* ── TOKENS: RADIUS ──────────────────────────────────────── */
+    .ds-radius-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .ds-radius-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .ds-radius-box {
+      width: 80px;
+      height: 80px;
+      background: rgba(89,86,233,.1);
+      border: 2px solid var(--accent-violet);
+    }
+    .ds-radius-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-align: center;
+    }
+    .ds-radius-val {
+      font-family: var(--ff-mono);
+      font-size: 11px;
+      color: var(--text-tertiary);
+    }
+
+    /* ── TOKENS: SHADOW ──────────────────────────────────────── */
+    .ds-shadow-row {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .ds-shadow-box {
+      width: 140px;
+      height: 80px;
+      background: #fff;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    /* ── TYPOGRAPHY SCALE ────────────────────────────────────── */
+    .ds-type-row {
+      display: flex;
+      align-items: baseline;
+      gap: 24px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--ds-border);
+    }
+    .ds-type-row:last-child { border-bottom: none; }
+    .ds-type-meta {
+      width: 200px;
+      flex-shrink: 0;
+    }
+    .ds-type-meta code { display: block; margin-bottom: 4px; }
+    .ds-type-specs {
+      font-size: 11px;
+      color: var(--text-tertiary);
+      line-height: 1.6;
+    }
+    .ds-type-example { flex: 1; }
+
+    /* ── BUTTON SYSTEM ───────────────────────────────────────── */
+    .ds-btn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .ds-btn-card {
+      background: #fff;
+      border: 1px solid var(--ds-border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+    .ds-btn-card--dark {
+      background: #0D0D12;
+    }
+    .ds-btn-card__preview {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+      min-height: 60px;
+    }
+    .ds-btn-card__divider {
+      height: 1px;
+      background: var(--ds-border);
+      margin-bottom: 14px;
+    }
+    .ds-btn-card--dark .ds-btn-card__divider { background: rgba(255,255,255,.08); }
+    .ds-btn-card__name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .ds-btn-card--dark .ds-btn-card__name { color: #fff; }
+    .ds-btn-card__class {
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+    .ds-btn-card__desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .ds-btn-card--dark .ds-btn-card__desc { color: rgba(255,255,255,.45); }
+    .ds-btn-card__usage {
+      margin-top: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+    }
+    .ds-btn-card__usage span {
+      color: var(--accent-violet);
+      font-style: normal;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* ── Actual button styles (mirrors styles.css) ─────────── */
+    .tp-btn {
+      display: inline-block; font-size: 15px; font-weight: 700;
+      color: #fff; background: var(--tp-theme-1);
+      height: 56px; line-height: 56px; text-align: center;
+      padding: 0 36px; position: relative; z-index: 1;
+      overflow: hidden; border-radius: 10px; text-decoration: none;
+      transition: color .3s; cursor: pointer; border: none;
+    }
+    .tp-btn::before,.tp-btn::after {
+      content:''; background:#FFDC60; height:50%; width:0;
+      position:absolute; transition:0.3s cubic-bezier(0.785,0.135,0.15,0.86);
+      z-index:-1;
+    }
+    .tp-btn::before { top:0; left:0; }
+    .tp-btn::after  { bottom:0; right:0; }
+    .tp-btn:hover   { color: var(--tp-common-black); }
+    .tp-btn:hover::before { width:100%; right:0; left:auto; }
+    .tp-btn:hover::after  { width:100%; left:0; right:auto; }
+
+    .hm-btn-primary {
+      display:inline-flex; align-items:center; gap:10px;
+      background:var(--tp-theme-1); color:#fff;
+      padding:14px 28px; border-radius:var(--radius-sm);
+      font-size:15px; font-weight:600; position:relative; overflow:hidden;
+      transition:color var(--transition); border:none; cursor:pointer;
+      text-decoration:none;
+    }
+    .hm-btn-primary::before {
+      content:''; position:absolute; inset:0;
+      background:var(--tp-theme-2); transform:scaleX(0); transform-origin:left;
+      transition:transform var(--transition);
+    }
+    .hm-btn-primary:hover::before { transform:scaleX(1); }
+    .hm-btn-primary span,.hm-btn-primary i { position:relative; z-index:1; }
+    .hm-btn-primary:hover { color:#fff; }
+
+    .hm-btn-yellow {
+      display:inline-flex; align-items:center; gap:10px;
+      background:var(--tp-theme-primary); color:var(--tp-common-black);
+      padding:14px 28px; border-radius:var(--radius-sm);
+      font-size:15px; font-weight:700; position:relative; overflow:hidden;
+      transition:all var(--transition); border:none; cursor:pointer;
+      text-decoration:none;
+    }
+    .hm-btn-yellow:hover { background:#ffe980; color:var(--tp-common-black); transform:translateY(-2px); }
+
+    .hm-btn-ghost {
+      display:inline-flex; align-items:center; gap:9px;
+      color:rgba(255,255,255,.75); padding:14px 24px;
+      border:1.5px solid rgba(255,255,255,.22); border-radius:var(--radius-sm);
+      font-size:15px; font-weight:500; transition:all .3s ease;
+      text-decoration:none; cursor:pointer;
+    }
+    .hm-btn-ghost:hover { border-color:rgba(255,255,255,.6); color:#fff; background:rgba(255,255,255,.06); }
+
+    .hm-btn-outline {
+      display:inline-flex; align-items:center; gap:9px;
+      color:var(--tp-theme-1); padding:14px 24px;
+      border:1.5px solid var(--tp-theme-1); border-radius:var(--radius-sm);
+      font-size:15px; font-weight:600; transition:all .3s ease;
+      text-decoration:none; cursor:pointer;
+    }
+    .hm-btn-outline:hover { background:var(--tp-theme-1); color:#fff; }
+
+    .btn-primary-hero {
+      display:inline-flex; align-items:center; gap:10px;
+      background:var(--text-primary); color:#fff;
+      padding:14px 26px; border-radius:var(--radius-sm);
+      font-size:15px; font-weight:600; text-decoration:none;
+      transition:var(--transition); position:relative; overflow:hidden; cursor:pointer;
+    }
+    .btn-primary-hero::before {
+      content:''; position:absolute; inset:0;
+      background:var(--accent-violet); transform:scaleX(0);
+      transform-origin:left; transition:transform var(--transition);
+    }
+    .btn-primary-hero:hover::before { transform:scaleX(1); }
+    .btn-primary-hero span,.btn-primary-hero i { position:relative; z-index:1; }
+    .btn-primary-hero:hover { color:#fff; }
+
+    .btn-ghost-hero {
+      display:inline-flex; align-items:center; gap:8px;
+      color:var(--text-primary); padding:14px 22px;
+      border-radius:var(--radius-sm); font-size:15px;
+      font-weight:500; text-decoration:none;
+      border:1.5px solid var(--tp-border-1); transition:var(--transition); cursor:pointer;
+    }
+    .btn-ghost-hero:hover { border-color:var(--accent-violet); color:var(--accent-violet); background:rgba(89,86,233,.04); }
+
+    .bk-btn-review {
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      background:var(--tp-theme-primary); color:var(--tp-common-black);
+      padding:14px 28px; border-radius:var(--radius-sm);
+      font-size:15px; font-weight:700; width:100%;
+      transition:all var(--transition); border:none; cursor:pointer; text-decoration:none;
+    }
+    .bk-btn-review:hover { background:var(--tp-theme-1) !important; color:#fff !important; transform:none; }
+
+    .dx-btn-primary {
+      display:inline-flex; align-items:center; gap:10px;
+      background:#FF3366; color:#fff;
+      padding:14px 28px; border-radius:var(--radius-sm);
+      font-size:15px; font-weight:700; text-decoration:none;
+      transition:all .3s ease; cursor:pointer; border:none;
+    }
+    .dx-btn-primary:hover { background:#e0194e; transform:translateY(-3px); box-shadow:0 14px 40px rgba(255,51,102,.6); }
+
+    .dx-btn-ghost {
+      display:inline-flex; align-items:center; gap:8px;
+      color:rgba(255,255,255,.8); padding:14px 22px;
+      border:1.5px solid rgba(255,255,255,.25); border-radius:var(--radius-sm);
+      font-size:15px; font-weight:500; text-decoration:none;
+      transition:all .3s ease; cursor:pointer;
+    }
+    .dx-btn-ghost:hover { background:rgba(255,255,255,.13); border-color:rgba(255,255,255,.45); color:#fff; transform:translateY(-3px); }
+
+    /* ── COMPONENT CARDS ─────────────────────────────────────── */
+    .ds-component-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .ds-comp-card {
+      background: #fff;
+      border: 1px solid var(--ds-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .ds-comp-card__preview {
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 110px;
+      background: var(--ds-bg);
+      border-bottom: 1px solid var(--ds-border);
+    }
+    .ds-comp-card__preview--dark {
+      background: #0D0D12;
+    }
+    .ds-comp-card__body {
+      padding: 16px 20px;
+    }
+    .ds-comp-card__name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+    .ds-comp-card__desc {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Kicker pill */
+    .ds-kicker {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:500; letter-spacing:0.08em;
+      text-transform:uppercase; color:var(--accent-violet);
+      background:rgba(89,86,233,.08); border:1px solid rgba(89,86,233,.15);
+      padding:6px 14px; border-radius:100px;
+    }
+    .ds-kicker-dot {
+      width:6px; height:6px; border-radius:50%;
+      background:var(--accent-violet);
+      animation:kickerPulse 2s ease-in-out infinite;
+    }
+    @keyframes kickerPulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50% { opacity:.5; transform:scale(.8); }
+    }
+    .ds-kicker--yellow {
+      background:rgba(255,220,96,.1); border-color:rgba(255,220,96,.3);
+      color:#7a6200;
+    }
+    .ds-kicker-dot--yellow { background:var(--accent-yellow); }
+
+    /* Section label */
+    .ds-sec-label {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:600; letter-spacing:.1em;
+      text-transform:uppercase; color:var(--accent-violet);
+    }
+    .ds-sec-label::before {
+      content:''; width:20px; height:1.5px;
+      background:var(--accent-violet); border-radius:1px; flex-shrink:0;
+    }
+
+    /* hm-label eyebrow */
+    .ds-hm-label {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; font-weight:600; letter-spacing:.12em;
+      text-transform:uppercase; color:var(--accent-violet);
+      margin-bottom:0;
+    }
+    .ds-hm-label::before {
+      content:''; width:16px; height:2px;
+      background:var(--accent-yellow); border-radius:1px;
+    }
+
+    /* Floating tag */
+    .ds-tag {
+      background:#fff; border:1px solid var(--ds-border);
+      border-radius:100px; padding:10px 18px;
+      font-size:13px; font-weight:500; color:var(--text-primary);
+      display:inline-flex; align-items:center; gap:8px;
+      box-shadow:var(--shadow-card);
+    }
+    .ds-tag-dot { width:8px; height:8px; border-radius:50%; background:var(--accent-violet); }
+    .ds-tag-dot--green { background:#22c55e; }
+
+    /* Quick-link bar */
+    .ds-quicklinks {
+      display:grid; grid-template-columns:repeat(4,1fr);
+      border:1px solid var(--ds-border); border-radius:var(--radius-md);
+      overflow:hidden; background:#fff;
+      box-shadow:0 2px 12px rgba(0,0,0,.06);
+    }
+    .ds-quicklinks a {
+      display:flex; align-items:center; justify-content:center; gap:8px;
+      padding:16px 12px; font-size:13px; font-weight:500;
+      color:var(--text-secondary); text-decoration:none;
+      border-right:1px solid var(--ds-border);
+      transition:all var(--transition-fast);
+    }
+    .ds-quicklinks a:last-child { border-right:none; }
+    .ds-quicklinks a:hover { color:var(--accent-violet); background:rgba(89,86,233,.04); }
+
+    /* Filter tabs */
+    .ds-filter-tab {
+      font-size:13px; font-weight:500; padding:8px 18px;
+      border-radius:100px; border:1.5px solid var(--ds-border);
+      background:transparent; color:var(--text-secondary);
+      cursor:pointer; transition:all var(--transition-fast);
+    }
+    .ds-filter-tab.active,.ds-filter-tab:hover {
+      background:var(--accent-violet); color:#fff; border-color:var(--accent-violet);
+    }
+
+    /* Skill chip */
+    .ds-skill-chip {
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:14px; font-weight:500; color:var(--text-secondary);
+      padding:10px 20px; border:1px solid var(--ds-border);
+      border-radius:100px; background:#fff;
+    }
+
+    /* Footer newsletter input */
+    .ds-newsletter {
+      display:flex; overflow:hidden;
+      border:1px solid rgba(255,255,255,.15); border-radius:var(--radius-sm);
+    }
+    .ds-newsletter input {
+      flex:1; background:transparent; border:none;
+      color:#fff; font-size:14px; padding:12px 16px;
+      outline:none; font-family:var(--ff-body);
+    }
+    .ds-newsletter input::placeholder { color:rgba(255,255,255,.35); }
+    .ds-newsletter button {
+      background:var(--accent-violet); border:none; color:#fff;
+      width:44px; cursor:pointer; font-size:14px; flex-shrink:0;
+      transition:background .2s;
+    }
+    .ds-newsletter button:hover { background:var(--tp-theme-2); }
+
+    /* ── ANIMATION DEMOS ─────────────────────────────────────── */
+    .ds-anim-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 12px;
+    }
+    .ds-anim-card {
+      background: #fff;
+      border: 1px solid var(--ds-border);
+      border-radius: var(--radius-md);
+      padding: 24px 16px;
+      text-align: center;
+    }
+    .ds-anim-card__box {
+      width: 48px; height: 48px;
+      background: rgba(89,86,233,.15);
+      border-radius: var(--radius-sm);
+      margin: 0 auto 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+    }
+    .ds-anim-card__name { font-size: 12px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+    .ds-anim-card__desc { font-size: 11px; color: var(--text-secondary); line-height: 1.5; }
+    .ds-anim-card__timing { font-family: var(--ff-mono); font-size: 10px; color: var(--text-tertiary); margin-top: 6px; }
+
+    @keyframes heroFadeUp {
+      from { opacity:0; transform:translateY(30px); }
+      to   { opacity:1; transform:none; }
+    }
+    @keyframes heroFadeRight {
+      from { opacity:0; transform:translateX(40px); }
+      to   { opacity:1; transform:none; }
+    }
+    @keyframes hm-lineGrow {
+      from { width:0; }
+      to   { width:100%; }
+    }
+    @keyframes blobFloat {
+      0%,100% { transform:translate(0,0) scale(1); }
+      50% { transform:translate(-20px,20px) scale(1.04); }
+    }
+    @keyframes marqueeScroll {
+      from { transform:translateX(0); }
+      to   { transform:translateX(-50%); }
+    }
+
+    .anim-demo-fadein { animation: heroFadeUp 1s ease both; }
+    .anim-demo-blob {
+      width:40px; height:40px; border-radius:50%;
+      background:radial-gradient(circle,rgba(89,86,233,.5) 0%,transparent 70%);
+      filter:blur(4px);
+      animation:blobFloat 4s ease-in-out infinite;
+    }
+
+    /* Yellow underline demo */
+    .ds-underline-demo {
+      display: inline-block;
+      position: relative;
+      font-size: 28px;
+      font-weight: 700;
+    }
+    .ds-underline-demo::after {
+      content:''; position:absolute; bottom:-8px; left:0;
+      width:10px; height:3px; border-radius:2px;
+      background:var(--tp-theme-primary);
+      max-width:90%;
+      animation:hm-lineGrow 1.2s 0.5s ease both;
+    }
+
+    /* ── PAGES REFERENCE TABLE ───────────────────────────────── */
+    .ds-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+    }
+    .ds-table th {
+      background: var(--surface-2);
+      text-align: left;
+      padding: 10px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      border-bottom: 1px solid var(--ds-border);
+    }
+    .ds-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--ds-border);
+      vertical-align: middle;
+    }
+    .ds-table tr:last-child td { border-bottom: none; }
+    .ds-table tr:hover td { background: rgba(89,86,233,.02); }
+    .ds-table__wrap {
+      border: 1px solid var(--ds-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      background: #fff;
+    }
+    .ds-dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }
+    .ds-dot--light { background:var(--surface-1); border:1px solid var(--ds-border); }
+    .ds-dot--dark { background:#0D0D12; }
+
+    /* ── ACCESSIBILITY ───────────────────────────────────────── */
+    .ds-a11y-item {
+      display: flex;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--ds-border);
+    }
+    .ds-a11y-item:last-child { border-bottom: none; }
+    .ds-a11y-icon {
+      width: 36px; height: 36px; flex-shrink: 0;
+      border-radius: var(--radius-sm);
+      background: rgba(89,86,233,.08);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px; color: var(--accent-violet);
+    }
+    .ds-a11y-content h4 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+    .ds-a11y-content p  { font-size: 13px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* ── BREAKPOINTS ─────────────────────────────────────────── */
+    .ds-bp-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .ds-bp-card {
+      flex: 1;
+      min-width: 140px;
+      background: #fff;
+      border: 1px solid var(--ds-border);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+    }
+    .ds-bp-card__icon { font-size: 24px; margin-bottom: 10px; }
+    .ds-bp-card__label { font-size: 12px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
+    .ds-bp-card__range { font-family: var(--ff-mono); font-size: 11px; color: var(--accent-violet); margin-bottom: 8px; }
+    .ds-bp-card__notes { font-size: 12px; color: var(--text-secondary); line-height: 1.6; }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    .ds-page-footer {
+      margin-top: 80px;
+      padding: 32px 0 0;
+      border-top: 1px solid var(--ds-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .ds-page-footer p { font-size: 12px; color: var(--text-tertiary); }
+    .ds-page-footer a { color: var(--accent-violet); text-decoration: none; font-size: 12px; }
+
+    /* ── RESPONSIVE (inline) — handled by design-system.css ──── */
+    @media (max-width: 900px) {
+      .ds-btn-grid, .ds-component-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Mobile topbar (hidden on desktop, shown on mobile) -->
+<div class="ds-topbar" role="banner">
+  <div class="ds-topbar__logo">
+    <img src="../assets/img/brand/chitra-logo-only-text.webp" alt="Chitra Design System" height="30" style="max-width:140px;object-fit:contain;">
+    <span class="ds-topbar__v">v2.0</span>
+  </div>
+  <button class="ds-menu-toggle" id="ds-menu-btn" aria-label="Open navigation">
+    <i class="fas fa-bars"></i>
+  </button>
+</div>
+
+<!-- Sidebar overlay (mobile) -->
+<div class="ds-sidebar-overlay" id="ds-overlay"></div>
+
+<!-- ══════════════════════════════════════════════════════════
+     SIDEBAR
+═══════════════════════════════════════════════════════════ -->
+<aside class="ds-sidebar" id="ds-sidebar" role="navigation" aria-label="Design system navigation">
+<div class="ds-sidebar__scroll">
+  <div class="ds-sidebar__logo">
+    <img src="../assets/img/brand/chitra-logo-only-text.webp" alt="Chitra Design System" style="height:36px;width:auto;max-width:180px;display:block;margin-bottom:10px;object-fit:contain;">
+    <div class="ds-sidebar__logo-sub" style="font-size:11px;color:#9CA3AF;line-height:1.4;">Official Brand Design System<br>of Subhankar Rout</div>
+    <span class="ds-sidebar__badge">v2.0 · June 2026</span>
+  </div>
+
+  <div class="ds-nav-group">
+    <span class="ds-nav-group__label">Introduction</span>
+    <a class="ds-nav-link" href="#introduction"><i class="fas fa-star"></i> Chitra Design System</a>
+  </div>
+
+  <div class="ds-nav-group">
+    <span class="ds-nav-group__label">Brand Identity</span>
+    <a class="ds-nav-link" href="#brand"><i class="fas fa-copyright"></i> Site Logo &amp; Guidelines</a>
+  </div>
+
+  <div class="ds-nav-group">
+    <span class="ds-nav-group__label">Foundation</span>
+    <a class="ds-nav-link" href="#tokens"><i class="fas fa-palette"></i> Design Tokens</a>
+    <a class="ds-nav-link" href="#color"><i class="fas fa-adjust"></i> Color System</a>
+    <a class="ds-nav-link" href="#typography"><i class="fas fa-font"></i> Typography</a>
+  </div>
+
+  <div class="ds-nav-group">
+    <span class="ds-nav-group__label">Components</span>
+    <a class="ds-nav-link" href="#buttons"><i class="fas fa-hand-pointer"></i> Buttons</a>
+    <a class="ds-nav-link" href="#labels"><i class="fas fa-tag"></i> Labels &amp; Kickers</a>
+    <a class="ds-nav-link" href="#components"><i class="fas fa-layer-group"></i> UI Components</a>
+    <a class="ds-nav-link" href="#navigation"><i class="fas fa-bars"></i> Navigation &amp; Header</a>
+    <a class="ds-nav-link" href="#footer"><i class="fas fa-border-bottom"></i> Footer</a>
+  </div>
+
+  <div class="ds-nav-group">
+    <span class="ds-nav-group__label">Motion</span>
+    <a class="ds-nav-link" href="#animation"><i class="fas fa-magic"></i> Animations</a>
+  </div>
+
+  <div class="ds-nav-group">
+    <span class="ds-nav-group__label">System</span>
+    <a class="ds-nav-link" href="#breakpoints"><i class="fas fa-mobile-alt"></i> Breakpoints</a>
+    <a class="ds-nav-link" href="#accessibility"><i class="fas fa-universal-access"></i> Accessibility</a>
+    <a class="ds-nav-link" href="#pages"><i class="fas fa-file-alt"></i> Page Reference</a>
+  </div>
+
+  <div class="ds-nav-group">
+    <span class="ds-nav-group__label">Patterns</span>
+    <a class="ds-nav-link" href="#cards"><i class="fas fa-id-card"></i> Cards</a>
+    <a class="ds-nav-link" href="#marquees"><i class="fas fa-scroll"></i> Marquees &amp; Tickers</a>
+    <a class="ds-nav-link" href="#stats"><i class="fas fa-chart-bar"></i> Stats &amp; Data</a>
+  </div>
+
+  <div class="ds-nav-group">
+    <span class="ds-nav-group__label">Site</span>
+    <a class="ds-nav-link" href="../index.html"><i class="fas fa-house"></i> Back to Site</a>
+  </div>
+</div><!-- /.ds-sidebar__scroll -->
+</aside>
+
+
+<!-- ══════════════════════════════════════════════════════════
+     MAIN
+═══════════════════════════════════════════════════════════ -->
+<main class="ds-main">
+
+  <!-- PAGE TITLE -->
+  <div style="margin-bottom:48px;padding-bottom:40px;border-bottom:1px solid var(--ds-border);">
+    <div style="margin-bottom:24px;">
+      <img src="../assets/img/brand/chitra-v2.0-logo.png" alt="Chitra" style="width:200px;height:auto;object-fit:contain;border-radius:12px;">
+    </div>
+    <h1 style="font-size:40px;font-weight:700;letter-spacing:-.03em;color:var(--text-primary);margin-bottom:6px;">Chitra Design System</h1>
+    <p style="font-size:15px;font-weight:600;color:var(--text-secondary);margin-bottom:14px;">The Official Brand Design System of Subhankar Rout</p>
+    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:18px;">
+      <span style="font-size:12px;font-weight:700;background:rgba(89,86,233,.1);color:var(--accent-violet);padding:3px 10px;border-radius:100px;">v2.0</span>
+      <span style="font-size:12px;color:var(--text-tertiary);">·</span>
+      <span style="font-size:12px;font-style:italic;color:var(--text-tertiary);">चित्र — Chitra — Picture · Image · Visual Expression</span>
+      <span style="font-size:12px;color:var(--text-tertiary);">·</span>
+      <span style="font-size:12px;color:var(--text-tertiary);">June 2026</span>
+    </div>
+    <p style="font-size:15px;color:var(--text-secondary);max-width:580px;line-height:1.8;">A unified design framework that brings together design, storytelling, creativity, and technology through a shared visual language. Every token, component, and pattern — the single source of truth for all of Subhankar Rout's creative work.</p>
+    <!-- Idea chain -->
+    <div style="margin-top:20px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
+      <span style="font-size:13px;font-weight:700;color:#0D0D12;background:#fff;border:1.5px solid var(--ds-border);padding:6px 14px;border-radius:100px;">Idea</span>
+      <i class="fas fa-long-arrow-right" style="color:var(--accent-violet);font-size:12px;"></i>
+      <span style="font-size:13px;font-weight:700;color:#0D0D12;background:#fff;border:1.5px solid var(--ds-border);padding:6px 14px;border-radius:100px;">Expression</span>
+      <i class="fas fa-long-arrow-right" style="color:var(--accent-violet);font-size:12px;"></i>
+      <span style="font-size:13px;font-weight:700;color:#0D0D12;background:#fff;border:1.5px solid var(--ds-border);padding:6px 14px;border-radius:100px;">Experience</span>
+      <i class="fas fa-long-arrow-right" style="color:var(--accent-violet);font-size:12px;"></i>
+      <span style="font-size:13px;font-weight:700;color:var(--accent-violet);background:rgba(89,86,233,.08);border:1.5px solid rgba(89,86,233,.2);padding:6px 14px;border-radius:100px;">Impact</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════
+       §0 INTRODUCTION — CHITRA
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="introduction">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-star"></i></div>
+      <div>
+        <div class="ds-section-title">Introduction — Chitra Design System</div>
+        <div class="ds-section-desc">What is Chitra, why it was built, and the vision behind the name.</div>
+      </div>
+    </div>
+
+    <!-- ── CHITRA HERO IDENTITY CARD ──────────────────────────── -->
+    <div style="background:linear-gradient(145deg,#1a1040,#0f0a1e,#0D0D12);border-radius:28px;padding:52px 40px 44px;margin-bottom:32px;position:relative;overflow:hidden;border:1px solid rgba(89,86,233,.18);">
+      <!-- decorative glow -->
+      <div style="position:absolute;top:-60px;right:-60px;width:280px;height:280px;background:radial-gradient(circle,rgba(89,86,233,.18) 0%,transparent 70%);pointer-events:none;"></div>
+      <div style="position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,220,96,.08) 0%,transparent 70%);pointer-events:none;"></div>
+
+      <!-- Logo displayed large and prominently -->
+      <div style="display:flex;justify-content:center;margin-bottom:36px;">
+        <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:32px 44px;display:inline-flex;align-items:center;justify-content:center;overflow:hidden;">
+          <img src="../assets/img/brand/chitra-logo-under-text.webp" alt="Chitra — The Official Brand Design System" style="max-width:300px;width:100%;height:auto;object-fit:contain;border-radius:16px;">
+        </div>
+      </div>
+
+      <!-- Name + version badge -->
+      <div style="text-align:center;margin-bottom:28px;">
+        <div style="display:inline-flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <span style="font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.35);">Official Brand Design System</span>
+          <span style="font-size:10px;font-weight:700;background:rgba(89,86,233,.3);color:#a5a3ff;padding:3px 10px;border-radius:100px;border:1px solid rgba(89,86,233,.4);">v2.0</span>
+        </div>
+        <h2 style="font-size:32px;font-weight:800;color:#fff;margin:0 0 10px;letter-spacing:-.02em;">Chitra Design System</h2>
+        <p style="font-size:15px;color:rgba(255,255,255,.55);margin:0;max-width:480px;margin-inline:auto;line-height:1.6;">The single source of truth for every visual decision on <strong style="color:rgba(255,255,255,.8);">subhankarrout.in</strong>.</p>
+      </div>
+
+      <!-- Idea chain -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap;margin-bottom:32px;">
+        <div style="text-align:center;padding:14px 20px;">
+          <div style="font-size:18px;font-weight:800;color:#FFDC60;letter-spacing:-.01em;">Idea</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:3px;">seed</div>
+        </div>
+        <div style="color:rgba(255,255,255,.2);font-size:20px;padding:0 4px;">→</div>
+        <div style="text-align:center;padding:14px 20px;">
+          <div style="font-size:18px;font-weight:800;color:#a5a3ff;letter-spacing:-.01em;">Expression</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:3px;">design &amp; craft</div>
+        </div>
+        <div style="color:rgba(255,255,255,.2);font-size:20px;padding:0 4px;">→</div>
+        <div style="text-align:center;padding:14px 20px;">
+          <div style="font-size:18px;font-weight:800;color:#67e8f9;letter-spacing:-.01em;">Experience</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:3px;">felt by the audience</div>
+        </div>
+        <div style="color:rgba(255,255,255,.2);font-size:20px;padding:0 4px;">→</div>
+        <div style="text-align:center;padding:14px 20px;">
+          <div style="font-size:18px;font-weight:800;color:#86efac;letter-spacing:-.01em;">Impact</div>
+          <div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:3px;">lasting change</div>
+        </div>
+      </div>
+
+      <!-- Three roles -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+        <span style="font-size:12px;font-weight:700;padding:7px 18px;border-radius:100px;background:rgba(89,86,233,.2);color:#a5a3ff;border:1px solid rgba(89,86,233,.3);">Product Designer</span>
+        <span style="font-size:12px;font-weight:700;padding:7px 18px;border-radius:100px;background:rgba(255,220,96,.12);color:#FFDC60;border:1px solid rgba(255,220,96,.25);">Published Author</span>
+        <span style="font-size:12px;font-weight:700;padding:7px 18px;border-radius:100px;background:rgba(255,59,48,.12);color:#ff8080;border:1px solid rgba(255,59,48,.2);">Filmmaker</span>
+      </div>
+    </div>
+
+    <!-- ── THE NAME & STORY ───────────────────────────────────── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">The Name — Chitra (चित्र)</div>
+
+      <!-- Single flowing narrative card -->
+      <div style="background:linear-gradient(145deg,#faf8ff,#f0eeff,#fff);border:1px solid rgba(89,86,233,.15);border-radius:var(--radius-lg);padding:36px 32px;margin-bottom:16px;">
+        <div style="display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:20px;">
+          <span style="font-size:48px;font-weight:900;color:#5956E9;letter-spacing:-.02em;line-height:1;">चित्र</span>
+          <div>
+            <div style="font-size:22px;font-weight:800;color:#0D0D12;letter-spacing:-.01em;">Chitra</div>
+            <div style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(89,86,233,.5);">Sanskrit · noun</div>
+          </div>
+        </div>
+        <p style="font-size:14px;color:#374151;line-height:1.8;margin:0 0 20px;max-width:580px;">In Sanskrit, <strong>Chitra</strong> means <em>"image"</em>, <em>"picture"</em>, or <em>"a wonderful work"</em> — one of the oldest words in the Indian vocabulary for visual creation. It encompasses everything drawn, painted, imagined, or seen.</p>
+
+        <!-- Evolution timeline -->
+        <div style="display:flex;align-items:center;gap:0;flex-wrap:wrap;margin-bottom:20px;padding:20px 24px;background:rgba(89,86,233,.06);border-radius:14px;border:1px solid rgba(89,86,233,.1);">
+          <div style="text-align:center;padding:8px 16px;min-width:100px;">
+            <div style="font-size:15px;font-weight:800;color:#5956E9;">चित्र</div>
+            <div style="font-size:11px;color:#6B7280;margin-top:3px;">Still image</div>
+          </div>
+          <div style="color:#D1D5DB;font-size:18px;padding:0 6px;">→</div>
+          <div style="text-align:center;padding:8px 16px;min-width:100px;">
+            <div style="font-size:15px;font-weight:800;color:#7c3aed;">चलचित्र</div>
+            <div style="font-size:11px;color:#6B7280;margin-top:3px;">Moving image · Cinema</div>
+          </div>
+          <div style="color:#D1D5DB;font-size:18px;padding:0 6px;">→</div>
+          <div style="text-align:center;padding:8px 16px;min-width:100px;">
+            <div style="font-size:15px;font-weight:800;color:#0e9488;">Digital Design</div>
+            <div style="font-size:11px;color:#6B7280;margin-top:3px;">Interactive · Today</div>
+          </div>
+        </div>
+
+        <p style="font-size:13px;color:#6B7280;line-height:1.8;margin:0 0 20px;max-width:600px;">Chitra is history — from the cave painting to the canvas, from the canvas to the film reel, and from film to the pixel. The word didn't change; the medium evolved. Subhankar lives at that same frontier: a <strong style="color:#0D0D12;">Product Designer</strong> who makes still frames feel alive, an <strong style="color:#0D0D12;">Author</strong> who puts images into words, and a <strong style="color:#0D0D12;">Filmmaker</strong> who turns images into motion.</p>
+
+        <p style="font-size:13px;color:#6B7280;line-height:1.8;margin:0 0 24px;max-width:600px;">This design system carries that same spirit — not just a style guide, but the visual language that carries every idea from thought to experience. Every token, component, and pattern is guided by one journey:</p>
+
+        <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px;font-weight:700;">
+          <span style="color:#FFDC60;background:#0D0D12;padding:6px 16px;border-radius:100px;">Idea</span>
+          <span style="color:#9CA3AF;">→</span>
+          <span style="color:#a5a3ff;background:#f0eeff;padding:6px 16px;border-radius:100px;">Expression</span>
+          <span style="color:#9CA3AF;">→</span>
+          <span style="color:#0e9488;background:#f0fffe;padding:6px 16px;border-radius:100px;">Experience</span>
+          <span style="color:#9CA3AF;">→</span>
+          <span style="color:#16a34a;background:#f0fdf4;padding:6px 16px;border-radius:100px;">Impact</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CHITRA IDENTITY MARK ───────────────────────────────── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Chitra Identity Mark</div>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:20px;line-height:1.6;">The visual mark of the Chitra Design System — used only on this page, not on any other page of subhankarrout.in.</p>
+
+      <!-- Full mark — premium display (image has white bg, float it as a product card) -->
+      <div style="background:linear-gradient(145deg,#1a1040,#0f0a1e);border-radius:var(--radius-lg);padding:40px 32px;margin-bottom:16px;display:flex;align-items:center;justify-content:center;">
+        <div style="background:#fff;border-radius:24px;padding:36px 48px;box-shadow:0 20px 60px rgba(0,0,0,.5);display:inline-flex;align-items:center;justify-content:center;">
+          <img src="../assets/img/brand/chitra-logo-image-with-text-punch-line.webp" alt="Chitra — Full Mark" style="max-width:280px;width:100%;height:auto;object-fit:contain;">
+        </div>
+      </div>
+      <div style="text-align:center;font-size:11px;color:var(--text-tertiary);margin-bottom:24px;">Icon, name, and vision — the complete mark.</div>
+
+      <!-- Icon + wordmark side by side -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div class="ds-logo-card">
+          <div class="ds-logo-card__bg" style="background:linear-gradient(135deg,#181530,#0D0D12);padding:40px 24px;">
+            <img src="../assets/img/brand/chitra-logo.webp" alt="Chitra Icon Mark" style="max-width:130px;width:100%;height:auto;object-fit:contain;border-radius:6px;">
+          </div>
+          <div class="ds-logo-card__meta">
+            <div class="ds-logo-card__label">Icon Mark</div>
+            <div class="ds-logo-card__usage">The image before the word.</div>
+          </div>
+        </div>
+        <div class="ds-logo-card">
+          <div class="ds-logo-card__bg ds-logo-card__bg--light" style="padding:40px 24px;">
+            <img src="../assets/img/brand/chitra-logo-only-text.webp" alt="Chitra Wordmark" style="max-width:190px;width:100%;height:auto;object-fit:contain;">
+          </div>
+          <div class="ds-logo-card__meta">
+            <div class="ds-logo-card__label">Wordmark</div>
+            <div class="ds-logo-card__usage">चित्र — the name is the mark.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §1 BRAND IDENTITY — subhankarrout.in
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="brand">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-copyright"></i></div>
+      <div>
+        <div class="ds-section-title">Brand Identity — subhankarrout.in</div>
+        <div class="ds-section-desc">The site logos, usage rules, and where each variant lives across all 9 pages.</div>
+      </div>
+    </div>
+
+    <!-- ── SUBHANKARROUT.IN SITE LOGOS ─────────────────────────── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Site Logo Variants</div>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;line-height:1.6;">Two variants used across all 9 pages — header, footer, and offcanvas menu. Class: <code>.tp-logo</code>.</p>
+      <div class="ds-logo-grid">
+
+        <div class="ds-logo-card">
+          <div class="ds-logo-card__bg ds-logo-card__bg--light">
+            <img src="../assets/img/logo/logo-blue.png" alt="Logo — Blue" style="max-height:44px;max-width:180px;object-fit:contain;">
+          </div>
+          <div class="ds-logo-card__meta">
+            <div class="ds-logo-card__label">Primary — Blue</div>
+            <div class="ds-logo-card__usage">White or light bg · scrolled header state. File: <code>logo-blue.png</code> · Class: <code>.tp-logo</code> · height 36–40px</div>
+          </div>
+        </div>
+
+        <div class="ds-logo-card">
+          <div class="ds-logo-card__bg ds-logo-card__bg--dark">
+            <img src="../assets/img/logo/logo-white.png" alt="Logo — White" style="max-height:44px;max-width:180px;object-fit:contain;">
+          </div>
+          <div class="ds-logo-card__meta">
+            <div class="ds-logo-card__label">Reversed — White</div>
+            <div class="ds-logo-card__usage">Dark bg · transparent header, footer, offcanvas. File: <code>logo-white.png</code> · Class: <code>.tp-logo</code></div>
+          </div>
+        </div>
+
+        <div class="ds-logo-card">
+          <div class="ds-logo-card__bg ds-logo-card__bg--grad">
+            <img src="../assets/img/logo/logo-white.png" alt="Logo on dark gradient" style="max-height:44px;max-width:180px;object-fit:contain;">
+          </div>
+          <div class="ds-logo-card__meta">
+            <div class="ds-logo-card__label">On Dark Gradient</div>
+            <div class="ds-logo-card__usage">Hero sections (index, books, S4 Cinesphere). Always <code>logo-white.png</code> here.</div>
+          </div>
+        </div>
+
+        <div class="ds-logo-card">
+          <div class="ds-logo-card__bg ds-logo-card__bg--light" style="flex-direction:column;gap:12px;">
+            <img src="../assets/img/logo/favicon.png" alt="Favicon" style="width:48px;height:48px;border-radius:10px;">
+          </div>
+          <div class="ds-logo-card__meta">
+            <div class="ds-logo-card__label">Favicon / Tiny Mark</div>
+            <div class="ds-logo-card__usage">Browser tab · <code>&lt;link rel="shortcut icon"&gt;</code> · File: <code>favicon.png</code> 32×32px</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── CLEAR SPACE & SIZING ───────────────────────────────── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Clear Space &amp; Sizing Rules</div>
+      <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:28px 24px;display:flex;gap:32px;align-items:center;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div class="ds-clearspace">
+            <img src="../assets/img/logo/logo-blue.png" alt="Logo" style="height:36px;width:auto;max-width:160px;object-fit:contain;">
+          </div>
+          <div style="font-size:11px;color:#9CA3AF;margin-top:22px;">Clear space = logo height on all sides</div>
+        </div>
+        <div style="flex:1;min-width:200px;">
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:13px;color:var(--text-secondary);line-height:1.7;">
+            <div><i class="fas fa-check-circle" style="color:#22c55e;margin-right:6px;"></i> Minimum height desktop: <strong style="color:#0D0D12;">36px</strong></div>
+            <div><i class="fas fa-check-circle" style="color:#22c55e;margin-right:6px;"></i> Minimum height mobile: <strong style="color:#0D0D12;">28px</strong></div>
+            <div><i class="fas fa-check-circle" style="color:#22c55e;margin-right:6px;"></i> Always maintain aspect ratio — never stretch</div>
+            <div><i class="fas fa-times-circle" style="color:#ef4444;margin-right:6px;"></i> Do not place on mid-grey backgrounds — use light or dark only</div>
+            <div><i class="fas fa-times-circle" style="color:#ef4444;margin-right:6px;"></i> Do not use blue logo on dark bg (low contrast)</div>
+            <div><i class="fas fa-times-circle" style="color:#ef4444;margin-right:6px;"></i> Do not apply filters, shadows, or colour tints</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── LOGO IN CONTEXT ────────────────────────────────────── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Logo in Context — Where it Lives</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:16px 18px;">
+          <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:var(--text-primary);">Desktop Header — Scrolled (white bg)</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;background:#fff;border:1px solid #E8ECF2;border-radius:8px;padding:10px 14px;">
+            <img src="../assets/img/logo/logo-blue.png" alt="Logo" style="height:28px;">
+            <span style="font-size:11px;color:#888;">nav items</span>
+            <span style="font-size:11px;background:#5956E9;color:#fff;padding:4px 10px;border-radius:6px;">Portfolio</span>
+          </div>
+          <div style="font-size:11px;color:#9CA3AF;margin-top:6px;"><code>logo-blue.png</code> · height 36–40px · <code>.tp-logo</code></div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:16px 18px;">
+          <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:var(--text-primary);">Footer (dark bg)</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;background:#0D0D12;border-radius:8px;padding:10px 14px;">
+            <img src="../assets/img/logo/logo-white.png" alt="Logo White" style="height:28px;">
+            <span style="font-size:11px;color:rgba(255,255,255,.35);">social icons</span>
+          </div>
+          <div style="font-size:11px;color:#9CA3AF;margin-top:6px;"><code>logo-white.png</code> · height 36–40px · <code>.black-bg</code> footer</div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:16px 18px;">
+          <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:var(--text-primary);">Transparent Header (on page load)</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#1a1530,#0D0D12);border-radius:8px;padding:10px 14px;">
+            <img src="../assets/img/logo/logo-white.png" alt="Logo White" style="height:28px;">
+            <span style="font-size:11px;color:rgba(255,255,255,.5);">nav items</span>
+            <span style="font-size:11px;background:#5956E9;color:#fff;padding:4px 10px;border-radius:6px;">Portfolio</span>
+          </div>
+          <div style="font-size:11px;color:#9CA3AF;margin-top:6px;"><code>logo-white.png</code> · transparent header · swaps to blue on scroll</div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:16px 18px;">
+          <div style="font-size:12px;font-weight:700;margin-bottom:10px;color:var(--text-primary);">Mobile Offcanvas Panel</div>
+          <div style="background:#0D0D12;border-radius:8px;padding:10px 14px;">
+            <img src="../assets/img/logo/logo-white.png" alt="Logo White offcanvas" style="height:24px;">
+          </div>
+          <div style="font-size:11px;color:#9CA3AF;margin-top:6px;"><code>logo-white.png</code> · <code>.tpoffcanvas</code> top-left · always white on dark panel</div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §1 DESIGN TOKENS
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="tokens">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-palette"></i></div>
+      <div>
+        <div class="ds-section-title">Design Tokens</div>
+        <div class="ds-section-desc">The single source of truth. All values live in <code>:root</code> in <code>styles.css</code>.</div>
+      </div>
+    </div>
+
+    <!-- Radius -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Border Radius</div>
+      <div class="ds-radius-row">
+        <div class="ds-radius-item">
+          <div class="ds-radius-box" style="border-radius:10px;"></div>
+          <div class="ds-radius-label">--radius-sm</div>
+          <div class="ds-radius-val">10px · Buttons</div>
+        </div>
+        <div class="ds-radius-item">
+          <div class="ds-radius-box" style="border-radius:16px;"></div>
+          <div class="ds-radius-label">--radius-md</div>
+          <div class="ds-radius-val">16px · Cards</div>
+        </div>
+        <div class="ds-radius-item">
+          <div class="ds-radius-box" style="border-radius:24px;"></div>
+          <div class="ds-radius-label">--radius-lg</div>
+          <div class="ds-radius-val">24px · Large cards</div>
+        </div>
+        <div class="ds-radius-item">
+          <div class="ds-radius-box" style="border-radius:32px;"></div>
+          <div class="ds-radius-label">--radius-xl</div>
+          <div class="ds-radius-val">32px · Portrait frame</div>
+        </div>
+        <div class="ds-radius-item">
+          <div class="ds-radius-box" style="border-radius:100px;"></div>
+          <div class="ds-radius-label">100px</div>
+          <div class="ds-radius-val">Pills · Kickers · Tags</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Shadows -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Elevation / Shadows</div>
+      <div class="ds-shadow-row">
+        <div>
+          <div class="ds-shadow-box" style="box-shadow:var(--shadow-card);">--shadow-card</div>
+          <div style="font-size:11px;color:var(--text-tertiary);margin-top:6px;font-family:var(--ff-mono);">Default resting state</div>
+        </div>
+        <div>
+          <div class="ds-shadow-box" style="box-shadow:var(--shadow-hover);">--shadow-hover</div>
+          <div style="font-size:11px;color:var(--text-tertiary);margin-top:6px;font-family:var(--ff-mono);">On hover / active</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transitions -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Transitions</div>
+      <div style="display:flex;flex-direction:column;gap:10px;">
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;">
+          <code>--transition</code>
+          <span style="margin-left:12px;font-size:13px;color:var(--text-secondary);">0.35s cubic-bezier(0.16, 1, 0.3, 1) — Default. Smooth spring feel. Used on cards, hover states.</span>
+        </div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;">
+          <code>--transition-fast</code>
+          <span style="margin-left:12px;font-size:13px;color:var(--text-secondary);">0.2s ease-out — Quick micro-interactions. Links, icon hovers.</span>
+        </div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;">
+          <code>--transition-btn</code>
+          <span style="margin-left:12px;font-size:13px;color:var(--text-secondary);">0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) — Snappy button fill animation (tp-btn split fill).</span>
+        </div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;">
+          <code>Mobile menu</code>
+          <span style="margin-left:12px;font-size:13px;color:var(--text-secondary);">0.25s — <code>.tpoffcanvas</code> slide-in. Intentionally fast to avoid UX lag.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §2 COLOR SYSTEM
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="color">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-adjust"></i></div>
+      <div>
+        <div class="ds-section-title">Color System</div>
+        <div class="ds-section-desc">Brand colors, semantic aliases, and surface tokens.</div>
+      </div>
+    </div>
+
+    <div class="ds-sub">
+      <div class="ds-sub-title">Brand / Primary</div>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#5956E9;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Violet</span>
+            <span class="ds-swatch__var">--tp-theme-1 / --accent-violet</span>
+            <span class="ds-swatch__hex">#5956E9</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#423EF3;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Violet Dark</span>
+            <span class="ds-swatch__var">--tp-theme-2</span>
+            <span class="ds-swatch__hex">#423EF3 · Button hover fill</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#FFDC60;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Yellow</span>
+            <span class="ds-swatch__var">--tp-theme-primary / --accent-yellow</span>
+            <span class="ds-swatch__hex">#FFDC60 · CTAs, underline, tp-btn hover</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#ffe980;border:1px solid #eee;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Yellow Light</span>
+            <span class="ds-swatch__var">(hardcoded)</span>
+            <span class="ds-swatch__hex">#ffe980 · hm-btn-yellow hover</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#FF3366;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Cinematic Red</span>
+            <span class="ds-swatch__var">(hardcoded)</span>
+            <span class="ds-swatch__hex">#FF3366 · s4cinesphere page only</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#22c55e;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Green</span>
+            <span class="ds-swatch__var">(hardcoded)</span>
+            <span class="ds-swatch__hex">#22c55e · Online / status dots only</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds-sub">
+      <div class="ds-sub-title">Text &amp; Neutral</div>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#0D0D12;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Black</span>
+            <span class="ds-swatch__var">--tp-common-black / --text-primary</span>
+            <span class="ds-swatch__hex">#0D0D12</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#6B7280;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Body Grey</span>
+            <span class="ds-swatch__var">--text-secondary / --tp-text-body</span>
+            <span class="ds-swatch__hex">#6B7280</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#9CA3AF;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Tertiary</span>
+            <span class="ds-swatch__var">--text-tertiary</span>
+            <span class="ds-swatch__hex">#9CA3AF · Timestamps, meta</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#E8ECF2;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Border</span>
+            <span class="ds-swatch__var">--tp-border-1</span>
+            <span class="ds-swatch__hex">#E8ECF2 · Dividers, card borders</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#FAFAFA;border:1px solid #E8ECF2;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Surface 1</span>
+            <span class="ds-swatch__var">--surface-1</span>
+            <span class="ds-swatch__hex">#FAFAFA · Section bg (light)</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#0D0D12;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Surface Dark</span>
+            <span class="ds-swatch__var">--surface-dark</span>
+            <span class="ds-swatch__hex">#0D0D12 · Dark hero, footer, marquee bg</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §3 TYPOGRAPHY
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="typography">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-font"></i></div>
+      <div>
+        <div class="ds-section-title">Typography</div>
+        <div class="ds-section-desc">Single typeface: <strong>DM Sans</strong> (Google Fonts). Weights 300–700, optical size 9–40.</div>
+      </div>
+    </div>
+
+    <div class="ds-type-row">
+      <div class="ds-type-meta">
+        <code>Hero Headline</code>
+        <div class="ds-type-specs">clamp(36px, 4vw, 72px)<br>weight 700 · lh 1.06<br>ls -0.025em</div>
+      </div>
+      <div class="ds-type-example" style="font-size:clamp(36px,4vw,60px);font-weight:700;line-height:1.06;letter-spacing:-.025em;">Hi, I'm <em style="font-style:italic;color:var(--accent-violet);">Subhankar</em></div>
+    </div>
+
+    <div class="ds-type-row">
+      <div class="ds-type-meta">
+        <code>Section Title</code>
+        <div class="ds-type-specs">clamp(32px, 3.5vw, 52px)<br>weight 700 · lh 1.1<br>ls -0.02em</div>
+      </div>
+      <div class="ds-type-example" style="font-size:clamp(28px,3vw,48px);font-weight:700;line-height:1.1;letter-spacing:-.02em;">Work that <em style="font-style:italic;color:var(--accent-violet);">moved</em> things</div>
+    </div>
+
+    <div class="ds-type-row">
+      <div class="ds-type-meta">
+        <code>Body / Sub-heading</code>
+        <div class="ds-type-specs">17px · weight 400<br>lh 1.75 · max-w 480–540px</div>
+      </div>
+      <div class="ds-type-example" style="font-size:17px;line-height:1.75;color:var(--text-secondary);max-width:420px;">Designing products people use. Writing stories people feel. Filming moments people remember.</div>
+    </div>
+
+    <div class="ds-type-row">
+      <div class="ds-type-meta">
+        <code>Kicker / Eyebrow</code>
+        <div class="ds-type-specs">12px · weight 500–600<br>ls 0.08–0.12em · uppercase</div>
+      </div>
+      <div class="ds-type-example" style="font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accent-violet);">Designer · Filmmaker · Author</div>
+    </div>
+
+    <div class="ds-type-row">
+      <div class="ds-type-meta">
+        <code>Card Body</code>
+        <div class="ds-type-specs">14–15px · weight 400–500<br>lh 1.6–1.7</div>
+      </div>
+      <div class="ds-type-example" style="font-size:14px;line-height:1.6;color:var(--text-secondary);">A debut novel merging emotional depth with vivid storytelling. Featured across international media.</div>
+    </div>
+
+    <div class="ds-type-row">
+      <div class="ds-type-meta">
+        <code>Meta / Label</code>
+        <div class="ds-type-specs">11–12px · weight 500–600<br>color text-tertiary</div>
+      </div>
+      <div class="ds-type-example" style="font-size:11px;font-weight:600;color:var(--text-tertiary);letter-spacing:.04em;">Effective for www.subhankarrout.in · Last reviewed June 2026</div>
+    </div>
+
+    <div style="margin-top:24px;padding:16px 20px;background:rgba(89,86,233,.05);border:1px solid rgba(89,86,233,.12);border-radius:var(--radius-md);">
+      <strong style="font-size:13px;">Italic rule:</strong>
+      <span style="font-size:13px;color:var(--text-secondary);margin-left:8px;">Italic <code>&lt;em&gt;</code> inside headlines always takes <code>color: var(--accent-violet)</code>. Exception on dark sections: <code>color: var(--accent-yellow)</code>. Never italic for body copy — only headlines.</span>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §4 BUTTON SYSTEM
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="buttons">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-hand-pointer"></i></div>
+      <div>
+        <div class="ds-section-title">Button System</div>
+        <div class="ds-section-desc">10 button variants across the site. Each has a defined context — never swap them freely.</div>
+      </div>
+    </div>
+
+    <div class="ds-btn-grid">
+
+      <!-- tp-btn -->
+      <div class="ds-btn-card">
+        <div class="ds-btn-card__preview">
+          <a class="tp-btn" href="javascript:void(0)">Portfolio</a>
+        </div>
+        <div class="ds-btn-card__divider"></div>
+        <div class="ds-btn-card__name">Nav CTA Button</div>
+        <code class="ds-btn-card__class">.tp-btn</code>
+        <div class="ds-btn-card__desc">Blue fill (#5956E9), height 70px. Hover: yellow fill (#FFDC60) via dual split-wipe animation from top-left + bottom-right. Text turns black on hover.</div>
+        <div class="ds-btn-card__usage">Used on <span>Desktop header nav (Portfolio CTA) · Mobile offcanvas nav</span></div>
+      </div>
+
+      <!-- hm-btn-yellow -->
+      <div class="ds-btn-card">
+        <div class="ds-btn-card__preview" style="background:#0D0D12;">
+          <a class="hm-btn-yellow" href="javascript:void(0)">My Portfolio <i class="fal fa-long-arrow-right"></i></a>
+        </div>
+        <div class="ds-btn-card__divider"></div>
+        <div class="ds-btn-card__name">Yellow Primary CTA</div>
+        <code class="ds-btn-card__class">.hm-btn-yellow</code>
+        <div class="ds-btn-card__desc">Yellow fill (#FFDC60), black text. Hover: lighter yellow (#ffe980) + lifts 2px. Weight 700. The highest-emphasis CTA — reserved for the most important action on a dark-background section.</div>
+        <div class="ds-btn-card__usage">Used on <span>index.html hero "My Portfolio" · Book spotlight "Get Your Copy" · Books page hero CTA</span></div>
+      </div>
+
+      <!-- hm-btn-primary -->
+      <div class="ds-btn-card">
+        <div class="ds-btn-card__preview">
+          <a class="hm-btn-primary" href="javascript:void(0)"><span>Full Story</span><i class="fal fa-long-arrow-right"></i></a>
+        </div>
+        <div class="ds-btn-card__divider"></div>
+        <div class="ds-btn-card__name">Violet Primary</div>
+        <code class="ds-btn-card__class">.hm-btn-primary</code>
+        <div class="ds-btn-card__desc">Violet fill (#5956E9). Hover: darker violet (#423EF3) slides in from left via scaleX. Used on light-background sections when the primary action is navigation deeper into the site.</div>
+        <div class="ds-btn-card__usage">Used on <span>index.html About section "Full Story"</span></div>
+      </div>
+
+      <!-- hm-btn-ghost -->
+      <div class="ds-btn-card ds-btn-card--dark">
+        <div class="ds-btn-card__preview" style="background:#0D0D12;">
+          <a class="hm-btn-ghost" href="javascript:void(0)">My Books</a>
+        </div>
+        <div class="ds-btn-card__divider"></div>
+        <div class="ds-btn-card__name">Dark Ghost</div>
+        <code class="ds-btn-card__class">.hm-btn-ghost</code>
+        <div class="ds-btn-card__desc">Transparent, white-tinted border (rgba 22%). White-ish text. Only used on dark backgrounds. Secondary action paired alongside hm-btn-yellow.</div>
+        <div class="ds-btn-card__usage">Used on <span>index.html hero "My Books" (dark hero bg)</span></div>
+      </div>
+
+      <!-- hm-btn-outline -->
+      <div class="ds-btn-card">
+        <div class="ds-btn-card__preview">
+          <a class="hm-btn-outline" href="javascript:void(0)">Press Release</a>
+        </div>
+        <div class="ds-btn-card__divider"></div>
+        <div class="ds-btn-card__name">Violet Outline</div>
+        <code class="ds-btn-card__class">.hm-btn-outline</code>
+        <div class="ds-btn-card__desc">Violet border + violet text. Hover: fills solid violet, text turns white. Light-bg secondary action. Lower visual weight than hm-btn-primary.</div>
+        <div class="ds-btn-card__usage">Used on <span>index.html About section "Press Release" (secondary to "Full Story")</span></div>
+      </div>
+
+      <!-- btn-primary-hero -->
+      <div class="ds-btn-card">
+        <div class="ds-btn-card__preview">
+          <a class="btn-primary-hero" href="javascript:void(0)"><span>View Work</span><i class="fal fa-long-arrow-right"></i></a>
+          <a class="btn-ghost-hero" href="javascript:void(0)">Contact</a>
+        </div>
+        <div class="ds-btn-card__divider"></div>
+        <div class="ds-btn-card__name">Page Hero Pair</div>
+        <code class="ds-btn-card__class">.btn-primary-hero + .btn-ghost-hero</code>
+        <div class="ds-btn-card__desc">Black fill → violet slide-fill on hover. Ghost: light border → violet on hover. This pair is exclusive to white/light hero sections (not the dark home hero).</div>
+        <div class="ds-btn-card__usage">Used on <span>portfolio.html hero · pr.html hero · about.html hero</span></div>
+      </div>
+
+      <!-- bk-btn-review -->
+      <div class="ds-btn-card">
+        <div class="ds-btn-card__preview">
+          <a class="bk-btn-review" href="javascript:void(0)" style="max-width:220px;">Post Review</a>
+        </div>
+        <div class="ds-btn-card__divider"></div>
+        <div class="ds-btn-card__name">Book Review Submit</div>
+        <code class="ds-btn-card__class">.hm-btn-yellow</code> + <code class="ds-btn-card__class">.bk-form override</code>
+        <div class="ds-btn-card__desc">Uses hm-btn-yellow as base but the books page overrides hover to go violet (#5956E9) + white text — the reverse of the normal yellow button. Full-width inside form context.</div>
+        <div class="ds-btn-card__usage">Used on <span>the_uncharted_romance.html · one_year_many_lessons.html — review form submit only</span></div>
+      </div>
+
+      <!-- dx-btn -->
+      <div class="ds-btn-card ds-btn-card--dark">
+        <div class="ds-btn-card__preview" style="background:#0D0D12;">
+          <a class="dx-btn-primary" href="javascript:void(0)">Watch Now</a>
+          <a class="dx-btn-ghost" href="javascript:void(0)">Subscribe</a>
+        </div>
+        <div class="ds-btn-card__divider"></div>
+        <div class="ds-btn-card__name">Cinematic Red Pair</div>
+        <code class="ds-btn-card__class">.dx-btn-primary + .dx-btn-ghost</code>
+        <div class="ds-btn-card__desc">Red fill (#FF3366) with strong lift + glow on hover. Ghost: white-border transparent. Exclusive to the S4 Cinesphere page — red is a brand signal for cinema/film.</div>
+        <div class="ds-btn-card__usage">Used on <span>s4cinesphere.html only</span></div>
+      </div>
+
+    </div>
+
+    <!-- Button decision guide -->
+    <div style="margin-top:24px;background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);overflow:hidden;">
+      <div style="padding:14px 20px;background:var(--surface-2);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);">Which button, when?</div>
+      <table class="ds-table">
+        <thead>
+          <tr>
+            <th>Situation</th>
+            <th>Use this</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Primary CTA on dark hero (index, books)</td><td><code>.hm-btn-yellow</code></td><td>Yellow pops on dark — highest contrast</td></tr>
+          <tr><td>Secondary action alongside yellow on dark bg</td><td><code>.hm-btn-ghost</code></td><td>Low-key, doesn't compete with yellow</td></tr>
+          <tr><td>Primary action on light section (about, portfolio)</td><td><code>.hm-btn-primary</code> or <code>.btn-primary-hero</code></td><td>Violet is readable on white</td></tr>
+          <tr><td>Secondary action on light section</td><td><code>.hm-btn-outline</code> or <code>.btn-ghost-hero</code></td><td>Outlined = less weight than filled</td></tr>
+          <tr><td>Desktop / mobile nav CTA</td><td><code>.tp-btn</code></td><td>Taller 70px height designed for nav bar</td></tr>
+          <tr><td>Form submit inside book page</td><td><code>.hm-btn-yellow</code> + bk-form override</td><td>Yellow start draws eye; blue hover confirms action</td></tr>
+          <tr><td>Any CTA on S4 Cinesphere page</td><td><code>.dx-btn-primary / .dx-btn-ghost</code></td><td>Red is the cinematic brand signal on that page</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §5 LABELS & KICKERS
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="labels">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-tag"></i></div>
+      <div>
+        <div class="ds-section-title">Labels &amp; Kickers</div>
+        <div class="ds-section-desc">Small contextual text elements that set up sections and headlines.</div>
+      </div>
+    </div>
+
+    <div class="ds-component-grid">
+
+      <div class="ds-comp-card">
+        <div class="ds-comp-card__preview">
+          <span class="ds-kicker"><span class="ds-kicker-dot"></span>Product Designer</span>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Kicker Pill — Violet</div>
+          <div class="ds-comp-card__desc"><code>.pr-hero__kicker</code> / <code>.hm-hero__kicker</code> — 12px uppercase, violet bg + border, pulsing dot. Hero kicker on light pages.</div>
+        </div>
+      </div>
+
+      <div class="ds-comp-card">
+        <div class="ds-comp-card__preview" style="background:#fffbea;">
+          <span class="ds-kicker ds-kicker--yellow"><span class="ds-kicker-dot ds-kicker-dot--yellow"></span>Amazon Bestseller</span>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Kicker Pill — Yellow</div>
+          <div class="ds-comp-card__desc"><code>.pr-hero__kicker--yellow</code> — Same shape, amber text, yellow tint bg. Used for achievement / book context badges.</div>
+        </div>
+      </div>
+
+      <div class="ds-comp-card">
+        <div class="ds-comp-card__preview">
+          <span class="ds-sec-label">Case Studies</span>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Section Label</div>
+          <div class="ds-comp-card__desc"><code>.pr-section-label</code> — 12px uppercase violet text with a 20px violet rule on the left. Appears above every section title on pr.html and portfolio.html.</div>
+        </div>
+      </div>
+
+      <div class="ds-comp-card">
+        <div class="ds-comp-card__preview">
+          <span class="ds-hm-label">Here He Is</span>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">HM Eyebrow Label</div>
+          <div class="ds-comp-card__desc"><code>.hm-label</code> — Violet text, yellow left-rule (not violet). Unique to index.html section openers. Slightly warmer feel than .pr-section-label.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §6 UI COMPONENTS
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="components">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-layer-group"></i></div>
+      <div>
+        <div class="ds-section-title">UI Components</div>
+        <div class="ds-section-desc">Reusable patterns across pages.</div>
+      </div>
+    </div>
+
+    <div class="ds-component-grid">
+
+      <!-- Floating tag -->
+      <div class="ds-comp-card">
+        <div class="ds-comp-card__preview">
+          <span class="ds-tag"><span class="ds-tag-dot"></span> Product Designer</span>
+          &nbsp;
+          <span class="ds-tag"><span class="ds-tag-dot ds-tag-dot--green"></span> Available for work</span>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Floating Tag Pills</div>
+          <div class="ds-comp-card__desc"><code>.pr-hero__tag</code> — White card, pill shape, colored dot, shadow. Float on portrait image in pr.html hero. 3 variants: violet, green, Figma-icon. Each animates independently (floatA / floatB / floatC).</div>
+        </div>
+      </div>
+
+      <!-- Filter tabs -->
+      <div class="ds-comp-card">
+        <div class="ds-comp-card__preview">
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <button class="ds-filter-tab active">All</button>
+            <button class="ds-filter-tab">UX Design</button>
+            <button class="ds-filter-tab">Branding</button>
+          </div>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Filter Tabs</div>
+          <div class="ds-comp-card__desc"><code>.pr-filter-tab</code> — Pill-shaped isotope filter. Active state: solid violet fill, white text. Used in portfolio.html to filter project cards by category.</div>
+        </div>
+      </div>
+
+      <!-- Quick-link bar -->
+      <div class="ds-comp-card" style="grid-column:span 2;">
+        <div class="ds-comp-card__preview" style="padding:0;background:#fff;">
+          <div class="ds-quicklinks" style="width:100%;">
+            <a href="#"><i class="fab fa-linkedin" style="color:#0A66C2;font-size:16px;"></i> LinkedIn</a>
+            <a href="#"><i class="fab fa-behance" style="color:#053EFF;font-size:16px;"></i> Behance</a>
+            <a href="#"><i class="fab fa-instagram" style="color:#E1306C;font-size:16px;"></i> Instagram</a>
+            <a href="#"><i class="fab fa-youtube" style="color:#FF0000;font-size:16px;"></i> YouTube</a>
+          </div>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Quick-Links Bar</div>
+          <div class="ds-comp-card__desc"><code>.pr-hero__links</code> — 4-column grid below the pr.html hero. White bg, shared border, each link has brand icon color. Hover: violet text + very faint violet bg tint. On mobile: collapses to 2×2 grid.</div>
+        </div>
+      </div>
+
+      <!-- Skill chip -->
+      <div class="ds-comp-card">
+        <div class="ds-comp-card__preview" style="gap:8px;flex-wrap:wrap;">
+          <span class="ds-skill-chip"><i class="fas fa-bezier-curve" style="color:var(--accent-violet);"></i> Figma</span>
+          <span class="ds-skill-chip"><i class="fas fa-film" style="color:var(--accent-violet);"></i> Filmmaking</span>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Skill Chips (Marquee)</div>
+          <div class="ds-comp-card__desc"><code>.hm-skill-chip</code> — Pill border, icon + label. Used in the skills marquee strip (currently commented out). Two rows — row 1 scrolls left, row 2 scrolls right.</div>
+        </div>
+      </div>
+
+      <!-- Book cover -->
+      <div class="ds-comp-card">
+        <div class="ds-comp-card__preview" style="background:#1a1830;">
+          <img src="../assets/img/hero/hero-2.png" alt="Book cover" style="width:100px;border-radius:12px;transform:rotate(-3deg);transition:transform .4s ease;box-shadow:0 8px 32px rgba(0,0,0,.4);" onmouseenter="this.style.transform='rotate(0deg) translateY(-8px)'" onmouseleave="this.style.transform='rotate(-3deg)'">
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Book Cover — Single Tilt</div>
+          <div class="ds-comp-card__desc"><code>.bk-hero__single-cover</code> — 320px wide, border-radius 12px, default rotate(-3deg). Hover: straightens + lifts 8px. Only on books.html hero.</div>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="ds-comp-card">
+        <div class="ds-comp-card__preview ds-comp-card__preview--dark">
+          <div class="ds-newsletter" style="max-width:260px;">
+            <input type="email" placeholder="Enter Mail">
+            <button><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Newsletter Input</div>
+          <div class="ds-comp-card__desc"><code>.tp-footer-widget__input</code> — Dark bg, white-tinted border, plane icon submit. Posts to Google Forms. Used in footer "Get Update" column on all pages.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §7 NAVIGATION & HEADER
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="navigation">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-bars"></i></div>
+      <div>
+        <div class="ds-section-title">Navigation &amp; Header</div>
+        <div class="ds-section-desc">Desktop sticky header + mobile offcanvas. Identical structure on all 9 pages. <span style="font-size:11px;background:rgba(89,86,233,.08);color:var(--accent-violet);padding:2px 8px;border-radius:4px;font-weight:600;">assets/css/style.css</span></div>
+      </div>
+    </div>
+
+    <!-- DESKTOP HEADER PREVIEW (Transparent state) -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">State 1 — Transparent (on page load)</div>
+      <div style="background:linear-gradient(135deg,#181530 0%,#0D0D12 100%);border-radius:var(--radius-md) var(--radius-md) 0 0;overflow:visible;position:relative;">
+        <div class="ds-nav-preview ds-nav-preview--transparent">
+          <!-- Logo -->
+          <div class="ds-nav-preview__logo">
+            <div style="width:110px;height:28px;background:rgba(255,255,255,.9);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="font-size:11px;font-weight:700;color:#0D0D12;letter-spacing:-.02em;">SubhankarRout</span>
+            </div>
+            <div style="font-size:9px;color:rgba(255,255,255,.35);margin-top:3px;">.tp-logo</div>
+          </div>
+          <!-- Nav center -->
+          <nav class="ds-nav-preview__menu">
+            <a class="ds-nav-preview__item">About</a>
+            <a class="ds-nav-preview__item">YouTube Channel</a>
+            <div class="ds-nav-preview__item ds-nav-preview__item--dropdown">
+              Publications <i class="fas fa-chevron-down" style="font-size:9px;margin-left:3px;"></i>
+              <div class="ds-nav-preview__submenu">
+                <a class="ds-nav-preview__sub-item">The Uncharted Romance</a>
+                <a class="ds-nav-preview__sub-item">One Year, Many Lessons</a>
+              </div>
+            </div>
+            <a class="ds-nav-preview__item">Press Release</a>
+          </nav>
+          <!-- CTA -->
+          <div class="ds-nav-preview__cta">
+            <div style="background:#5956E9;color:#fff;font-size:12px;font-weight:700;padding:10px 22px;border-radius:8px;letter-spacing:.02em;">Portfolio</div>
+            <div style="font-size:9px;color:rgba(255,255,255,.35);margin-top:3px;text-align:center;">.tp-btn</div>
+          </div>
+        </div>
+        <div style="padding:0 24px 10px;font-size:11px;color:rgba(255,255,255,.3);">.tp-header-area-two.header-transparent — transparent on load, nav items white, d-none d-lg-block</div>
+      </div>
+
+      <!-- DESKTOP HEADER PREVIEW (White / Scrolled state) -->
+      <div style="background:#fff;border:1px solid var(--ds-border);border-radius:0 0 var(--radius-md) var(--radius-md);overflow:visible;position:relative;">
+        <div class="ds-nav-preview ds-nav-preview--white">
+          <div class="ds-nav-preview__logo">
+            <div style="width:110px;height:28px;background:#f0f1f8;border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="font-size:11px;font-weight:700;color:#0D0D12;letter-spacing:-.02em;">SubhankarRout</span>
+            </div>
+            <div style="font-size:9px;color:#bbb;margin-top:3px;">logo-blue.png</div>
+          </div>
+          <nav class="ds-nav-preview__menu">
+            <a class="ds-nav-preview__item ds-nav-preview__item--light">About</a>
+            <a class="ds-nav-preview__item ds-nav-preview__item--light">YouTube Channel</a>
+            <div class="ds-nav-preview__item ds-nav-preview__item--light ds-nav-preview__item--dropdown">
+              Publications <i class="fas fa-chevron-down" style="font-size:9px;margin-left:3px;"></i>
+              <div class="ds-nav-preview__submenu">
+                <a class="ds-nav-preview__sub-item">The Uncharted Romance</a>
+                <a class="ds-nav-preview__sub-item">One Year, Many Lessons</a>
+              </div>
+            </div>
+            <a class="ds-nav-preview__item ds-nav-preview__item--light">Press Release</a>
+          </nav>
+          <div class="ds-nav-preview__cta">
+            <div style="background:#5956E9;color:#fff;font-size:12px;font-weight:700;padding:10px 22px;border-radius:8px;"">Portfolio</div>
+          </div>
+        </div>
+        <div style="padding:0 24px 10px;font-size:11px;color:#999;">#header-sticky.header-white — added by JS on scroll ≥ 100px. Box-shadow added. Nav items turn dark. (assets/css/style.css)</div>
+      </div>
+    </div>
+
+    <!-- DROPDOWN STATE -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Dropdown — Publications hover state</div>
+      <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:24px;display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;">
+        <div>
+          <div style="display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:#0D0D12;padding:8px 0;border-bottom:2px solid #5956E9;margin-bottom:0;">
+            Publications <i class="fas fa-chevron-down" style="font-size:10px;color:#5956E9;"></i>
+          </div>
+          <div style="background:#0D0D12;border-radius:10px;min-width:220px;padding:8px 0;box-shadow:0 16px 48px rgba(0,0,0,.25);margin-top:0;">
+            <a style="display:flex;align-items:center;gap:10px;padding:12px 18px;font-size:13px;font-weight:500;color:rgba(255,255,255,.8);text-decoration:none;cursor:pointer;transition:color .2s;" onmouseenter="this.style.color='#FFDC60'" onmouseleave="this.style.color='rgba(255,255,255,.8)'">
+              <i class="fas fa-book" style="font-size:12px;color:#5956E9;width:16px;"></i> The Uncharted Romance
+            </a>
+            <a style="display:flex;align-items:center;gap:10px;padding:12px 18px;font-size:13px;font-weight:500;color:rgba(255,255,255,.8);text-decoration:none;cursor:pointer;" onmouseenter="this.style.color='#FFDC60'" onmouseleave="this.style.color='rgba(255,255,255,.8)'">
+              <i class="fas fa-book-open" style="font-size:12px;color:#5956E9;width:16px;"></i> One Year, Many Lessons
+            </a>
+          </div>
+          <div style="font-size:11px;color:#999;margin-top:8px;">.has-dropdown &gt; .submenu — dark bg, yellow text on hover. .tp-main-menu in style.css</div>
+        </div>
+        <div style="flex:1;min-width:240px;font-size:13px;color:var(--text-secondary);line-height:1.75;padding-top:8px;">
+          <strong>How it works:</strong> <code>.has-dropdown</code> class on the <code>&lt;li&gt;</code>. On <code>:hover</code>, the nested <code>.submenu</code> becomes visible (opacity + translateY). Submenu background: <code>#0D0D12</code>. Text hover color: <code>#FFDC60</code> (yellow). Built by <code>.tp-main-menu</code> styles in <code>assets/css/style.css</code>. On mobile, MeanMenu.js collapses all dropdowns into accordion-style expand/collapse.
+        </div>
+      </div>
+    </div>
+
+    <!-- MOBILE HEADER -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Mobile Header + Offcanvas</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;flex-wrap:wrap;">
+        <div style="background:#0D0D12;border-radius:var(--radius-md);padding:20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <div style="width:90px;height:24px;background:rgba(255,255,255,.8);border-radius:4px;display:flex;align-items:center;justify-content:center;">
+              <span style="font-size:10px;font-weight:700;color:#0D0D12;">SubhankarRout</span>
+            </div>
+            <div style="width:36px;height:36px;border-radius:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;">
+              <span style="width:14px;height:2px;background:#fff;border-radius:1px;display:block;"></span>
+              <span style="width:10px;height:2px;background:#fff;border-radius:1px;display:block;"></span>
+              <span style="width:14px;height:2px;background:#fff;border-radius:1px;display:block;"></span>
+            </div>
+          </div>
+          <div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:10px;">.tp-md-header-area · d-lg-none · logo-white.png + .tp-menu-bar hamburger</div>
+        </div>
+        <div style="background:#0D0D12;border-radius:var(--radius-md);padding:20px;border:1px solid rgba(255,255,255,.08);">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+            <div style="width:80px;height:22px;background:rgba(255,255,255,.8);border-radius:3px;"></div>
+            <div style="width:28px;height:28px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;display:flex;align-items:center;justify-content:center;"><i class="fas fa-times-hexagon" style="color:#fff;font-size:11px;"></i></div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:4px;margin-bottom:16px;">
+            <div style="font-size:12px;color:rgba(255,255,255,.7);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);">About</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.7);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);">YouTube Channel</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.7);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);">Publications <i class="fas fa-plus" style="font-size:9px;float:right;margin-top:2px;color:#5956E9;"></i></div>
+            <div style="font-size:12px;color:rgba(255,255,255,.7);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.06);">Press Release</div>
+          </div>
+          <div style="background:#5956E9;text-align:center;padding:10px;border-radius:8px;font-size:12px;font-weight:700;color:#fff;margin-bottom:16px;">Portfolio</div>
+          <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:14px;">
+            <div style="font-size:10px;color:rgba(255,255,255,.3);margin-bottom:6px;">Any Query!</div>
+            <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,.5);"><i class="fas fa-envelope" style="color:#5956E9;font-size:10px;"></i> subhankarrout.kiit@gmail.com</div>
+          </div>
+          <div style="font-size:10px;color:rgba(255,255,255,.3);margin-top:10px;">.tpoffcanvas — 0.25s slide-in from right. .mean-nav built by MeanMenu.js. Close: fa-times-hexagon.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CSS SOURCES TABLE -->
+    <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:20px 24px;margin-top:4px;">
+      <div style="font-size:12px;font-weight:700;margin-bottom:12px;color:var(--text-primary);">CSS Class Reference</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;font-size:12px;">
+        <div><code>.tp-header-area-two</code> — <span style="color:#2563eb;">assets/css/style.css</span></div>
+        <div><code>.header-transparent</code> — <span style="color:#2563eb;">assets/css/style.css</span></div>
+        <div><code>#header-sticky.header-white</code> — <span style="color:#2563eb;">assets/css/style.css</span> (JS adds class)</div>
+        <div><code>.tp-logo</code> — <span style="color:#2563eb;">assets/css/style.css</span></div>
+        <div><code>.tp-main-menu</code> — <span style="color:#2563eb;">assets/css/style.css</span></div>
+        <div><code>.has-dropdown .submenu</code> — <span style="color:#2563eb;">assets/css/style.css</span></div>
+        <div><code>.tp-btn</code> (Portfolio CTA) — <span style="color:#2563eb;">assets/css/style.css</span></div>
+        <div><code>.tp-md-header-area</code> — <span style="color:#2563eb;">assets/css/style.css</span></div>
+        <div><code>.tp-menu-bar</code> — <span style="color:#2563eb;">assets/css/style.css</span></div>
+        <div><code>.tp-offcanvas-area .tpoffcanvas</code> — <span style="color:#2563eb;">assets/css/style.css</span></div>
+        <div><code>.tpoffcanvas { transition: 0.25s }</code> — <span style="color:#7c3aed;">styles.css</span> (override)</div>
+        <div><code>.mean-nav, .mean-container</code> — <span style="color:#b45309;">assets/css/meanmenu.css</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <style>
+    /* ── NAV PREVIEW component (navigation section only) ─────── */
+    .ds-nav-preview {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      gap: 16px;
+    }
+    .ds-nav-preview__logo { display:flex;flex-direction:column; }
+    .ds-nav-preview__menu {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex: 1;
+      justify-content: center;
+      position: relative;
+    }
+    .ds-nav-preview__item {
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: rgba(255,255,255,.8);
+      cursor: pointer;
+      position: relative;
+      white-space: nowrap;
+    }
+    .ds-nav-preview__item--light { color: #333; }
+    .ds-nav-preview__item--dropdown { display:flex;align-items:center; }
+    .ds-nav-preview__item:hover { background:rgba(255,255,255,.08); }
+    .ds-nav-preview__item--light:hover { background:rgba(89,86,233,.06);color:#5956E9; }
+    .ds-nav-preview__submenu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0D0D12;
+      border-radius: 10px;
+      min-width: 200px;
+      padding: 6px 0;
+      box-shadow: 0 16px 40px rgba(0,0,0,.3);
+      z-index: 99;
+    }
+    .ds-nav-preview__item--dropdown:hover .ds-nav-preview__submenu { display:block; }
+    .ds-nav-preview__sub-item {
+      display: block;
+      padding: 10px 16px;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,.75);
+      cursor: pointer;
+    }
+    .ds-nav-preview__sub-item:hover { color: #FFDC60; }
+    .ds-nav-preview__cta { display:flex;flex-direction:column;align-items:center; }
+  </style>
+
+
+  <!-- ══════════════════════════════════════════════
+       §8 FOOTER
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="footer">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-border-bottom"></i></div>
+      <div>
+        <div class="ds-section-title">Footer</div>
+        <div class="ds-section-desc">Identical across all 9 pages. 4-column layout on dark background.</div>
+      </div>
+    </div>
+
+    <div style="background:#0D0D12;border-radius:var(--radius-lg);padding:40px;overflow:hidden;">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-bottom:32px;">
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;">Col 1: Brand</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.8;">Logo (logo-white.png)<br>Social icons: LinkedIn, Instagram, Facebook, Behance</div>
+        </div>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;">Col 2: Useful Links</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.8;">S4 Cinesphere (YouTube)<br>Press Release<br>IMDb Profile</div>
+        </div>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;">Col 3: Publications</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.8;">The Uncharted Romance<br>One Year, Many Lessons</div>
+        </div>
+        <div>
+          <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;">Col 4: Get Update</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.8;">Email newsletter form → Google Forms. Confirm via iframe onload.</div>
+          <div class="ds-newsletter" style="margin-top:10px;">
+            <input type="email" placeholder="Enter Mail">
+            <button><i class="fas fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+        <div style="font-size:12px;color:rgba(255,255,255,.3);">© Copyright 2026, All rights reserved</div>
+        <div style="display:flex;gap:20px;">
+          <span style="font-size:12px;color:rgba(255,255,255,.3);">Contact</span>
+          <span style="font-size:12px;color:rgba(255,255,255,.3);">Privacy Policy</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px;padding:14px 18px;background:rgba(89,86,233,.05);border:1px solid rgba(89,86,233,.12);border-radius:var(--radius-md);font-size:13px;color:var(--text-secondary);">
+      <strong>Wrapper class:</strong> <code>.black-bg.pt-130.pb-30</code> — Critical. Using the wrong wrapper (e.g. <code>.tp-footer-top.pt-90</code>) will break the dark background and column spacing. This mistake happened on privacy-policy.html and was fixed.
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §9 ANIMATIONS
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="animation">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-magic"></i></div>
+      <div>
+        <div class="ds-section-title">Animations</div>
+        <div class="ds-section-desc">Keyframe animations, entrance staggering, and ambient motion.</div>
+      </div>
+    </div>
+
+    <div class="ds-sub">
+      <div class="ds-sub-title">Yellow Name Underline</div>
+      <div style="background:#0D0D12;border-radius:var(--radius-md);padding:32px;text-align:center;">
+        <span class="ds-underline-demo" style="color:#fff;">Subhankar Rout</span>
+      </div>
+      <div style="margin-top:12px;font-size:13px;color:var(--text-secondary);">
+        <code>.hm-name::after</code> — Grows from 0→<strong>100%</strong> via <code>hm-lineGrow</code> (1.2s, 1s delay). Height 3px, yellow, border-radius 2px. Lives in <code>styles.css</code>.
+      </div>
+    </div>
+
+    <div class="ds-anim-grid">
+      <div class="ds-anim-card">
+        <div class="ds-anim-card__box anim-demo-fadein">↑</div>
+        <div class="ds-anim-card__name">heroFadeUp</div>
+        <div class="ds-anim-card__desc">Opacity 0→1 + translateY(30px→0). 5 stagger variants (.1 to .78s delay)</div>
+        <div class="ds-anim-card__timing">0.8s ease · .hero-anim-1–5</div>
+      </div>
+      <div class="ds-anim-card">
+        <div class="ds-anim-card__box">→</div>
+        <div class="ds-anim-card__name">heroFadeRight</div>
+        <div class="ds-anim-card__desc">Opacity 0→1 + translateX(40px→0). Right column (image side)</div>
+        <div class="ds-anim-card__timing">0.9s · .hero-anim-right</div>
+      </div>
+      <div class="ds-anim-card">
+        <div class="ds-anim-card__box"><div class="anim-demo-blob"></div></div>
+        <div class="ds-anim-card__name">blobFloat / hm-blobDrift</div>
+        <div class="ds-anim-card__desc">Translate + scale drift. Hero ambient background gradient blobs</div>
+        <div class="ds-anim-card__timing">12–20s infinite · 3 blobs</div>
+      </div>
+      <div class="ds-anim-card">
+        <div class="ds-anim-card__box">◉</div>
+        <div class="ds-anim-card__name">kickerPulse</div>
+        <div class="ds-anim-card__desc">Opacity + scale 0.8 on the dot inside kicker pills</div>
+        <div class="ds-anim-card__timing">2s ease-in-out infinite</div>
+      </div>
+      <div class="ds-anim-card">
+        <div class="ds-anim-card__box">⟳</div>
+        <div class="ds-anim-card__name">marqueeScroll</div>
+        <div class="ds-anim-card__desc">Infinite horizontal ticker. translateX(0→-50%). Pauses on hover</div>
+        <div class="ds-anim-card__timing">24s linear infinite</div>
+      </div>
+      <div class="ds-anim-card">
+        <div class="ds-anim-card__box">↕</div>
+        <div class="ds-anim-card__name">floatA / B / C</div>
+        <div class="ds-anim-card__desc">Tag pills on portrait image. Each has unique Y offset + timing offset</div>
+        <div class="ds-anim-card__timing">5–7s ease-in-out infinite</div>
+      </div>
+      <div class="ds-anim-card">
+        <div class="ds-anim-card__box">✦</div>
+        <div class="ds-anim-card__name">ph-shimmer</div>
+        <div class="ds-anim-card__desc">Glossy shimmer sweep across kicker pills. White light gradient slides through</div>
+        <div class="ds-anim-card__timing">3.5s · 1.8s delay · infinite</div>
+      </div>
+      <div class="ds-anim-card">
+        <div class="ds-anim-card__box">⏳</div>
+        <div class="ds-anim-card__name">Slow-Load Message</div>
+        <div class="ds-anim-card__desc">If page loads &gt;3s, #preloader-slow-msg fades in with emotional copy. Cleared on window.load</div>
+        <div class="ds-anim-card__timing">setTimeout 3000ms · opacity 0.6s</div>
+      </div>
+    </div>
+
+    <!-- Scroll Down Reveals — full visual demo -->
+    <div style="margin-top:28px;">
+      <div class="ds-sub-title">Scroll-Down Reveal Animations — 3 Systems</div>
+
+      <!-- SYSTEM 1: WOW.js -->
+      <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);margin-bottom:16px;overflow:hidden;">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--ds-border);display:flex;align-items:center;gap:10px;">
+          <span style="width:28px;height:28px;background:rgba(89,86,233,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;"><i class="fas fa-eye" style="color:#5956E9;"></i></span>
+          <strong style="font-size:13px;">System 1 — WOW.js (animate.css classes)</strong>
+          <span style="margin-left:auto;font-size:10px;background:rgba(124,58,237,.1);color:#7c3aed;padding:2px 7px;border-radius:4px;font-weight:600;">assets/css/animate.css + wow.js</span>
+        </div>
+        <div style="padding:20px;">
+          <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;margin-bottom:16px;">
+            WOW.js watches the viewport. When an element with <code>.wow</code> enters view, it adds <code>.animated</code> so the CSS animation fires. <code>data-wow-delay</code> staggers multiple elements. Used on most section blocks across all 9 pages.
+          </div>
+          <!-- Visual before/after states -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
+            <div>
+              <div style="font-size:11px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">Before scroll (off-screen)</div>
+              <div style="background:#f7f8fc;border:1px dashed #dde0ee;border-radius:10px;padding:16px;opacity:.25;transform:translateY(24px);">
+                <div style="height:10px;background:#E8ECF2;border-radius:4px;margin-bottom:8px;"></div>
+                <div style="height:8px;background:#E8ECF2;border-radius:4px;width:70%;"></div>
+              </div>
+              <div style="font-size:11px;color:#9CA3AF;margin-top:6px;text-align:center;"><code>opacity:0; transform:translateY(30px)</code></div>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:600;color:#22c55e;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">After scroll (enters view)</div>
+              <div style="background:#fff;border:1px solid #E8ECF2;border-radius:10px;padding:16px;box-shadow:0 2px 12px rgba(89,86,233,.08);">
+                <div style="height:10px;background:#5956E9;border-radius:4px;margin-bottom:8px;opacity:.4;"></div>
+                <div style="height:8px;background:#5956E9;border-radius:4px;width:70%;opacity:.25;"></div>
+              </div>
+              <div style="font-size:11px;color:#9CA3AF;margin-top:6px;text-align:center;"><code>.animated.fadeInUp — opacity:1; transform:none</code></div>
+            </div>
+          </div>
+          <!-- Stagger demo -->
+          <div style="background:#f7f8fc;border-radius:10px;padding:16px;">
+            <div style="font-size:11px;font-weight:700;margin-bottom:12px;color:var(--text-primary);">Stagger pattern (data-wow-delay)</div>
+            <div style="display:flex;gap:8px;align-items:flex-end;flex-wrap:wrap;">
+              <div style="text-align:center;">
+                <div style="width:56px;height:56px;background:#5956E9;border-radius:10px;opacity:1;margin-bottom:4px;"></div>
+                <div style="font-size:10px;color:#9CA3AF;">0ms</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="width:56px;height:56px;background:#5956E9;border-radius:10px;opacity:.8;margin-bottom:4px;"></div>
+                <div style="font-size:10px;color:#9CA3AF;">200ms</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="width:56px;height:56px;background:#5956E9;border-radius:10px;opacity:.6;margin-bottom:4px;"></div>
+                <div style="font-size:10px;color:#9CA3AF;">400ms</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="width:56px;height:56px;background:#5956E9;border-radius:10px;opacity:.4;margin-bottom:4px;"></div>
+                <div style="font-size:10px;color:#9CA3AF;">600ms</div>
+              </div>
+              <div style="text-align:center;">
+                <div style="width:56px;height:56px;background:#5956E9;border-radius:10px;opacity:.2;margin-bottom:4px;"></div>
+                <div style="font-size:10px;color:#9CA3AF;">800ms</div>
+              </div>
+              <div style="font-size:12px;color:var(--text-secondary);padding:0 8px;">Each card fires <strong>200ms later</strong> than the previous.<br>Effect: a smooth cascade from left to right.</div>
+            </div>
+          </div>
+          <div style="margin-top:12px;background:rgba(89,86,233,.03);border:1px solid rgba(89,86,233,.1);border-radius:8px;padding:12px;font-family:'DM Mono',monospace;font-size:11px;color:#555;line-height:2;">
+            &lt;div class="<span style="color:#5956E9;">wow fadeInUp</span>" data-wow-delay="<span style="color:#b45309;">0.2s</span>" data-wow-duration="<span style="color:#0d9488;">0.8s</span>"&gt; ... &lt;/div&gt;
+          </div>
+          <div style="margin-top:8px;font-size:12px;color:var(--text-secondary);">Common classes used: <code>fadeInUp</code> · <code>fadeInLeft</code> · <code>fadeInRight</code> · <code>zoomIn</code>. All from <code>assets/css/animate.css</code>.</div>
+        </div>
+      </div>
+
+      <!-- SYSTEM 2: Custom IntersectionObserver (hm-reveal) -->
+      <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);margin-bottom:16px;overflow:hidden;">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--ds-border);display:flex;align-items:center;gap:10px;">
+          <span style="width:28px;height:28px;background:rgba(89,86,233,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;"><i class="fas fa-arrows-left-right" style="color:#5956E9;"></i></span>
+          <strong style="font-size:13px;">System 2 — Custom IntersectionObserver (.hm-reveal)</strong>
+          <span style="margin-left:auto;font-size:10px;background:rgba(124,58,237,.1);color:#7c3aed;padding:2px 7px;border-radius:4px;font-weight:600;">styles.css §16 + script.js</span>
+        </div>
+        <div style="padding:20px;">
+          <div style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;line-height:1.7;">
+            Used on index.html "About" and "Book Spotlight" sections. Elements start off-screen (left or right) and slide in when they enter the viewport. <code>script.js</code> adds <code>.is-visible</code> via IntersectionObserver.
+          </div>
+          <!-- from-left / from-right demo -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px;">
+            <div>
+              <div style="font-size:11px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">.hm-reveal.from-left</div>
+              <div style="position:relative;height:80px;background:#f7f8fc;border-radius:10px;overflow:hidden;">
+                <div style="position:absolute;left:-20px;top:50%;transform:translateY(-50%);opacity:.3;background:#5956E9;height:40px;width:120px;border-radius:8px;transition:all .6s;"></div>
+                <div style="position:absolute;left:16px;top:50%;transform:translateY(-50%);opacity:1;background:#5956E9;height:40px;width:120px;border-radius:8px;"></div>
+                <div style="position:absolute;top:6px;right:8px;font-size:9px;color:#9CA3AF;">→ slides in from left</div>
+              </div>
+              <div style="font-size:11px;color:#9CA3AF;margin-top:6px;"><code>translateX(-60px)→0 · opacity 0→1 · 0.7s ease</code></div>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px;">.hm-reveal.from-right</div>
+              <div style="position:relative;height:80px;background:#f7f8fc;border-radius:10px;overflow:hidden;">
+                <div style="position:absolute;right:16px;top:50%;transform:translateY(-50%);opacity:1;background:#FFDC60;height:40px;width:120px;border-radius:8px;"></div>
+                <div style="position:absolute;top:6px;left:8px;font-size:9px;color:#9CA3AF;">← slides in from right</div>
+              </div>
+              <div style="font-size:11px;color:#9CA3AF;margin-top:6px;"><code>translateX(60px)→0 · opacity 0→1 · 0.7s ease · delay 0.2s</code></div>
+            </div>
+          </div>
+          <div style="background:rgba(89,86,233,.03);border:1px solid rgba(89,86,233,.1);border-radius:8px;padding:12px;font-family:'DM Mono',monospace;font-size:11px;color:#555;line-height:2;">
+            &lt;div class="<span style="color:#5956E9;">hm-reveal from-left</span>"&gt; text content &lt;/div&gt;&nbsp;&nbsp;<span style="color:#888;">/* starts invisible */</span><br>
+            &lt;div class="<span style="color:#5956E9;">hm-reveal from-right</span>"&gt; image &lt;/div&gt;<br>
+            <span style="color:#888;">/* script.js adds .is-visible when scrolled into view → animation plays */</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SYSTEM 3: data-pr-reveal (PR page) -->
+      <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);overflow:hidden;">
+        <div style="padding:16px 20px;border-bottom:1px solid var(--ds-border);display:flex;align-items:center;gap:10px;">
+          <span style="width:28px;height:28px;background:rgba(89,86,233,.1);border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;"><i class="fas fa-newspaper" style="color:#5956E9;"></i></span>
+          <strong style="font-size:13px;">System 3 — [data-pr-reveal] (PR page)</strong>
+          <span style="margin-left:auto;font-size:10px;background:rgba(124,58,237,.1);color:#7c3aed;padding:2px 7px;border-radius:4px;font-weight:600;">styles.css §23 + script.js</span>
+        </div>
+        <div style="padding:20px;">
+          <div style="font-size:13px;color:var(--text-secondary);margin-bottom:14px;line-height:1.7;">
+            Used only on <code>pr.html</code>. A simpler IntersectionObserver pattern: adds <code>.pr-visible</code> to elements with <code>[data-pr-reveal]</code> attribute.
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px;">
+            <div style="background:#f7f8fc;border:1px dashed #dde0ee;border-radius:10px;padding:14px;opacity:.2;transform:translateY(28px);">
+              <div style="height:8px;background:#E8ECF2;border-radius:3px;margin-bottom:6px;"></div>
+              <div style="height:8px;background:#E8ECF2;border-radius:3px;width:60%;"></div>
+              <div style="font-size:10px;color:#9CA3AF;margin-top:10px;text-align:center;">[data-pr-reveal] — initial state</div>
+            </div>
+            <div style="background:#fff;border:1px solid #E8ECF2;border-radius:10px;padding:14px;box-shadow:0 2px 12px rgba(89,86,233,.08);">
+              <div style="height:8px;background:#5956E9;border-radius:3px;margin-bottom:6px;opacity:.4;"></div>
+              <div style="height:8px;background:#5956E9;border-radius:3px;width:60%;opacity:.25;"></div>
+              <div style="font-size:10px;color:#9CA3AF;margin-top:10px;text-align:center;">.pr-visible added → plays in</div>
+            </div>
+          </div>
+          <div style="background:rgba(89,86,233,.03);border:1px solid rgba(89,86,233,.1);border-radius:8px;padding:12px;font-family:'DM Mono',monospace;font-size:11px;color:#555;line-height:2;">
+            &lt;div <span style="color:#5956E9;">data-pr-reveal</span>&gt;...&lt;/div&gt;<br>
+            <span style="color:#888;">/* CSS: opacity:0; transform:translateY(28px); transition:.55s */</span><br>
+            <span style="color:#888;">/* .pr-visible: opacity:1; transform:none */</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Summary table -->
+      <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);margin-top:16px;overflow:hidden;">
+        <div style="padding:14px 20px;border-bottom:1px solid var(--ds-border);font-size:13px;font-weight:700;">Which scroll system to use where</div>
+        <div style="padding:0 20px;">
+          <table style="width:100%;font-size:12px;border-collapse:collapse;">
+            <thead>
+              <tr style="border-bottom:1px solid var(--ds-border);">
+                <th style="padding:10px 0;text-align:left;font-weight:600;color:var(--text-primary);">System</th>
+                <th style="padding:10px 0;text-align:left;font-weight:600;color:var(--text-primary);">Pages</th>
+                <th style="padding:10px 0;text-align:left;font-weight:600;color:var(--text-primary);">Animation</th>
+                <th style="padding:10px 0;text-align:left;font-weight:600;color:var(--text-primary);">CSS Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom:1px solid var(--ds-border);">
+                <td style="padding:10px 0;"><code>.wow.fadeInUp</code></td>
+                <td style="padding:10px 0;color:var(--text-secondary);">All 9 pages</td>
+                <td style="padding:10px 0;color:var(--text-secondary);">Fade up from Y+30px</td>
+                <td style="padding:10px 0;"><code>animate.css</code></td>
+              </tr>
+              <tr style="border-bottom:1px solid var(--ds-border);">
+                <td style="padding:10px 0;"><code>.hm-reveal.from-left/right</code></td>
+                <td style="padding:10px 0;color:var(--text-secondary);">index.html only</td>
+                <td style="padding:10px 0;color:var(--text-secondary);">Slide in from side</td>
+                <td style="padding:10px 0;"><code>styles.css §16</code></td>
+              </tr>
+              <tr>
+                <td style="padding:10px 0;"><code>[data-pr-reveal]</code></td>
+                <td style="padding:10px 0;color:var(--text-secondary);">pr.html only</td>
+                <td style="padding:10px 0;color:var(--text-secondary);">Fade up from Y+28px</td>
+                <td style="padding:10px 0;"><code>styles.css §23</code></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §10 BREAKPOINTS
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="breakpoints">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-mobile-alt"></i></div>
+      <div>
+        <div class="ds-section-title">Breakpoints</div>
+        <div class="ds-section-desc">Responsive system. Mobile-friendly via Bootstrap grid + custom media queries.</div>
+      </div>
+    </div>
+
+    <div class="ds-bp-row">
+      <div class="ds-bp-card">
+        <div class="ds-bp-card__icon">🖥️</div>
+        <div class="ds-bp-card__label">Desktop</div>
+        <div class="ds-bp-card__range">&gt; 1080px</div>
+        <div class="ds-bp-card__notes">2-col hero grids · Sticky header shown · Quick-links 4-col · Footer 4-col · Yellow underline max-width 90%</div>
+      </div>
+      <div class="ds-bp-card">
+        <div class="ds-bp-card__icon">📱</div>
+        <div class="ds-bp-card__label">Tablet</div>
+        <div class="ds-bp-card__range">768px – 1080px</div>
+        <div class="ds-bp-card__notes">Same 90% underline · Buy-bar stays 2×2 · Some sections stack · Custom max-width breakpoint (not 1024 — intentional)</div>
+      </div>
+      <div class="ds-bp-card">
+        <div class="ds-bp-card__icon">📲</div>
+        <div class="ds-bp-card__label">Mobile</div>
+        <div class="ds-bp-card__range">&lt; 768px</div>
+        <div class="ds-bp-card__notes">Single col · Yellow underline 100% · Mobile menu (offcanvas) · Buttons full-width in forms · tp-btn height 56px</div>
+      </div>
+      <div class="ds-bp-card">
+        <div class="ds-bp-card__icon">♿</div>
+        <div class="ds-bp-card__label">Reduced Motion</div>
+        <div class="ds-bp-card__range">prefers-reduced-motion</div>
+        <div class="ds-bp-card__notes">All keyframe animations disabled. Transitions set to 0.01ms. Section in styles.css §20.</div>
+      </div>
+    </div>
+
+    <div style="margin-top:20px;background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:20px 24px;">
+      <div style="font-size:13px;font-weight:700;margin-bottom:10px;">Bootstrap Grid in use</div>
+      <div style="font-size:13px;color:var(--text-secondary);line-height:1.75;">
+        Bootstrap 5 via <code>bootstrap.bundle.min.js</code>. Key grid classes used: <code>col-xl-3 col-lg-4 col-md-6</code> pattern for footer · <code>container-fluid</code> for header · <code>container</code> for content sections. Custom grid overrides live in <code>styles.css</code> for hero sections (CSS Grid, not Bootstrap).
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §11 ACCESSIBILITY
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="accessibility">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-universal-access"></i></div>
+      <div>
+        <div class="ds-section-title">Accessibility</div>
+        <div class="ds-section-desc">Lighthouse accessibility 82–92%. These patterns are applied across all pages.</div>
+      </div>
+    </div>
+
+    <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:0 24px;">
+      <div class="ds-a11y-item">
+        <div class="ds-a11y-icon"><i class="fas fa-walking"></i></div>
+        <div class="ds-a11y-content">
+          <h4>Skip Link</h4>
+          <p><code>&lt;a class="skip-link" href="#hm-main"&gt;</code> — Visually hidden until focused. Appears at top-left with violet bg on Tab key. On all pages.</p>
+        </div>
+      </div>
+      <div class="ds-a11y-item">
+        <div class="ds-a11y-icon"><i class="fas fa-eye"></i></div>
+        <div class="ds-a11y-content">
+          <h4>Focus Styles</h4>
+          <p>All interactive elements (<code>a, button, input, [tabindex]</code>) get <code>outline: 2px solid var(--accent-violet); outline-offset: 3px</code> on <code>:focus-visible</code>. Defined globally in styles.css §03.</p>
+        </div>
+      </div>
+      <div class="ds-a11y-item">
+        <div class="ds-a11y-icon"><i class="fas fa-tag"></i></div>
+        <div class="ds-a11y-content">
+          <h4>ARIA Labels</h4>
+          <p>All nav elements have <code>aria-label</code>. Images have descriptive <code>alt</code>. Decorative elements use <code>aria-hidden="true"</code>. Offcanvas: <code>role="dialog" aria-modal="true"</code>. Hamburger: <code>aria-expanded</code> toggled by JS.</p>
+        </div>
+      </div>
+      <div class="ds-a11y-item">
+        <div class="ds-a11y-icon"><i class="fas fa-image"></i></div>
+        <div class="ds-a11y-content">
+          <h4>Image Loading</h4>
+          <p>Hero LCP image: <code>loading="eager" fetchpriority="high"</code> + <code>&lt;link rel="preload"&gt;</code>. All below-fold images: <code>loading="lazy"</code>. Width + height attributes on logo images to prevent CLS.</p>
+        </div>
+      </div>
+      <div class="ds-a11y-item" style="border-bottom:none;">
+        <div class="ds-a11y-icon"><i class="fas fa-bolt"></i></div>
+        <div class="ds-a11y-content">
+          <h4>Performance (Lighthouse)</h4>
+          <p>Non-critical CSS deferred via <code>media="print" onload="this.media='all'"</code> + noscript fallback. All JS (except jQuery + Bootstrap) uses <code>defer</code> in dependency order: plugins first, then main.js, then script.js. Clarity + Chatbase at bottom. DNS prefetch for third-party domains.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §12 PAGE REFERENCE
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="pages">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-file-alt"></i></div>
+      <div>
+        <div class="ds-section-title">Page Reference</div>
+        <div class="ds-section-desc">What's on each page, its hero background, and which button variants it uses.</div>
+      </div>
+    </div>
+
+    <div class="ds-table__wrap">
+      <table class="ds-table">
+        <thead>
+          <tr>
+            <th>Page</th>
+            <th>File</th>
+            <th>Hero Theme</th>
+            <th>Primary CTA</th>
+            <th>Secondary CTA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Home</strong></td>
+            <td><code>index.html</code></td>
+            <td><span class="ds-dot ds-dot--dark"></span>Dark gradient</td>
+            <td><code>.hm-btn-yellow</code></td>
+            <td><code>.hm-btn-ghost</code></td>
+          </tr>
+          <tr>
+            <td><strong>Portfolio</strong></td>
+            <td><code>portfolio.html</code></td>
+            <td><span class="ds-dot ds-dot--light"></span>Light white</td>
+            <td><code>.btn-primary-hero</code></td>
+            <td><code>.btn-ghost-hero</code></td>
+          </tr>
+          <tr>
+            <td><strong>About</strong></td>
+            <td><code>about.html</code></td>
+            <td><span class="ds-dot ds-dot--light"></span>Light white</td>
+            <td><code>.ab-btn-primary</code></td>
+            <td><code>.ab-btn-ghost</code></td>
+          </tr>
+          <tr>
+            <td><strong>Books</strong></td>
+            <td><code>books.html</code></td>
+            <td><span class="ds-dot ds-dot--dark"></span>Dark gradient</td>
+            <td><code>.hm-btn-yellow</code></td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>The Uncharted Romance</strong></td>
+            <td><code>the_uncharted_romance.html</code></td>
+            <td><span class="ds-dot ds-dot--dark"></span>Dark book hero</td>
+            <td><code>.tp-btn</code> (Buy)</td>
+            <td><code>.hm-btn-yellow</code> (Review form)</td>
+          </tr>
+          <tr>
+            <td><strong>One Year, Many Lessons</strong></td>
+            <td><code>one_year_many_lessons.html</code></td>
+            <td><span class="ds-dot ds-dot--dark"></span>Dark book hero</td>
+            <td><code>.tp-btn</code> (Buy)</td>
+            <td><code>.hm-btn-yellow</code> (Review form)</td>
+          </tr>
+          <tr>
+            <td><strong>Press Release</strong></td>
+            <td><code>pr.html</code></td>
+            <td><span class="ds-dot ds-dot--light"></span>Light / grid bg</td>
+            <td><code>.btn-primary-hero</code></td>
+            <td><code>.btn-ghost-hero</code></td>
+          </tr>
+          <tr>
+            <td><strong>S4 Cinesphere</strong></td>
+            <td><code>s4cinesphere.html</code></td>
+            <td><span class="ds-dot ds-dot--dark"></span>Dark cinematic</td>
+            <td><code>.dx-btn-primary</code> (red)</td>
+            <td><code>.dx-btn-ghost</code></td>
+          </tr>
+          <tr>
+            <td><strong>Privacy Policy</strong></td>
+            <td><code>privacy-policy.html</code></td>
+            <td><span class="ds-dot ds-dot--dark"></span>Dark hero strip</td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top:20px;">
+      <div class="ds-sub-title">Shared across ALL pages</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;font-size:13px;"><strong>Header:</strong> .tp-header-area-two + mobile .tp-md-header-area + .tpoffcanvas offcanvas</div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;font-size:13px;"><strong>Footer:</strong> .black-bg.pt-130.pb-30 · 4 columns · Google Forms newsletter</div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;font-size:13px;"><strong>Analytics:</strong> Microsoft Clarity (r08p4eibkc) · Chatbase chatbot</div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;font-size:13px;"><strong>Fonts:</strong> DM Sans via Google Fonts · Font Awesome Pro icons</div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;font-size:13px;"><strong>Custom cursor:</strong> .cursor-dot (8px violet) + .cursor-ring (36px → 56px on hover). Hidden on touch.</div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;font-size:13px;"><strong>Preloader:</strong> #pr-preloader · Dismissed on window.load · Slow-load message after 3s.</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §CARDS  ALL CARD TYPES
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="cards">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-id-card"></i></div>
+      <div>
+        <div class="ds-section-title">Cards</div>
+        <div class="ds-section-desc">Every card pattern across all 9 pages — with live preview and CSS source.</div>
+      </div>
+    </div>
+
+    <!-- ── 1. PROJECT CARD (portfolio.html) ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Project / Portfolio Card <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §10</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;">
+        <div class="ds-preview-card" style="border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 2px 16px rgba(16,24,40,.07);transition:transform .28s,box-shadow .28s;" onmouseenter="this.style.transform='translateY(-6px)';this.style.boxShadow='0 16px 48px rgba(89,86,233,.15)'" onmouseleave="this.style.transform='none';this.style.boxShadow='0 2px 16px rgba(16,24,40,.07)'">
+          <div style="background:linear-gradient(135deg,#f0f1f8,#e0e2f4);aspect-ratio:4/3;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:10px;left:10px;background:#5956E9;color:#fff;font-size:9px;font-weight:800;padding:3px 8px;border-radius:20px;text-transform:uppercase;letter-spacing:.07em;">.pr-badge--pr</div>
+            <div style="position:absolute;inset:0;background:rgba(13,13,18,.55);display:flex;align-items:center;justify-content:center;gap:10px;opacity:0;transition:opacity .28s;" class="ds-card-overlay">
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;"><i class="fas fa-eye" style="color:#fff;font-size:13px;"></i></div>
+              <div style="width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;"><i class="fas fa-external-link-alt" style="color:#fff;font-size:13px;"></i></div>
+            </div>
+          </div>
+          <div style="padding:18px 20px 20px;">
+            <div style="font-size:14px;font-weight:700;color:#0D0D12;margin-bottom:8px;line-height:1.35;">UX Case Study — Fintech App Redesign</div>
+            <div style="font-size:12px;color:#999;display:flex;align-items:center;gap:6px;"><i class="fas fa-calendar-alt" style="color:#5956E9;font-size:11px;"></i> 2024 · UX Design</div>
+          </div>
+        </div>
+        <div style="padding:16px;background:rgba(89,86,233,.04);border:1px solid rgba(89,86,233,.12);border-radius:var(--radius-md);font-size:12px;color:var(--text-secondary);line-height:1.75;">
+          <strong style="color:var(--text-primary);">Classes:</strong><br>
+          <code>.pr-card</code> — wrapper (white bg, 18px radius, hover lift)<br>
+          <code>.pr-card__fig</code> — image container (aspect-ratio 4/3)<br>
+          <code>.pr-card__img</code> — cover image (scale on hover)<br>
+          <code>.pr-card__overlay</code> — dark overlay with action icons (opacity 0→1 on hover)<br>
+          <code>.pr-card__act</code> — glassmorphism action button (36×36, blur backdrop)<br>
+          <code>.pr-card__badge</code> — top-left pill badge<br>
+          <code>.pr-badge--pr</code> / <code>.pr-badge--awd</code> / <code>.pr-badge--video</code> — badge color variants<br>
+          <code>.pr-card__body</code> — text content padding<br>
+          <code>.pr-card__title</code> — 15px/700, hover→violet<br>
+          <code>.pr-card__meta</code> — 12px, icon+text, tertiary color<br>
+          Filter: <code>.pr-filter</code>, <code>.pr-filter.active</code> — pill tabs, active=violet fill
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 2. AI TOOL CARD (index.html) ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">AI Tool Card <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §09</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;">
+        <div style="background:#0D0D12;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px 22px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s;" onmouseenter="this.style.borderColor='rgba(89,86,233,.45)';this.style.transform='translateY(-4px)'" onmouseleave="this.style.borderColor='rgba(255,255,255,.08)';this.style.transform='none'">
+          <div style="width:44px;height:44px;border-radius:12px;background:rgba(89,86,233,.15);border:1px solid rgba(89,86,233,.25);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+            <i class="fas fa-magic" style="color:#5956E9;font-size:18px;"></i>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:#fff;margin-bottom:8px;">AI Writing Tool</div>
+          <div style="font-size:13px;color:rgba(255,255,255,.45);line-height:1.65;margin-bottom:14px;">Generates story outlines and scene drafts with context-aware suggestions.</div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(89,86,233,.15);color:rgba(89,86,233,.9);border:1px solid rgba(89,86,233,.2);">GPT-4</span>
+            <span style="font-size:10px;font-weight:700;padding:3px 9px;border-radius:20px;background:rgba(89,86,233,.15);color:rgba(89,86,233,.9);border:1px solid rgba(89,86,233,.2);">Writing</span>
+          </div>
+        </div>
+        <div style="padding:16px;background:rgba(89,86,233,.04);border:1px solid rgba(89,86,233,.12);border-radius:var(--radius-md);font-size:12px;color:var(--text-secondary);line-height:1.75;">
+          <strong style="color:var(--text-primary);">Classes:</strong><br>
+          <code>.pr-ai-card</code> — dark glass card (dark bg, rgba border, hover lifts + border glows violet)<br>
+          Icon wrapper: 44×44px, 12px radius, <code>rgba(89,86,233,.15)</code> bg<br>
+          6 icon variants: wand-magic-sparkles, brain, robot, microchip, code, film<br>
+          <code>.pr-ai-tag</code> — tiny pill badge, violet tint, used for tool category labels<br>
+          Grid: 3-col on desktop, collapses to 1-col mobile
+        </div>
+      </div>
+    </div>
+
+    <!-- ── 3. STORY / CHRONICLE CARD (index.html Swiper) ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Story / Chronicle Card — Swiper Carousel <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §14</span></div>
+      <div style="background:#0D0D12;border-radius:var(--radius-md);padding:24px;overflow:hidden;">
+        <div style="display:flex;gap:16px;overflow-x:auto;padding-bottom:8px;">
+          <!-- Card 1 -->
+          <div style="min-width:240px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;flex-shrink:0;transition:border-color .3s;" onmouseenter="this.style.borderColor='rgba(89,86,233,.5)'" onmouseleave="this.style.borderColor='rgba(255,255,255,.08)'">
+            <div style="background:linear-gradient(135deg,#1a1830,#2a2060);aspect-ratio:16/9;"></div>
+            <div style="padding:16px;">
+              <span style="font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#5956E9;background:rgba(89,86,233,.12);padding:3px 8px;border-radius:20px;">Short Film</span>
+              <div style="font-size:14px;font-weight:700;color:#fff;margin:10px 0 6px;line-height:1.3;">The Last Frame</div>
+              <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.6;">A story about finding your last shot when time runs out.</div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div style="min-width:240px;background:rgba(255,255,255,.04);border:1px solid rgba(89,86,233,.5);border-radius:16px;overflow:hidden;flex-shrink:0;">
+            <div style="background:linear-gradient(135deg,#1e1540,#2d1f60);aspect-ratio:16/9;"></div>
+            <div style="padding:16px;">
+              <span style="font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#FFDC60;background:rgba(255,220,96,.12);padding:3px 8px;border-radius:20px;">Novel</span>
+              <div style="font-size:14px;font-weight:700;color:#fff;margin:10px 0 6px;line-height:1.3;">The Uncharted Romance</div>
+              <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.6;">Where every heartbeat wrote a new chapter.</div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div style="min-width:240px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;overflow:hidden;flex-shrink:0;">
+            <div style="background:linear-gradient(135deg,#0f1a2e,#1a2d4a);aspect-ratio:16/9;"></div>
+            <div style="padding:16px;">
+              <span style="font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#1EE2CF;background:rgba(30,226,207,.1);padding:3px 8px;border-radius:20px;">Non-Fiction</span>
+              <div style="font-size:14px;font-weight:700;color:#fff;margin:10px 0 6px;line-height:1.3;">One Year, Many Lessons</div>
+              <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.6;">365 days that changed everything about who I am.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Swiper dots -->
+        <div style="display:flex;justify-content:center;gap:6px;margin-top:16px;">
+          <div style="width:20px;height:6px;background:#5956E9;border-radius:3px;"></div>
+          <div style="width:6px;height:6px;background:rgba(255,255,255,.2);border-radius:50%;"></div>
+          <div style="width:6px;height:6px;background:rgba(255,255,255,.2);border-radius:50%;"></div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
+        <code>.pr-story-card</code> — dark glass card (rgba bg + border). Hover: border turns violet. Tags: category pill (violet, yellow, or teal tint). Pagination: <code>.pr-chronicles-dots</code> — custom elongated active dot. Carousel: <code>Swiper</code> (slidesPerView: 1.2 mobile, 3 desktop). Active slide: border glows.
+      </div>
+    </div>
+
+    <!-- ── 4. ABOUT HIGHLIGHT CARD ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">About Page — Highlight Card &amp; Meta Item <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §20</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px;">
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:16px;padding:22px;transition:box-shadow .3s,transform .3s;" onmouseenter="this.style.boxShadow='0 8px 32px rgba(89,86,233,.12)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='none';this.style.transform='none'">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(89,86,233,.1);display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+            <i class="fas fa-award" style="color:#5956E9;font-size:16px;"></i>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:#0D0D12;margin-bottom:6px;">Amazon #1 Bestseller</div>
+          <div style="font-size:13px;color:#6B7280;line-height:1.6;">Debut novel ranked #1 in Kindle store within first week.</div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:16px;padding:22px;" onmouseenter="this.style.boxShadow='0 8px 32px rgba(89,86,233,.12)';this.style.transform='translateY(-3px)'" onmouseleave="this.style.boxShadow='none';this.style.transform='none'">
+          <div style="width:40px;height:40px;border-radius:10px;background:rgba(255,220,96,.15);display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+            <i class="fas fa-film" style="color:#b8860b;font-size:16px;"></i>
+          </div>
+          <div style="font-size:15px;font-weight:700;color:#0D0D12;margin-bottom:6px;">IMDb Listed Filmmaker</div>
+          <div style="font-size:13px;color:#6B7280;line-height:1.6;">Short films listed on IMDb with international festival selections.</div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:16px;padding:22px;">
+          <div style="font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#9CA3AF;margin-bottom:6px;">Location</div>
+          <div style="font-size:15px;font-weight:700;color:#0D0D12;">Bhubaneswar, India</div>
+          <div style="font-size:12px;color:#6B7280;margin-top:4px;"><i class="fas fa-map-pin" style="color:#5956E9;margin-right:4px;font-size:11px;"></i> Available remote worldwide</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
+        <code>.ab-highlight-card</code> — white card, 16px radius, icon + title + body. Hover: soft violet shadow + lift 3px. Icon box: 40×40, rounded, tinted bg matching icon color.<br>
+        <code>.ab-meta-item</code> — label (uppercase/tertiary) + value + sub-label. Used for location, availability, etc.
+      </div>
+    </div>
+
+    <!-- ── 5. PROCESS STEP CARD ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Process Step Card <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §13</span></div>
+      <div style="background:#0D0D12;border-radius:var(--radius-md);padding:24px;">
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;">
+          <div style="padding:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;">
+            <div style="font-size:28px;font-weight:800;color:rgba(89,86,233,.3);line-height:1;margin-bottom:12px;">01</div>
+            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;">Research</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.65;">User interviews, competitive analysis, defining problem space.</div>
+          </div>
+          <div style="padding:22px;background:rgba(255,255,255,.04);border:1px solid rgba(89,86,233,.3);border-radius:16px;">
+            <div style="font-size:28px;font-weight:800;color:rgba(89,86,233,.5);line-height:1;margin-bottom:12px;">02</div>
+            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;">Define</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.65;">Synthesizing insights into clear design principles and goals.</div>
+          </div>
+          <div style="padding:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;">
+            <div style="font-size:28px;font-weight:800;color:rgba(89,86,233,.3);line-height:1;margin-bottom:12px;">03</div>
+            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;">Design</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.65;">Wireframes, prototypes, and final Figma handoff.</div>
+          </div>
+          <div style="padding:22px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;">
+            <div style="font-size:28px;font-weight:800;color:rgba(89,86,233,.3);line-height:1;margin-bottom:12px;">04</div>
+            <div style="font-size:14px;font-weight:700;color:#fff;margin-bottom:8px;">Test</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.65;">Usability testing, iteration, and launch validation.</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);">
+        <code>.pr-step</code> — 4-col dark grid. Step number: large, faded violet. Active step: brighter border. Used in index.html "Process" section.
+      </div>
+    </div>
+
+    <!-- ── 6. BOOK PRODUCT DISPLAY ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Book Product Display — 2-Column Layout <span style="background:rgba(180,83,9,.1);color:#b45309;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">book.css + styles.css</span></div>
+      <div style="background:#181530;border-radius:var(--radius-md);padding:32px;">
+        <div style="display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:start;max-width:640px;">
+          <!-- Cover -->
+          <div>
+            <div style="width:130px;height:190px;background:linear-gradient(135deg,#2a1f5e,#1a1040);border-radius:10px;transform:rotate(-3deg);box-shadow:0 16px 48px rgba(0,0,0,.5);transition:transform .4s ease;" onmouseenter="this.style.transform='rotate(0deg) translateY(-8px)'" onmouseleave="this.style.transform='rotate(-3deg)'"></div>
+            <div style="font-size:9px;color:rgba(255,255,255,.3);margin-top:10px;text-align:center;">.bk-hero__single-cover</div>
+          </div>
+          <!-- Info -->
+          <div>
+            <span style="font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#5956E9;background:rgba(89,86,233,.12);padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:14px;">Romance · Novel</span>
+            <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:8px;line-height:1.2;">The Uncharted Romance</div>
+            <div style="font-size:13px;color:rgba(255,255,255,.55);margin-bottom:16px;line-height:1.7;">Where a chance meeting became the most defining journey of their lives. A debut novel that went straight to Amazon #1.</div>
+            <div style="display:flex;gap:16px;margin-bottom:20px;">
+              <div><div style="font-size:18px;font-weight:800;color:#FFDC60;">₹299</div><div style="font-size:10px;color:rgba(255,255,255,.4);">Kindle</div></div>
+              <div><div style="font-size:18px;font-weight:800;color:#fff;">₹449</div><div style="font-size:10px;color:rgba(255,255,255,.4);">Paperback</div></div>
+            </div>
+            <!-- Buy bar -->
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+              <div style="background:#5956E9;color:#fff;text-align:center;padding:10px;border-radius:8px;font-size:12px;font-weight:700;"><i class="fab fa-amazon" style="margin-right:5px;"></i> Amazon</div>
+              <div style="background:rgba(255,255,255,.08);color:#fff;text-align:center;padding:10px;border-radius:8px;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.12);">Flipkart</div>
+            </div>
+            <div style="font-size:9px;color:rgba(255,255,255,.25);margin-top:8px;">.bk-form buy-bar — 2-col grid, Amazon violet, secondary ghost. Full-width on mobile.</div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
+        <code>.bk-hero__single-cover</code> (<code>book.css</code>) — 320px wide, rotate(-3deg), hover straightens + lifts 8px.<br>
+        Genre chips: pill badge above title. Price row: yellow Kindle price, white Paperback price.<br>
+        Buy bar: 2→4 col responsive grid of retailer buttons. Review form below: <code>.bk-form</code> with <code>.hm-btn-yellow</code> (hover overridden to blue in <code>book.css</code>).
+      </div>
+    </div>
+
+    <!-- ── 7. REVIEW CARD ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Review Card — Star Rating <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css / book.css</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px;">
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:16px;padding:22px;">
+          <div style="display:flex;gap:3px;margin-bottom:12px;">
+            <i class="fas fa-star" style="color:#FFDC60;font-size:14px;"></i>
+            <i class="fas fa-star" style="color:#FFDC60;font-size:14px;"></i>
+            <i class="fas fa-star" style="color:#FFDC60;font-size:14px;"></i>
+            <i class="fas fa-star" style="color:#FFDC60;font-size:14px;"></i>
+            <i class="fas fa-star" style="color:#FFDC60;font-size:14px;"></i>
+          </div>
+          <div style="font-size:14px;font-weight:500;color:#0D0D12;line-height:1.65;margin-bottom:14px;font-style:italic;">"Absolutely loved this book. The way Subhankar writes emotions is unlike anything I've read before. Finished it in one sitting."</div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#5956E9,#1EE2CF);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700;">A</div>
+            <div>
+              <div style="font-size:13px;font-weight:700;color:#0D0D12;">Ananya S.</div>
+              <div style="font-size:11px;color:#9CA3AF;">Verified Amazon Purchase</div>
+            </div>
+          </div>
+        </div>
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:16px;padding:22px;">
+          <div style="display:flex;gap:3px;margin-bottom:12px;">
+            <i class="fas fa-star" style="color:#FFDC60;font-size:14px;"></i>
+            <i class="fas fa-star" style="color:#FFDC60;font-size:14px;"></i>
+            <i class="fas fa-star" style="color:#FFDC60;font-size:14px;"></i>
+            <i class="fas fa-star" style="color:#FFDC60;font-size:14px;"></i>
+            <i class="far fa-star" style="color:#E8ECF2;font-size:14px;"></i>
+          </div>
+          <div style="font-size:14px;font-weight:500;color:#0D0D12;line-height:1.65;margin-bottom:14px;font-style:italic;">"One Year, Many Lessons hit differently. Raw, honest, and full of wisdom. Every chapter felt like a conversation."</div>
+          <div style="display:flex;align-items:center;gap:10px;">
+            <div style="width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,#FFDC60,#ff8c00);display:flex;align-items:center;justify-content:center;color:#0D0D12;font-size:12px;font-weight:700;">R</div>
+            <div>
+              <div style="font-size:13px;font-weight:700;color:#0D0D12;">Rahul M.</div>
+              <div style="font-size:11px;color:#9CA3AF;">Goodreads Reader</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
+        Stars: <code>fas fa-star</code> (filled, yellow #FFDC60) + <code>far fa-star</code> (empty, #E8ECF2). Reviewer avatar: 32px circle gradient. Quote in italic. Platform label in tertiary grey. Submit form below reviews uses <code>.bk-form</code> with name/email/review textarea + <code>.hm-btn-yellow</code> (hover turns blue in book.css).
+      </div>
+    </div>
+
+    <!-- ── 8. YOUTUBE / CHANNEL CARD ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">YouTube / Channel Card <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css (hm-yt-card)</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px;">
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:16px;overflow:hidden;transition:transform .28s,box-shadow .28s;" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 36px rgba(0,0,0,.1)'" onmouseleave="this.style.transform='none';this.style.boxShadow='none'">
+          <div style="background:linear-gradient(135deg,#0f0f0f,#1a1a2e);aspect-ratio:16/9;position:relative;display:flex;align-items:center;justify-content:center;">
+            <div style="width:44px;height:44px;border-radius:50%;background:rgba(255,0,0,.85);display:flex;align-items:center;justify-content:center;"><i class="fas fa-play" style="color:#fff;font-size:14px;margin-left:3px;"></i></div>
+          </div>
+          <div style="padding:14px 16px 16px;">
+            <div style="font-size:13px;font-weight:700;color:#0D0D12;margin-bottom:4px;line-height:1.3;">Behind the Lens — Short Film Making</div>
+            <div style="font-size:11px;color:#9CA3AF;display:flex;align-items:center;gap:10px;"><span><i class="fas fa-eye" style="font-size:10px;margin-right:3px;"></i>12K views</span><span><i class="fas fa-clock" style="font-size:10px;margin-right:3px;"></i>8 min</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);">
+        <code>.hm-yt-card</code> — white card, 16px radius, thumbnail (16/9 aspect-ratio) + red play button + title + meta. Hover: lifts + shadow. Used in index.html "S4 Cinesphere" section and s4cinesphere.html.
+      </div>
+    </div>
+
+    <!-- ── 9. JOURNEY / ROCKET CARD ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Rocket Journey Card — Timeline Milestone <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §22</span></div>
+      <div style="background:#0D0D12;border-radius:var(--radius-md);padding:24px;display:flex;gap:16px;overflow-x:auto;">
+        <div style="min-width:180px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;flex-shrink:0;">
+          <div style="font-size:22px;font-weight:800;color:rgba(89,86,233,.6);margin-bottom:8px;">2020</div>
+          <span style="font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#FFDC60;background:rgba(255,220,96,.1);padding:3px 8px;border-radius:20px;">Start</span>
+          <div style="font-size:13px;font-weight:700;color:#fff;margin:10px 0 6px;">First Steps</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;">Began the journey into product design and storytelling.</div>
+        </div>
+        <div style="min-width:180px;background:rgba(255,255,255,.04);border:1px solid rgba(89,86,233,.3);border-radius:16px;padding:20px;flex-shrink:0;">
+          <div style="font-size:22px;font-weight:800;color:rgba(89,86,233,.8);margin-bottom:8px;">2022</div>
+          <span style="font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#1EE2CF;background:rgba(30,226,207,.1);padding:3px 8px;border-radius:20px;">Launch</span>
+          <div style="font-size:13px;font-weight:700;color:#fff;margin:10px 0 6px;">Published Author</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;">Debut novel became Amazon #1 Bestseller in first week.</div>
+        </div>
+        <div style="min-width:180px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;flex-shrink:0;">
+          <div style="font-size:22px;font-weight:800;color:rgba(89,86,233,.6);margin-bottom:8px;">2024</div>
+          <span style="font-size:9px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#5956E9;background:rgba(89,86,233,.12);padding:3px 8px;border-radius:20px;">Now</span>
+          <div style="font-size:13px;font-weight:700;color:#fff;margin:10px 0 6px;">Product Designer</div>
+          <div style="font-size:11px;color:rgba(255,255,255,.4);line-height:1.6;">Designing digital products and shipping internationally.</div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
+        <code>.rj-card</code> — dark glass card, year in large faded violet, badge pill, title, description.<br>
+        <code>.rj-card-year</code> / <code>.rj-card-badge</code> — year display + colored milestone badge.<br>
+        Desktop: horizontal sticky scroll (CSS overflow-x scroll pinned). Mobile: <code>.rj-mobile-timeline</code> — vertical stacked cards.
+      </div>
+    </div>
+
+    <!-- ── 10. SKILL GROUP CARD ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Skill Group Card <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §11</span></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;">
+        <div style="background:#fff;border:1px solid var(--ds-border);border-radius:16px;padding:22px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div style="width:36px;height:36px;border-radius:10px;background:rgba(89,86,233,.1);display:flex;align-items:center;justify-content:center;"><i class="fas fa-bezier-curve" style="color:#5956E9;font-size:14px;"></i></div>
+            <div style="font-size:14px;font-weight:700;color:#0D0D12;">Design</div>
+          </div>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;">
+            <span style="font-size:11px;font-weight:600;padding:5px 11px;border-radius:20px;background:#F7F8FD;border:1px solid #E8ECF2;color:#0D0D12;">Figma</span>
+            <span style="font-size:11px;font-weight:600;padding:5px 11px;border-radius:20px;background:#F7F8FD;border:1px solid #E8ECF2;color:#0D0D12;">UI/UX</span>
+            <span style="font-size:11px;font-weight:600;padding:5px 11px;border-radius:20px;background:#F7F8FD;border:1px solid #E8ECF2;color:#0D0D12;">Prototyping</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);">
+        <code>.pr-skill-group</code> — white card with icon + group title + chip tags. <code>.pr-skill-tag</code> — pill chip (light grey bg, border, dark text). Used in index.html "Skills" section grid.
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §MARQUEES  TICKERS & SCROLLING STRIPS
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="marquees">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-scroll"></i></div>
+      <div>
+        <div class="ds-section-title">Marquees &amp; Tickers</div>
+        <div class="ds-section-desc">Three auto-scrolling strips across the site. All pause on hover.</div>
+      </div>
+    </div>
+
+    <!-- ── 1. CLIENT CHIP MARQUEE (dark) ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Client / Company Chip — Dark Marquee <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §06</span></div>
+      <div style="background:#0D0D12;border-radius:var(--radius-md);padding:28px 0;overflow:hidden;">
+        <div style="text-align:center;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:20px;">Companies &amp; Clients</div>
+        <div style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 10%,#000 90%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 10%,#000 90%,transparent 100%);">
+          <div class="ds-marquee-track-dark" style="display:flex;gap:0;width:max-content;animation:dsScroll 18s linear infinite;">
+            <span class="ds-chip-dark">Flipkart</span><span class="ds-chip-dark">Amazon Kindle</span><span class="ds-chip-dark">Goodreads</span><span class="ds-chip-dark">Notion</span><span class="ds-chip-dark">Figma</span><span class="ds-chip-dark">IMDb</span><span class="ds-chip-dark">YouTube</span><span class="ds-chip-dark">Behance</span>
+            <span class="ds-chip-dark">Flipkart</span><span class="ds-chip-dark">Amazon Kindle</span><span class="ds-chip-dark">Goodreads</span><span class="ds-chip-dark">Notion</span><span class="ds-chip-dark">Figma</span><span class="ds-chip-dark">IMDb</span><span class="ds-chip-dark">YouTube</span><span class="ds-chip-dark">Behance</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
+        <code>.pr-client-chip</code> — semi-transparent pill (dark bg), brand name in muted white, subtle border. Track: <code>.pr-marquee-track</code> with <code>animation: prClientScroll 24s linear infinite</code>. Mask fades edges. Pauses on hover. Used in index.html below hero.
+      </div>
+    </div>
+
+    <!-- ── 2. PR FEATURED-IN MARQUEE (light) ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Press Release "Featured In" Marquee — Light <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §23</span></div>
+      <div style="background:#f7f8fc;border:1px solid #ebebf3;border-radius:var(--radius-md);padding:28px 0;overflow:hidden;">
+        <div style="text-align:center;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#aaa;margin-bottom:24px;">Featured In</div>
+        <div style="overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);">
+          <div class="ds-marquee-track-light" style="display:flex;gap:0;width:max-content;animation:dsScroll 20s linear infinite;">
+            <span class="ds-marquee-item-light"><i class="fas fa-newspaper" style="font-size:12px;color:#bbb;margin-right:8px;"></i>Hindustan Times</span>
+            <span class="ds-marquee-item-light"><i class="fas fa-newspaper" style="font-size:12px;color:#bbb;margin-right:8px;"></i>Times of India</span>
+            <span class="ds-marquee-item-light"><i class="fas fa-newspaper" style="font-size:12px;color:#bbb;margin-right:8px;"></i>The Indian Express</span>
+            <span class="ds-marquee-item-light"><i class="fas fa-tv" style="font-size:12px;color:#bbb;margin-right:8px;"></i>ANI</span>
+            <span class="ds-marquee-item-light"><i class="fas fa-globe" style="font-size:12px;color:#bbb;margin-right:8px;"></i>Yahoo News</span>
+            <span class="ds-marquee-item-light"><i class="fas fa-newspaper" style="font-size:12px;color:#bbb;margin-right:8px;"></i>Hindustan Times</span>
+            <span class="ds-marquee-item-light"><i class="fas fa-newspaper" style="font-size:12px;color:#bbb;margin-right:8px;"></i>Times of India</span>
+            <span class="ds-marquee-item-light"><i class="fas fa-newspaper" style="font-size:12px;color:#bbb;margin-right:8px;"></i>The Indian Express</span>
+            <span class="ds-marquee-item-light"><i class="fas fa-tv" style="font-size:12px;color:#bbb;margin-right:8px;"></i>ANI</span>
+            <span class="ds-marquee-item-light"><i class="fas fa-globe" style="font-size:12px;color:#bbb;margin-right:8px;"></i>Yahoo News</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
+        <code>.pr-featured</code> wrapper — light grey bg (#f7f8fc), overflow:hidden. <code>.pr-marquee</code> — edge-faded mask. <code>.pr-marquee__track</code> — animates <code>prScroll 24s linear infinite</code>. <code>.pr-marquee__item</code> — 16px/700, grey text, right divider border, icon + label. Hover: text turns violet. Used in pr.html "Featured In" section.
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════
+       §STATS  STATS & DATA DISPLAY
+  ═══════════════════════════════════════════════ -->
+  <section class="ds-section" id="stats">
+    <div class="ds-section-header">
+      <div class="ds-section-icon"><i class="fas fa-chart-bar"></i></div>
+      <div>
+        <div class="ds-section-title">Stats &amp; Data Display</div>
+        <div class="ds-section-desc">Two stat strip variants — dark with gradient text (PR page) and about page yellow variant.</div>
+      </div>
+    </div>
+
+    <!-- PR Stats Strip (dark, gradient text) -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">PR Page — Gradient Text Stats Strip <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §23</span></div>
+      <div style="background:#0D0D12;border-radius:var(--radius-md);padding:40px 24px;">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;">
+          <div style="text-align:center;padding:16px;position:relative;">
+            <span style="display:block;font-size:48px;font-weight:800;line-height:1;background:linear-gradient(135deg,#5956E9 0%,#FFDC60 60%,#1EE2CF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;">50+</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);">Press Features</span>
+          </div>
+          <div style="text-align:center;padding:16px;position:relative;border-left:1px solid rgba(255,255,255,.08);">
+            <span style="display:block;font-size:48px;font-weight:800;line-height:1;background:linear-gradient(135deg,#5956E9 0%,#FFDC60 60%,#1EE2CF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;">#1</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);">Amazon Rank</span>
+          </div>
+          <div style="text-align:center;padding:16px;position:relative;border-left:1px solid rgba(255,255,255,.08);">
+            <span style="display:block;font-size:48px;font-weight:800;line-height:1;background:linear-gradient(135deg,#5956E9 0%,#FFDC60 60%,#1EE2CF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;">2</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);">Books Published</span>
+          </div>
+          <div style="text-align:center;padding:16px;position:relative;border-left:1px solid rgba(255,255,255,.08);">
+            <span style="display:block;font-size:48px;font-weight:800;line-height:1;background:linear-gradient(135deg,#5956E9 0%,#FFDC60 60%,#1EE2CF 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:8px;">10K+</span>
+            <span style="font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);">Readers</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
+        <code>.pr-stats</code> — dark bg (#0D0D12), top border. <code>.pr-stats__grid</code> — 4-col grid, dividers between cols. <code>.pr-stat__num</code> — 54px/800, gradient text-clip (violet → yellow → teal). <code>.pr-stat__lbl</code> — 12px/600, uppercase, muted. Animated via CounterUp.js on scroll.
+      </div>
+    </div>
+
+    <!-- About Page Stats Bar -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">About Page — Stats Bar <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §20</span></div>
+      <div style="background:#fff;border:1px solid var(--ds-border);border-radius:var(--radius-md);padding:32px 24px;">
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;">
+          <div style="text-align:center;padding:16px;border-right:1px solid #E8ECF2;">
+            <span style="display:block;font-size:36px;font-weight:800;color:#FFDC60;line-height:1;margin-bottom:6px;">4+</span>
+            <span style="font-size:11px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:.08em;">Years Experience</span>
+          </div>
+          <div style="text-align:center;padding:16px;border-right:1px solid #E8ECF2;">
+            <span style="display:block;font-size:36px;font-weight:800;color:#FFDC60;line-height:1;margin-bottom:6px;">20+</span>
+            <span style="font-size:11px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:.08em;">Projects</span>
+          </div>
+          <div style="text-align:center;padding:16px;border-right:1px solid #E8ECF2;">
+            <span style="display:block;font-size:36px;font-weight:800;color:#FFDC60;line-height:1;margin-bottom:6px;">2</span>
+            <span style="font-size:11px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:.08em;">Books</span>
+          </div>
+          <div style="text-align:center;padding:16px;">
+            <span style="display:block;font-size:36px;font-weight:800;color:#FFDC60;line-height:1;margin-bottom:6px;">50+</span>
+            <span style="font-size:11px;font-weight:600;color:#9CA3AF;text-transform:uppercase;letter-spacing:.08em;">Press Features</span>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);">
+        <code>.ab-stat-item</code> — white bg, yellow number (#FFDC60), grey label. 4-col grid, divider borders. Animated via CounterUp.js on scroll.
+      </div>
+    </div>
+
+  </section>
+
+  <style>
+    /* Marquee animation for DS preview */
+    @keyframes dsScroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .ds-chip-dark {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 20px;
+      margin: 0 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,.55);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 40px;
+      white-space: nowrap;
+    }
+    .ds-marquee-item-light {
+      display: inline-flex;
+      align-items: center;
+      padding: 0 40px;
+      font-size: 15px;
+      font-weight: 700;
+      color: #888;
+      border-right: 1px solid #e0e0eb;
+      white-space: nowrap;
+      cursor: default;
+    }
+    .ds-marquee-item-light:hover { color: #5956E9; }
+    .ds-card-overlay:hover { opacity: 1 !important; }
+  </style>
+
+
+  <!-- PAGE FOOTER -->
+  <div class="ds-page-footer">
+    <p>Chitra Design System v2.0 · subhankarrout.in · June 2026 · <a href="../index.html">Back to site →</a></p>
+    <p style="font-size:11px;color:var(--text-tertiary);">noindex · Brand &amp; Component Reference · Internal use only</p>
+    <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;padding-top:16px;border-top:1px solid var(--ds-border);line-height:1.7;">
+      <strong style="color:var(--text-secondary);">A small honest note —</strong> this document captures the intended system. A few pages across the site may have their own little quirks, overrides, or one-off tweaks that don't follow every rule to the letter. That's okay — good design systems are living things, not strict courtrooms. Think of this as the north star, not the law.
+    </p>
+    <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;padding-top:16px;border-top:1px solid var(--ds-border);">
+      Chitra Design System<sup style="font-size:8px;letter-spacing:.04em;">TM</sup> &nbsp;©&nbsp; Subhankar Rout 2026. All rights reserved.
+    </p>
+  </div>
+
+</main>
+
+<script>
+  /* ── Active sidebar link highlight on scroll ── */
+  const sections = document.querySelectorAll('.ds-section');
+  const navLinks = document.querySelectorAll('.ds-nav-link');
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const hit = document.querySelector('.ds-nav-link[href="#' + e.target.id + '"]');
+        if (hit) hit.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => sectionObserver.observe(s));
+
+  /* ── Mobile sidebar toggle ── */
+  const sidebar = document.getElementById('ds-sidebar');
+  const overlay = document.getElementById('ds-overlay');
+  const menuBtn = document.getElementById('ds-menu-btn');
+
+  function isMobile() { return window.innerWidth <= 768; }
+
+  function openSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.add('open');
+    if (overlay) overlay.classList.add('open');
+    if (menuBtn) {
+      menuBtn.querySelector('i').className = 'fas fa-times';
+      menuBtn.setAttribute('aria-label', 'Close navigation');
+    }
+  }
+
+  function closeSidebar() {
+    if (!sidebar) return;
+    sidebar.classList.remove('open');
+    if (overlay) overlay.classList.remove('open');
+    if (menuBtn) {
+      menuBtn.querySelector('i').className = 'fas fa-bars';
+      menuBtn.setAttribute('aria-label', 'Open navigation');
+    }
+  }
+
+  function toggleSidebar() {
+    sidebar && sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+  }
+
+  /* Use touchend for instant response on mobile, click as fallback */
+  function addTapListener(el, fn) {
+    if (!el) return;
+    var touched = false;
+    el.addEventListener('touchend', function(e) {
+      touched = true;
+      e.preventDefault(); /* prevent ghost click */
+      fn();
+      setTimeout(function() { touched = false; }, 400);
+    }, { passive: false });
+    el.addEventListener('click', function() {
+      if (!touched) fn(); /* only fires if touch didn't already handle it */
+    });
+  }
+
+  addTapListener(menuBtn, toggleSidebar);
+  addTapListener(overlay, closeSidebar);
+
+  /* Close on nav link click (mobile) */
+  navLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (isMobile()) {
+        setTimeout(closeSidebar, 120); /* small delay so anchor scroll starts first */
+      }
+    });
+  });
+
+  /* Close on Escape key */
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeSidebar();
+  });
+</script>
+</body>
+</html>
+
