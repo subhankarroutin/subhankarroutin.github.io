@@ -7898,9 +7898,10 @@ input:focus-visible,
   justify-content: center;
 }
 
-/* Big watermark text */
-.book-hero::after {
-  content: 'ROMANCE';
+/* Big watermark text — set per page via modifier class */
+.book-hero--romance::after,
+.book-hero--lessons::after,
+.book-hero--books::after {
   position: absolute;
   font-size: clamp(100px, 18vw, 200px);
   font-weight: 900;
@@ -7914,6 +7915,9 @@ input:focus-visible,
   z-index: 0;
   font-family: var(--ff-body);
 }
+.book-hero--romance::after { content: 'ROMANCE'; }
+.book-hero--lessons::after { content: 'LESSONS'; }
+.book-hero--books::after   { content: 'BOOKS'; }
 
 /* Grain texture overlay */
 .book-hero__noise {
@@ -8057,7 +8061,7 @@ input:focus-visible,
 }
 .book-know-more:hover { color: var(--tp-theme-1); }
 
-/* Platform buy-bar */
+/* Platform buy-bar — 1×4 on desktop, 2×2 on mobile */
 .book-hero__buy-bar {
   position: relative; z-index: 2;
   display: flex; align-items: stretch;
@@ -8281,9 +8285,7 @@ input:focus-visible,
   .book-hero__book-img { max-width: 220px; }
   .book-hero__scroll { display: none; }
   .book-hero__noise { display: none; }
-  .book-hero__buy-bar { flex-direction: column; margin-top: 32px; }
-  .book-hero__buy-item { flex-direction: row; border-right: none; border-bottom: 1px solid rgba(89,86,233,.08); padding: 14px 20px; }
-  .book-hero__buy-item:last-child { border-bottom: none; }
+  .book-hero__buy-bar { margin-top: 32px; }
   .book-strip__sep { display: none; }
   .book-strip__inner { gap: 12px; flex-direction: column; padding: 0 20px; }
   .book-strip__item { padding: 0; }
