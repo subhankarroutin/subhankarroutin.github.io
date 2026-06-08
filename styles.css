@@ -1,7 +1,7 @@
-/* =============================================================
-   SUBHANKAR THEME — styles.css
+﻿/* =============================================================
+   SUBHANKAR THEME â€” styles.css
    Design System: Subhankar Theme (derived from Collax Theme)
-   Author: Portfolio Redesign — Phase 1
+   Author: Portfolio Redesign â€” Phase 1
    Sections:
      01. Design Tokens (CSS variables)
      02. Reset & Base
@@ -20,8 +20,8 @@
      15. CTA Section
      16. Scroll Reveal Animations
      17. Video Popup
-     18. Responsive — Tablet (max 991px)
-     19. Responsive — Mobile (max 767px)
+     18. Responsive â€” Tablet (max 991px)
+     19. Responsive â€” Mobile (max 767px)
      20. Reduced Motion
 ================================================================ */
 
@@ -29,7 +29,7 @@
    01. DESIGN TOKENS
 --------------------------------------------------------------- */
 :root {
-  /* Brand — Subhankar Theme */
+  /* Brand â€” Subhankar Theme */
   --tp-theme-1:           #5956E9;
   --tp-theme-2:           #423EF3;
   --tp-theme-primary:     #FFDC60;
@@ -53,7 +53,7 @@
   --surface-dark:         #0D0D12;
   --surface-card:         #ffffff;
 
-  /* Border radius — per Subhankar Theme §17 rule 6 */
+  /* Border radius â€” per Subhankar Theme Â§17 rule 6 */
   --radius-sm:            10px;   /* buttons */
   --radius-md:            16px;
   --radius-lg:            24px;   /* cards */
@@ -63,7 +63,7 @@
   --shadow-card:          0 1px 3px rgba(0,0,0,.04), 0 4px 16px rgba(0,0,0,.06);
   --shadow-hover:         0 4px 24px rgba(89,86,233,.14), 0 1px 4px rgba(0,0,0,.08);
 
-  /* Transitions — per Subhankar Theme §17 rule 10 */
+  /* Transitions â€” per Subhankar Theme Â§17 rule 10 */
   --transition:           0.35s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast:      0.2s ease-out;
   --transition-btn:       0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -1643,7 +1643,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   18. RESPONSIVE — TABLET (max-width: 991px)
+   18. RESPONSIVE â€” TABLET (max-width: 991px)
 --------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
   .container {
@@ -1695,7 +1695,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   19. RESPONSIVE — MOBILE (max-width: 767px)
+   19. RESPONSIVE â€” MOBILE (max-width: 767px)
 --------------------------------------------------------------- */
 @media (max-width: 767px) {
   .container {
@@ -1834,27 +1834,27 @@ input:focus-visible,
 
 
 /* =============================================================
-   CSS_CHANGES.css — Subhankar Rout Portfolio
+   CSS_CHANGES.css â€” Subhankar Rout Portfolio
    Append the contents of this file to the BOTTOM of styles.css
    (after section 20. REDUCED MOTION).
 
    SECTIONS IN THIS PATCH:
-     §01  Hero spacing fix (pr-hero--spaced modifier)
-     §02  Responsive hero — tablet improvements
-     §03  Responsive hero — mobile improvements
-     §04  Responsive general — tablet improvements
-     §05  Responsive general — mobile improvements
-     §06  Creative Chronicles — Swiper carousel replacement
-     §07  Chronicles pagination dots
-     §08  Filter tabs — mobile scrollable
-     §09  Projects grid — tablet & mobile
-     §10  About section — responsive
-     §11  AI Grid — mobile single column fix
-     §12  Skills grid — gap & card padding
-     §13  Process grid — mobile stack
-     §14  CTA section — full-width buttons on mobile
-     §15  Footer — responsive stack
-     §16  Scroll-to-top button
+     Â§01  Hero spacing fix (pr-hero--spaced modifier)
+     Â§02  Responsive hero â€” tablet improvements
+     Â§03  Responsive hero â€” mobile improvements
+     Â§04  Responsive general â€” tablet improvements
+     Â§05  Responsive general â€” mobile improvements
+     Â§06  Creative Chronicles â€” Swiper carousel replacement
+     Â§07  Chronicles pagination dots
+     Â§08  Filter tabs â€” mobile scrollable
+     Â§09  Projects grid â€” tablet & mobile
+     Â§10  About section â€” responsive
+     Â§11  AI Grid â€” mobile single column fix
+     Â§12  Skills grid â€” gap & card padding
+     Â§13  Process grid â€” mobile stack
+     Â§14  CTA section â€” full-width buttons on mobile
+     Â§15  Footer â€” responsive stack
+     Â§16  Scroll-to-top button
 
    WHY APPENDED LAST:
    Appending to the bottom gives this patch the highest specificity
@@ -1863,7 +1863,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §01  HERO SPACING FIX
+   Â§01  HERO SPACING FIX
    pr-hero--spaced is added to the <section> element in HTML.
    Uses !important to override any conflicting theme utility
    classes (e.g. bootstrap .pt-* or custom-animation.css overrides).
@@ -1890,7 +1890,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §02  RESPONSIVE HERO — TABLET (max-width: 991px) IMPROVEMENTS
+   Â§02  RESPONSIVE HERO â€” TABLET (max-width: 991px) IMPROVEMENTS
 --------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
 
@@ -1930,7 +1930,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §03  RESPONSIVE HERO — MOBILE (max-width: 767px) IMPROVEMENTS
+   Â§03  RESPONSIVE HERO â€” MOBILE (max-width: 767px) IMPROVEMENTS
 --------------------------------------------------------------- */
 @media (max-width: 767px) {
 
@@ -1988,7 +1988,7 @@ input:focus-visible,
     display: none;
   }
 
-  /* Quick links bar: 2×2 grid on mobile */
+  /* Quick links bar: 2Ã—2 grid on mobile */
   .pr-hero__links {
     grid-template-columns: repeat(2, 1fr);
     margin-top: 24px;
@@ -2013,7 +2013,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §04  RESPONSIVE GENERAL — TABLET improvements
+   Â§04  RESPONSIVE GENERAL â€” TABLET improvements
 --------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
 
@@ -2071,7 +2071,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §05  RESPONSIVE GENERAL — MOBILE (max-width: 767px)
+   Â§05  RESPONSIVE GENERAL â€” MOBILE (max-width: 767px)
 --------------------------------------------------------------- */
 @media (max-width: 767px) {
 
@@ -2228,7 +2228,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §06  CREATIVE CHRONICLES — Swiper Carousel
+   Â§06  CREATIVE CHRONICLES â€” Swiper Carousel
 
    The old .pr-chronicles__track + CSS animation approach is
    replaced by Swiper.js. These styles:
@@ -2250,10 +2250,10 @@ input:focus-visible,
 .pr-chronicles__slider-wrap {
   position: relative;
   margin-top: 56px;
-  /* Allow swiper to breathe — edge fade handled via ::before/::after */
+  /* Allow swiper to breathe â€” edge fade handled via ::before/::after */
 }
 
-/* Edge fades — maintained from original for premium feel */
+/* Edge fades â€” maintained from original for premium feel */
 .pr-chronicles__slider-wrap::before,
 .pr-chronicles__slider-wrap::after {
   content: '';
@@ -2294,7 +2294,7 @@ input:focus-visible,
   but we ensure the card fills its slide slot.
 */
 .pr-chronicles-swiper .swiper-slide {
-  /* Let swiper control width — don't set it in CSS */
+  /* Let swiper control width â€” don't set it in CSS */
   height: auto;
   display: flex;
   align-items: stretch;
@@ -2306,7 +2306,7 @@ input:focus-visible,
   flex-shrink: 0;
 }
 
-/* Story card sizing — keep original 280px max, but responsive */
+/* Story card sizing â€” keep original 280px max, but responsive */
 .pr-story-card {
   background: #ffffff;
   border: 1px solid var(--tp-border-1);
@@ -2342,14 +2342,14 @@ input:focus-visible,
   padding: 20px;
 }
 
-/* Neutralise old track animation (safety — in case old CSS isn't removed) */
+/* Neutralise old track animation (safety â€” in case old CSS isn't removed) */
 .pr-chronicles__track {
   animation: none !important;
 }
 
 
 /* ---------------------------------------------------------------
-   §07  CHRONICLES PAGINATION DOTS
+   Â§07  CHRONICLES PAGINATION DOTS
    Custom-styled Swiper pagination bullets.
    Swiper injects .swiper-pagination-bullet elements inside the
    .pr-chronicles-dots container.
@@ -2382,7 +2382,7 @@ input:focus-visible,
   margin: 0 !important; /* Use gap instead of Swiper's margin */
 }
 
-/* Active dot — pill shape */
+/* Active dot â€” pill shape */
 .pr-chronicles-dots .swiper-pagination-bullet-active {
   width: 24px;
   background: var(--accent-violet);
@@ -2413,7 +2413,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §08  FILTER TABS — mobile: horizontally scrollable row
+   Â§08  FILTER TABS â€” mobile: horizontally scrollable row
    Prevents tabs from wrapping / overflowing on small screens.
 --------------------------------------------------------------- */
 @media (max-width: 767px) {
@@ -2444,7 +2444,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §09  PROJECTS GRID — tablet & mobile
+   Â§09  PROJECTS GRID â€” tablet & mobile
 --------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
   .pr-projects {
@@ -2506,7 +2506,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §10  ABOUT SECTION — responsive improvements
+   Â§10  ABOUT SECTION â€” responsive improvements
 --------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
   .pr-about__img-stack {
@@ -2539,7 +2539,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §11  AI GRID — ensure single column on mobile doesn't overflow
+   Â§11  AI GRID â€” ensure single column on mobile doesn't overflow
 --------------------------------------------------------------- */
 @media (max-width: 767px) {
   .pr-ai-grid {
@@ -2560,7 +2560,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §12  SKILLS GRID — spacing and card paddings
+   Â§12  SKILLS GRID â€” spacing and card paddings
 --------------------------------------------------------------- */
 @media only screen and (max-width: 991px) {
   .pr-skills__grid {
@@ -2585,7 +2585,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §13  PROCESS GRID — mobile single column
+   Â§13  PROCESS GRID â€” mobile single column
 --------------------------------------------------------------- */
 @media (max-width: 767px) {
   .pr-step {
@@ -2604,7 +2604,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §14  CTA — mobile layout
+   Â§14  CTA â€” mobile layout
 --------------------------------------------------------------- */
 @media (max-width: 767px) {
   .pr-cta__eyebrow {
@@ -2619,7 +2619,7 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §15  FOOTER — responsive stack improvements
+   Â§15  FOOTER â€” responsive stack improvements
 --------------------------------------------------------------- */
 @media (max-width: 767px) {
   .tp-footer-area .black-bg {
@@ -2646,14 +2646,14 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
-   §16  SCROLL-TO-TOP — left side, bottom-up entry via transform
+   Â§16  SCROLL-TO-TOP â€” left side, bottom-up entry via transform
    Using translateY instead of bottom so horizontal left/right
    values never participate in any transition.
 --------------------------------------------------------------- */
 .scroll-top {
   right: auto !important;
   left: 30px !important;
-  bottom: 24px !important;          /* fixed at final Y — never changes  */
+  bottom: 24px !important;          /* fixed at final Y â€” never changes  */
   opacity: 0 !important;
   visibility: hidden !important;
   transform: translateY(100px) !important;
@@ -2699,7 +2699,7 @@ input:focus-visible,
 
 
 /* ============================================================
-   MOBILE NAV — meanmenu offcanvas fixes
+   MOBILE NAV â€” meanmenu offcanvas fixes
    meanmenu injects a duplicate a.meanmenu-reveal hamburger button
    (three white spans) inside .mobile-menu/.mean-container inside
    the offcanvas panel. The real hamburger is .tp-menu-bar in the
@@ -2714,7 +2714,7 @@ input:focus-visible,
 /* Divider opacity */
 .tpoffcanvas .mean-container .mean-nav ul li a { border-top-color: rgba(255,255,255,.4); }
 
-/* + / - expand button — vertically centred inside its own row, immune to MeanMenu JS shift */
+/* + / - expand button â€” vertically centred inside its own row, immune to MeanMenu JS shift */
 .tpoffcanvas .mean-container .mean-nav ul li a.mean-expand {
   top: 50% !important;
   transform: translateY(-50%) !important;
@@ -2728,7 +2728,7 @@ input:focus-visible,
 }
 
 /* ============================================================
-   MOBILE NAV — scroll lock (Module 09, script.js)
+   MOBILE NAV â€” scroll lock (Module 09, script.js)
    style.css owns all .tpoffcanvas, .body-overlay, and
    .mobile-menu rules. Only the body overflow lock is added
    here since style.css has no body-level scroll-lock rule.
@@ -2736,27 +2736,27 @@ input:focus-visible,
 
 /* Prevent background scroll while offcanvas is open.
    Applied / removed by script.js Module 09 via
-   document.body.style.overflow — no extra class needed,
+   document.body.style.overflow â€” no extra class needed,
    but this comment keeps the intent documented. */
 
 /* ============================================================
-   OFFCANVAS — shared rules (all pages)
+   OFFCANVAS â€” shared rules (all pages)
 ============================================================ */
 .tpoffcanvas .tp-header-button { text-align: left; }
 
 /* ============================================================
-   NEWSLETTER FRAME — always hidden (form submits into it)
+   NEWSLETTER FRAME â€” always hidden (form submits into it)
 ============================================================ */
 #newsletter-frame { display: none; }
 
 
 /* ================================================================
-   §20  ABOUT PAGE  (about-us.html)
+   Â§20  ABOUT PAGE  (about-us.html)
    All rules are scoped to .ab-page or prefixed .ab- so they
    never bleed into other pages.  Add new about-page styles here.
 ================================================================ */
 
-/* —— Keyframes (about-specific) ————————————————————————————————— */
+/* â€”â€” Keyframes (about-specific) â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” */
 @keyframes ab-blobDrift1 {
   0%,100% { transform: translate(0,0) scale(1); }
   40%      { transform: translate(-40px, 50px) scale(1.08); }
@@ -2822,7 +2822,7 @@ input:focus-visible,
   100% { opacity: 0; pointer-events: none; }
 }
 
-/* —— Preloader ————————————————————————————————————————————————— */
+/* â€”â€” Preloader â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” */
 .ab-page #ab-preloader {
   position: fixed; inset: 0; z-index: 99999;
   background: var(--tp-common-black);
@@ -2838,7 +2838,7 @@ input:focus-visible,
   animation: ab-spin .75s linear infinite;
 }
 
-/* —— Header overrides (white/solid on about page) ——————————————— */
+/* â€”â€” Header overrides (white/solid on about page) â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” */
 .ab-page #header-sticky.header-white,
 .ab-page #header-sticky-mobile.header-white {
   background: var(--tp-common-white);
@@ -2854,7 +2854,7 @@ input:focus-visible,
   box-shadow: 0 2px 40px rgba(168,182,218,.3) !important;
 }
 
-/* —— Scroll-reveal primitives —————————————————————————————————— */
+/* â€”â€” Scroll-reveal primitives â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” */
 .ab-reveal {
   opacity: 0;
   transform: translateY(44px);
@@ -2876,7 +2876,7 @@ input:focus-visible,
 .ab-stagger.ab-visible > *:nth-child(5) { opacity:1;transform:none;transition-delay:.48s }
 .ab-stagger.ab-visible > *:nth-child(6) { opacity:1;transform:none;transition-delay:.58s }
 
-/* —— Section globals ———————————————————————————————————————————— */
+/* â€”â€” Section globals â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” */
 .ab-page .ab-section-label {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: 12px; font-weight: 700; letter-spacing: 2.5px;
@@ -2897,7 +2897,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §20.1  HERO
+   Â§20.1  HERO
 ================================================================ */
 .ab-hero {
   min-height: 100vh;
@@ -3071,7 +3071,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §20.2  STATS BAR
+   Â§20.2  STATS BAR
 ================================================================ */
 .ab-stats {
   padding: 80px 0;
@@ -3106,7 +3106,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §20.3  IDENTITY / WHO I AM
+   Â§20.3  IDENTITY / WHO I AM
 ================================================================ */
 .ab-identity {
   padding: 120px 0;
@@ -3214,7 +3214,7 @@ input:focus-visible,
 .ab-social-pill.be:hover  { border-color: #1769FF; color: #1769FF; }
 
 /* ================================================================
-   §20.4  STORY / MY JOURNEY
+   Â§20.4  STORY / MY JOURNEY
 ================================================================ */
 .ab-story {
   padding: 110px 0;
@@ -3272,7 +3272,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §20.5  SKILLS & EDUCATION
+   Â§20.5  SKILLS & EDUCATION
 ================================================================ */
 .ab-skills {
   padding: 120px 0;
@@ -3331,7 +3331,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §20.6  HORIZONTAL JOURNEY / ROADMAP
+   Â§20.6  HORIZONTAL JOURNEY / ROADMAP
 ================================================================ */
 .ab-journey {
   padding: 120px 0 100px;
@@ -3501,7 +3501,7 @@ input:focus-visible,
 .ab-journey-dot.ab-active { background: var(--tp-theme-primary); width: 24px; border-radius: 4px; }
 
 /* ================================================================
-   §20.7  CONTACT / CTA
+   Â§20.7  CONTACT / CTA
 ================================================================ */
 .ab-contact {
   padding: 120px 0;
@@ -3579,7 +3579,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §20.8  RESPONSIVE — ABOUT PAGE
+   Â§20.8  RESPONSIVE â€” ABOUT PAGE
 ================================================================ */
 @media (max-width: 1024px) {
   .ab-hero__inner   { grid-template-columns: 1fr; gap: 50px; text-align: center; }
@@ -3620,7 +3620,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §20.9  COMPACT HERO (no image — about page variant)
+   Â§20.9  COMPACT HERO (no image â€” about page variant)
 ================================================================ */
 .ab-hero--compact {
   min-height: 0;
@@ -3651,21 +3651,21 @@ input:focus-visible,
   }
 }
 
-/* ════════════════════════════════════════════════════════════════
+/* â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
    GLOBAL WHITE-HEADER NAV  (#header-sticky.header-white)
-   Edit here → about.html AND pr-award.html update automatically
-════════════════════════════════════════════════════════════════ */
+   Edit here â†’ about.html AND pr.html update automatically
+â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• */
 #header-sticky.header-white {
   position: relative;
   z-index: 9999;
   box-shadow: 0 2px 20px rgba(0,0,0,.06);
 }
-/* ── Row spacing ── */
+/* â”€â”€ Row spacing â”€â”€ */
 #header-sticky.header-white .header-space-two {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-/* ── Nav list layout (flex-centered, consistent gap) ── */
+/* â”€â”€ Nav list layout (flex-centered, consistent gap) â”€â”€ */
 #header-sticky.header-white .tp-main-menu ul {
   display: inline-flex;
   justify-content: center;
@@ -3680,17 +3680,17 @@ input:focus-visible,
 #header-sticky.header-white .tp-main-menu ul li:last-child {
   margin-right: 0;
 }
-/* ── Nav link height — unified 24px top/bottom on all white-header pages ── */
+/* â”€â”€ Nav link height â€” unified 24px top/bottom on all white-header pages â”€â”€ */
 #header-sticky.header-white .tp-main-menu ul li a {
   padding-top: 24px;
   padding-bottom: 24px;
 }
-/* ── Underline animation — recalibrate for 24px padding ── */
+/* â”€â”€ Underline animation â€” recalibrate for 24px padding â”€â”€ */
 #header-sticky.header-white .tp-main-menu ul li a::after,
 #header-sticky.header-white .tp-main-menu ul li a::before {
   bottom: 12px;
 }
-/* ── Home Page button ── */
+/* â”€â”€ Home Page button â”€â”€ */
 #header-sticky.header-white .tp-header-button {
   text-align: right;
 }
@@ -3698,14 +3698,14 @@ input:focus-visible,
   padding: 0 40px;
   min-width: 130px;
 }
-/* ── Dropdown: center under its li ── */
+/* â”€â”€ Dropdown: center under its li â”€â”€ */
 #header-sticky.header-white .tp-main-menu ul li ul.submenu {
   display: block;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 0;
 }
-/* ── Dropdown text (force white — survives body color cascade) ── */
+/* â”€â”€ Dropdown text (force white â€” survives body color cascade) â”€â”€ */
 #header-sticky.header-white .tp-main-menu ul li ul.submenu li a {
   color: var(--tp-common-white, #ffffff) !important;
   padding: 9px 22px !important;
@@ -3716,7 +3716,7 @@ input:focus-visible,
   color: var(--tp-theme-primary, #FFDC60) !important;
 }
 
-/* ── Global: mobile white-header centering (change here → reflects everywhere) ── */
+/* â”€â”€ Global: mobile white-header centering (change here â†’ reflects everywhere) â”€â”€ */
 #header-sticky-mobile.header-white {
   display: flex;
   align-items: center;
@@ -3732,11 +3732,11 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §21  SHARED PAGE HERO  (.ph-hero)
-   Edit here → about.html & pr-award.html update automatically
+   Â§21  SHARED PAGE HERO  (.ph-hero)
+   Edit here â†’ about.html & pr.html update automatically
 ================================================================ */
 
-/* ── Base ── */
+/* â”€â”€ Base â”€â”€ */
 .ph-hero {
   position: relative;
   overflow: hidden;
@@ -3745,7 +3745,7 @@ input:focus-visible,
   padding-bottom: 100px;
 }
 
-/* ── Dot-grid overlay ── */
+/* â”€â”€ Dot-grid overlay â”€â”€ */
 .ph-hero::before {
   content: '';
   position: absolute;
@@ -3757,7 +3757,7 @@ input:focus-visible,
   z-index: 0;
 }
 
-/* ── Background layer (holds orbs + noise) ── */
+/* â”€â”€ Background layer (holds orbs + noise) â”€â”€ */
 .ph-hero__bg {
   position: absolute;
   inset: 0;
@@ -3765,7 +3765,7 @@ input:focus-visible,
   z-index: 1;
 }
 
-/* ── Orbs ── */
+/* â”€â”€ Orbs â”€â”€ */
 .ph-orb {
   position: absolute;
   border-radius: 50%;
@@ -3799,7 +3799,7 @@ input:focus-visible,
   66%      { transform: translate(-16px,18px) scale(.96); }
 }
 
-/* ── Noise grain ── */
+/* â”€â”€ Noise grain â”€â”€ */
 .ph-hero__noise {
   position: absolute;
   inset: 0;
@@ -3808,7 +3808,7 @@ input:focus-visible,
   background-size: 300px 300px;
 }
 
-/* ── Content ── */
+/* â”€â”€ Content â”€â”€ */
 .ph-hero__inner {
   position: relative;
   z-index: 2;
@@ -3820,7 +3820,7 @@ input:focus-visible,
   margin: 0 auto;
 }
 
-/* ── Eyebrow pill ── */
+/* â”€â”€ Eyebrow pill â”€â”€ */
 .ph-eyebrow {
   display: inline-flex;
   align-items: center;
@@ -3866,7 +3866,7 @@ input:focus-visible,
   100% { transform: translateX(250%); }
 }
 
-/* ── Title ── */
+/* â”€â”€ Title â”€â”€ */
 .ph-hero__title {
   font-size: clamp(1.8rem, 3.8vw, 3.2rem);
   font-weight: 800;
@@ -3899,7 +3899,7 @@ input:focus-visible,
   to { transform: scaleX(1); }
 }
 
-/* ── Sub text ── */
+/* â”€â”€ Sub text â”€â”€ */
 .ph-hero__sub {
   font-size: clamp(1rem, 1.6vw, 1.1rem);
   line-height: 1.75;
@@ -3911,7 +3911,7 @@ input:focus-visible,
   animation: ph-rise .8s cubic-bezier(.22,1,.36,1) .48s forwards;
 }
 
-/* ── Actions ── */
+/* â”€â”€ Actions â”€â”€ */
 .ph-hero__actions {
   display: flex;
   align-items: center;
@@ -3923,7 +3923,7 @@ input:focus-visible,
   animation: ph-rise .8s cubic-bezier(.22,1,.36,1) .68s forwards;
 }
 
-/* ── Buttons ── */
+/* â”€â”€ Buttons â”€â”€ */
 .ph-btn-primary {
   display: inline-flex;
   align-items: center;
@@ -3981,7 +3981,7 @@ input:focus-visible,
   outline-offset: 3px;
 }
 
-/* ── Scroll cue ── */
+/* â”€â”€ Scroll cue â”€â”€ */
 .ph-hero__scroll {
   position: absolute;
   bottom: 24px;
@@ -3996,7 +3996,7 @@ input:focus-visible,
   gap: 8px;
   z-index: 3;
   text-align: center;
-  /* centering via margin:auto — no transform needed, so animation is pure Y */
+  /* centering via margin:auto â€” no transform needed, so animation is pure Y */
   opacity: 0;
   transform: translateY(22px);
   animation: ph-rise .6s ease 1.1s both;
@@ -4020,12 +4020,12 @@ input:focus-visible,
   50%      { transform: scaleY(1.3); opacity: 1; }
 }
 
-/* ── Shared keyframe ── */
+/* â”€â”€ Shared keyframe â”€â”€ */
 @keyframes ph-rise {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 991px) {
   .ph-hero { padding-top: 60px; padding-bottom: 80px; }
 }
@@ -4042,7 +4042,7 @@ input:focus-visible,
 
 
 /* ================================================================
-   §22  ROCKET JOURNEY  (.rj-*)
+   Â§22  ROCKET JOURNEY  (.rj-*)
    Desktop: sticky horizontal scroll-driven timeline.
    Mobile:  vertical parallax cards with IntersectionObserver.
 ================================================================ */
@@ -4050,7 +4050,7 @@ input:focus-visible,
 .rj-section {
   background: #0D0D12;
   position: relative;
-  overflow: clip; /* clip ≠ hidden: clips visually but doesn't block sticky */
+  overflow: clip; /* clip â‰  hidden: clips visually but doesn't block sticky */
 }
 
 .rj-bg-grid {
@@ -4072,7 +4072,7 @@ input:focus-visible,
 .rj-orb--a { width: 600px; height: 600px; background: #5956E9; top: -180px; left: -200px; }
 .rj-orb--b { width: 400px; height: 400px; background: #1EE2CF; bottom: -100px; right: -120px; }
 
-/* ── Section header ── */
+/* â”€â”€ Section header â”€â”€ */
 .rj-header {
   text-align: center;
   padding: 80px 24px 40px;
@@ -4115,20 +4115,20 @@ input:focus-visible,
   50%       { transform: translateX(7px); }
 }
 
-/* ── Sticky outer ── */
+/* â”€â”€ Sticky outer â”€â”€ */
 .rj-sticky-outer {
   position: relative;
   height: 300vh; /* JS overrides after render; 300vh is a reasonable fallback */
 }
 
-/* ── Sticky inner — JS switches between relative / fixed / absolute ── */
+/* â”€â”€ Sticky inner â€” JS switches between relative / fixed / absolute â”€â”€ */
 .rj-sticky-inner {
   position: relative;
   height: 100vh; overflow: hidden;
   width: 100%;
 }
 
-/* ── Road ── */
+/* â”€â”€ Road â”€â”€ */
 .rj-road {
   position: absolute; top: 50%; left: 0; right: 0;
   height: 1px;
@@ -4142,7 +4142,7 @@ input:focus-visible,
   background: inherit; filter: blur(7px); opacity: .45;
 }
 
-/* ── Track ── */
+/* â”€â”€ Track â”€â”€ */
 .rj-track {
   display: flex; height: 100%;
   padding: 0 5vw 0 8vw;
@@ -4150,13 +4150,13 @@ input:focus-visible,
   position: relative; z-index: 3;
 }
 
-/* ── Card wrap ── */
+/* â”€â”€ Card wrap â”€â”€ */
 .rj-card-wrap {
   flex: 0 0 220px;
   position: relative; height: 100%;
 }
 
-/* ── Card positions: odd above road, even below ── */
+/* â”€â”€ Card positions: odd above road, even below â”€â”€ */
 .rj-card-wrap:nth-child(odd) .rj-card {
   position: absolute;
   bottom: calc(50% + 30px);
@@ -4168,7 +4168,7 @@ input:focus-visible,
   left: 10px; right: 10px;
 }
 
-/* ── Card base ── */
+/* â”€â”€ Card base â”€â”€ */
 .rj-card {
   background: rgba(255,255,255,.03);
   border: 1px solid rgba(255,255,255,.07);
@@ -4182,7 +4182,7 @@ input:focus-visible,
     background .35s ease, opacity .35s ease;
 }
 
-/* Connector lines card ↔ road */
+/* Connector lines card â†” road */
 .rj-card-wrap:nth-child(odd) .rj-card::after {
   content: ''; position: absolute;
   bottom: -30px; left: 50%; transform: translateX(-50%);
@@ -4196,7 +4196,7 @@ input:focus-visible,
   background: linear-gradient(to top, rgba(255,220,96,.45), rgba(89,86,233,.2));
 }
 
-/* ── Active state ── */
+/* â”€â”€ Active state â”€â”€ */
 .rj-card.is-active {
   background: rgba(89,86,233,.12);
   border-color: rgba(89,86,233,.5);
@@ -4206,7 +4206,7 @@ input:focus-visible,
 .rj-card-wrap:nth-child(even) .rj-card.is-active { transform: translateY(6px); }
 .rj-card:not(.is-active) { opacity: .42; }
 
-/* ── Card icon ── */
+/* â”€â”€ Card icon â”€â”€ */
 .rj-card-icon {
   font-size: 26px; margin-bottom: 9px; display: block;
   transition: transform .35s cubic-bezier(.34,1.56,.64,1), filter .35s ease;
@@ -4214,7 +4214,7 @@ input:focus-visible,
 }
 .rj-card.is-active .rj-card-icon { transform: scale(1.15); filter: grayscale(0); }
 
-/* ── Year pill ── */
+/* â”€â”€ Year pill â”€â”€ */
 .rj-card-year {
   display: inline-flex; align-items: center; gap: 6px;
   font-size: 10px; font-weight: 700;
@@ -4243,7 +4243,7 @@ input:focus-visible,
 }
 .rj-card.is-active p { color: rgba(255,255,255,.58); }
 
-/* ── Achievement badge ── */
+/* â”€â”€ Achievement badge â”€â”€ */
 .rj-card-badge {
   position: absolute; top: -11px; right: -11px;
   width: 28px; height: 28px; border-radius: 50%;
@@ -4256,7 +4256,7 @@ input:focus-visible,
 }
 .rj-card.is-active .rj-card-badge { transform: scale(1) rotate(0deg); }
 
-/* ── Node on road ── */
+/* â”€â”€ Node on road â”€â”€ */
 .rj-node {
   position: absolute; top: 50%; left: 50%;
   transform: translate(-50%, -50%);
@@ -4277,7 +4277,7 @@ input:focus-visible,
   100% { box-shadow: 0 0 0 3px #5956E9, 0 0 0 0 rgba(255,220,96,0); }
 }
 
-/* ── Rocket ── */
+/* â”€â”€ Rocket â”€â”€ */
 .rj-rocket {
   position: absolute; top: calc(50% - 16px); left: -100px;
   z-index: 20; width: 80px; height: 32px;
@@ -4302,7 +4302,7 @@ input:focus-visible,
   to   { transform: scaleX(1.3); opacity: 1; }
 }
 
-/* ── Progress bar ── */
+/* â”€â”€ Progress bar â”€â”€ */
 .rj-progress {
   position: absolute; bottom: 26px; left: 50%;
   transform: translateX(-50%);
@@ -4327,7 +4327,7 @@ input:focus-visible,
   color: rgba(255,220,96,.6); min-width: 32px;
 }
 
-/* ── End cap ── */
+/* â”€â”€ End cap â”€â”€ */
 .rj-endcap {
   flex: 0 0 240px; height: 100%;
   display: flex; flex-direction: column;
@@ -4367,7 +4367,7 @@ input:focus-visible,
   font-size: 13px; color: rgba(255,255,255,.32); line-height: 1.7;
 }
 
-/* ── Responsive: desktop/mobile toggle ── */
+/* â”€â”€ Responsive: desktop/mobile toggle â”€â”€ */
 @media (max-width: 991px) {
   .rj-sticky-outer { display: none !important; }
   .rj-header { padding: 60px 20px 40px; }
@@ -4377,7 +4377,7 @@ input:focus-visible,
   .rj-mobile-timeline { display: none !important; }
 }
 
-/* ── Mobile timeline ── */
+/* â”€â”€ Mobile timeline â”€â”€ */
 .rj-mobile-timeline {
   padding: 20px 20px 80px;
   position: relative;
@@ -4429,11 +4429,11 @@ input:focus-visible,
 
 
 /* ============================================================
-   §23  PR PAGE — Press Release & Awards
+   Â§23  PR PAGE â€” Press Release & Awards
    Classes prefixed  pr-  (page body: .pr-page)
 ============================================================ */
 
-/* ── Preloader ── */
+/* â”€â”€ Preloader â”€â”€ */
 .pr-page #pr-preloader {
   position: fixed; inset: 0; z-index: 99999;
   background: #0D0D12;
@@ -4442,14 +4442,14 @@ input:focus-visible,
 }
 .pr-page #pr-preloader.pr-loaded { opacity: 0; visibility: hidden; }
 
-/* ── Scroll-reveal base ── */
+/* â”€â”€ Scroll-reveal base â”€â”€ */
 [data-pr-reveal] {
   opacity: 0; transform: translateY(28px);
   transition: opacity .55s ease, transform .55s ease;
 }
 [data-pr-reveal].pr-visible { opacity: 1; transform: none; }
 
-/* ── Stats strip ── */
+/* â”€â”€ Stats strip â”€â”€ */
 .pr-stats { background: #0D0D12; padding: 64px 0; border-top: 1px solid rgba(255,255,255,.06); }
 .pr-stats__grid { display: grid; grid-template-columns: repeat(4,1fr); }
 .pr-stat { text-align: center; padding: 24px 16px; position: relative; }
@@ -4468,7 +4468,7 @@ input:focus-visible,
   text-transform: uppercase; color: rgba(255,255,255,.45);
 }
 
-/* ── Featured In marquee ── */
+/* â”€â”€ Featured In marquee â”€â”€ */
 .pr-featured { padding: 56px 0; background: #f7f8fc; overflow: hidden; border-bottom: 1px solid #ebebf3; }
 .pr-featured__hd {
   text-align: center; font-size: 11px; font-weight: 700;
@@ -4494,10 +4494,10 @@ input:focus-visible,
 .pr-marquee__item i { font-size: 13px; color: #ccc; }
 @keyframes prScroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-/* ── Showcase section ── */
+/* â”€â”€ Showcase section â”€â”€ */
 .pr-showcase { padding: 90px 0 110px; background: #fff; }
 
-/* ── Section header ── */
+/* â”€â”€ Section header â”€â”€ */
 .pr-hd { text-align: center; margin-bottom: 52px; }
 .pr-hd__label {
   display: inline-block; font-size: 11px; font-weight: 800;
@@ -4507,7 +4507,7 @@ input:focus-visible,
 .pr-hd__title em { font-style: normal; color: #5956E9; }
 .pr-hd__sub { font-size: 16px; color: #777; max-width: 520px; margin: 0 auto; line-height: 1.7; }
 
-/* ── Filter bar ── */
+/* â”€â”€ Filter bar â”€â”€ */
 .pr-filterbar { display: flex; justify-content: center; gap: 8px; margin-bottom: 52px; flex-wrap: wrap; }
 .pr-filter {
   padding: 9px 24px; border-radius: 40px; border: 1.5px solid #dde0ee;
@@ -4519,7 +4519,7 @@ input:focus-visible,
   box-shadow: 0 4px 16px rgba(89,86,233,.28);
 }
 
-/* ── Card grid ── */
+/* â”€â”€ Card grid â”€â”€ */
 .pr-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
 .pr-card {
   background: #fff; border-radius: 18px; overflow: hidden;
@@ -4570,7 +4570,7 @@ input:focus-visible,
 .pr-card__meta { font-size: 12px; color: #999; display: flex; align-items: center; gap: 7px; }
 .pr-card__meta i { color: #5956E9; font-size: 12px; }
 
-/* ── Lightbox ── */
+/* â”€â”€ Lightbox â”€â”€ */
 .pr-lb { position: fixed; inset: 0; z-index: 200000; display: flex; align-items: center; justify-content: center; padding: 20px; }
 .pr-lb[hidden] { display: none; }
 .pr-lb__backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.9); }
@@ -4588,7 +4588,7 @@ input:focus-visible,
 }
 .pr-lb__close:hover { background: #5956E9; color: #fff; }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 991px) {
   .pr-grid { grid-template-columns: repeat(2,1fr); gap: 20px; }
   .pr-stats__grid { grid-template-columns: repeat(2,1fr); }
@@ -4604,11 +4604,11 @@ input:focus-visible,
 .rj-ml-endcap .rj-endcap-title { font-size: 16px; margin-bottom: 4px; }
 
 /* ============================================================
-   §23  PR PAGE — Press Release & Awards
+   Â§23  PR PAGE â€” Press Release & Awards
    Classes prefixed  pr-  (page body: .pr-page)
 ============================================================ */
 
-/* ── Preloader (reuse ab-preloader-ring) ── */
+/* â”€â”€ Preloader (reuse ab-preloader-ring) â”€â”€ */
 .pr-page #pr-preloader {
   position: fixed; inset: 0; z-index: 99999;
   background: #0D0D12;
@@ -4619,7 +4619,7 @@ input:focus-visible,
   opacity: 0; visibility: hidden;
 }
 
-/* ── Scroll-reveal base ── */
+/* â”€â”€ Scroll-reveal base â”€â”€ */
 [data-pr-reveal] {
   opacity: 0;
   transform: translateY(28px);
@@ -4630,7 +4630,7 @@ input:focus-visible,
   transform: none;
 }
 
-/* ── Stats strip ── */
+/* â”€â”€ Stats strip â”€â”€ */
 .pr-stats {
   background: #0D0D12;
   padding: 64px 0;
@@ -4664,7 +4664,7 @@ input:focus-visible,
   text-transform: uppercase; color: rgba(255,255,255,.45);
 }
 
-/* ── Featured In marquee ── */
+/* â”€â”€ Featured In marquee â”€â”€ */
 .pr-featured {
   padding: 56px 0;
   background: #f7f8fc;
@@ -4706,13 +4706,13 @@ input:focus-visible,
   100% { transform: translateX(-50%); }
 }
 
-/* ── Section wrapper ── */
+/* â”€â”€ Section wrapper â”€â”€ */
 .pr-showcase {
   padding: 90px 0 110px;
   background: #fff;
 }
 
-/* ── Section header ── */
+/* â”€â”€ Section header â”€â”€ */
 .pr-hd {
   text-align: center;
   margin-bottom: 52px;
@@ -4735,7 +4735,7 @@ input:focus-visible,
   line-height: 1.7;
 }
 
-/* ── Filter bar ── */
+/* â”€â”€ Filter bar â”€â”€ */
 .pr-filterbar {
   display: flex; justify-content: center;
   gap: 8px; margin-bottom: 52px;
@@ -4759,7 +4759,7 @@ input:focus-visible,
   box-shadow: 0 4px 16px rgba(89,86,233,.28);
 }
 
-/* ── Card grid ── */
+/* â”€â”€ Card grid â”€â”€ */
 .pr-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -4848,7 +4848,7 @@ input:focus-visible,
 }
 .pr-card__meta i { color: #5956E9; font-size: 12px; }
 
-/* ── Lightbox ── */
+/* â”€â”€ Lightbox â”€â”€ */
 .pr-lb {
   position: fixed; inset: 0; z-index: 200000;
   display: flex; align-items: center; justify-content: center;
@@ -4886,7 +4886,7 @@ input:focus-visible,
 }
 .pr-lb__close:hover { background: #5956E9; color: #fff; }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 991px) {
   .pr-grid        { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .pr-stats__grid { grid-template-columns: repeat(2, 1fr); }
@@ -4902,10 +4902,10 @@ input:focus-visible,
 
 
 /* ============================================================
-   §24  404 NOT FOUND PAGE
+   Â§24  404 NOT FOUND PAGE
 ============================================================ */
 
-/* Full-viewport section — reuses ph-hero dark bg + orbs */
+/* Full-viewport section â€” reuses ph-hero dark bg + orbs */
 .nf-hero {
   position: relative;
   min-height: 100vh;
@@ -4917,7 +4917,7 @@ input:focus-visible,
   padding: 120px 20px 80px;
 }
 
-/* ── Orbs (same as ph-hero) ── */
+/* â”€â”€ Orbs (same as ph-hero) â”€â”€ */
 .nf-orb {
   position: absolute;
   border-radius: 50%;
@@ -4952,7 +4952,7 @@ input:focus-visible,
   pointer-events: none;
 }
 
-/* ── Content ── */
+/* â”€â”€ Content â”€â”€ */
 .nf-inner {
   position: relative;
   z-index: 2;
@@ -5101,7 +5101,7 @@ input:focus-visible,
   background: rgba(255,255,255,.06);
 }
 
-/* Floating astronaut illustration — pure CSS */
+/* Floating astronaut illustration â€” pure CSS */
 .nf-astro {
   margin: 48px auto 0;
   width: 160px;
@@ -5164,11 +5164,11 @@ input:focus-visible,
 
 
 /* ============================================================
-   §25  S4 CINESPHERE PAGE  (.s4c-page)
-   Cinematic dark theme — accent: #FFDC60 gold + #E63946 red
+   Â§25  S4 CINESPHERE PAGE  (.s4c-page)
+   Cinematic dark theme â€” accent: #FFDC60 gold + #E63946 red
 ============================================================ */
 
-/* ── Scroll-reveal base ── */
+/* â”€â”€ Scroll-reveal base â”€â”€ */
 [data-s4c-reveal] {
   opacity: 0;
   transform: translateY(32px);
@@ -5179,7 +5179,7 @@ input:focus-visible,
   transform: none;
 }
 
-/* ── Story section ── */
+/* â”€â”€ Story section â”€â”€ */
 .s4c-story {
   background: #fff;
   padding: 96px 0 100px;
@@ -5285,7 +5285,7 @@ input:focus-visible,
 }
 .s4c-story__body p:last-child { margin-bottom: 0; }
 
-/* ── Stats bar ── */
+/* â”€â”€ Stats bar â”€â”€ */
 .s4c-stats {
   background: #0D0D12;
   padding: 56px 0;
@@ -5321,7 +5321,7 @@ input:focus-visible,
   text-transform: uppercase; color: rgba(255,255,255,.65);
 }
 
-/* ── Three pillars ── */
+/* â”€â”€ Three pillars â”€â”€ */
 .s4c-pillars {
   background: #f7f8fc;
   padding: 90px 0 100px;
@@ -5400,7 +5400,7 @@ input:focus-visible,
   color: #666;
 }
 
-/* ── CTA band ── */
+/* â”€â”€ CTA band â”€â”€ */
 .s4c-cta {
   position: relative;
   background: linear-gradient(145deg, #eef0ff 0%, var(--tp-grey-1) 50%, #fffbee 100%);
@@ -5577,7 +5577,7 @@ input:focus-visible,
   border-radius: 2px;
 }
 
-/* Spinning rings inside the stage — always behind the logo */
+/* Spinning rings inside the stage â€” always behind the logo */
 .s4c-cta__ring {
   position: absolute;
   border-radius: 50%;
@@ -5600,7 +5600,7 @@ input:focus-visible,
   animation: ph-spin-slow 18s linear infinite reverse;
 }
 
-/* Logo circle — sits above rings */
+/* Logo circle â€” sits above rings */
 .s4c-cta__logo-wrap {
   position: relative;
   z-index: 3;
@@ -5619,7 +5619,7 @@ input:focus-visible,
 }
 
 
-/* Floating badges — positioned relative to .s4c-cta__visual */
+/* Floating badges â€” positioned relative to .s4c-cta__visual */
 .s4c-cta__badge {
   position: absolute;
   display: inline-flex;
@@ -5652,7 +5652,7 @@ input:focus-visible,
   to   { transform: rotate(360deg); }
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 991px) {
   .s4c-story__grid { grid-template-columns: 1fr; gap: 48px; }
   .s4c-pillars__grid { grid-template-columns: 1fr 1fr; gap: 20px; }
@@ -5680,7 +5680,7 @@ input:focus-visible,
 }
 
 
-/* ── S4 Music section ── */
+/* â”€â”€ S4 Music section â”€â”€ */
 .s4c-music {
   background: #0D0D12;
   padding: 96px 0 108px;
@@ -5801,11 +5801,11 @@ input:focus-visible,
 
 
 /* ============================================================
-   §26  ODICODER PAGE  (.oc-page)
-   Tech-blue palette — accent: #4361EE blue + #CC44FF magenta
+   Â§26  ODICODER PAGE  (.oc-page)
+   Tech-blue palette â€” accent: #4361EE blue + #CC44FF magenta
 ============================================================ */
 
-/* ── Scroll reveal ── */
+/* â”€â”€ Scroll reveal â”€â”€ */
 [data-oc-reveal] {
   opacity: 0;
   transform: translateY(28px);
@@ -5816,7 +5816,7 @@ input:focus-visible,
   transform: translateY(0);
 }
 
-/* ── Stats strip ── */
+/* â”€â”€ Stats strip â”€â”€ */
 .oc-stats {
   background: #0A0A14;
   padding: 56px 0;
@@ -5853,7 +5853,7 @@ input:focus-visible,
   text-transform: uppercase; color: rgba(255,255,255,.65);
 }
 
-/* ── Brand story ── */
+/* â”€â”€ Brand story â”€â”€ */
 .oc-story {
   background: var(--tp-common-white);
   padding: 96px 0 108px;
@@ -5947,7 +5947,7 @@ input:focus-visible,
 }
 .oc-story__link:active { transform: translateY(0); }
 
-/* ── What We Teach (Pillars) ── */
+/* â”€â”€ What We Teach (Pillars) â”€â”€ */
 .oc-pillars {
   background: var(--tp-grey-1);
   padding: 96px 0 108px;
@@ -5998,7 +5998,7 @@ input:focus-visible,
 .oc-pillar__title { font-size: 20px; font-weight: 800; color: var(--text-primary); margin-bottom: 12px; line-height: 1.25; }
 .oc-pillar__body { font-size: 14px; line-height: 1.75; color: var(--text-secondary); }
 
-/* ── Community CTA ── */
+/* â”€â”€ Community CTA â”€â”€ */
 .oc-cta {
   position: relative;
   background: linear-gradient(145deg, #eef1ff 0%, var(--tp-grey-1) 50%, #f5eeff 100%);
@@ -6139,7 +6139,7 @@ input:focus-visible,
 .oc-cta__badge--br { bottom: 10px; right: -8px; color: var(--text-secondary); }
 .oc-cta__badge--br i { color: #4361EE; }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1199px) {
   .oc-pillars__grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -6170,16 +6170,16 @@ input:focus-visible,
 }
 
 /* =============================================================
-   §27  ODIDESIGNER PAGE
+   Â§27  ODIDESIGNER PAGE
    Classes prefixed  od-  (page body: .od-page)
    Palette: Pink-Purple #B5179E + Deep Purple #7209B7
 ============================================================= */
 
-/* ── Scroll reveal ── */
+/* â”€â”€ Scroll reveal â”€â”€ */
 [data-od-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s cubic-bezier(.22,.61,.36,1); }
 [data-od-reveal].od-visible { opacity: 1; transform: translateY(0); }
 
-/* ── Stats strip ── */
+/* â”€â”€ Stats strip â”€â”€ */
 .od-stats { background: #0A0A14; padding: 56px 0; }
 .od-stats__grid {
   display: grid; grid-template-columns: repeat(4,1fr); gap: 0;
@@ -6200,7 +6200,7 @@ input:focus-visible,
 }
 .od-stat__lbl { font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.45); }
 
-/* ── Brand Story ── */
+/* â”€â”€ Brand Story â”€â”€ */
 .od-story { padding: 96px 0 108px; background: var(--tp-common-white); }
 .od-story__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
 
@@ -6242,7 +6242,7 @@ input:focus-visible,
 }
 .od-story__link:hover { border-color: #B5179E; color: #B5179E; transform: translateY(-2px); }
 
-/* ── Pillars ── */
+/* â”€â”€ Pillars â”€â”€ */
 .od-pillars { padding: 88px 0 100px; background: var(--tp-grey-1); }
 .od-pillars__hd { text-align: center; margin-bottom: 56px; }
 .od-pillars__label { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #B5179E; margin-bottom: 14px; }
@@ -6260,7 +6260,7 @@ input:focus-visible,
 .od-pillar__title { font-size: 17px; font-weight: 700; color: var(--tp-common-black); margin-bottom: 10px; line-height: 1.3; }
 .od-pillar__body { font-size: 14px; line-height: 1.75; color: var(--tp-text-body); }
 
-/* ── Community CTA ── */
+/* â”€â”€ Community CTA â”€â”€ */
 .od-cta {
   position: relative; overflow: hidden;
   background: linear-gradient(145deg, #fef0ff 0%, var(--tp-grey-1) 50%, #f0f0ff 100%);
@@ -6342,7 +6342,7 @@ input:focus-visible,
 .od-cta__badge--br { bottom: 10px; right: -8px; color: var(--text-secondary); }
 .od-cta__badge--br i { color: #B5179E; }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 1199px) { .od-pillars__grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 991px) {
   .od-story__grid { grid-template-columns: 1fr; gap: 48px; }
@@ -6374,7 +6374,7 @@ input:focus-visible,
 
 
 /* ================================================================
-   §20.5  PRELOADER  (shared: index.html, pr.html)
+   Â§20.5  PRELOADER  (shared: index.html, pr.html)
 ================================================================ */
 #pr-preloader {
   position: fixed;
@@ -6403,12 +6403,12 @@ input:focus-visible,
 
 
 /* ================================================================
-   §21  HOME PAGE  (index.html)
+   Â§21  HOME PAGE  (index.html)
    All rules are prefixed  .hm-  and scoped to body.hm-page
    so they never affect any other page.
 ================================================================ */
 
-/* ── Keyframes ────────────────────────────────────────────────── */
+/* â”€â”€ Keyframes â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 @keyframes hm-blobDrift1  { 0%,100%{transform:translate(0,0) scale(1)}45%{transform:translate(-50px,60px) scale(1.09)}75%{transform:translate(35px,-30px) scale(.93)} }
 @keyframes hm-blobDrift2  { 0%,100%{transform:translate(0,0) scale(1)}55%{transform:translate(55px,-45px) scale(1.12)} }
 @keyframes hm-float       { 0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)} }
@@ -6432,7 +6432,7 @@ input:focus-visible,
 @keyframes hm-tagFloat2   { 0%,100%{transform:translateY(0) rotate(2deg)}50%{transform:translateY(-10px) rotate(2deg)} }
 @keyframes hm-tagFloat3   { 0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-16px) rotate(-1deg)} }
 
-/* ── Scroll-reveal helpers ────────────────────────────────────── */
+/* â”€â”€ Scroll-reveal helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hm-reveal {
   opacity:0; transform:translateY(44px);
   transition:opacity .85s cubic-bezier(.16,1,.3,1), transform .85s cubic-bezier(.16,1,.3,1);
@@ -6452,7 +6452,7 @@ input:focus-visible,
 .hm-stagger.hm-visible > *:nth-child(5){opacity:1;transform:none;transition-delay:.46s}
 .hm-stagger.hm-visible > *:nth-child(6){opacity:1;transform:none;transition-delay:.56s}
 
-/* ── Section globals ──────────────────────────────────────────── */
+/* â”€â”€ Section globals â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hm-page .hm-label {
   display:inline-flex; align-items:center; gap:10px;
   font-size:12px; font-weight:700; letter-spacing:2.5px; text-transform:uppercase;
@@ -6469,7 +6469,7 @@ input:focus-visible,
 .hm-page .hm-section-title em { font-style:normal; color:var(--tp-theme-1); }
 .hm-page .hm-section-title span.hm-yellow { color:var(--tp-theme-primary); -webkit-text-fill-color:var(--tp-theme-primary); }
 
-/* ── Button system ────────────────────────────────────────────── */
+/* â”€â”€ Button system â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .hm-btn-primary {
   display:inline-flex; align-items:center; gap:10px;
   background:var(--tp-theme-1); color:#fff;
@@ -6512,7 +6512,7 @@ input:focus-visible,
 .hm-btn-outline:hover { background:var(--tp-theme-1); color:#fff; }
 
 /* ================================================================
-   §21.1  HERO
+   Â§21.1  HERO
 ================================================================ */
 .hm-hero {
   min-height:88vh;
@@ -6559,7 +6559,7 @@ input:focus-visible,
   max-width:1200px; margin:0 auto; padding:0 30px; width:100%;
 }
 
-/* — LEFT ————————————————————————————————— */
+/* â€” LEFT â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” */
 .hm-hero__left { animation:hm-fadeUp .9s .1s ease both; }
 
 .hm-hero__kicker {
@@ -6629,7 +6629,7 @@ input:focus-visible,
 .hm-hero__link-pill img { width:20px; height:20px; object-fit:contain; border-radius:4px; }
 .hm-hero__link-pill:hover { border-color:rgba(255,255,255,.45); color:#fff; background:rgba(255,255,255,.06); }
 
-/* — RIGHT ———————————————————————————————— */
+/* â€” RIGHT â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€”â€” */
 .hm-hero__right {
   position:relative; animation:hm-fadeUp 1s .25s ease both;
   display:flex; align-items:center; justify-content:center;
@@ -6687,7 +6687,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §21.2  STATS TICKER — dark ribbon
+   Â§21.2  STATS TICKER â€” dark ribbon
 ================================================================ */
 .hm-stats-ribbon {
   background:var(--tp-common-black); padding:64px 0;
@@ -6719,7 +6719,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §21.3  ABOUT / IDENTITY STRIP
+   Â§21.3  ABOUT / IDENTITY STRIP
 ================================================================ */
 .hm-about {
   padding:120px 0; background:var(--tp-common-white);
@@ -6778,7 +6778,7 @@ input:focus-visible,
 .hm-about__actions { display:flex; gap:14px; flex-wrap:wrap; }
 
 /* ================================================================
-   §21.4  SKILLS MARQUEE STRIP
+   Â§21.4  SKILLS MARQUEE STRIP
 ================================================================ */
 .hm-marquee-strip {
   padding:56px 0; background:var(--tp-grey-1); overflow:hidden;
@@ -6808,12 +6808,12 @@ input:focus-visible,
 .hm-skill-chip i { font-size:12px; color:var(--tp-theme-1); }
 .hm-skill-chip:hover i { color:#fff; }
 
-/* second row — reversed */
+/* second row â€” reversed */
 .hm-marquee-track--r { animation:hm-marqueeR 32s linear infinite; }
 .hm-marquee-strip .hm-marquee-wrap + .hm-marquee-wrap { margin-top:12px; }
 
 /* ================================================================
-   §21.5  FEATURED WORK PREVIEW STRIP
+   Â§21.5  FEATURED WORK PREVIEW STRIP
 ================================================================ */
 .hm-work {
   padding:120px 0; background:var(--tp-common-white);
@@ -6851,7 +6851,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §21.6  CREATIVE CHRONICLES (story cards)
+   Â§21.6  CREATIVE CHRONICLES (story cards)
 ================================================================ */
 .hm-chronicles {
   padding:110px 0; background:var(--tp-grey-1);
@@ -6878,7 +6878,7 @@ input:focus-visible,
 .hm-cc-body h4 a:hover { color:var(--tp-theme-1); }
 
 /* ================================================================
-   §21.7  BOOK SPOTLIGHT
+   Â§21.7  BOOK SPOTLIGHT
 ================================================================ */
 .hm-book {
   padding:80px 0; background:var(--tp-common-black); position:relative; overflow:hidden;
@@ -6934,7 +6934,7 @@ input:focus-visible,
 .hm-book__actions { display:flex; gap:14px; flex-wrap:wrap; }
 
 /* ================================================================
-   §21.8  YOUTUBE / CINEMATIC SECTION
+   Â§21.8  YOUTUBE / CINEMATIC SECTION
 ================================================================ */
 .hm-yt {
   padding:110px 0; background:var(--tp-common-white);
@@ -6981,7 +6981,7 @@ input:focus-visible,
 .hm-yt-card a:hover { color:var(--tp-theme-2); }
 
 /* ================================================================
-   §21.9  MEDIA SLIDER (Instagram)
+   Â§21.9  MEDIA SLIDER (Instagram)
 ================================================================ */
 .hm-media {
   padding:80px 0 100px; background:var(--tp-grey-1); overflow:hidden;
@@ -7002,7 +7002,7 @@ input:focus-visible,
 .hm-media-slide:hover img { transform:scale(1.06); }
 
 /* ================================================================
-   §21.10  NEWSLETTER CTA
+   Â§21.10  NEWSLETTER CTA
 ================================================================ */
 .hm-cta {
   padding:100px 0; position:relative; overflow:hidden;
@@ -7051,7 +7051,7 @@ input:focus-visible,
 .hm-cta-form button:hover { background:#ffe980; transform:translateY(-2px); }
 
 /* ================================================================
-   §21.11  RESPONSIVE
+   Â§21.11  RESPONSIVE
 ================================================================ */
 @media (max-width:1024px) {
   .hm-hero__inner        { grid-template-columns:1fr; gap:50px; text-align:center; }
@@ -7093,17 +7093,17 @@ input:focus-visible,
 
 
 /* =============================================================
-   §28  DESIGNUX PAGE
+   Â§28  DESIGNUX PAGE
    Classes prefixed  dx-  (page body: .dx-page)
    Palette: Coral #FF3366 + Indigo #4776E6
-   Hinglish content — movement / brand page
+   Hinglish content â€” movement / brand page
 ============================================================= */
 
-/* ── Scroll reveal ── */
+/* â”€â”€ Scroll reveal â”€â”€ */
 [data-dx-reveal] { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s cubic-bezier(.22,.61,.36,1); }
 [data-dx-reveal].dx-visible { opacity: 1; transform: translateY(0); }
 
-/* ── Hero (full dark) ── */
+/* â”€â”€ Hero (full dark) â”€â”€ */
 .dx-hero {
   position: relative; overflow: hidden;
   background: linear-gradient(135deg, #0D0D12 0%, #160816 55%, #0f0f24 100%);
@@ -7244,7 +7244,7 @@ input:focus-visible,
 }
 .dx-hero__scroll-text { font-size: 10px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: rgba(255,255,255,.3); }
 
-/* ── Concept section ── */
+/* â”€â”€ Concept section â”€â”€ */
 .dx-concept { padding: 96px 0 108px; background: #fff; }
 .dx-concept__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 
@@ -7273,7 +7273,7 @@ input:focus-visible,
 .dx-analogy-card--highlight strong { color: #FF3366; }
 .dx-analogy-card span { font-size: 13px; color: var(--text-secondary); }
 
-/* ── Three Paths ── */
+/* â”€â”€ Three Paths â”€â”€ */
 .dx-paths { padding: 88px 0 100px; background: var(--tp-grey-1); }
 .dx-paths__hd { text-align: center; margin-bottom: 56px; }
 .dx-paths__label { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: #FF3366; margin-bottom: 14px; }
@@ -7297,7 +7297,7 @@ input:focus-visible,
 .dx-path__title { font-size: 22px; font-weight: 800; color: var(--tp-common-black); margin-bottom: 12px; }
 .dx-path__body { font-size: 14px; line-height: 1.8; color: var(--tp-text-body); }
 
-/* ── CTA ── */
+/* â”€â”€ CTA â”€â”€ */
 .dx-cta {
   position: relative; overflow: hidden;
   background: linear-gradient(145deg, #fff0f4 0%, var(--tp-grey-1) 50%, #f0f2ff 100%);
@@ -7392,10 +7392,10 @@ input:focus-visible,
 
 
 /* ============================================================
-   PR PAGE — Mobile card image & grid fix (FINAL)
+   PR PAGE â€” Mobile card image & grid fix (FINAL)
 ============================================================ */
 
-/* Image fill fix — position absolute so height:100% always works */
+/* Image fill fix â€” position absolute so height:100% always works */
 .pr-card__fig {
   position: relative;
   overflow: hidden;
@@ -7447,7 +7447,7 @@ input:focus-visible,
   }
 }
 
-/* ── Responsive ── */
+/* â”€â”€ Responsive â”€â”€ */
 @media (max-width: 991px) {
   .dx-concept__grid { grid-template-columns: 1fr; gap: 48px; }
   .dx-paths__grid { grid-template-columns: 1fr; gap: 16px; }
@@ -7483,7 +7483,7 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §22  HOME PAGE — WHO I AM (three disciplines)
+   Â§22  HOME PAGE â€” WHO I AM (three disciplines)
 ================================================================ */
 .hm-who {
   padding: 110px 0;
@@ -7688,14 +7688,14 @@ input:focus-visible,
 }
 
 /* ================================================================
-   §23  HOME PAGE — DARK SECTION COLOUR OVERRIDES
+   Â§23  HOME PAGE â€” DARK SECTION COLOUR OVERRIDES
    Slightly off-black charcoal (#111119) instead of near-pure #0D0D12
 ================================================================ */
 .hm-page .hm-book { background: #111119; }
 .hm-page .black-bg { background: #111119 !important; }
 
 /* ================================================================
-   §24  HOME PAGE — ABOUT v2 (editorial / premium)
+   Â§24  HOME PAGE â€” ABOUT v2 (editorial / premium)
 ================================================================ */
 .hm-ab2 {
   padding: 100px 0 100px;
@@ -7873,7 +7873,7 @@ input:focus-visible,
 }
 
 /* ============================================================
-   BOOK PAGES — hero spacing overrides (transparent header)
+   BOOK PAGES â€” hero spacing overrides (transparent header)
 ============================================================ */
 .tur-page .tp-hero-space,
 .bk-page .tp-hero-space,
@@ -7883,11 +7883,11 @@ input:focus-visible,
 }
 
 /* ============================================================
-   NEW UNCHARTED ROMANCE — .nur-page  (new_uncrted_romance.html)
+   NEW UNCHARTED ROMANCE â€” .book-page  (new_uncrted_romance.html)
 ============================================================ */
 
 /* -- Hero -------------------------------------------------- */
-.nur-hero {
+.book-hero {
   position: relative;
   overflow: hidden;
   background: linear-gradient(150deg, #f4f4ff 0%, #ebebff 50%, #f8f3ff 100%);
@@ -7899,7 +7899,7 @@ input:focus-visible,
 }
 
 /* Big watermark text */
-.nur-hero::after {
+.book-hero::after {
   content: 'ROMANCE';
   position: absolute;
   font-size: clamp(100px, 18vw, 200px);
@@ -7916,7 +7916,7 @@ input:focus-visible,
 }
 
 /* Grain texture overlay */
-.nur-hero__noise {
+.book-hero__noise {
   position: absolute; inset: 0;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   background-size: 300px 300px;
@@ -7924,25 +7924,25 @@ input:focus-visible,
 }
 
 /* Ambient orbs */
-.nur-hero__blob {
+.book-hero__blob {
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
   pointer-events: none;
 }
-.nur-hero__blob--1 {
+.book-hero__blob--1 {
   width: 620px; height: 620px;
   background: rgba(89,86,233,.11);
   top: -180px; right: -150px;
   animation: nurBlobA 10s ease-in-out infinite;
 }
-.nur-hero__blob--2 {
+.book-hero__blob--2 {
   width: 400px; height: 400px;
   background: rgba(255,220,96,.2);
   bottom: -110px; left: 40px;
   animation: nurBlobB 14s ease-in-out infinite reverse;
 }
-.nur-hero__blob--3 {
+.book-hero__blob--3 {
   width: 260px; height: 260px;
   background: rgba(200,100,230,.07);
   top: 35%; left: 36%;
@@ -7957,9 +7957,9 @@ input:focus-visible,
   50%      { transform: translate(22px,-26px) scale(1.09); }
 }
 
-.nur-hero .container { position: relative; z-index: 1; width: 100%; }
+.book-hero .container { position: relative; z-index: 1; width: 100%; }
 
-.nur-hero__inner {
+.book-hero__inner {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
   gap: 72px;
@@ -7967,27 +7967,27 @@ input:focus-visible,
 }
 
 /* Scroll indicator */
-.nur-hero__scroll {
+.book-hero__scroll {
   position: absolute;
   bottom: 36px; left: 50%;
   transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 8px;
   z-index: 2;
 }
-.nur-hero__scroll-line {
+.book-hero__scroll-line {
   width: 1px; height: 44px;
   background: linear-gradient(to bottom, var(--tp-theme-1), transparent);
   animation: nurScrollAnim 2s ease-in-out infinite;
 }
 @keyframes nurScrollAnim { 0%,100%{opacity:1} 50%{opacity:.35} }
-.nur-hero__scroll-text {
+.book-hero__scroll-text {
   font-size: 9px; font-weight: 700;
   letter-spacing: .18em; text-transform: uppercase;
   color: var(--text-tertiary);
 }
 
 /* Left content */
-.nur-hero__kicker {
+.book-hero__kicker {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 7px 18px 7px 12px;
   background: rgba(89,86,233,.07);
@@ -7998,14 +7998,14 @@ input:focus-visible,
   margin-bottom: 20px;
   position: relative; overflow: hidden;
 }
-.nur-hero__kicker > * { position: relative; z-index: 1; }
-.nur-hero__kicker::after {
+.book-hero__kicker > * { position: relative; z-index: 1; }
+.book-hero__kicker::after {
   content: ''; position: absolute; inset: 0; width: 200%;
   background: linear-gradient(90deg, transparent, rgba(89,86,233,.14), transparent);
   transform: translateX(-100%);
   animation: ph-shimmer 3.5s ease-in-out 1.5s infinite;
 }
-.nur-hero__kicker-dot {
+.book-hero__kicker-dot {
   width: 7px; height: 7px; border-radius: 50%;
   background: var(--tp-theme-1);
   animation: nurPulse 2.4s ease-in-out infinite;
@@ -8014,51 +8014,51 @@ input:focus-visible,
 @keyframes nurPulse { 0%,100%{opacity:1} 50%{opacity:.35} }
 
 /* Author byline chip */
-.nur-author-chip {
+.book-author-chip {
   display: inline-flex; align-items: center; gap: 10px;
   font-size: 14px; font-weight: 400; color: var(--text-secondary);
   margin-bottom: 16px;
 }
-.nur-author-chip__avatar {
+.book-author-chip__avatar {
   width: 34px; height: 34px; border-radius: 50%;
   background: linear-gradient(135deg, var(--tp-theme-1) 0%, #8b7cf7 100%);
   display: flex; align-items: center; justify-content: center;
   font-size: 11px; font-weight: 800; color: #fff; flex-shrink: 0;
   letter-spacing: .02em;
 }
-.nur-author-chip strong { font-weight: 600; color: var(--text-primary); }
-.nur-author-chip__sep {
+.book-author-chip strong { font-weight: 600; color: var(--text-primary); }
+.book-author-chip__sep {
   width: 3px; height: 3px; border-radius: 50%;
   background: var(--text-tertiary); flex-shrink: 0;
 }
 
-.nur-hero__title {
+.book-hero__title {
   font-family: var(--ff-body);
   font-size: clamp(46px, 6.2vw, 82px);
   font-weight: 700; line-height: 1.04;
   letter-spacing: -.03em; color: var(--text-primary);
   margin-bottom: 22px;
 }
-.nur-hero__title em { font-style: italic; color: var(--tp-theme-1); }
+.book-hero__title em { font-style: italic; color: var(--tp-theme-1); }
 
-.nur-hero__tagline {
+.book-hero__tagline {
   font-size: 17px; line-height: 1.75;
   color: var(--text-secondary); max-width: 460px; margin-bottom: 38px;
 }
 
-.nur-hero__ctas {
+.book-hero__ctas {
   display: flex; align-items: center; gap: 16px;
   flex-wrap: wrap; margin-bottom: 0;
 }
-.nur-know-more {
+.book-know-more {
   display: inline-flex; align-items: center; gap: 7px;
   font-size: 15px; font-weight: 500; color: var(--text-secondary);
   text-decoration: none; transition: color var(--transition-fast);
 }
-.nur-know-more:hover { color: var(--tp-theme-1); }
+.book-know-more:hover { color: var(--tp-theme-1); }
 
 /* Platform buy-bar */
-.nur-hero__buy-bar {
+.book-hero__buy-bar {
   position: relative; z-index: 2;
   display: flex; align-items: stretch;
   background: rgba(255,255,255,.92);
@@ -8070,7 +8070,7 @@ input:focus-visible,
   box-shadow: 0 4px 32px rgba(89,86,233,.08), 0 1px 0 rgba(255,255,255,.8);
   margin-top: 72px;
 }
-.nur-hero__buy-item {
+.book-hero__buy-item {
   flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
   padding: 20px 16px; gap: 6px;
   text-decoration: none;
@@ -8081,42 +8081,42 @@ input:focus-visible,
   text-transform: uppercase; letter-spacing: .06em;
   white-space: nowrap;
 }
-.nur-hero__buy-item:last-child { border-right: none; }
-.nur-hero__buy-item:hover { background: rgba(89,86,233,.05); color: var(--tp-theme-1); }
-.nur-hero__buy-item i { font-size: 22px; }
-.nur-hero__buy-item .nur-c-amazon   { color: #ff9d08; }
-.nur-hero__buy-item .nur-c-flipkart { color: #F8AE3B; }
-.nur-hero__buy-item .nur-c-apple    { color: #888; }
-.nur-hero__buy-item .nur-c-google   { color: #4285F4; }
+.book-hero__buy-item:last-child { border-right: none; }
+.book-hero__buy-item:hover { background: rgba(89,86,233,.05); color: var(--tp-theme-1); }
+.book-hero__buy-item i { font-size: 22px; }
+.book-hero__buy-item .book-c-amazon   { color: #ff9d08; }
+.book-hero__buy-item .book-c-flipkart { color: #F8AE3B; }
+.book-hero__buy-item .book-c-apple    { color: #888; }
+.book-hero__buy-item .book-c-google   { color: #4285F4; }
 
 /* Colour helpers */
-.nur-c-amazon   { color: #ff9d08; }
-.nur-c-flipkart { color: #F8AE3B; }
-.nur-c-apple    { color: #888; }
-.nur-c-google   { color: #4285F4; }
+.book-c-amazon   { color: #ff9d08; }
+.book-c-flipkart { color: #F8AE3B; }
+.book-c-apple    { color: #888; }
+.book-c-google   { color: #4285F4; }
 
 /* Right: visual with floating tags */
-.nur-hero__visual {
+.book-hero__visual {
   display: flex; justify-content: center; align-items: center;
   position: relative;
 }
-.nur-hero__ring {
+.book-hero__ring {
   position: absolute; border-radius: 50%;
   border: 1px solid rgba(89,86,233,.14); pointer-events: none;
 }
-.nur-hero__ring--1 { width: 460px; height: 460px; }
-.nur-hero__ring--2 {
+.book-hero__ring--1 { width: 460px; height: 460px; }
+.book-hero__ring--2 {
   width: 600px; height: 600px;
   border-style: dashed; opacity: .32;
   animation: nurSpin 48s linear infinite;
 }
 @keyframes nurSpin { to { transform: rotate(360deg); } }
 
-.nur-hero__book-wrap {
+.book-hero__book-wrap {
   position: relative; z-index: 1;
   display: flex; justify-content: center;
 }
-.nur-hero__book-img {
+.book-hero__book-img {
   max-width: 340px; width: 100%;
   filter: drop-shadow(0 40px 70px rgba(89,86,233,.26));
   animation: nurFloat 5s ease-in-out infinite;
@@ -8124,7 +8124,7 @@ input:focus-visible,
 @keyframes nurFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-18px)} }
 
 /* Bestseller badge */
-.nur-book-badge {
+.book-book-badge {
   position: absolute; top: -14px; right: -20px;
   background: var(--accent-yellow); color: var(--text-primary);
   width: 80px; height: 80px; border-radius: 50%;
@@ -8135,10 +8135,10 @@ input:focus-visible,
   padding: 6px;
 }
 @keyframes nurBadgePop { 0%,100%{transform:scale(1) rotate(-6deg)} 50%{transform:scale(1.07) rotate(-6deg)} }
-.nur-book-badge strong { font-size: 15px; display: block; }
+.book-book-badge strong { font-size: 15px; display: block; }
 
 /* Floating achievement tags */
-.nur-hero__ftag {
+.book-hero__ftag {
   position: absolute; z-index: 2;
   background: #fff; border: 1px solid rgba(89,86,233,.12);
   border-radius: 50px; padding: 9px 16px 9px 12px;
@@ -8147,146 +8147,207 @@ input:focus-visible,
   display: flex; align-items: center; gap: 6px;
   white-space: nowrap;
 }
-.nur-hero__ftag--tl { top: 30px;  left: -90px;  animation: nurTag1 4s ease-in-out infinite; }
-.nur-hero__ftag--tr { top: 30px;  right: -90px; animation: nurTag2 4s ease-in-out infinite; }
-.nur-hero__ftag--bl { bottom: 70px; left: -90px;  animation: nurTag3 4.5s ease-in-out infinite; }
-.nur-hero__ftag--br { bottom: 70px; right: -90px; animation: nurTag4 4.5s ease-in-out infinite; }
+.book-hero__ftag--tl { top: 30px;  left: -90px;  animation: nurTag1 4s ease-in-out infinite; }
+.book-hero__ftag--tr { top: 30px;  right: -90px; animation: nurTag2 4s ease-in-out infinite; }
+.book-hero__ftag--bl { bottom: 70px; left: -90px;  animation: nurTag3 4.5s ease-in-out infinite; }
+.book-hero__ftag--br { bottom: 70px; right: -90px; animation: nurTag4 4.5s ease-in-out infinite; }
 @keyframes nurTag1 { 0%,100%{transform:translateY(0)}   50%{transform:translateY(-8px)} }
 @keyframes nurTag2 { 0%,100%{transform:translateY(-4px)} 50%{transform:translateY(6px)} }
 @keyframes nurTag3 { 0%,100%{transform:translateY(-6px)} 50%{transform:translateY(4px)} }
 @keyframes nurTag4 { 0%,100%{transform:translateY(0)}   50%{transform:translateY(-10px)} }
 
 /* -- Stats strip ------------------------------------------ */
-.nur-strip { background: var(--surface-dark); padding: 20px 0; overflow: hidden; }
-.nur-strip__inner {
+.book-strip { background: var(--surface-dark); padding: 20px 0; overflow: hidden; }
+.book-strip__inner {
   display: flex; align-items: center; justify-content: center;
   flex-wrap: wrap; gap: 4px 0; padding: 0 40px;
 }
-.nur-strip__item {
+.book-strip__item {
   display: flex; align-items: center; gap: 10px;
   color: #fff; font-size: 14px; font-weight: 500; padding: 0 28px;
 }
-.nur-strip__item i { color: var(--accent-yellow); font-size: 15px; }
-.nur-strip__sep {
+.book-strip__item i { color: var(--accent-yellow); font-size: 15px; }
+.book-strip__sep {
   width: 1px; height: 20px;
   background: rgba(255,255,255,.15); flex-shrink: 0;
 }
 
 /* -- Section heading (eyebrow style) ---------------------- */
-.nur-sect-hd { text-align: center; margin-bottom: 56px; }
-.nur-sect-hd__eyebrow {
+.book-sect-hd { text-align: center; margin-bottom: 56px; }
+.book-sect-hd__eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 12px; font-weight: 700; letter-spacing: .1em;
   text-transform: uppercase; color: var(--tp-theme-1); margin-bottom: 14px;
 }
-.nur-sect-hd__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--tp-theme-1); }
-.nur-sect-hd__title {
+.book-sect-hd__dot { width: 6px; height: 6px; border-radius: 50%; background: var(--tp-theme-1); }
+.book-sect-hd__title {
   font-family: var(--ff-body);
   font-size: clamp(28px,4vw,42px); font-weight: 700;
   letter-spacing: -.02em; color: var(--text-primary);
   margin-bottom: 12px; line-height: 1.15;
 }
-.nur-sect-hd__title em { font-style: italic; color: var(--tp-theme-1); }
-.nur-sect-hd__sub {
+.book-sect-hd__title em { font-style: italic; color: var(--tp-theme-1); }
+.book-sect-hd__sub {
   font-size: 15px; color: var(--text-secondary);
   max-width: 520px; margin: 0 auto; line-height: 1.7;
 }
 
 /* -- Product Details --------------------------------------- */
-.nur-details { background: #fff; padding: 100px 0 80px; }
+.book-details { background: #fff; padding: 100px 0 80px; }
 
-.nur-details__grid {
+.book-details__grid {
   display: grid; grid-template-columns: 300px 1fr;
   gap: 64px; align-items: start; margin-bottom: 64px;
 }
-.nur-details__img img {
+.book-details__img img {
   width: 100%; border-radius: var(--radius-md);
   box-shadow: 0 20px 56px rgba(0,0,0,.11);
 }
-.nur-details__title {
+.book-details__title {
   font-family: var(--ff-body);
   font-size: 30px; font-weight: 700; letter-spacing: -.01em;
   color: var(--text-primary); margin-bottom: 8px;
 }
-.nur-details__subtitle {
+.book-details__subtitle {
   font-size: 15px; line-height: 1.65;
   color: var(--text-secondary); margin-bottom: 22px;
 }
-.nur-details__price {
+.book-details__price {
   display: flex; align-items: baseline; gap: 10px;
   margin-bottom: 22px; flex-wrap: wrap;
 }
-.nur-details__price-now { font-size: 30px; font-weight: 700; color: var(--text-primary); }
-.nur-details__price-old { font-size: 16px; color: var(--text-tertiary); text-decoration: line-through; }
-.nur-details__free {
+.book-details__price-now { font-size: 30px; font-weight: 700; color: var(--text-primary); }
+.book-details__price-old { font-size: 16px; color: var(--text-tertiary); text-decoration: line-through; }
+.book-details__free {
   font-size: 12px; font-weight: 600; padding: 3px 10px;
   border-radius: 20px; background: #e8f5e9; color: #2e7d32;
 }
-.nur-genre-label {
+.book-genre-label {
   font-size: 11px; font-weight: 700; letter-spacing: .08em;
   text-transform: uppercase; color: var(--text-tertiary); margin-bottom: 10px;
 }
-.nur-genres { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-.nur-genre-tag {
+.book-genres { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.book-genre-tag {
   font-size: 13px; font-weight: 500; padding: 5px 14px; border-radius: 20px;
   background: rgba(89,86,233,.06); color: var(--tp-theme-1);
   border: 1px solid rgba(89,86,233,.18);
 }
 
 /* -- Review form ------------------------------------------ */
-.nur-review { background: var(--surface-1); padding: 80px 0 100px; }
-.nur-review__head { text-align: center; margin-bottom: 44px; }
-.nur-review__head h2 {
+.book-review { background: var(--surface-1); padding: 80px 0 100px; }
+.book-review__head { text-align: center; margin-bottom: 44px; }
+.book-review__head h2 {
   font-family: var(--ff-body);
   font-size: 32px; font-weight: 700; letter-spacing: -.01em;
   color: var(--text-primary); margin-bottom: 8px;
 }
-.nur-review__head p { font-size: 15px; color: var(--text-secondary); }
+.book-review__head p { font-size: 15px; color: var(--text-secondary); }
 
 /* -- Responsive ------------------------------------------- */
 @media (max-width: 1200px) {
-  .nur-hero__ftag--tl { left: -60px; }
-  .nur-hero__ftag--tr { right: -60px; }
-  .nur-hero__ftag--bl { left: -60px; }
-  .nur-hero__ftag--br { right: -60px; }
-  .nur-hero__ring--1 { width: 380px; height: 380px; }
-  .nur-hero__ring--2 { width: 500px; height: 500px; }
-  .nur-hero__book-img { max-width: 300px; }
+  .book-hero__ftag--tl { left: -60px; }
+  .book-hero__ftag--tr { right: -60px; }
+  .book-hero__ftag--bl { left: -60px; }
+  .book-hero__ftag--br { right: -60px; }
+  .book-hero__ring--1 { width: 380px; height: 380px; }
+  .book-hero__ring--2 { width: 500px; height: 500px; }
+  .book-hero__book-img { max-width: 300px; }
 }
 @media (max-width: 991px) {
-  .nur-hero { padding: 170px 0 100px; }
-  .nur-hero__inner { grid-template-columns: 1fr; gap: 48px; }
-  .nur-hero__visual { order: -1; }
-  .nur-hero__tagline { max-width: 100%; }
-  .nur-hero__ctas { justify-content: center; }
-  .nur-hero__ftag { display: none; }
-  .nur-book-badge { right: 10px; }
-  .nur-hero__buy-bar { margin-top: 48px; }
-  .nur-strip__item { font-size: 13px; padding: 0 16px; }
-  .nur-details__grid { grid-template-columns: 1fr; }
-  .nur-details__img { max-width: 260px; margin: 0 auto; }
-  .nur-author-chip { justify-content: center; }
-  .nur-hero__kicker { display: inline-flex; }
+  .book-hero { padding: 170px 0 100px; }
+  .book-hero__inner { grid-template-columns: 1fr; gap: 48px; }
+  .book-hero__visual { order: -1; }
+  .book-hero__tagline { max-width: 100%; }
+  .book-hero__ctas { justify-content: center; }
+  .book-hero__ftag { display: none; }
+  .book-book-badge { right: 10px; }
+  .book-hero__buy-bar { margin-top: 48px; }
+  .book-strip__item { font-size: 13px; padding: 0 16px; }
+  .book-details__grid { grid-template-columns: 1fr; }
+  .book-details__img { max-width: 260px; margin: 0 auto; }
+  .book-author-chip { justify-content: center; }
+  .book-hero__kicker { display: inline-flex; }
 }
 @media (max-width: 767px) {
-  .nur-hero__buy-bar { flex-wrap: wrap; }
-  .nur-hero__buy-item { flex: 1 1 calc(50% - 1px); border-bottom: 1px solid rgba(89,86,233,.1); }
-  .nur-hero__buy-item:nth-child(2) { border-right: none; }
-  .nur-hero__buy-item:nth-child(3), .nur-hero__buy-item:nth-child(4) { border-bottom: none; }
+  .book-hero__buy-bar { flex-wrap: wrap; }
+  .book-hero__buy-item { flex: 1 1 calc(50% - 1px); border-bottom: 1px solid rgba(89,86,233,.1); }
+  .book-hero__buy-item:nth-child(2) { border-right: none; }
+  .book-hero__buy-item:nth-child(3), .book-hero__buy-item:nth-child(4) { border-bottom: none; }
 }
 @media (max-width: 575px) {
-  .nur-hero { padding: 150px 0 80px; }
-  .nur-hero::after { display: none; }
-  .nur-hero__ring { display: none; }
-  .nur-hero__book-img { max-width: 220px; }
-  .nur-hero__scroll { display: none; }
-  .nur-hero__noise { display: none; }
-  .nur-hero__buy-bar { flex-direction: column; margin-top: 32px; }
-  .nur-hero__buy-item { flex-direction: row; border-right: none; border-bottom: 1px solid rgba(89,86,233,.08); padding: 14px 20px; }
-  .nur-hero__buy-item:last-child { border-bottom: none; }
-  .nur-strip__sep { display: none; }
-  .nur-strip__inner { gap: 12px; flex-direction: column; padding: 0 20px; }
-  .nur-strip__item { padding: 0; }
-  .nur-details { padding: 70px 0 60px; }
-  .nur-review { padding: 60px 0 80px; }
+  .book-hero { padding: 150px 0 80px; }
+  .book-hero::after { display: none; }
+  .book-hero__ring { display: none; }
+  .book-hero__book-img { max-width: 220px; }
+  .book-hero__scroll { display: none; }
+  .book-hero__noise { display: none; }
+  .book-hero__buy-bar { flex-direction: column; margin-top: 32px; }
+  .book-hero__buy-item { flex-direction: row; border-right: none; border-bottom: 1px solid rgba(89,86,233,.08); padding: 14px 20px; }
+  .book-hero__buy-item:last-child { border-bottom: none; }
+  .book-strip__sep { display: none; }
+  .book-strip__inner { gap: 12px; flex-direction: column; padding: 0 20px; }
+  .book-strip__item { padding: 0; }
+  .book-details { padding: 70px 0 60px; }
+  .book-review { padding: 60px 0 80px; }
+}
+
+/* ============================================================
+   GLOBAL â€” white solid navbar (all pages except portfolio)
+============================================================ */
+#header-sticky,
+.tp-header-area-two {
+  background: #fff !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,.06) !important;
+}
+.tp-md-header-area {
+  background: #fff !important;
+  box-shadow: 0 2px 14px rgba(0,0,0,.06) !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+@media (min-width: 992px) {
+  .header-space-two,
+  #header-sticky .header-space-two { padding-top: 4px !important; padding-bottom: 4px !important; }
+  .header-space-three,
+  #header-sticky .header-space-three { padding-top: 0 !important; padding-bottom: 0 !important; }
+}
+
+/* Portfolio â€” keep header fully transparent (initial state) */
+.portfolio-page #header-sticky,
+.portfolio-page .tp-header-area-two {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.portfolio-page .tp-md-header-area {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+   Subpage header (desktop + mobile): position:relative so
+   content starts BELOW the header.
+   Sticky state reverts to position:fixed so the bar pins.
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ab-page #header-sticky,        .ab-page #header-sticky-mobile,        .ab-page .tp-md-header-area,
+.s4c-page #header-sticky,       .s4c-page #header-sticky-mobile,       .s4c-page .tp-md-header-area,
+.pr-page #header-sticky,        .pr-page #header-sticky-mobile,        .pr-page .tp-md-header-area,
+.hm-page #header-sticky,        .hm-page #header-sticky-mobile,        .hm-page .tp-md-header-area,
+.not-found-page #header-sticky, .not-found-page #header-sticky-mobile, .not-found-page .tp-md-header-area {
+  position: relative !important;
+}
+/* Restore fixed when JS adds .header-sticky on scroll */
+.ab-page #header-sticky.header-sticky,        .ab-page #header-sticky-mobile.header-sticky,
+.s4c-page #header-sticky.header-sticky,       .s4c-page #header-sticky-mobile.header-sticky,
+.pr-page #header-sticky.header-sticky,        .pr-page #header-sticky-mobile.header-sticky,
+.hm-page #header-sticky.header-sticky,        .hm-page #header-sticky-mobile.header-sticky,
+.not-found-page #header-sticky.header-sticky, .not-found-page #header-sticky-mobile.header-sticky {
+  position: fixed !important;
+}
+
+/* Portfolio â€” sticky bar turns white when user scrolls */
+.portfolio-page #header-sticky.header-sticky,
+.portfolio-page #header-sticky-mobile.header-sticky {
+  position: fixed !important;
+  background: #fff !important;
+  box-shadow: 0 2px 16px rgba(0,0,0,.06) !important;
 }

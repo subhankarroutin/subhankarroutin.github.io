@@ -11,24 +11,18 @@
 
 
 /* ----------------------------------------------------------
-   1. Desktop white header
-      Selector is intentionally unscoped — works on any page
-      that uses #header-sticky.header-white.
+   1. Desktop header — white background + compact height
+      Padding and background handled by global styles.css.
+      Only nav structure and dropdown overrides live here.
 ---------------------------------------------------------- */
-#header-sticky.header-white {
+#header-sticky.header-white,
+#header-sticky.header-transparent {
   position: relative;
   z-index: 9999;
-  background: var(--tp-common-white, #ffffff);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, .06);
-}
-
-#header-sticky.header-white .header-space-two {
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 
 /* Nav list — centered flex row */
-#header-sticky.header-white .tp-main-menu ul {
+#header-sticky .tp-main-menu ul {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -36,51 +30,39 @@
   padding: 0;
   margin: 0;
 }
-#header-sticky.header-white .tp-main-menu ul li {
+#header-sticky .tp-main-menu ul li {
   margin-right: 40px;
 }
-#header-sticky.header-white .tp-main-menu ul li:last-child {
+#header-sticky .tp-main-menu ul li:last-child {
   margin-right: 0;
 }
 
-/* Nav link height */
-#header-sticky.header-white .tp-main-menu ul li a {
-  padding-top: 24px;
-  padding-bottom: 24px;
-}
-
-/* Underline animation offset for 24px padding */
-#header-sticky.header-white .tp-main-menu ul li a::after,
-#header-sticky.header-white .tp-main-menu ul li a::before {
-  bottom: 12px;
-}
-
-/* Home Page button */
-#header-sticky.header-white .tp-header-button {
+/* Portfolio button */
+#header-sticky .tp-header-button {
   text-align: right;
 }
-#header-sticky.header-white .tp-header-button .tp-btn {
+#header-sticky .tp-header-button .tp-btn {
   padding: 0 40px;
   min-width: 130px;
 }
 
 /* Dropdown — centred under its parent li */
-#header-sticky.header-white .tp-main-menu ul li ul.submenu {
+#header-sticky .tp-main-menu ul li ul.submenu {
   display: block;
   left: 50%;
   transform: translateX(-50%);
   padding: 10px 0;
 }
-#header-sticky.header-white .tp-main-menu ul li ul.submenu li {
+#header-sticky .tp-main-menu ul li ul.submenu li {
   padding: 0;
 }
-#header-sticky.header-white .tp-main-menu ul li ul.submenu li a {
+#header-sticky .tp-main-menu ul li ul.submenu li a {
   color: var(--tp-common-white, #ffffff) !important;
   padding: 9px 22px !important;
   display: block;
   white-space: nowrap;
 }
-#header-sticky.header-white .tp-main-menu ul li ul.submenu li a:hover {
+#header-sticky .tp-main-menu ul li ul.submenu li a:hover {
   color: var(--tp-theme-primary, #FFDC60) !important;
 }
 
