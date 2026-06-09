@@ -291,13 +291,16 @@ if (
 
     breakpoints: {
       0: {
-        slidesPerView: 1
+        slidesPerView: 1.15
       },
-      768: {
+      576: {
         slidesPerView: 2
       },
-      1200: {
+      992: {
         slidesPerView: 3
+      },
+      1200: {
+        slidesPerView: 4
       }
     }
   });
