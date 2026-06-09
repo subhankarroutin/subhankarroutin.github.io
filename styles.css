@@ -2637,15 +2637,24 @@ input:focus-visible,
   }
   .tp-copyright-right {
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 8px;
+    gap: 16px;
+    width: fit-content;
+    margin: 8px auto 0;
+  }
+  .tp-copyright-right a {
+    margin-left: 0 !important;
   }
   .copyright-border {
     padding-top: 20px;
   }
 }
 
+@media (hover: none) {
+  .tp-copyright-right a:hover {
+    color: inherit !important;
+  }
+}
 
 /* ---------------------------------------------------------------
    Â§16  SCROLL-TO-TOP â€” left side, bottom-up entry via transform
