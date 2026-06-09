@@ -545,7 +545,7 @@ Tag pill      — category label (Novel, Non-fiction, etc.)
 
 ## 15. Marquees & Tickers
 
-3 auto-scrolling strips across the site. All pause on hover.
+4 auto-scrolling strips across the site. All pause on hover.
 
 ### Logo Marquee (index.html, pr.html)
 ```
@@ -564,6 +564,30 @@ Brand logos        — grayscale, opacity 0.5. Hover: opacity 1.
 ### S4 Cinesphere Film Ticker (s4cinesphere.html)
 - Film titles scrolling continuously
 - Red accent for cinema branding
+
+### Testimonial Card Marquee (portfolio.html — added June 2026)
+```
+.pr-testimonials          — section wrapper. Background: var(--surface-dark). Padding 100px 0 80px.
+.pr-testimonials__glow    — radial violet glow (bottom-right), pointer-events: none
+.pr-testi-marquee         — overflow:hidden flex container. CSS mask fades both edges.
+                            Hover pauses ALL tracks via .pr-testi-marquee:hover .pr-testi-track
+.pr-testi-track           — flex row of cards. animation: pr-testi-scroll 32s linear infinite
+.pr-testi-track--clone    — identical duplicate track for seamless loop (aria-hidden)
+.pr-testi-card            — 360px wide dark glass card (rgba bg + rgba border). No translateY on hover —
+                            only border-color changes to rgba(89,86,233,.45). Flex column.
+.pr-testi-card__quote     — fal fa-quote-left icon, 26px, accent-violet, opacity 0.75
+.pr-testi-card__text      — 14.5px / 1.72 line-height / rgba(255,255,255,.62)
+.pr-testi-card__author    — flex row: avatar + info
+.pr-testi-card__avatar    — 42px circle, violet gradient bg, letter initial, white text
+.pr-testi-card__name      — 14px/600, white
+.pr-testi-card__role      — 12.5px, rgba(255,255,255,.38) — "Designation · Company"
+.pr-testi-card__source    — 11.5px muted label at bottom: "fab fa-linkedin / fal fa-envelope + source text"
+```
+Animation: `@keyframes pr-testi-scroll { 0% { transform: translateX(0) } 100% { transform: translateX(-100%) } }`
+Two tracks together create a seamless infinite loop — when track 1 has scrolled fully off-screen, track 2 (clone) fills the gap and the cycle repeats.
+`prefers-reduced-motion`: animation disabled, tracks become horizontally scrollable overflow.
+Mobile (≤575px): card width reduced to 280px, padding 24px 20px.
+Source: `styles.css §14` (inserted before chronicles styles)
 
 ---
 

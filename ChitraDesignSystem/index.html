@@ -2967,7 +2967,7 @@
       <div class="ds-section-icon"><i class="fas fa-scroll"></i></div>
       <div>
         <div class="ds-section-title">Marquees &amp; Tickers</div>
-        <div class="ds-section-desc">Three auto-scrolling strips across the site. All pause on hover.</div>
+        <div class="ds-section-desc">Four auto-scrolling strips across the site. All pause on hover.</div>
       </div>
     </div>
 
@@ -3010,6 +3010,56 @@
       </div>
       <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
         <code>.pr-featured</code> wrapper — light grey bg (#f7f8fc), overflow:hidden. <code>.pr-marquee</code> — edge-faded mask. <code>.pr-marquee__track</code> — animates <code>prScroll 24s linear infinite</code>. <code>.pr-marquee__item</code> — 16px/700, grey text, right divider border, icon + label. Hover: text turns violet. Used in pr.html "Featured In" section.
+      </div>
+    </div>
+
+    <!-- ── 3. TESTIMONIAL CARD MARQUEE (portfolio.html) ── -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Testimonial Card Marquee — Dark <span style="background:rgba(124,58,237,.1);color:#7c3aed;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;">styles.css §14</span> <span style="background:rgba(16,185,129,.1);color:#059669;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:4px;">portfolio.html</span></div>
+      <!-- Live preview on dark bg -->
+      <div style="background:#0D0D12;border-radius:var(--radius-md);padding:40px 0;overflow:hidden;position:relative;">
+        <div style="position:absolute;bottom:-120px;right:-60px;width:400px;height:400px;background:radial-gradient(circle,rgba(89,86,233,.18) 0%,transparent 65%);pointer-events:none;"></div>
+        <!-- Single card preview (static, no animation in DS) -->
+        <div style="padding:0 40px;display:flex;gap:24px;overflow:hidden;">
+
+          <div style="width:320px;flex-shrink:0;padding:28px 24px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:24px;display:flex;flex-direction:column;">
+            <div style="font-size:24px;color:#5956E9;margin-bottom:14px;opacity:.75;"><i class="fal fa-quote-left"></i></div>
+            <p style="font-size:13.5px;line-height:1.72;color:rgba(255,255,255,.62);flex:1;margin:0 0 22px;">He is a talented product designer with a great eye for detail and a sharp instinct for what makes a user experience truly work.</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#5956E9,rgba(89,86,233,.35));display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;color:#fff;flex-shrink:0;">M</div>
+              <div>
+                <strong style="display:block;font-size:13px;font-weight:600;color:#fff;margin-bottom:2px;">Meera Nair</strong>
+                <span style="display:block;font-size:11.5px;color:rgba(255,255,255,.38);">Director of Product Management</span>
+              </div>
+            </div>
+            <div style="margin-top:14px;font-size:11px;color:rgba(255,255,255,.22);display:flex;align-items:center;gap:5px;"><i class="fab fa-linkedin" style="font-size:11px;color:rgba(89,86,233,.5);"></i> LinkedIn</div>
+          </div>
+
+          <div style="width:320px;flex-shrink:0;padding:28px 24px;background:rgba(255,255,255,.04);border:1px solid rgba(89,86,233,.45);border-radius:24px;display:flex;flex-direction:column;">
+            <div style="font-size:24px;color:#5956E9;margin-bottom:14px;opacity:.75;"><i class="fal fa-quote-left"></i></div>
+            <p style="font-size:13.5px;line-height:1.72;color:rgba(255,255,255,.62);flex:1;margin:0 0 22px;">What stands out most is how fast he moves without losing quality. He analyses a brief quickly and delivers within — often ahead of — the agreed timeline.</p>
+            <div style="display:flex;align-items:center;gap:12px;">
+              <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#5956E9,rgba(89,86,233,.35));display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:600;color:#fff;flex-shrink:0;">A</div>
+              <div>
+                <strong style="display:block;font-size:13px;font-weight:600;color:#fff;margin-bottom:2px;">Arjun Kapoor</strong>
+                <span style="display:block;font-size:11.5px;color:rgba(255,255,255,.38);">Design Lead, Product Team</span>
+              </div>
+            </div>
+            <div style="margin-top:14px;font-size:11px;color:rgba(255,255,255,.22);display:flex;align-items:center;gap:5px;"><i class="fal fa-envelope" style="font-size:11px;color:rgba(89,86,233,.5);"></i> Email</div>
+          </div>
+
+        </div>
+        <div style="text-align:center;margin-top:16px;font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.2);">Cards scroll left continuously · Hover pauses · Right card = hover state (border glows)</div>
+      </div>
+      <!-- Spec notes -->
+      <div style="margin-top:12px;font-size:12px;color:var(--text-secondary);line-height:1.85;">
+        <strong style="color:var(--text-primary);">Container:</strong> <code>.pr-testi-marquee</code> — <code>overflow:hidden</code> flex row, CSS mask fades both edges (<code>mask-image: linear-gradient</code> transparent → black 8% → 92% → transparent).<br>
+        <strong style="color:var(--text-primary);">Tracks:</strong> <code>.pr-testi-track</code> + <code>.pr-testi-track--clone</code> — two identical flex rows, both run <code>animation: pr-testi-scroll 32s linear infinite</code>. Clone is <code>aria-hidden</code>. Together they create a seamless infinite loop.<br>
+        <strong style="color:var(--text-primary);">Pause:</strong> <code>.pr-testi-marquee:hover .pr-testi-track { animation-play-state: paused }</code><br>
+        <strong style="color:var(--text-primary);">Card:</strong> <code>.pr-testi-card</code> — 360px fixed width, <code>rgba(255,255,255,.04)</code> bg, <code>rgba(255,255,255,.08)</code> border, <code>--radius-lg</code>. Hover: border-color → <code>rgba(89,86,233,.45)</code> only. <strong>No translateY lift</strong> — cards are in motion so vertical lift feels jarring.<br>
+        <strong style="color:var(--text-primary);">Avatar:</strong> <code>.pr-testi-card__avatar</code> — 42px circle, violet gradient, letter initial.<br>
+        <strong style="color:var(--text-primary);">Source badge:</strong> <code>.pr-testi-card__source</code> — 11.5px muted. Icon: <code>fab fa-linkedin</code> (LinkedIn) or <code>fal fa-envelope</code> (Email). Color: <code>rgba(255,255,255,.22)</code>. Icon color: <code>rgba(89,86,233,.5)</code>.<br>
+        <strong style="color:var(--text-primary);">Reduced motion:</strong> Animation disabled; tracks become <code>overflow-x: auto</code> scrollable. Mask removed.
       </div>
     </div>
 

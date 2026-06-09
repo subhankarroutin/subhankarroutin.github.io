@@ -1356,6 +1356,135 @@ input:focus-visible,
 
 
 /* ---------------------------------------------------------------
+   14. TESTIMONIALS SECTION
+--------------------------------------------------------------- */
+.pr-testimonials {
+  padding: 100px 0 80px;
+  background: var(--surface-dark);
+  position: relative;
+  overflow: hidden;
+}
+.pr-testimonials__glow {
+  position: absolute;
+  bottom: -200px;
+  right: -100px;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(89, 86, 233, 0.18) 0%, transparent 65%);
+  pointer-events: none;
+}
+/* Infinite marquee container */
+.pr-testi-marquee {
+  margin-top: 60px;
+  display: flex;
+  overflow: hidden;
+  /* soft fade edges */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  gap: 0;
+}
+.pr-testi-marquee:hover .pr-testi-track {
+  animation-play-state: paused;
+}
+
+@keyframes pr-testi-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.pr-testi-track {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+  padding-right: 24px;
+  animation: pr-testi-scroll 32s linear infinite;
+}
+
+/* Cards */
+.pr-testi-card {
+  width: 360px;
+  flex-shrink: 0;
+  padding: 32px 28px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  transition: border-color 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.pr-testi-card:hover {
+  border-color: rgba(89, 86, 233, 0.45);
+}
+.pr-testi-card__quote {
+  font-size: 26px;
+  color: var(--accent-violet);
+  margin-bottom: 16px;
+  opacity: 0.75;
+}
+.pr-testi-card__text {
+  font-size: 14.5px;
+  line-height: 1.72;
+  color: rgba(255, 255, 255, 0.62);
+  flex: 1;
+  margin: 0 0 24px;
+}
+.pr-testi-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+.pr-testi-card__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-violet), rgba(89, 86, 233, 0.35));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: 600;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+.pr-testi-card__name {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+.pr-testi-card__role {
+  display: block;
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.38);
+  letter-spacing: 0.01em;
+}
+
+.pr-testi-card__source {
+  margin-top: 16px;
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.22);
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.pr-testi-card__source i { font-size: 12px; color: rgba(89, 86, 233, 0.5); }
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  .pr-testi-track { animation: none; overflow-x: auto; }
+  .pr-testi-marquee { -webkit-mask-image: none; mask-image: none; }
+}
+
+/* Mobile — narrower cards */
+@media (max-width: 575px) {
+  .pr-testi-card { width: 280px; padding: 24px 20px; }
+  .pr-testi-marquee { margin-top: 36px; }
+}
+
+/* ---------------------------------------------------------------
    14. CREATIVE CHRONICLES SECTION
 --------------------------------------------------------------- */
 .pr-chronicles {
