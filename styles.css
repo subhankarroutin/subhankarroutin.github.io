@@ -2656,6 +2656,14 @@ input:focus-visible,
   }
 }
 
+.tp-copyright-left p,
+.tp-copyright-right a {
+  color: #9ca3af !important;
+}
+.tp-copyright-right a:hover {
+  color: var(--tp-theme-primary) !important;
+}
+
 /* ---------------------------------------------------------------
    Â§16  SCROLL-TO-TOP â€” left side, bottom-up entry via transform
    Using translateY instead of bottom so horizontal left/right

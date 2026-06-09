@@ -336,6 +336,15 @@ Identical across all 9 pages. 4-column layout on dark background.
 </footer>
 ```
 
+**Copyright bar — `.tp-copyright-area`:**
+- Copyright text (`.tp-copyright-left p`) and both links (`.tp-copyright-right a`) use `color: #9ca3af !important` — muted gray, not white. Override in `styles.css`.
+- Chitra DS link uses **two separate `<a>` tags** (NOT two spans inside one `<a>`):
+  - `class="d-none d-md-inline"` → "Chitra Design System" on desktop
+  - `class="d-md-none"` → "Chitra DS" on mobile
+  - Keeps each link's hover/tap area exactly its own text width. Putting both texts inside one `<a>` made the hit area wider than visible text.
+- Mobile layout (`@media max-width:767px`): `.tp-copyright-right { display:flex; width:fit-content; margin:8px auto 0 }` — container hugs links and centers itself. Theme's `margin-left:60px` on `a` zeroed with `!important`.
+- Touch hover fix: `@media (hover:none) { .tp-copyright-right a:hover { color:inherit !important } }` — prevents `:hover` sticking after tap on mobile.
+
 **Known bug:** `privacy-policy.html` once used `.tp-footer-top.pt-90` wrapper — broke dark bg and column spacing. Fixed by switching to `.black-bg.pt-130.pb-30`.
 
 ---
@@ -486,15 +495,24 @@ Grid          — 3-col desktop, 1-col mobile
 ```
 Source: `styles.css §09`
 
-### Story / Chronicle Card — `index.html` Swiper carousel
+### Story / Chronicle Card — `index.html` Swiper carousel (Creative Chronicles)
 ```
 .pr-story-card     — dark glass card (rgba bg + rgba border). Hover: border turns violet.
 Category pill      — violet / yellow / teal tint depending on content type
 .pr-chronicles-dots — custom Swiper pagination (elongated active dot)
-Swiper config      — slidesPerView: 1.2 mobile, 3 desktop
+Swiper config      — slidesPerView: 1.15 (mobile) → 2 (576px) → 3 (992px) → 4 (1200px)
 Active slide       — border glows violet
+No <a> wrapper    — images have no external link; tag/title in body only
 ```
-Source: `styles.css §14`
+**6 slides (portfolio.html):**
+1. Short Film (placeholder / existing)
+2. Novel / The Uncharted Romance
+3. Non-Fiction / One Year, Many Lessons
+4. Figma MCP Training at Capgemini — `assets/img/pr/details/delivering_Figma mcp_training_capgemni.jpg` · tag: Training
+5. SAP Impulse India '25 — `assets/img/pr/details/sap_impluse_2025.jpg` · tag: Event · title: "Event Coordinator & Volunteer — SAP Impulse India '25"
+6. (Any additional future slide)
+
+Source: `styles.css §14` · Swiper breakpoints in `script.js`
 
 ### About Page — Highlight Card
 ```

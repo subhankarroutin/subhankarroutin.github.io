@@ -2157,16 +2157,17 @@
         </div>
       </div>
       <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-        <div style="font-size:12px;color:rgba(255,255,255,.3);">© Copyright 2026, All rights reserved</div>
-        <div style="display:flex;gap:20px;">
-          <span style="font-size:12px;color:rgba(255,255,255,.3);">Contact</span>
-          <span style="font-size:12px;color:rgba(255,255,255,.3);">Privacy Policy</span>
+        <div style="font-size:12px;color:#9ca3af;">© Copyright 2026, All rights reserved</div>
+        <div style="display:flex;gap:16px;">
+          <span style="font-size:12px;color:#9ca3af;">Chitra Design System</span>
+          <span style="font-size:12px;color:#9ca3af;">Privacy Policy</span>
         </div>
       </div>
     </div>
 
     <div style="margin-top:16px;padding:14px 18px;background:rgba(89,86,233,.05);border:1px solid rgba(89,86,233,.12);border-radius:var(--radius-md);font-size:13px;color:var(--text-secondary);">
-      <strong>Wrapper class:</strong> <code>.black-bg.pt-130.pb-30</code> — Critical. Using the wrong wrapper (e.g. <code>.tp-footer-top.pt-90</code>) will break the dark background and column spacing. This mistake happened on privacy-policy.html and was fixed.
+      <strong>Wrapper class:</strong> <code>.black-bg.pt-130.pb-30</code> — Critical. Using the wrong wrapper (e.g. <code>.tp-footer-top.pt-90</code>) will break the dark background and column spacing. This mistake happened on privacy-policy.html and was fixed.<br><br>
+      <strong>Copyright bar:</strong> Both copyright text and links use <code>color: #9ca3af !important</code> (= <code>--text-tertiary</code>) — intentionally muted, not white. Chitra DS link uses <strong>two separate <code>&lt;a&gt;</code> tags</strong> (not spans inside one): <code>class="d-none d-md-inline"</code> shows "Chitra Design System" on desktop; <code>class="d-md-none"</code> shows "Chitra DS" on mobile. This keeps each link's tap/hover area exactly its text width. Mobile layout: <code>.tp-copyright-right { display:flex; width:fit-content; margin:8px auto 0 }</code> — hugs content and centers itself; theme's <code>margin-left:60px</code> on <code>a</code> is zeroed with <code>!important</code>.
     </div>
   </section>
 
@@ -2740,7 +2741,7 @@
         </div>
       </div>
       <div style="margin-top:10px;font-size:12px;color:var(--text-secondary);line-height:1.75;">
-        <code>.pr-story-card</code> — dark glass card (rgba bg + border). Hover: border turns violet. Tags: category pill (violet, yellow, or teal tint). Pagination: <code>.pr-chronicles-dots</code> — custom elongated active dot. Carousel: <code>Swiper</code> (slidesPerView: 1.2 mobile, 3 desktop). Active slide: border glows.
+        <code>.pr-story-card</code> — dark glass card (rgba bg + border). Hover: border turns violet. Tags: category pill (violet, yellow, or teal tint). Pagination: <code>.pr-chronicles-dots</code> — custom elongated active dot. Carousel: <code>Swiper</code> (slidesPerView: 1.15 mobile → 2 at 576px → 3 at 992px → <strong>4 at 1200px</strong>). Active slide: border glows. <strong>6 slides total:</strong> Short Film · Novel · Non-Fiction · Figma MCP Training at Capgemini (<code>delivering_Figma mcp_training_capgemni.jpg</code>) · SAP Impulse India '25 Event Coordinator &amp; Volunteer (<code>sap_impluse_2025.jpg</code>). Images in <code>assets/img/pr/details/</code>. No external link on image — body tag only.
       </div>
     </div>
 
