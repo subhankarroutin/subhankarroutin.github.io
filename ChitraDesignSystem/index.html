@@ -44,6 +44,15 @@
       --transition-btn:   0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
       --ff-body:          'DM Sans', sans-serif;
       --ff-mono:          'DM Mono', monospace;
+      /* Spacing scale */
+      --space-1:          4px;
+      --space-2:          8px;
+      --space-3:          16px;
+      --space-4:          24px;
+      --space-5:          32px;
+      --space-6:          48px;
+      --space-7:          80px;
+      --space-8:          120px;
       /* DS page chrome */
       --ds-sidebar-w:     260px;
       --ds-bg:            #F7F8FD;
@@ -67,6 +76,7 @@
       display: block;         /* explicit block — never inherit row-flex from body */
       width: var(--ds-sidebar-w);
       flex-shrink: 0;
+      align-self: flex-start; /* prevent flex stretch from overriding height:100vh */
       background: #fff;
       border-right: 1px solid var(--ds-border);
       position: sticky;
@@ -285,6 +295,47 @@
       justify-content: center;
       font-size: 12px;
       font-weight: 600;
+      color: var(--text-secondary);
+    }
+
+    /* ── SPACING SCALE ──────────────────────────────────────── */
+    .ds-spacing-row {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .ds-spacing-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: #fff;
+      border: 1px solid var(--ds-border);
+      border-radius: 10px;
+      padding: 10px 16px;
+    }
+    .ds-spacing-bar {
+      background: rgba(89,86,233,.15);
+      border: 1px solid rgba(89,86,233,.2);
+      border-radius: 4px;
+      height: 18px;
+      flex-shrink: 0;
+    }
+    .ds-spacing-var {
+      font-family: var(--ff-mono);
+      font-size: 12px;
+      color: var(--accent-violet);
+      width: 82px;
+      flex-shrink: 0;
+    }
+    .ds-spacing-px {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      width: 38px;
+      flex-shrink: 0;
+    }
+    .ds-spacing-use {
+      font-size: 12px;
       color: var(--text-secondary);
     }
 
@@ -815,6 +866,40 @@
 <!-- Sidebar overlay (mobile) -->
 <div class="ds-sidebar-overlay" id="ds-overlay"></div>
 
+<!-- Mobile nav panel (independent from desktop sidebar) -->
+<nav id="ds-mobile-nav" class="ds-mobile-nav" aria-label="Site navigation">
+  <div class="ds-mn-header">
+    <img src="../assets/img/brand/chitra-logo-only-text.webp" alt="Chitra Design System">
+    <span>Official Brand Design System · v2.0</span>
+  </div>
+  <span class="ds-mn-label">Introduction</span>
+  <a class="ds-mn-link" href="#introduction"><i class="fas fa-star"></i> Chitra Design System</a>
+  <span class="ds-mn-label">Brand Identity</span>
+  <a class="ds-mn-link" href="#brand"><i class="fas fa-copyright"></i> Site Logo &amp; Guidelines</a>
+  <span class="ds-mn-label">Foundation</span>
+  <a class="ds-mn-link" href="#tokens"><i class="fas fa-palette"></i> Design Tokens</a>
+  <a class="ds-mn-link" href="#color"><i class="fas fa-adjust"></i> Color System</a>
+  <a class="ds-mn-link" href="#typography"><i class="fas fa-font"></i> Typography</a>
+  <span class="ds-mn-label">Components</span>
+  <a class="ds-mn-link" href="#buttons"><i class="fas fa-hand-pointer"></i> Buttons</a>
+  <a class="ds-mn-link" href="#labels"><i class="fas fa-tag"></i> Labels &amp; Kickers</a>
+  <a class="ds-mn-link" href="#components"><i class="fas fa-layer-group"></i> UI Components</a>
+  <a class="ds-mn-link" href="#navigation"><i class="fas fa-bars"></i> Navigation &amp; Header</a>
+  <a class="ds-mn-link" href="#footer"><i class="fas fa-border-bottom"></i> Footer</a>
+  <span class="ds-mn-label">Motion</span>
+  <a class="ds-mn-link" href="#animation"><i class="fas fa-magic"></i> Animations</a>
+  <span class="ds-mn-label">System</span>
+  <a class="ds-mn-link" href="#breakpoints"><i class="fas fa-mobile-alt"></i> Breakpoints</a>
+  <a class="ds-mn-link" href="#accessibility"><i class="fas fa-universal-access"></i> Accessibility</a>
+  <a class="ds-mn-link" href="#pages"><i class="fas fa-file-alt"></i> Page Reference</a>
+  <span class="ds-mn-label">Patterns</span>
+  <a class="ds-mn-link" href="#cards"><i class="fas fa-id-card"></i> Cards</a>
+  <a class="ds-mn-link" href="#marquees"><i class="fas fa-scroll"></i> Marquees &amp; Tickers</a>
+  <a class="ds-mn-link" href="#stats"><i class="fas fa-chart-bar"></i> Stats &amp; Data</a>
+  <span class="ds-mn-label">Site</span>
+  <a class="ds-mn-link" href="../index.html"><i class="fas fa-house"></i> Back to Site</a>
+</nav>
+
 <!-- ══════════════════════════════════════════════════════════
      SIDEBAR
 ═══════════════════════════════════════════════════════════ -->
@@ -822,7 +907,7 @@
 <div class="ds-sidebar__scroll">
   <div class="ds-sidebar__logo">
     <img src="../assets/img/brand/chitra-logo-only-text.webp" alt="Chitra Design System" style="height:36px;width:auto;max-width:180px;display:block;margin-bottom:10px;object-fit:contain;">
-    <div class="ds-sidebar__logo-sub" style="font-size:11px;color:#9CA3AF;line-height:1.4;">Official Brand Design System<br>of Subhankar Rout</div>
+    <div class="ds-sidebar__logo-sub" style="font-size:11px;color:#9CA3AF;line-height:1.4;">Official Brand Design System<br>of <span style="color:#5956E9;font-weight:600;">subhankarrout.in</span></div>
     <span class="ds-sidebar__badge">v2.0 · June 2026</span>
   </div>
 
@@ -890,7 +975,7 @@
       <img src="../assets/img/brand/chitra-v2.0-logo.png" alt="Chitra" style="width:200px;height:auto;object-fit:contain;border-radius:12px;">
     </div>
     <h1 style="font-size:40px;font-weight:700;letter-spacing:-.03em;color:var(--text-primary);margin-bottom:6px;">Chitra Design System</h1>
-    <p style="font-size:15px;font-weight:600;color:var(--text-secondary);margin-bottom:14px;">The Official Brand Design System of Subhankar Rout</p>
+    <p style="font-size:15px;font-weight:600;color:var(--text-secondary);margin-bottom:14px;">The Official Brand Design System of <a href="https://subhankarrout.in" target="_blank" rel="noopener" style="color:var(--accent-violet);text-decoration:none;">subhankarrout.in</a></p>
     <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:18px;">
       <span style="font-size:12px;font-weight:700;background:rgba(89,86,233,.1);color:var(--accent-violet);padding:3px 10px;border-radius:100px;">v2.0</span>
       <span style="font-size:12px;color:var(--text-tertiary);">·</span>
@@ -1271,6 +1356,61 @@
         <div style="background:#fff;border:1px solid var(--ds-border);border-radius:10px;padding:14px 18px;">
           <code>Mobile menu</code>
           <span style="margin-left:12px;font-size:13px;color:var(--text-secondary);">0.25s — <code>.tpoffcanvas</code> slide-in. Intentionally fast to avoid UX lag.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Spacing -->
+    <div class="ds-sub">
+      <div class="ds-sub-title">Spacing Scale</div>
+      <div class="ds-spacing-row">
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:4px;"></div>
+          <span class="ds-spacing-var">--space-1</span>
+          <span class="ds-spacing-px">4px</span>
+          <span class="ds-spacing-use">Micro — icon gaps, badge padding, inline offsets</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:8px;"></div>
+          <span class="ds-spacing-var">--space-2</span>
+          <span class="ds-spacing-px">8px</span>
+          <span class="ds-spacing-use">Tight — nav item gaps, small button padding, tag rows</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:16px;"></div>
+          <span class="ds-spacing-var">--space-3</span>
+          <span class="ds-spacing-px">16px</span>
+          <span class="ds-spacing-use">Base unit — standard padding, form fields, list items</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:24px;"></div>
+          <span class="ds-spacing-var">--space-4</span>
+          <span class="ds-spacing-px">24px</span>
+          <span class="ds-spacing-use">Comfortable — card padding, sidebar nav groups</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:32px;"></div>
+          <span class="ds-spacing-var">--space-5</span>
+          <span class="ds-spacing-px">32px</span>
+          <span class="ds-spacing-use">Component — between components within a section</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:48px;"></div>
+          <span class="ds-spacing-var">--space-6</span>
+          <span class="ds-spacing-px">48px</span>
+          <span class="ds-spacing-use">Section — top/bottom padding on page sections</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:80px;"></div>
+          <span class="ds-spacing-var">--space-7</span>
+          <span class="ds-spacing-px">80px</span>
+          <span class="ds-spacing-use">Large — gap between major page sections</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:120px;"></div>
+          <span class="ds-spacing-var">--space-8</span>
+          <span class="ds-spacing-px">120px</span>
+          <span class="ds-spacing-use">Hero / Page — hero sections, footer top padding</span>
         </div>
       </div>
     </div>
@@ -3007,35 +3147,50 @@
   }, { rootMargin: '-20% 0px -70% 0px' });
   sections.forEach(s => sectionObserver.observe(s));
 
-  /* ── Mobile sidebar toggle ── */
-  const sidebar = document.getElementById('ds-sidebar');
+  /* ── Mobile nav toggle (uses separate #ds-mobile-nav on mobile) ── */
   const overlay = document.getElementById('ds-overlay');
   const menuBtn = document.getElementById('ds-menu-btn');
+  const mobileNav = document.getElementById('ds-mobile-nav');
 
   function isMobile() { return window.innerWidth <= 768; }
 
+  var _lockedScrollY = 0;
+  function lockBodyScroll() {
+    _lockedScrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = '-' + _lockedScrollY + 'px';
+    document.body.style.width = '100%';
+  }
+  function unlockBodyScroll() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.width = '';
+    window.scrollTo(0, _lockedScrollY);
+  }
+
   function openSidebar() {
-    if (!sidebar) return;
-    sidebar.classList.add('open');
+    if (!mobileNav) return;
+    mobileNav.classList.add('open');
     if (overlay) overlay.classList.add('open');
     if (menuBtn) {
       menuBtn.querySelector('i').className = 'fas fa-times';
       menuBtn.setAttribute('aria-label', 'Close navigation');
     }
+    lockBodyScroll();
   }
 
   function closeSidebar() {
-    if (!sidebar) return;
-    sidebar.classList.remove('open');
+    if (mobileNav) mobileNav.classList.remove('open');
     if (overlay) overlay.classList.remove('open');
     if (menuBtn) {
       menuBtn.querySelector('i').className = 'fas fa-bars';
       menuBtn.setAttribute('aria-label', 'Open navigation');
     }
+    unlockBodyScroll();
   }
 
   function toggleSidebar() {
-    sidebar && sidebar.classList.contains('open') ? closeSidebar() : openSidebar();
+    mobileNav && mobileNav.classList.contains('open') ? closeSidebar() : openSidebar();
   }
 
   /* Use touchend for instant response on mobile, click as fallback */
@@ -3056,11 +3211,34 @@
   addTapListener(menuBtn, toggleSidebar);
   addTapListener(overlay, closeSidebar);
 
-  /* Close on nav link click (mobile) */
-  navLinks.forEach(function(link) {
-    link.addEventListener('click', function() {
-      if (isMobile()) {
-        setTimeout(closeSidebar, 120); /* small delay so anchor scroll starts first */
+  /* Close mobile nav on link click — and scroll to anchor target */
+  document.querySelectorAll('.ds-mn-link').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href && href.charAt(0) === '#') {
+        e.preventDefault();
+        var target = document.getElementById(href.slice(1));
+        /* Close panel */
+        if (mobileNav) mobileNav.classList.remove('open');
+        if (overlay)   overlay.classList.remove('open');
+        if (menuBtn) {
+          menuBtn.setAttribute('aria-expanded', 'false');
+          var icon = menuBtn.querySelector('i');
+          if (icon) icon.className = 'fas fa-bars';
+        }
+        /* Unlock body — calculate target scroll before restoring */
+        var scrollTo = 0;
+        if (target) {
+          /* While body is position:fixed, getBoundingClientRect gives position relative to viewport */
+          scrollTo = target.getBoundingClientRect().top + _lockedScrollY - 68; /* 56px topbar + 12px breathing room */
+          if (scrollTo < 0) scrollTo = 0;
+        }
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
+        window.scrollTo({ top: scrollTo, behavior: 'smooth' });
+      } else {
+        setTimeout(closeSidebar, 120);
       }
     });
   });

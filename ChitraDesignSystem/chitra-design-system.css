@@ -8,7 +8,7 @@ html {
   overflow-x: hidden;
 }
 body {
-  overflow-x: hidden;
+  overflow-x: clip; /* clip prevents horizontal scroll without creating a scroll container — overflow:hidden breaks position:sticky and blocks vertical scroll on iOS */
   max-width: 100vw;
 }
 
@@ -162,6 +162,9 @@ body {
   /* 1. Body: plain block — remove flex so fixed topbar + scroll work cleanly */
   body {
     display: block !important;
+    overflow-x: hidden !important;        /* clip horizontal without blocking vertical */
+    overflow-y: scroll !important;        /* force vertical scroll on (needed on iOS Safari) */
+    -webkit-overflow-scrolling: touch !important;
   }
 
   /* 2. Topbar: FIXED bar at top — stays put while page scrolls */
@@ -175,7 +178,7 @@ body {
     max-width: 100vw !important;
     box-sizing: border-box !important;
     height: 56px !important;
-    z-index: 1000 !important;    /* above everything */
+    z-index: 1002 !important;    /* above overlay (1000) and mobile nav (1001) */
     background: #fff !important;
     border-bottom: 1px solid #E8ECF2 !important;
     padding: 0 16px !important;
@@ -191,6 +194,8 @@ body {
     max-width: 100% !important;
     margin-left: 0 !important;
     padding: 76px 18px 80px !important; /* 56px topbar + 20px gap */
+    position: relative !important;
+    z-index: 0 !important; /* creates a stacking context so no child can float above the overlay (z-index 998) or sidebar (z-index 999) */
   }
 
   /* 4. Sidebar: fixed slide-in panel — outer handles position+animation only */
@@ -267,6 +272,83 @@ body {
   [style*="grid-template-columns:auto 1fr"] {
     grid-template-columns: 1fr !important;
   }
+}
+
+/* ── MOBILE NAV (completely separate from desktop .ds-sidebar) ── */
+.ds-mobile-nav { display: none; }          /* hidden on desktop */
+
+@media (max-width: 768px) {
+  /* Suppress desktop sidebar entirely */
+  .ds-sidebar { display: none !important; }
+
+  /* Raise overlay above main content */
+  .ds-sidebar-overlay { z-index: 1000 !important; }
+
+  /* Slide-in panel */
+  .ds-mobile-nav {
+    display: block;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    bottom: 0;
+    width: 75vw;
+    max-width: 290px;
+    background: #fff;
+    border-right: 1px solid #E8ECF2;
+    z-index: 1001;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+    transform: translateX(-110%);
+    transition: transform 0.27s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 16px 0 48px;
+    will-change: transform;
+  }
+  .ds-mobile-nav.open {
+    transform: translateX(0);
+    box-shadow: 6px 0 28px rgba(0,0,0,.18);
+  }
+
+  /* Header inside panel */
+  .ds-mn-header {
+    padding: 4px 20px 16px;
+    border-bottom: 1px solid #E8ECF2;
+    margin-bottom: 8px;
+  }
+  .ds-mn-header img { height: 26px; width: auto; display: block; margin-bottom: 6px; }
+  .ds-mn-header span { font-size: 10px; color: #9CA3AF; }
+
+  /* Group label */
+  .ds-mn-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    padding: 10px 20px 4px;
+  }
+
+  /* Nav link */
+  .ds-mn-link {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6B7280;
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ds-mn-link:active,
+  .ds-mn-link.active {
+    color: #5956E9;
+    border-left-color: #5956E9;
+    background: rgba(89,86,233,.05);
+  }
+  .ds-mn-link i { width: 15px; font-size: 12px; flex-shrink: 0; }
 }
 
 /* ── SMALL PHONES (≤480px) ───────────────────────────────────── */
