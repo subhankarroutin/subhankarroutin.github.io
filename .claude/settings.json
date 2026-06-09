@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls \"C:/Users/subha/Pictures/Screenshots/\" 2>/dev/null | tail -5; ls \"C:/Users/subha/Desktop/\" 2>/dev/null | grep -i \"chitra\\\\|design\\\\|figma\\\\|cover\\\\|screenshot\\\\|png\\\\|jpg\\\\|webp\" | head -10)",
+      "Read(//c/Users/subha/Pictures/**)",
+      "Read(//c/Users/subha/Desktop/**)",
+      "Bash(find \"C:/Users/subha\" -maxdepth 3 \\\\\\( -name \"*.png\" -o -name \"*.jpg\" -o -name \"*.webp\" \\\\\\) -newer \"d:/Web/subhankarroutin.github.io/portfolio.html\" 2>/dev/null | head -10)",
+      "Read(//c/Users/subha/**)",
+      "Bash(cp \"C:/Users/subha/Downloads/SVG/Cover.png\" \"d:/Web/subhankarroutin.github.io/assets/img/brand/chitra-ds-cover.png\" && echo \"copied\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\subha\\Downloads\\SVG"
+    ]
+  }
+}
