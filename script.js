@@ -291,7 +291,7 @@ if (
 
     breakpoints: {
       0: {
-        slidesPerView: 1.15
+        slidesPerView: 1
       },
       576: {
         slidesPerView: 2
