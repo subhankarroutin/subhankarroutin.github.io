@@ -47,12 +47,17 @@
       /* Spacing scale */
       --space-1:          4px;
       --space-2:          8px;
-      --space-3:          16px;
-      --space-4:          24px;
-      --space-5:          32px;
-      --space-6:          48px;
-      --space-7:          80px;
-      --space-8:          120px;
+      --space-3:          12px;
+      --space-4:          16px;
+      --space-5:          20px;
+      --space-6:          24px;
+      --space-7:          28px;
+      --space-8:          32px;
+      --space-9:          36px;
+      --space-10:         40px;
+      --space-11:         48px;
+      --space-12:         80px;
+      --space-13:         120px;
       /* DS page chrome */
       --ds-sidebar-w:     260px;
       --ds-bg:            #F7F8FD;
@@ -1371,10 +1376,22 @@
           <span class="ds-spacing-use">Tight — nav item gaps, small button padding, tag rows</span>
         </div>
         <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:12px;background:rgba(255,220,96,.35);border-color:rgba(255,220,96,.5);"></div>
+          <span class="ds-spacing-var">--space-2b</span>
+          <span class="ds-spacing-px">12px</span>
+          <span class="ds-spacing-use">Snug — pill vertical padding, icon row gaps</span>
+        </div>
+        <div class="ds-spacing-item">
           <div class="ds-spacing-bar" style="width:16px;"></div>
           <span class="ds-spacing-var">--space-3</span>
           <span class="ds-spacing-px">16px</span>
           <span class="ds-spacing-use">Base unit — standard padding, form fields, list items</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:20px;background:rgba(255,220,96,.35);border-color:rgba(255,220,96,.5);"></div>
+          <span class="ds-spacing-var">--space-4b</span>
+          <span class="ds-spacing-px">20px</span>
+          <span class="ds-spacing-use">Relaxed — card body gap, tag padding</span>
         </div>
         <div class="ds-spacing-item">
           <div class="ds-spacing-bar" style="width:24px;"></div>
@@ -1383,10 +1400,28 @@
           <span class="ds-spacing-use">Comfortable — card padding, sidebar nav groups</span>
         </div>
         <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:28px;background:rgba(255,220,96,.35);border-color:rgba(255,220,96,.5);"></div>
+          <span class="ds-spacing-var">--space-4c</span>
+          <span class="ds-spacing-px">28px</span>
+          <span class="ds-spacing-use">Button-pad — .tp-btn left/right padding</span>
+        </div>
+        <div class="ds-spacing-item">
           <div class="ds-spacing-bar" style="width:32px;"></div>
           <span class="ds-spacing-var">--space-5</span>
           <span class="ds-spacing-px">32px</span>
           <span class="ds-spacing-use">Component — between components within a section</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:36px;background:rgba(255,220,96,.35);border-color:rgba(255,220,96,.5);"></div>
+          <span class="ds-spacing-var">--space-5b</span>
+          <span class="ds-spacing-px">36px</span>
+          <span class="ds-spacing-use">Medium — filter tab rows, medium gaps</span>
+        </div>
+        <div class="ds-spacing-item">
+          <div class="ds-spacing-bar" style="width:40px;background:rgba(255,220,96,.35);border-color:rgba(255,220,96,.5);"></div>
+          <span class="ds-spacing-var">--space-5c</span>
+          <span class="ds-spacing-px">40px</span>
+          <span class="ds-spacing-use">Card-pad — card padding, nav item height</span>
         </div>
         <div class="ds-spacing-item">
           <div class="ds-spacing-bar" style="width:48px;"></div>
@@ -1528,6 +1563,133 @@
             <span class="ds-swatch__hex">#0D0D12 · Dark hero, footer, marquee bg</span>
           </div>
         </div>
+      </div>
+    </div>
+
+    <div class="ds-sub">
+      <div class="ds-sub-title">Surface &amp; Border</div>
+      <div class="ds-swatch-grid">
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#FFFFFF;border:1px solid #E8ECF2;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">White</span>
+            <span class="ds-swatch__var">--tp-common-white</span>
+            <span class="ds-swatch__hex">#FFFFFF · Cards, sidebar, modal bg</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#F4F4F6;border:1px solid #E8ECF2;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Surface 2</span>
+            <span class="ds-swatch__var">--surface-2</span>
+            <span class="ds-swatch__hex">#F4F4F6 · Table headers, muted bg</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#F7F8FD;border:1px solid #E8ECF2;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Grey 1</span>
+            <span class="ds-swatch__var">--tp-grey-1 / --ds-bg</span>
+            <span class="ds-swatch__hex">#F7F8FD · Page background</span>
+          </div>
+        </div>
+        <div class="ds-swatch">
+          <div class="ds-swatch__color" style="background:#E8ECF2;"></div>
+          <div class="ds-swatch__meta">
+            <span class="ds-swatch__name">Border</span>
+            <span class="ds-swatch__var">--tp-border-1 / --ds-border</span>
+            <span class="ds-swatch__hex">#E8ECF2 · Dividers, card outlines</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ds-sub">
+      <div class="ds-sub-title">Gradients</div>
+      <div class="ds-table__wrap">
+        <table class="ds-table">
+          <thead>
+            <tr>
+              <th style="width:48px;"></th>
+              <th>Name</th>
+              <th style="width:80px;">Type</th>
+              <th>Color Stops</th>
+              <th>Usage</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#181530,#0D0D12);border:1px solid rgba(255,255,255,.06);"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/Hero Dark</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(89,86,233,.1);color:var(--accent-violet);padding:2px 8px;border-radius:100px;letter-spacing:.04em;">LINEAR</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">#181530 → #0D0D12</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">index.html · books.html hero bg</td>
+            </tr>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#1a0508,#0f0305,#000012);border:1px solid rgba(255,255,255,.06);"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/Hero Cinematic</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(89,86,233,.1);color:var(--accent-violet);padding:2px 8px;border-radius:100px;letter-spacing:.04em;">LINEAR</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">#1a0508 → #0f0305 → #000012</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">s4cinesphere.html hero bg</td>
+            </tr>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:radial-gradient(circle,rgba(230,57,70,.28),transparent);border:1px solid var(--ds-border);background-color:#0a0a0a;"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/Cinematic Red Glow</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(255,100,100,.1);color:#c0392b;padding:2px 8px;border-radius:100px;letter-spacing:.04em;">RADIAL</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">rgba(230,57,70,.28) → transparent</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">s4cinesphere.html radial overlay</td>
+            </tr>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:radial-gradient(circle,rgba(89,86,233,.05),transparent);border:1px solid var(--ds-border);"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/PR Dot Grid</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(255,100,100,.1);color:#c0392b;padding:2px 8px;border-radius:100px;letter-spacing:.04em;">RADIAL</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">rgba(89,86,233,.05) → transparent</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">pr.html hero bg subtle violet overlay</td>
+            </tr>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#5956E9,#FFDC60,#22c55e);"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/Stats Number</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(89,86,233,.1);color:var(--accent-violet);padding:2px 8px;border-radius:100px;letter-spacing:.04em;">LINEAR</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">#5956E9 → #FFDC60 → #22c55e</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">pr.html stat numbers · background-clip:text</td>
+            </tr>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(135deg,#5956E9,#423EF3);"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/Avatar Violet</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(89,86,233,.1);color:var(--accent-violet);padding:2px 8px;border-radius:100px;letter-spacing:.04em;">LINEAR</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">#5956E9 → #423EF3</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">Testimonial + review card avatars</td>
+            </tr>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:radial-gradient(circle,rgba(89,86,233,.35),transparent);border:1px solid var(--ds-border);"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/Ambient Violet</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(255,100,100,.1);color:#c0392b;padding:2px 8px;border-radius:100px;letter-spacing:.04em;">RADIAL</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">rgba(89,86,233,.35) → transparent</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">index.html hero blobs · testimonials glow</td>
+            </tr>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:radial-gradient(circle,rgba(255,220,96,.18),transparent);border:1px solid var(--ds-border);"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/Ambient Yellow</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(255,100,100,.1);color:#c0392b;padding:2px 8px;border-radius:100px;letter-spacing:.04em;">RADIAL</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">rgba(255,220,96,.18) → transparent</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">index.html hero bottom-left blob</td>
+            </tr>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.4),transparent);border:1px solid var(--ds-border);"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/Kicker Shimmer</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(89,86,233,.1);color:var(--accent-violet);padding:2px 8px;border-radius:100px;letter-spacing:.04em;">LINEAR</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">transparent → rgba(255,255,255,.4) → transparent</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">.pr-hero__kicker::after pseudo-element</td>
+            </tr>
+            <tr>
+              <td><div style="width:36px;height:36px;border-radius:8px;background:linear-gradient(90deg,transparent,rgba(0,0,0,.08) 8%,rgba(0,0,0,.92) 92%,transparent);border:1px solid var(--ds-border);"></div></td>
+              <td style="font-weight:600;font-size:13px;">Gradient/Marquee Edge Fade</td>
+              <td><span style="font-size:10px;font-weight:700;background:rgba(89,86,233,.1);color:var(--accent-violet);padding:2px 8px;border-radius:100px;letter-spacing:.04em;">LINEAR</span></td>
+              <td style="font-family:var(--ff-mono);font-size:12px;color:var(--text-secondary);">transparent → black 8% → black 92% → transparent</td>
+              <td style="font-size:12px;color:var(--text-tertiary);">All 3 marquee wrappers · CSS mask-image</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
