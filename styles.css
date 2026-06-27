@@ -7866,6 +7866,14 @@ input:focus-visible,
 .hm-book__new-row:hover > .fal {
   color: var(--tp-theme-primary); transform: translateX(4px);
 }
+.hm-book__new-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+@media (max-width: 575px) {
+  .hm-book__new-grid { grid-template-columns: 1fr; }
+}
 
 /* ================================================================
    Â§23  HOME PAGE â€” DARK SECTION COLOUR OVERRIDES
