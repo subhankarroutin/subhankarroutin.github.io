@@ -225,6 +225,16 @@
 .book-quote__rule  { width: 44px; height: 2px; background: rgba(255,220,96,.65); margin: 0 auto 18px; }
 .book-quote__attr  { font-size: 11px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.5); }
 
+/* Cinematic quote — light variant */
+.book-quote--light { background: #f0effe; }
+.book-quote--light .book-quote__watermark { color: rgba(89,86,233,.07); }
+.book-quote--light .book-quote__orb-r { background: rgba(89,86,233,.06); }
+.book-quote--light .book-quote__orb-l { background: rgba(89,86,233,.04); }
+.book-quote--light .book-quote__glyph  { color: rgba(89,86,233,.16); }
+.book-quote--light .book-quote__text   { color: #1e1c3a; }
+.book-quote--light .book-quote__rule   { background: rgba(89,86,233,.4); }
+.book-quote--light .book-quote__attr   { color: rgba(30,28,58,.45); }
+
 /* Characters */
 .book-characters { background: var(--surface-1); padding: 120px 0 110px; }
 .book-char-layout { display: grid; grid-template-columns: 1fr 110px 1fr; align-items: center; max-width: 900px; margin: 0 auto; }
