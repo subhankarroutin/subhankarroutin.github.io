@@ -2866,15 +2866,20 @@ input:focus-visible,
 .tpoffcanvas .mean-bar { padding: 0; }
 .tpoffcanvas .mean-nav > ul { display: block !important; }
 
-/* Divider opacity */
+/* Divider opacity + link row spacing */
 .tpoffcanvas .mean-container .mean-nav ul li a { border-top-color: rgba(255,255,255,.4); }
+.tpoffcanvas .mean-container .mean-nav ul li > a:not(.mean-expand) {
+  padding-top: 16px !important;
+  padding-bottom: 16px !important;
+}
 
-/* + / - expand button â€” vertically centred inside its own row, immune to MeanMenu JS shift */
+/* + / - expand button — anchored to top of the link row, never shifts when submenu expands.
+   height matches the link row (16px top-pad + ~18px line-height + 16px bottom-pad = 50px). */
 .tpoffcanvas .mean-container .mean-nav ul li a.mean-expand {
-  top: 50% !important;
-  transform: translateY(-50%) !important;
+  top: 0 !important;
+  transform: none !important;
   margin-top: 0 !important;
-  height: 32px !important;
+  height: 50px !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
