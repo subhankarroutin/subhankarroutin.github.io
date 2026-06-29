@@ -8115,7 +8115,7 @@ input:focus-visible,
   z-index: 0;
   font-family: var(--ff-body);
 }
-.book-hero--romance::after { content: 'ROMANCE'; }
+.book-hero--romance::after { content: 'FICTION'; }
 .book-hero--lessons::after { content: 'LESSONS'; }
 .book-hero--books::after   { content: 'BOOKS'; }
 
