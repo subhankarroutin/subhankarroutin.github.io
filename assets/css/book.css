@@ -429,6 +429,43 @@
 }
 .bk-hero__single-cover:hover { transform: rotate(0deg) translateY(-8px); }
 
+/* Genre filter pills */
+.bk-filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 64px;
+}
+.bk-filter__pill {
+  padding: 9px 22px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(89,86,233,.35);
+  background: transparent;
+  color: var(--tp-text-1, #555);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s, box-shadow .2s;
+}
+.bk-filter__pill:hover {
+  border-color: var(--tp-theme-1, #5956E9);
+  color: var(--tp-theme-1, #5956E9);
+}
+.bk-filter__pill.active {
+  background: var(--tp-theme-1, #5956E9);
+  border-color: var(--tp-theme-1, #5956E9);
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(89,86,233,.28);
+}
+
+/* Card hide/show on filter */
+.bk-book-card.bk-book-card--hidden {
+  display: none !important;
+}
+
 /* Book cards */
 .bk-books { padding: 100px 0 60px; }
 

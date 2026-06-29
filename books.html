@@ -215,8 +215,16 @@
     <section class="bk-books" aria-label="Publications">
       <div class="container">
 
+        <!-- Genre filter -->
+        <div class="bk-filter" role="group" aria-label="Filter books by genre">
+          <button class="bk-filter__pill active" data-filter="all">All</button>
+          <button class="bk-filter__pill" data-filter="fiction">Fiction</button>
+          <button class="bk-filter__pill" data-filter="non-fiction">Non-Fiction</button>
+          <!-- <button class="bk-filter__pill" data-filter="academic">Academic</button> -->
+        </div>
+
         <!-- Book 1: One Year, Many Lessons -->
-        <article class="bk-book-card" id="bk-oyml">
+        <article class="bk-book-card" id="bk-oyml" data-genre="non-fiction">
           <div class="bk-book-card__cover-wrap">
             <img class="bk-book-card__cover" src="assets/img/oyml/oyml book.png" alt="One Year, Many Lessons book cover">
             <div class="bk-book-card__badge">
@@ -252,7 +260,7 @@
         </article>
 
         <!-- Book 2: The Uncharted Romance -->
-        <article class="bk-book-card bk-book-card--flip" id="bk-tur">
+        <article class="bk-book-card bk-book-card--flip" id="bk-tur" data-genre="fiction">
           <div class="bk-book-card__cover-wrap">
             <img class="bk-book-card__cover" src="assets/img/book/Product1-tur.png" alt="The Uncharted Romance book cover">
             <div class="bk-book-card__badge bk-book-card__badge--gold">
@@ -289,7 +297,7 @@
         </article>
 
         <!-- Book 3: The Goodbye I Never Thought to Say (Coming Soon) -->
-        <article class="bk-book-card" id="bk-tgb">
+        <article class="bk-book-card" id="bk-tgb" data-genre="fiction">
           <div class="bk-book-card__cover-wrap">
             <img class="bk-book-card__cover" src="assets/img/book/the_goodbye_i_never_thought_to_say.png" alt="The Goodbye I Never Thought to Say — book cover">
             <div class="bk-book-card__badge" style="background:linear-gradient(135deg,#7c5cbf,#5956E9);">
@@ -300,9 +308,9 @@
             <div class="bk-book-card__genre">Fiction &middot; Romance &middot; Emotional Drama</div>
             <h2 class="bk-book-card__title">The Goodbye I<br>Never Thought to Say</h2>
             <p class="bk-book-card__desc">
-              Not every love story ends with two people standing together.
-              This one ends with two people standing apart, with a strange kind of peace between them.
-              The story of Natasha and Varun is still being written. Be the first to know when it&rsquo;s ready.
+              Varun receives an unexpected phone call after years of silence, and is forced to revisit a love he thought time had erased.
+              As hidden truths come to light, he discovers that sometimes the greatest heartbreak is not losing the person you love.
+              It is realizing they never stopped loving you.
             </p>
             <div class="bk-book-card__meta">
               <span><i class="fas fa-pen-fancy" aria-hidden="true"></i> Being Written</span>
@@ -570,6 +578,27 @@
   <script src="assets/js/ajax-form.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="script.js"></script>
+  <script>
+    (function () {
+      var pills = document.querySelectorAll('.bk-filter__pill');
+      var cards = document.querySelectorAll('.bk-book-card');
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          var filter = pill.getAttribute('data-filter');
+          cards.forEach(function (card) {
+            var genre = card.getAttribute('data-genre');
+            if (filter === 'all' || genre === filter) {
+              card.classList.remove('bk-book-card--hidden');
+            } else {
+              card.classList.add('bk-book-card--hidden');
+            }
+          });
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
