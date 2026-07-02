@@ -15770,6 +15770,12 @@ blockquote cite::before {
 .tp-footer-widget__list ul li:hover a {
   color: var(--tp-theme-primary);
 }
+.tp-footer-widget__list ul li a .ext-icon {
+  font-size: 10px;
+  margin-left: 5px;
+  opacity: .55;
+  vertical-align: 1px;
+}
 .tp-footer-widget__input {
   position: relative;
 }

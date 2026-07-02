@@ -916,6 +916,7 @@
     <a href="#" style="display:block;text-decoration:none;"><img src="../assets/img/brand/chitra-logo-only-text.webp" alt="Chitra Design System" style="height:36px;width:auto;max-width:180px;display:block;margin-bottom:10px;object-fit:contain;"></a>
     <div class="ds-sidebar__logo-sub" style="font-size:11px;color:#9CA3AF;line-height:1.4;">Official Brand Design System<br>of <span style="color:#5956E9;font-weight:600;">subhankarrout.in</span></div>
     <span class="ds-sidebar__badge">v2.0 · June 2026</span>
+    <div style="font-size:10px;color:#9CA3AF;margin-top:4px;">Last updated 2nd July 2026</div>
   </div>
 
   <div class="ds-nav-group">
@@ -988,7 +989,9 @@
       <span style="font-size:12px;color:var(--text-tertiary);">·</span>
       <span style="font-size:12px;font-style:italic;color:var(--text-tertiary);">चित्र — Chitra — Picture · Image · Visual Expression</span>
       <span style="font-size:12px;color:var(--text-tertiary);">·</span>
-      <span style="font-size:12px;color:var(--text-tertiary);">June 2026</span>
+      <span style="font-size:12px;color:var(--text-tertiary);">Released June 2026</span>
+      <span style="font-size:12px;color:var(--text-tertiary);">·</span>
+      <span style="font-size:12px;color:var(--text-tertiary);">Last updated 2nd July 2026</span>
     </div>
     <p style="font-size:15px;color:var(--text-secondary);max-width:580px;line-height:1.8;">A unified design framework that brings together design, storytelling, creativity, and technology through a shared visual language. Every token, component, and pattern — the single source of truth for all of Subhankar Rout's creative work.</p>
     <!-- Idea chain -->
@@ -1158,14 +1161,14 @@
       <div class="ds-section-icon"><i class="fas fa-copyright"></i></div>
       <div>
         <div class="ds-section-title">Brand Identity — subhankarrout.in</div>
-        <div class="ds-section-desc">The site logos, usage rules, and where each variant lives across all 9 pages.</div>
+        <div class="ds-section-desc">The site logos, usage rules, and where each variant lives across all 11 pages.</div>
       </div>
     </div>
 
     <!-- ── SUBHANKARROUT.IN SITE LOGOS ─────────────────────────── -->
     <div class="ds-sub">
       <div class="ds-sub-title">Site Logo Variants</div>
-      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;line-height:1.6;">Two variants used across all 9 pages — header, footer, and offcanvas menu. Class: <code>.tp-logo</code>.</p>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:16px;line-height:1.6;">Two variants used across all 11 pages — header, footer, and offcanvas menu. Class: <code>.tp-logo</code>.</p>
       <div class="ds-logo-grid">
 
         <div class="ds-logo-card">
@@ -1771,7 +1774,7 @@
       <div class="ds-section-icon"><i class="fas fa-hand-pointer"></i></div>
       <div>
         <div class="ds-section-title">Button System</div>
-        <div class="ds-section-desc">10 button variants across the site. Each has a defined context — never swap them freely.</div>
+        <div class="ds-section-desc">11 button variants across the site. Each has a defined context — never swap them freely.</div>
       </div>
     </div>
 
@@ -1787,6 +1790,19 @@
         <code class="ds-btn-card__class">.tp-btn</code>
         <div class="ds-btn-card__desc">Blue fill (#5956E9), height 70px. Hover: yellow fill (#FFDC60) via dual split-wipe animation from top-left + bottom-right. Text turns black on hover.</div>
         <div class="ds-btn-card__usage">Used on <span>Desktop header nav (Portfolio CTA) · Mobile offcanvas nav</span></div>
+      </div>
+
+      <!-- book-ghost-btn -->
+      <div class="ds-btn-card ds-btn-card--dark">
+        <div class="ds-btn-card__preview" style="background:#0D0D12;">
+          <a class="tp-btn" href="javascript:void(0)" style="height:56px;line-height:56px;">Browse All Books</a>
+          <a class="book-ghost-btn" href="javascript:void(0)" style="height:56px;"><i class="far fa-user"></i> Meet the Author</a>
+        </div>
+        <div class="ds-btn-card__divider"></div>
+        <div class="ds-btn-card__name">Book Hero Ghost Button</div>
+        <code class="ds-btn-card__class">.book-ghost-btn</code>
+        <div class="ds-btn-card__desc">Transparent, white-tinted border on dark book-hero backgrounds. Always paired next to <code>.tp-btn</code> as the secondary action — its height breakpoints (70px desktop → 60px @ 991px → 56px @ 767px) are kept in lockstep with <code>.tp-btn</code>'s so the pair never mismatches on mobile. (Preview forced to mobile height above to show the fix.)</div>
+        <div class="ds-btn-card__usage">Used on <span>books.html &amp; articles.html hero · one_year_many_lessons.html, the_uncharted_romance.html &amp; the_good_bye_i_never_thought_to_say.html final CTA bar</span></div>
       </div>
 
       <!-- hm-btn-yellow -->
@@ -1894,6 +1910,7 @@
           <tr><td>Primary action on light section (about, portfolio)</td><td><code>.hm-btn-primary</code> or <code>.btn-primary-hero</code></td><td>Violet is readable on white</td></tr>
           <tr><td>Secondary action on light section</td><td><code>.hm-btn-outline</code> or <code>.btn-ghost-hero</code></td><td>Outlined = less weight than filled</td></tr>
           <tr><td>Desktop / mobile nav CTA</td><td><code>.tp-btn</code></td><td>Taller 70px height designed for nav bar</td></tr>
+          <tr><td>Secondary action beside .tp-btn on a book hero</td><td><code>.book-ghost-btn</code></td><td>Low-key outline, height synced to .tp-btn at every breakpoint</td></tr>
           <tr><td>Form submit inside book page</td><td><code>.hm-btn-yellow</code> + bk-form override</td><td>Yellow start draws eye; blue hover confirms action</td></tr>
           <tr><td>Any CTA on S4 Cinesphere page</td><td><code>.dx-btn-primary / .dx-btn-ghost</code></td><td>Red is the cinematic brand signal on that page</td></tr>
         </tbody>
@@ -2041,6 +2058,22 @@
         </div>
       </div>
 
+      <!-- Language / Edition switcher -->
+      <div class="ds-comp-card" style="grid-column:span 2;">
+        <div class="ds-comp-card__preview">
+          <div style="display:flex;gap:10px;">
+            <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:100px;background:var(--accent-violet);border:1.5px solid var(--accent-violet);color:#fff;font-size:13px;font-weight:700;">English</span>
+            <span style="display:inline-flex;align-items:center;gap:6px;padding:7px 16px;border-radius:100px;background:transparent;border:1.5px solid rgba(89,86,233,.3);color:#555;font-size:13px;font-weight:700;">Hindi</span>
+          </div>
+        </div>
+        <div class="ds-comp-card__body">
+          <div class="ds-comp-card__name">Language / Edition Switcher</div>
+          <div class="ds-comp-card__desc">
+            <code>.lang-switch</code> — Reusable pill-group component. Selecting a pill swaps cover image, title, subtitle, price, delivery note, and CTA label/href anywhere in the nearest <code>[data-lang-scope]</code> ancestor via <code>data-lang-field="..."</code> attributes. One shared script (<code>assets/js/lang-switch.js</code>) drives every instance on the page — no per-page JS to write. Add <code>.lang-switch--compact</code> for dense card grids. Fixes a past bug where swapping editions permanently killed the cover's hover-lift animation (was set as an inline style; now toggled as a CSS class instead).
+          </div>
+        </div>
+      </div>
+
       <!-- Newsletter -->
       <div class="ds-comp-card">
         <div class="ds-comp-card__preview ds-comp-card__preview--dark">
@@ -2067,7 +2100,7 @@
       <div class="ds-section-icon"><i class="fas fa-bars"></i></div>
       <div>
         <div class="ds-section-title">Navigation &amp; Header</div>
-        <div class="ds-section-desc">Desktop sticky header + mobile offcanvas. Identical structure on all 9 pages. <span style="font-size:11px;background:rgba(89,86,233,.08);color:var(--accent-violet);padding:2px 8px;border-radius:4px;font-weight:600;">assets/css/style.css</span></div>
+        <div class="ds-section-desc">Desktop sticky header + mobile offcanvas. Identical structure on all 11 pages. <span style="font-size:11px;background:rgba(89,86,233,.08);color:var(--accent-violet);padding:2px 8px;border-radius:4px;font-weight:600;">assets/css/style.css</span></div>
       </div>
     </div>
 
@@ -2284,7 +2317,7 @@
       <div class="ds-section-icon"><i class="fas fa-border-bottom"></i></div>
       <div>
         <div class="ds-section-title">Footer</div>
-        <div class="ds-section-desc">Identical across all 9 pages. 4-column layout on dark background.</div>
+        <div class="ds-section-desc">Identical across all 11 pages. 4-column layout on dark background.</div>
       </div>
     </div>
 
@@ -2296,11 +2329,11 @@
         </div>
         <div>
           <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;">Col 2: Useful Links</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.8;">S4 Cinesphere (YouTube)<br>Press Release<br>IMDb Profile</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.8;">Portfolio<br>About<br>Press Release<br>IMDb Profile <i class="fal fa-external-link-alt" style="font-size:9px;opacity:.6;"></i></div>
         </div>
         <div>
           <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;">Col 3: Publications</div>
-          <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.8;">The Uncharted Romance<br>One Year, Many Lessons</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.4);line-height:1.8;">The Uncharted Romance<br>One Year, Many Lessons<br>The Goodbye I Never Thought to Say</div>
         </div>
         <div>
           <div style="font-size:13px;font-weight:700;color:#fff;margin-bottom:12px;">Col 4: Get Update</div>
@@ -2322,7 +2355,8 @@
 
     <div style="margin-top:16px;padding:14px 18px;background:rgba(89,86,233,.05);border:1px solid rgba(89,86,233,.12);border-radius:var(--radius-md);font-size:13px;color:var(--text-secondary);">
       <strong>Wrapper class:</strong> <code>.black-bg.pt-130.pb-30</code> — Critical. Using the wrong wrapper (e.g. <code>.tp-footer-top.pt-90</code>) will break the dark background and column spacing. This mistake happened on privacy-policy.html and was fixed.<br><br>
-      <strong>Copyright bar:</strong> Both copyright text and links use <code>color: #9ca3af !important</code> (= <code>--text-tertiary</code>) — intentionally muted, not white. Chitra DS link uses <strong>two separate <code>&lt;a&gt;</code> tags</strong> (not spans inside one): <code>class="d-none d-md-inline"</code> shows "Chitra Design System" on desktop; <code>class="d-md-none"</code> shows "Chitra DS" on mobile. This keeps each link's tap/hover area exactly its text width. Mobile layout: <code>.tp-copyright-right { display:flex; width:fit-content; margin:8px auto 0 }</code> — hugs content and centers itself; theme's <code>margin-left:60px</code> on <code>a</code> is zeroed with <code>!important</code>.
+      <strong>Copyright bar:</strong> Both copyright text and links use <code>color: #9ca3af !important</code> (= <code>--text-tertiary</code>) — intentionally muted, not white. Chitra DS link uses <strong>two separate <code>&lt;a&gt;</code> tags</strong> (not spans inside one): <code>class="d-none d-md-inline"</code> shows "Chitra Design System" on desktop; <code>class="d-md-none"</code> shows "Chitra DS" on mobile. This keeps each link's tap/hover area exactly its text width. Mobile layout: <code>.tp-copyright-right { display:flex; width:fit-content; margin:8px auto 0 }</code> — hugs content and centers itself; theme's <code>margin-left:60px</code> on <code>a</code> is zeroed with <code>!important</code>.<br><br>
+      <strong>External-link icon:</strong> <code>.ext-icon</code> (in <code>assets/css/style.css</code>, scoped to <code>.tp-footer-widget__list ul li a</code>) — 10px <code>fal fa-external-link-alt</code>, opacity .55, 1px vertical nudge. Add it after any footer link text that navigates off-site, so users aren't surprised by a new tab. Currently only on <strong>IMDb Profile</strong>. "S4 Cinesphere (YouTube)" was removed from Useful Links entirely — the header nav already links to <code>s4cinesphere.html</code>, so the footer's direct-to-YouTube link was a redundant, inconsistently-behaving duplicate (same label, different destination than the nav link).
     </div>
   </section>
 
@@ -2413,7 +2447,7 @@
         </div>
         <div style="padding:20px;">
           <div style="font-size:13px;color:var(--text-secondary);line-height:1.7;margin-bottom:16px;">
-            WOW.js watches the viewport. When an element with <code>.wow</code> enters view, it adds <code>.animated</code> so the CSS animation fires. <code>data-wow-delay</code> staggers multiple elements. Used on most section blocks across all 9 pages.
+            WOW.js watches the viewport. When an element with <code>.wow</code> enters view, it adds <code>.animated</code> so the CSS animation fires. <code>data-wow-delay</code> staggers multiple elements. Used on most section blocks across all 11 pages.
           </div>
           <!-- Visual before/after states -->
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px;">
@@ -2554,7 +2588,7 @@
             <tbody>
               <tr style="border-bottom:1px solid var(--ds-border);">
                 <td style="padding:10px 0;"><code>.wow.fadeInUp</code></td>
-                <td style="padding:10px 0;color:var(--text-secondary);">All 9 pages</td>
+                <td style="padding:10px 0;color:var(--text-secondary);">All 11 pages</td>
                 <td style="padding:10px 0;color:var(--text-secondary);">Fade up from Y+30px</td>
                 <td style="padding:10px 0;"><code>animate.css</code></td>
               </tr>
@@ -2727,8 +2761,15 @@
             <td><strong>Books</strong></td>
             <td><code>books.html</code></td>
             <td><span class="ds-dot ds-dot--dark"></span>Dark gradient</td>
-            <td><code>.hm-btn-yellow</code></td>
-            <td>—</td>
+            <td><code>.tp-btn</code> (Browse All Books)</td>
+            <td><code>.book-ghost-btn</code> (Meet the Author)</td>
+          </tr>
+          <tr>
+            <td><strong>Articles <span style="background:rgba(89,86,233,.1);color:var(--accent-violet);font-size:9px;padding:2px 7px;border-radius:4px;font-weight:700;margin-left:4px;text-transform:uppercase;letter-spacing:.04em;">New · unlinked</span></strong></td>
+            <td><code>articles.html</code></td>
+            <td><span class="ds-dot ds-dot--dark"></span>Dark gradient</td>
+            <td><code>.tp-btn</code> (Read on Medium)</td>
+            <td><code>.book-ghost-btn</code> (Browse Articles)</td>
           </tr>
           <tr>
             <td><strong>The Uncharted Romance</strong></td>
@@ -2743,6 +2784,13 @@
             <td><span class="ds-dot ds-dot--dark"></span>Dark book hero</td>
             <td><code>.tp-btn</code> (Buy)</td>
             <td><code>.hm-btn-yellow</code> (Review form)</td>
+          </tr>
+          <tr>
+            <td><strong>The Goodbye I Never Thought to Say <span style="background:rgba(89,86,233,.1);color:var(--accent-violet);font-size:9px;padding:2px 7px;border-radius:4px;font-weight:700;margin-left:4px;text-transform:uppercase;letter-spacing:.04em;">New · pre-release</span></strong></td>
+            <td><code>the_good_bye_i_never_thought_to_say.html</code></td>
+            <td><span class="ds-dot ds-dot--dark"></span>Dark book hero</td>
+            <td><code>.tp-btn</code> / <code>.tp-btn-yellow</code> (Notify Me at Launch)</td>
+            <td><code>.book-ghost-btn</code> (Explore His Other Books)</td>
           </tr>
           <tr>
             <td><strong>Press Release</strong></td>
@@ -2791,7 +2839,7 @@
       <div class="ds-section-icon"><i class="fas fa-id-card"></i></div>
       <div>
         <div class="ds-section-title">Cards</div>
-        <div class="ds-section-desc">Every card pattern across all 9 pages — with live preview and CSS source.</div>
+        <div class="ds-section-desc">Every card pattern across all 11 pages — with live preview and CSS source.</div>
       </div>
     </div>
 
@@ -3328,7 +3376,7 @@
 
   <!-- PAGE FOOTER -->
   <div class="ds-page-footer">
-    <p>Chitra Design System v2.0 · subhankarrout.in · June 2026 · <a href="../index.html">Back to site →</a></p>
+    <p>Chitra Design System v2.0 · subhankarrout.in · Released June 2026 · Last updated 2nd July 2026 · <a href="../index.html">Back to site →</a></p>
     <p style="font-size:11px;color:var(--text-tertiary);">noindex · Brand &amp; Component Reference · Internal use only</p>
     <p style="font-size:12px;color:var(--text-tertiary);margin-top:16px;padding-top:16px;border-top:1px solid var(--ds-border);line-height:1.7;">
       <strong style="color:var(--text-secondary);">A small honest note —</strong> this document captures the intended system. A few pages across the site may have their own little quirks, overrides, or one-off tweaks that don't follow every rule to the letter. That's okay — good design systems are living things, not strict courtrooms. Think of this as the north star, not the law.

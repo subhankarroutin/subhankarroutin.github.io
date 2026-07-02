@@ -326,6 +326,13 @@
 }
 .book-ghost-btn:hover { background: rgba(255,255,255,.15); border-color: rgba(255,255,255,.9); color: #fff; }
 .book-ghost-btn:focus-visible { outline: 2px solid var(--accent-yellow); outline-offset: 3px; }
+/* Match .tp-btn / .tp-btn-yellow height breakpoints so hero CTA pairs stay level */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .book-ghost-btn { height: 60px; }
+}
+@media (max-width: 767px) {
+  .book-ghost-btn { height: 56px; padding: 0 32px; }
+}
 
 /* Testimonials */
 .book-testimonials { background: var(--surface-1); padding: 120px 0 100px; }
@@ -473,13 +480,39 @@
   display: none !important;
 }
 
-/* Language switcher — OYML */
-.oyml-lang {
+/* ------------------------------------------------------------
+   Language / Edition switcher — reusable across any book page.
+   Drop this markup anywhere and it just works (see assets/js/lang-switch.js):
+
+   <div data-lang-scope>              <!-- put on the common ancestor -->
+     <div class="lang-switch" role="group" aria-label="Choose edition">
+       <button class="lang-switch__pill active"
+         data-cover="cover.jpg" data-title="..." data-subtitle="..."
+         data-price="&#8377;199" data-delivery="Free Delivery" data-delivery-icon="fa-shipping-fast"
+         data-cta="Order Now" data-href="https://...">
+         <img class="lang-switch__flag" src="https://flagcdn.com/16x12/gb.png" width="16" height="12" alt="English"> English
+       </button>
+       <button class="lang-switch__pill" data-cover="..." ...>Hindi</button>
+     </div>
+
+     <img data-lang-field="cover" ...>            <!-- any number of elements per field -->
+     <h2 data-lang-field="title">...</h2>
+     <p data-lang-field="subtitle">...</p>
+     <span data-lang-field="price">...</span>
+     <span data-lang-field="delivery">...</span>
+     <a data-lang-field="cta-href cta-label" href="...">Order Now</a>  <!-- one element, both fields -->
+   </div>
+
+   Add `.lang-switch--compact` on the wrapper for tighter spacing in dense card grids.
+------------------------------------------------------------ */
+.lang-switch {
   display: flex;
   gap: 10px;
   margin-bottom: 18px;
 }
-.oyml-lang__pill {
+.lang-switch--compact { gap: 8px; margin-bottom: 12px; }
+
+.lang-switch__pill {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -491,18 +524,27 @@
   font-size: 13px;
   font-weight: 700;
   cursor: pointer;
+  font-family: inherit;
+  line-height: 1.4;
   transition: background .2s, color .2s, border-color .2s;
 }
-.oyml-lang__pill:hover {
+.lang-switch--compact .lang-switch__pill { padding: 3px 10px; font-size: 11px; }
+.lang-switch__pill:hover {
   border-color: var(--tp-theme-1, #5956E9);
   color: var(--tp-theme-1, #5956E9);
 }
-.oyml-lang__pill.active {
+.lang-switch__pill.active {
   background: var(--tp-theme-1, #5956E9);
   border-color: var(--tp-theme-1, #5956E9);
   color: #fff;
 }
-.oyml-lang__flag { display: inline-block; vertical-align: middle; border-radius: 2px; }
+.lang-switch__flag { display: inline-block; vertical-align: middle; border-radius: 2px; }
+
+/* Toggled by lang-switch.js as a CLASS (never an inline style) so it can never
+   permanently clobber other transitions declared on the same element, like the
+   hover lift on .bk-book-card__cover below — that was the bug: setting
+   el.style.transition inline used to overwrite the hover transition for good. */
+.lang-switch__cover--fade { opacity: 0; }
 
 /* Book cards */
 .bk-books { padding: 100px 0 60px; }
@@ -529,7 +571,7 @@
 .bk-book-card__cover {
   max-width: 240px; border-radius: 10px;
   box-shadow: 0 20px 64px rgba(0,0,0,.18);
-  transition: transform .4s ease;
+  transition: transform .4s ease, opacity .25s ease;
 }
 .bk-book-card:hover .bk-book-card__cover { transform: translateY(-8px) rotate(-1.5deg); }
 
@@ -549,24 +591,6 @@
   font-size: 11px; font-weight: 700; letter-spacing: .1em;
   text-transform: uppercase; color: var(--tp-theme-1); margin-bottom: 8px;
 }
-.bk-book-card__langs {
-  display: flex; gap: 8px; margin-bottom: 12px;
-}
-.bk-book-card__langs span {
-  font-size: 11px; font-weight: 600; color: #666;
-  background: #f4f4f8; border-radius: 100px;
-  padding: 3px 10px;
-}
-.bk-lang-pill {
-  display: inline-flex; align-items: center;
-  font-size: 11px; font-weight: 600; color: #666;
-  background: #f4f4f8; border: 1.5px solid transparent;
-  border-radius: 100px; padding: 3px 10px;
-  cursor: pointer; transition: all .2s ease;
-  font-family: inherit; line-height: 1.4;
-}
-.bk-lang-pill:hover { background: #ededf8; color: #5956E9; }
-.bk-lang-pill.active { background: #ededf8; border-color: #5956E9; color: #5956E9; }
 .bk-book-card__title {
   font-size: clamp(28px, 3vw, 40px); font-weight: 800; line-height: 1.15;
   color: var(--tp-heading-primary); margin-bottom: 16px;

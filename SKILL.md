@@ -1,12 +1,12 @@
 # Site Skill — subhankarrout.in
-**Chitra Design System v2.0 · June 2026**
+**Chitra Design System v2.0 · Released June 2026 · Last updated 2nd July 2026**
 
 Personal portfolio of **Subhankar Rout** — Product Designer, Author, Filmmaker.
 Stack: static HTML/CSS/JS · Bootstrap 5 · jQuery · WOW.js · Swiper · MeanMenu · Isotope · Font Awesome Pro
 
 ---
 
-## 1. Pages (9 total)
+## 1. Pages (11 total)
 
 | File | Purpose | Hero background |
 |------|---------|----------------|
@@ -16,9 +16,11 @@ Stack: static HTML/CSS/JS · Bootstrap 5 · jQuery · WOW.js · Swiper · MeanMe
 | `books.html` | Books listing | Dark gradient |
 | `the_uncharted_romance.html` | Book page — novel | Dark book hero |
 | `one_year_many_lessons.html` | Book page — non-fiction | Dark book hero |
+| `the_good_bye_i_never_thought_to_say.html` | Book page — fiction, releasing 23 Sept 2026 | Dark book hero. Linked from footer Publications on every page; **not yet in the header nav dropdown** (pre-release) — was previously undocumented here |
 | `pr.html` | Press release + portrait hero | Light / dot-grid |
 | `s4cinesphere.html` | YouTube / film channel | Dark cinematic (red accent) |
 | `privacy-policy.html` | Legal | Dark hero strip |
+| `articles.html` | Design/writing articles → link out to Medium | Dark gradient. **Not linked from nav/footer yet** — placeholder content, add real posts before linking |
 
 ---
 
@@ -268,7 +270,7 @@ Only **DM Sans** (Google Fonts). No second typeface. All sizes use `clamp()` for
 
 ## 8. Navigation & Header
 
-Identical structure on all 9 pages.
+Identical structure on all 11 pages.
 
 ### Desktop Header States
 
@@ -317,7 +319,7 @@ Identical structure on all 9 pages.
 
 ## 9. Footer
 
-Identical across all 9 pages. 4-column layout on dark background.
+Identical across all 11 pages. 4-column layout on dark background.
 
 **Critical wrapper class (use exactly this or dark bg breaks):**
 ```html
@@ -326,7 +328,7 @@ Identical across all 9 pages. 4-column layout on dark background.
     <div class="container">
       <div class="row">
         <!-- Col 1: Logo (logo-white.png) + social: LinkedIn, Instagram, Facebook, Behance -->
-        <!-- Col 2: Useful Links — S4 Cinesphere, Press Release, IMDb -->
+        <!-- Col 2: Useful Links — Portfolio, About, Press Release, IMDb -->
         <!-- Col 3: Publications — The Uncharted Romance, One Year Many Lessons -->
         <!-- Col 4: Get Update — email input → Google Forms -->
       </div>
@@ -335,6 +337,11 @@ Identical across all 9 pages. 4-column layout on dark background.
   </div>
 </footer>
 ```
+
+**External-link icon on footer links (`.ext-icon`):**
+- Source: `assets/css/style.css`, scoped `.tp-footer-widget__list ul li a .ext-icon` — 10px `fal fa-external-link-alt`, opacity `.55`, `vertical-align: 1px`.
+- Add `<i class="fal fa-external-link-alt ext-icon" aria-hidden="true"></i>` after the link text for any Useful Links entry that navigates off-site, so a new tab isn't a surprise. Currently only on **IMDb Profile**.
+- "S4 Cinesphere (YouTube)" was **removed** from Useful Links on every page — the header nav's "YouTube Channel" already points to `s4cinesphere.html`, so the footer's direct-to-YouTube link duplicated it under the same-ish label but a different destination (internal page vs. external YouTube). Removed as redundant/inconsistent rather than iconed.
 
 **Copyright bar — `.tp-copyright-area`:**
 - Copyright text (`.tp-copyright-left p`) and both links (`.tp-copyright-right a`) use `color: #9ca3af !important` — muted gray, not white. Override in `styles.css`.
@@ -366,7 +373,7 @@ Identical across all 9 pages. 4-column layout on dark background.
 
 ### Scroll-Down Reveal — 3 Systems
 
-**System 1 — WOW.js (all 9 pages)**
+**System 1 — WOW.js (all 11 pages)**
 - WOW.js watches viewport. When `.wow` element enters, adds `.animated` → CSS animation fires.
 - `data-wow-delay` staggers multiple elements (common: 0.2s between cards).
 - Common classes: `fadeInUp`, `fadeInLeft`, `fadeInRight`, `zoomIn`
@@ -450,14 +457,16 @@ Lighthouse accessibility: **82–92%**
 | Home | `index.html` | Dark gradient | `.hm-btn-yellow` | `.hm-btn-ghost` |
 | Portfolio | `portfolio.html` | Light white | `.btn-primary-hero` | `.btn-ghost-hero` |
 | About | `about.html` | Light white | `.ab-btn-primary` | `.ab-btn-ghost` |
-| Books | `books.html` | Dark gradient | `.hm-btn-yellow` | — |
+| Books | `books.html` | Dark gradient | `.tp-btn` (Browse All Books) | `.book-ghost-btn` (Meet the Author) |
+| Articles *(new, unlinked)* | `articles.html` | Dark gradient | `.tp-btn` (Read on Medium) | `.book-ghost-btn` (Browse Articles) |
 | The Uncharted Romance | `the_uncharted_romance.html` | Dark book hero | `.tp-btn` (Buy) | `.hm-btn-yellow` (review) |
 | One Year, Many Lessons | `one_year_many_lessons.html` | Dark book hero | `.tp-btn` (Buy) | `.hm-btn-yellow` (review) |
+| The Goodbye I Never Thought to Say *(new, pre-release)* | `the_good_bye_i_never_thought_to_say.html` | Dark book hero | `.tp-btn` / `.tp-btn-yellow` (Notify Me at Launch) | `.book-ghost-btn` (Explore His Other Books) |
 | Press Release | `pr.html` | Light/grid bg | `.btn-primary-hero` | `.btn-ghost-hero` |
 | S4 Cinesphere | `s4cinesphere.html` | Dark cinematic | `.dx-btn-primary` (red) | `.dx-btn-ghost` |
 | Privacy Policy | `privacy-policy.html` | Dark strip | — | — |
 
-### Shared on ALL 9 pages:
+### Shared on ALL 11 pages:
 - **Header:** `.tp-header-area-two` + mobile `.tp-md-header-area` + `.tpoffcanvas` offcanvas
 - **Footer:** `.black-bg.pt-130.pb-30` · 4 columns · Google Forms newsletter
 - **Analytics:** Microsoft Clarity (ID: `r08p4eibkc`) · Chatbase AI chatbot

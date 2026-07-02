@@ -8192,14 +8192,14 @@ input:focus-visible,
 
 /* Left content */
 .book-hero__kicker {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 7px 18px 7px 12px;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 14px 5px 10px;
   background: rgba(89,86,233,.07);
   border: 1px solid rgba(89,86,233,.22);
   border-radius: 100px;
-  font-size: 11px; font-weight: 700; letter-spacing: .1em;
+  font-size: 10px; font-weight: 700; letter-spacing: .08em;
   text-transform: uppercase; color: var(--tp-theme-1);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   position: relative; overflow: hidden;
 }
 .book-hero__kicker > * { position: relative; z-index: 1; }
@@ -8210,7 +8210,7 @@ input:focus-visible,
   animation: ph-shimmer 3.5s ease-in-out 1.5s infinite;
 }
 .book-hero__kicker-dot {
-  width: 7px; height: 7px; border-radius: 50%;
+  width: 6px; height: 6px; border-radius: 50%;
   background: var(--tp-theme-1);
   animation: nurPulse 2.4s ease-in-out infinite;
   flex-shrink: 0;
