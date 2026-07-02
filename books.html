@@ -68,7 +68,7 @@
                   <ul class="submenu text-start">
                     <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
                     <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
-                    <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say<br><em>(Coming Soon)</em></a></li>
+                    <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say</a></li>
                   </ul>
                 </li>
                 <li><a href="pr.html">Press Release</a></li>
@@ -226,23 +226,47 @@
         <!-- Book 1: One Year, Many Lessons -->
         <article class="bk-book-card" id="bk-oyml" data-genre="non-fiction">
           <div class="bk-book-card__cover-wrap">
-            <img class="bk-book-card__cover" src="assets/img/oyml/oyml book.png" alt="One Year, Many Lessons book cover">
+            <img id="oyml-card-cover" class="bk-book-card__cover" src="assets/img/oyml/oyml book.png" alt="One Year, Many Lessons book cover">
             <div class="bk-book-card__badge">
               <i class="fas fa-fire" aria-hidden="true"></i> #Jugadu Startup Book
             </div>
           </div>
           <div class="bk-book-card__body">
             <div class="bk-book-card__genre">Non-Fiction &middot; Entrepreneurship &middot; Business</div>
-            <h2 class="bk-book-card__title">One Year,<br>Many Lessons</h2>
-            <p class="bk-book-card__desc">
+            <div class="bk-book-card__langs" role="group" aria-label="Choose language">
+              <button class="bk-lang-pill active"
+                data-cover="assets/img/oyml/oyml book.png"
+                data-title="One Year,<br>Many Lessons"
+                data-desc="What happens when students with zero investment, big dreams, and pure Jugadu spirit set out to build a B2B startup? This book doesn&rsquo;t sugarcoat it: real chaos, real failure, real lessons you&rsquo;ll never learn in a classroom."
+                data-price="&#8377;199"
+                data-delivery="Free Delivery"
+                data-delivery-icon="fa-shipping-fast"
+                data-cta="Order Now"
+                data-href="https://linktr.ee/buy.oyml">
+                <img src="https://flagcdn.com/16x12/gb.png" width="16" height="12" alt="" style="vertical-align:middle;border-radius:2px;margin-right:5px;">English
+              </button>
+              <button class="bk-lang-pill"
+                data-cover="assets/img/book/oyml_hindi_cover.PNG"
+                data-title="एक साल,<br>अनेक सीखें"
+                data-desc="कुछ कॉलेज के छात्र। जेब में एक भी निवेश नहीं। बस एक ऐसा सपना, जो शायद हकीकत से कहीं बड़ा था। फिर आया वह एक साल... जिसने सब कुछ बदल दिया। मंज़िल वैसी नहीं मिली, जैसी उन्होंने सोची थी, लेकिन जो सीख मिली, उसने उनकी पूरी सोच और ज़िंदगी बदल दी।"
+                data-price="<s>&#8377;199</s> &#8377;99"
+                data-delivery="Instant Delivery"
+                data-delivery-icon="fa-bolt"
+                data-cta="Read in Play Books"
+                data-href="#">
+                <img src="https://flagcdn.com/16x12/in.png" width="16" height="12" alt="" style="vertical-align:middle;border-radius:2px;margin-right:5px;">Hindi
+              </button>
+            </div>
+            <h2 class="bk-book-card__title" id="oyml-card-title">One Year,<br>Many Lessons</h2>
+            <p class="bk-book-card__desc" id="oyml-card-desc">
               What happens when students with zero investment, big dreams, and pure Jugadu spirit set out to build a B2B startup?
               This book doesn&rsquo;t sugarcoat it: real chaos, real failure, real lessons you&rsquo;ll never learn in a classroom.
             </p>
             <div class="bk-book-card__meta">
               <span><i class="fas fa-star" aria-hidden="true"></i> 4.4 / 5</span>
               <span><i class="fas fa-book-open" aria-hidden="true"></i> 110 Pages</span>
-              <span><i class="fas fa-tag" aria-hidden="true"></i> &#8377;199</span>
-              <span><i class="fas fa-shipping-fast" aria-hidden="true"></i> Free Delivery</span>
+              <span><i class="fas fa-tag" aria-hidden="true"></i> <span id="oyml-card-price">&#8377;199</span></span>
+              <span id="oyml-card-delivery"><i class="fas fa-shipping-fast" aria-hidden="true"></i> Free Delivery</span>
             </div>
             <div class="bk-book-card__tags">
               <span>Non Fiction</span>
@@ -253,7 +277,7 @@
               <span>Real Experience</span>
             </div>
             <div class="bk-book-card__btns">
-              <a class="tp-btn" href="https://linktr.ee/buy.oyml" target="_blank" rel="noopener noreferrer">Order Now</a>
+              <a id="oyml-card-cta" class="tp-btn" href="https://linktr.ee/buy.oyml" target="_blank" rel="noopener noreferrer">Order Now</a>
               <a class="book-know-more" href="one_year_many_lessons.html">Know More <i class="far fa-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
@@ -508,7 +532,7 @@
                 <ul>
                   <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
                   <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
-                  <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say<br><em>(Coming Soon)</em></a></li>
+                  <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say</a></li>
                 </ul>
               </nav>
             </div>
@@ -595,6 +619,43 @@
               card.classList.add('bk-book-card--hidden');
             }
           });
+        });
+      });
+    })();
+  </script>
+
+  <script>
+    (function () {
+      var pills = document.querySelectorAll('.bk-lang-pill');
+      var cover = document.getElementById('oyml-card-cover');
+      var titleEl = document.getElementById('oyml-card-title');
+      var descEl = document.getElementById('oyml-card-desc');
+      var priceEl = document.getElementById('oyml-card-price');
+      var deliveryEl = document.getElementById('oyml-card-delivery');
+      var ctaEl = document.getElementById('oyml-card-cta');
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+
+          if (cover) {
+            cover.style.transition = 'opacity .25s ease';
+            cover.style.opacity = '0';
+            setTimeout(function () {
+              cover.src = pill.dataset.cover;
+              cover.style.opacity = '1';
+            }, 250);
+          }
+
+          if (titleEl) titleEl.innerHTML = pill.dataset.title;
+          if (descEl) descEl.innerHTML = pill.dataset.desc;
+          if (priceEl) priceEl.innerHTML = pill.dataset.price;
+          if (deliveryEl) deliveryEl.innerHTML = '<i class="fas ' + pill.dataset.deliveryIcon + '" aria-hidden="true"></i> ' + pill.dataset.delivery;
+          if (ctaEl) {
+            ctaEl.textContent = pill.dataset.cta;
+            ctaEl.href = pill.dataset.href;
+          }
         });
       });
     })();

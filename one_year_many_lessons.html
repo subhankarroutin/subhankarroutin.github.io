@@ -69,7 +69,7 @@
                   <ul class="submenu text-start">
                     <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
                     <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
-                    <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say<br><em>(Coming Soon)</em></a></li>
+                    <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say</a></li>
                   </ul>
                 </li>
                 <li><a href="pr.html">Press Release</a></li>
@@ -177,7 +177,7 @@
             <div class="book-hero__ring book-hero__ring--2"></div>
 
             <div class="book-hero__book-wrap">
-              <img class="book-hero__book-img" src="assets/img/oyml/oyml book.png" alt="One Year, Many Lessons book cover">
+              <img id="oyml-cover-hero" class="book-hero__book-img" src="assets/img/oyml/oyml book.png" alt="One Year, Many Lessons book cover">
               <div class="book-book-badge"><strong>#Jugadu</strong>Startup<br>Story</div>
             </div>
 
@@ -255,16 +255,16 @@
         <!-- Product grid -->
         <div class="book-details__grid">
           <div class="book-details__img">
-            <img src="assets/img/oyml/oyml book.png" alt="One Year, Many Lessons book cover" loading="lazy">
+            <img id="oyml-cover-details" src="assets/img/oyml/oyml book.png" alt="One Year, Many Lessons book cover" loading="lazy">
           </div>
           <div>
-            <h3 class="book-details__title">One Year, Many Lessons</h3>
-            <p class="book-details__subtitle">A group of college students. Zero investment. One wild idea. And twelve months that changed everything, even if not in the way they planned.</p>
+            <h3 class="book-details__title" id="oyml-det-title">One Year, Many Lessons</h3>
+            <p class="book-details__subtitle" id="oyml-det-subtitle">A group of college students. Zero investment. One wild idea. And twelve months that changed everything, even if not in the way they planned.</p>
 
             <div class="book-details__price">
-              <span class="book-details__price-now">&#x20B9;199.00</span>
+              <span class="book-details__price-now" id="oyml-det-price">&#x20B9;199.00</span>
               <span class="book-details__price-old">&#x20B9;299</span>
-              <span class="book-details__free">Free Delivery</span>
+              <span class="book-details__free" id="oyml-det-delivery">Free Delivery</span>
             </div>
 
             <p class="book-genre-label">Book Genre</p>
@@ -277,8 +277,30 @@
               <span class="book-genre-tag">Inspiration</span>
             </div>
 
-            <a href="https://linktr.ee/buy.OYML" target="_blank" rel="noopener noreferrer">
-              <button class="tp-btn-yellow">Order Your Copy</button>
+            <div class="oyml-lang" role="group" aria-label="Choose language">
+              <button class="oyml-lang__pill active" data-lang="en"
+                data-href="https://linktr.ee/buy.OYML"
+                data-cover="assets/img/oyml/oyml book.png"
+                data-title="One Year, Many Lessons"
+                data-subtitle="A group of college students. Zero investment. One wild idea. And twelve months that changed everything, even if not in the way they planned."
+                data-price="&#8377;199.00"
+                data-delivery="Free Delivery"
+                data-cta="Order Your Copy">
+                <img class="oyml-lang__flag" src="https://flagcdn.com/16x12/gb.png" width="16" height="12" alt="English"> English
+              </button>
+              <button class="oyml-lang__pill" data-lang="hi"
+                data-href="#"
+                data-cover="assets/img/book/oyml_hindi_cover.PNG"
+                data-title="एक साल, अनेक सीखें"
+                data-subtitle="कुछ कॉलेज के छात्र। जेब में एक भी निवेश नहीं। बस एक ऐसा सपना, जो शायद हकीकत से कहीं बड़ा था। फिर आया वह एक साल जिसने सब कुछ बदल दिया।"
+                data-price="&#8377;99"
+                data-delivery="Instant Delivery"
+                data-cta="Read in Play Books">
+                <img class="oyml-lang__flag" src="https://flagcdn.com/16x12/in.png" width="16" height="12" alt="Hindi"> Hindi
+              </button>
+            </div>
+            <a id="oyml-buy-link" href="https://linktr.ee/buy.OYML" target="_blank" rel="noopener noreferrer">
+              <button class="tp-btn-yellow" id="oyml-det-cta">Order Your Copy</button>
             </a>
           </div>
         </div>
@@ -640,7 +662,7 @@
                 <ul>
                   <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
                   <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
-                  <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say<br><em>(Coming Soon)</em></a></li>
+                  <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say</a></li>
                 </ul>
               </nav>
             </div>
@@ -706,6 +728,42 @@
   <script src="assets/js/ajax-form.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="script.js"></script>
+  <script>
+    (function () {
+      var pills = document.querySelectorAll('.oyml-lang__pill');
+      var buyLink = document.getElementById('oyml-buy-link');
+      var coverHero = document.getElementById('oyml-cover-hero');
+      var coverDetails = document.getElementById('oyml-cover-details');
+      var titleEl = document.getElementById('oyml-det-title');
+      var subtitleEl = document.getElementById('oyml-det-subtitle');
+      var priceEl = document.getElementById('oyml-det-price');
+      var deliveryEl = document.getElementById('oyml-det-delivery');
+      var ctaEl = document.getElementById('oyml-det-cta');
+
+      function swapCover(src) {
+        [coverHero, coverDetails].forEach(function (img) {
+          if (!img) return;
+          img.style.transition = 'opacity .25s ease';
+          img.style.opacity = '0';
+          setTimeout(function () { img.src = src; img.style.opacity = '1'; }, 250);
+        });
+      }
+
+      pills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          pills.forEach(function (p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          buyLink.href = pill.dataset.href;
+          swapCover(pill.dataset.cover);
+          if (titleEl) titleEl.textContent = pill.dataset.title;
+          if (subtitleEl) subtitleEl.textContent = pill.dataset.subtitle;
+          if (priceEl) priceEl.innerHTML = pill.dataset.price;
+          if (deliveryEl) deliveryEl.textContent = pill.dataset.delivery;
+          if (ctaEl) ctaEl.textContent = pill.dataset.cta;
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>

@@ -59,8 +59,15 @@
   color: rgba(255,255,255,.52) !important;
   max-width: 600px !important; margin-left: auto !important; margin-right: auto !important;
 }
-.book-know-more       { color: rgba(255,255,255,.48) !important; }
-.book-know-more:hover { color: var(--accent-yellow)  !important; }
+/* Dark hero context — white at reduced opacity is fine on near-black bg */
+.book-hero .book-know-more       { color: rgba(255,255,255,.48) !important; }
+.book-hero .book-know-more:hover { color: var(--accent-yellow)  !important; }
+
+/* Card context — white bg requires accessible color
+   #5956E9 on #fff = 5.18:1  (WCAG AA ✓)
+   #3d3ab5 on #fff = 8.40:1  (WCAG AAA ✓) */
+.bk-book-card .book-know-more       { color: #5956E9 !important; font-weight: 700; }
+.bk-book-card .book-know-more:hover { color: #3d3ab5 !important; }
 
 .book-hero__ring    { border-color: rgba(255,255,255,.07) !important; }
 .book-hero__ring--2 { border-color: rgba(89,86,233,.24)  !important; }
@@ -466,6 +473,37 @@
   display: none !important;
 }
 
+/* Language switcher — OYML */
+.oyml-lang {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.oyml-lang__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 16px;
+  border-radius: 100px;
+  border: 1.5px solid rgba(89,86,233,.3);
+  background: transparent;
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.oyml-lang__pill:hover {
+  border-color: var(--tp-theme-1, #5956E9);
+  color: var(--tp-theme-1, #5956E9);
+}
+.oyml-lang__pill.active {
+  background: var(--tp-theme-1, #5956E9);
+  border-color: var(--tp-theme-1, #5956E9);
+  color: #fff;
+}
+.oyml-lang__flag { display: inline-block; vertical-align: middle; border-radius: 2px; }
+
 /* Book cards */
 .bk-books { padding: 100px 0 60px; }
 
@@ -509,8 +547,26 @@
 
 .bk-book-card__genre {
   font-size: 11px; font-weight: 700; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--tp-theme-1); margin-bottom: 12px;
+  text-transform: uppercase; color: var(--tp-theme-1); margin-bottom: 8px;
 }
+.bk-book-card__langs {
+  display: flex; gap: 8px; margin-bottom: 12px;
+}
+.bk-book-card__langs span {
+  font-size: 11px; font-weight: 600; color: #666;
+  background: #f4f4f8; border-radius: 100px;
+  padding: 3px 10px;
+}
+.bk-lang-pill {
+  display: inline-flex; align-items: center;
+  font-size: 11px; font-weight: 600; color: #666;
+  background: #f4f4f8; border: 1.5px solid transparent;
+  border-radius: 100px; padding: 3px 10px;
+  cursor: pointer; transition: all .2s ease;
+  font-family: inherit; line-height: 1.4;
+}
+.bk-lang-pill:hover { background: #ededf8; color: #5956E9; }
+.bk-lang-pill.active { background: #ededf8; border-color: #5956E9; color: #5956E9; }
 .bk-book-card__title {
   font-size: clamp(28px, 3vw, 40px); font-weight: 800; line-height: 1.15;
   color: var(--tp-heading-primary); margin-bottom: 16px;
