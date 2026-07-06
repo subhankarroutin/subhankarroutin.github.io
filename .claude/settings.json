@@ -13,10 +13,12 @@
       "Bash(pkill -f \"http.server 8090\")",
       "Bash(node -e \"require.resolve\\('playwright'\\)\")",
       "Bash(npm ls *)",
-      "Bash(where node *)"
+      "Bash(where node *)",
+      "Bash(git diff *)"
     ],
     "additionalDirectories": [
-      "C:\\Users\\subha\\Downloads\\SVG"
+      "C:\\Users\\subha\\Downloads\\SVG",
+      "\\tmp"
     ]
   }
 }

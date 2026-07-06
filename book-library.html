@@ -1,0 +1,783 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Book Library · Subhankar Rout</title>
+  <meta name="description" content="Find libraries carrying The Uncharted Romance and One Year, Many Lessons by Subhankar Rout — addresses, Google Maps links, and availability status for each location.">
+  <meta name="keywords" content="subhankar rout books library, the uncharted romance library, one year many lessons library, rourkela municipal library, harekrushna mahtab state library, kiit central library, rims rourkela library">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#5956E9">
+
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script","r08p4eibkc");
+  </script>
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/custom-animation.css">
+  <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+  <link rel="stylesheet" href="assets/css/slick.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/meanmenu.css">
+  <link rel="stylesheet" href="assets/css/font-awesome-pro.css">
+  <link rel="stylesheet" href="assets/css/magnific-popup.css">
+  <link rel="stylesheet" href="assets/css/spacing.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <link rel="stylesheet" href="assets/css/book.css">
+
+  <style>
+    .lib-hero {
+      padding: 140px 0 60px;
+      background: var(--tp-common-black);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .lib-hero::after {
+      content: 'LIBRARY';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(80px, 14vw, 160px);
+      font-weight: 900; letter-spacing: -.04em;
+      color: rgba(89,86,233,.04);
+      white-space: nowrap; pointer-events: none;
+      font-family: var(--ff-body);
+    }
+    .lib-hero__inner { position: relative; z-index: 1; }
+    .lib-hero__label {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 12px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--tp-theme-primary);
+      background: rgba(255,220,96,.08); border: 1px solid rgba(255,220,96,.2);
+      padding: 6px 16px; border-radius: 100px; margin-bottom: 24px;
+    }
+    .lib-hero__title {
+      font-family: var(--ff-body);
+      font-size: clamp(36px, 5vw, 56px); font-weight: 700;
+      line-height: 1.08; letter-spacing: -.03em;
+      color: #fff; margin-bottom: 16px;
+    }
+    .lib-hero__meta {
+      font-size: 14.5px; color: rgba(255,255,255,.48);
+      max-width: 480px; margin: 0 auto; line-height: 1.7;
+    }
+
+    .lib-filter-wrap { text-align: center; margin-bottom: 48px; position: relative; }
+    .lib-filter-toggle {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 12px 24px; border-radius: 100px;
+      border: 1.5px solid rgba(89,86,233,.35); background: transparent;
+      color: var(--text-primary); font-size: 13px; font-weight: 700;
+      letter-spacing: .04em; text-transform: uppercase; cursor: pointer;
+      transition: border-color .2s, color .2s;
+      width: auto; max-width: 100%;
+    }
+    .lib-filter-toggle:hover,
+    .lib-filter-toggle[aria-expanded="true"] { border-color: var(--tp-theme-1); color: var(--tp-theme-1); }
+    .lib-filter-toggle i { font-size: 12px; }
+    .lib-filter-toggle__chev { transition: transform .2s; }
+    .lib-filter-toggle[aria-expanded="true"] .lib-filter-toggle__chev { transform: rotate(180deg); }
+    .lib-filter-toggle__dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--tp-theme-1); display: none;
+    }
+    .lib-filter-toggle.has-active-filter .lib-filter-toggle__dot { display: inline-block; }
+
+    .lib-filter-panel {
+      display: none; flex-direction: column; align-items: center; gap: 18px;
+      margin: 20px auto 0; padding: 24px; max-width: 100%;
+      background: var(--surface-1); border-radius: var(--radius-lg);
+    }
+    .lib-filter-panel.is-open { display: flex; }
+    .lib-filter-group {
+      display: grid; grid-template-columns: 56px 1fr; align-items: start;
+      gap: 14px; width: 100%;
+    }
+    .lib-filter-group__label {
+      font-size: 11px; font-weight: 800; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--text-tertiary);
+      text-align: right; padding-top: 9px;
+    }
+    .lib-filter-group__pills {
+      display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+    }
+    .lib-filter-reset {
+      background: none; border: none; padding: 0;
+      font-size: 12.5px; font-weight: 700; color: var(--text-tertiary);
+      text-decoration: underline; cursor: pointer;
+    }
+    .lib-filter-reset:hover { color: var(--tp-theme-1); }
+
+    @media (max-width: 575px) {
+      .lib-filter-toggle { width: 100%; justify-content: center; }
+      .lib-filter-panel { padding: 20px 16px; margin-left: -8px; margin-right: -8px; }
+      .lib-filter-group { grid-template-columns: 1fr; justify-items: center; gap: 10px; }
+      .lib-filter-group__label { text-align: center; }
+      .lib-filter-group__pills { justify-content: center; }
+      .bk-filter__pill { padding: 8px 16px; font-size: 12px; }
+    }
+
+    /* Panel widens progressively with the viewport — narrow/full-bleed on
+       phones (above), a bit roomier on tablets, noticeably wider on desktop. */
+    @media (min-width: 576px)  { .lib-filter-panel { max-width: 560px; } }
+    @media (min-width: 768px)  { .lib-filter-panel { max-width: 680px; } }
+    @media (min-width: 992px)  { .lib-filter-panel { max-width: 820px; } }
+    @media (min-width: 1200px) { .lib-filter-panel { max-width: 960px; } }
+  </style>
+</head>
+
+<body class="book-page">
+
+  <div id="pr-preloader" aria-hidden="true">
+    <div class="ab-preloader-ring"></div>
+  </div>
+
+  <a class="skip-link" href="#lib-main">Skip to main content</a>
+
+  <!-- Desktop header — transparent -->
+  <header class="d-none d-lg-block" role="banner">
+    <div id="header-sticky" class="tp-header-area-two header-transparent header-space-three pl-115 pr-115">
+      <div class="container-fluid">
+        <div class="row align-items-center header-space-two">
+          <div class="col-xxl-3 col-xl-3 col-lg-3">
+            <div class="tp-logo text-start">
+              <a href="index.html" aria-label="Subhankar Rout — Home">
+                <img src="assets/img/logo/logo-blue.png" alt="Subhankar Rout logo" width="140" height="40">
+              </a>
+            </div>
+          </div>
+          <div class="col-xxl-6 col-xl-6 col-lg-6">
+            <nav id="mobile-menu" class="tp-main-menu text-center" aria-label="Primary navigation">
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="s4cinesphere.html">YouTube Channel</a></li>
+                <li class="has-dropdown"><a href="books.html">Publications</a>
+                  <ul class="submenu text-start">
+                    <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
+                    <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
+                    <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say</a></li>
+                  </ul>
+                </li>
+                <li><a href="pr.html">Press Release</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-xxl-3 col-xl-3 col-lg-3">
+            <div class="tp-header-button text-end">
+              <a class="tp-btn" href="portfolio.html">Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile header -->
+  <div id="header-sticky-mobile" class="tp-md-header-area header-transparent d-lg-none pt-30" role="banner">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 col-6">
+          <div class="tp-logo">
+            <a href="index.html" aria-label="Subhankar Rout — Home">
+              <img src="assets/img/logo/logo-blue.png" alt="Subhankar Rout logo" width="120" height="34">
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-6">
+          <div class="tp-header-right z-index-1 d-flex align-items-center justify-content-end">
+            <a class="tp-btn d-none d-md-block" href="portfolio.html">Portfolio</a>
+            <button class="tp-menu-bar" aria-label="Open navigation menu" aria-expanded="false" aria-controls="offcanvas-menu">
+              <i class="fal fa-bars" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Offcanvas -->
+  <div class="tp-offcanvas-area" id="offcanvas-menu" role="dialog" aria-label="Mobile navigation menu" aria-modal="true">
+    <div class="tpoffcanvas">
+      <div class="tpoffcanvas__logo">
+        <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="Subhankar Rout logo" width="140" height="40"></a>
+      </div>
+      <div class="tpoffcanvas__close-btn">
+        <a class="close-btn" href="javascript:void(0)" aria-label="Close navigation menu">
+          <i class="fal fa-times-hexagon" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="mobile-menu" aria-label="Mobile navigation"></div>
+      <div class="tp-header-button" style="text-align:left;">
+        <a class="tp-btn" href="portfolio.html">Portfolio</a>
+      </div>
+      <div class="tpoffcanvas__contact">
+        <br><br><span>Any Query!</span>
+        <ul>
+          <li>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <a href="mailto:subhankarrout.kiit@gmail.com">subhankarrout.kiit@gmail.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="body-overlay" aria-hidden="true"></div>
+
+  <main id="lib-main">
+
+    <!-- ===================================================
+         §1  HERO — kept deliberately simple: this page lives
+         off the main nav flow, so it doesn't need the full
+         book-hero treatment or worldwide buy messaging.
+    =================================================== -->
+    <section class="lib-hero" aria-label="Book Library">
+      <div class="container lib-hero__inner">
+        <div class="lib-hero__label">Physical Availability</div>
+        <h1 class="lib-hero__title">Book Library</h1>
+        <p class="lib-hero__meta">Public &amp; campus libraries where you can borrow a paperback copy for free &mdash; growing month by month.</p>
+      </div>
+    </section>
+
+    <!-- ===================================================
+         §2  FACTS RIBBON — disabled per request; markup kept
+         in case it's wanted back later.
+    <div class="book-award-ribbon" aria-hidden="true">
+      <div class="book-award-ribbon__track">
+        <span class="book-award-ribbon__item"><i class="fas fa-university"></i> 5 Library Locations Tracked</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-book-open"></i> 2 Books Already on Shelves</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-map-marker-alt"></i> Growing Across India</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-plus-circle"></i> More States Being Added</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-university"></i> 5 Library Locations Tracked</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-book-open"></i> 2 Books Already on Shelves</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-map-marker-alt"></i> Growing Across India</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-plus-circle"></i> More States Being Added</span>
+      </div>
+    </div>
+    =================================================== -->
+
+    <!-- ===================================================
+         §3  LIBRARY LIST
+    =================================================== -->
+    <div class="book-details">
+      <div class="container">
+
+        <div class="book-sect-hd">
+          <div class="book-sect-hd__eyebrow">
+            <span class="book-sect-hd__dot" aria-hidden="true"></span>
+            Where to Borrow
+          </div>
+          <h2 class="book-sect-hd__title">Libraries Carrying<br><em>Subhankar&rsquo;s Books.</em></h2>
+          <p class="book-sect-hd__sub">Public and campus libraries currently stocking these titles, with addresses and directions, so you can walk in and borrow a copy.</p>
+        </div>
+
+        <!-- Filter by book &amp; state — collapsed by default; scales as more
+             titles/states are added (just add a pill + matching data value) -->
+        <div class="lib-filter-wrap">
+          <button class="lib-filter-toggle" type="button" id="libFilterToggle" aria-expanded="false" aria-controls="libFilterPanel">
+            <i class="fas fa-filter" aria-hidden="true"></i>
+            <span>Filter</span>
+            <span class="lib-filter-toggle__dot" aria-hidden="true"></span>
+            <i class="fas fa-chevron-down lib-filter-toggle__chev" aria-hidden="true"></i>
+          </button>
+          <div class="lib-filter-panel" id="libFilterPanel">
+            <div class="lib-filter-group" role="group" aria-label="Filter by book">
+              <span class="lib-filter-group__label">Book</span>
+              <div class="lib-filter-group__pills">
+                <button class="bk-filter__pill active" type="button" data-filter="book" data-value="all">All Books</button>
+                <button class="bk-filter__pill" type="button" data-filter="book" data-value="uncharted-romance">The Uncharted Romance</button>
+                <button class="bk-filter__pill" type="button" data-filter="book" data-value="one-year-many-lessons">One Year, Many Lessons</button>
+                <button class="bk-filter__pill" type="button" data-filter="book" data-value="the-goodbye">The Goodbye I Never Thought to Say</button>
+              </div>
+            </div>
+            <div class="lib-filter-group" role="group" aria-label="Filter by state">
+              <span class="lib-filter-group__label">State</span>
+              <div class="lib-filter-group__pills">
+                <button class="bk-filter__pill active" type="button" data-filter="state" data-value="all">All States</button>
+                <button class="bk-filter__pill" type="button" data-filter="state" data-value="odisha">Odisha</button>
+                <button class="bk-filter__pill" type="button" data-filter="state" data-value="karnataka">Karnataka</button>
+              </div>
+            </div>
+            <button class="lib-filter-reset" type="button" id="libFilterReset">Reset filters</button>
+          </div>
+        </div>
+
+        <!-- ============ THE UNCHARTED ROMANCE ============ -->
+        <div class="lib-book-group" id="uncharted-romance">
+          <div class="lib-book-head">
+            <img src="assets/img/book/Product1-tur.png" alt="The Uncharted Romance book cover">
+            <div>
+              <h3>The Uncharted Romance</h3>
+              <p>Available at 2 libraries &middot; 2 more coming soon</p>
+            </div>
+          </div>
+          <div class="lib-grid">
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                <span class="lib-badge lib-badge--available"><i class="fas fa-check-circle" aria-hidden="true"></i> Available Now</span>
+              </div>
+              <div class="lib-card__name">Rourkela Municipal Library and Cultural Centre</div>
+              <p class="lib-card__addr">Uditnagar Children&rsquo;s Park, 4, Main Rd, Udit Nagar, Rourkela, Odisha 769012</p>
+              <a class="lib-card__link" href="https://share.google/jcZOBjIMjwXX7UeSz" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-globe" aria-hidden="true"></i> Access: Open to the public</p>
+            </div>
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                <span class="lib-badge lib-badge--available"><i class="fas fa-check-circle" aria-hidden="true"></i> Available Now</span>
+              </div>
+              <div class="lib-card__name">Harekrushna Mahtab State Library</div>
+              <p class="lib-card__addr">7RGM+8H2, opp. Keshari Talkie, Unit 4, Bhouma Nagar, Bhubaneswar, Odisha 751001</p>
+              <a class="lib-card__link" href="https://share.google/UYnXRmHSBPY2XGMR3" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-globe" aria-hidden="true"></i> Access: Open to the public</p>
+            </div>
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+                <span class="lib-badge lib-badge--soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</span>
+              </div>
+              <div class="lib-card__name">KIIT Central Library</div>
+              <p class="lib-card__addr">9R38+JGF, Chandaka Industrial Estate, Patia, Bhubaneswar, Odisha 751024</p>
+              <a class="lib-card__link" href="https://share.google/2IB98z7if77jtBKoZ" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-id-card" aria-hidden="true"></i> Access: KIIT students &amp; alumni only</p>
+            </div>
+
+            <div class="lib-card" data-state="karnataka">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                <span class="lib-badge lib-badge--soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</span>
+              </div>
+              <div class="lib-card__name">Government Public Digital Library</div>
+              <p class="lib-card__addr">32/1A, Kumarapalli, BEML Layout, Whitefield, Bengaluru, Karnataka 560066</p>
+              <a class="lib-card__link" href="https://share.google/W2pag2ua6yKHI5Wnl" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-globe" aria-hidden="true"></i> Access: Open to the public</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ============ ONE YEAR, MANY LESSONS ============ -->
+        <div class="lib-book-group" id="one-year-many-lessons">
+          <div class="lib-book-head">
+            <img src="assets/img/oyml/oyml book.png" alt="One Year, Many Lessons book cover">
+            <div>
+              <h3>One Year, Many Lessons</h3>
+              <p>Available at 5 libraries &middot; 2 more coming soon</p>
+            </div>
+          </div>
+          <!-- 7 cards (mod 4 = 3) — default grid balances fine as 4+3 -->
+          <div class="lib-grid">
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                <span class="lib-badge lib-badge--available"><i class="fas fa-check-circle" aria-hidden="true"></i> Available Now</span>
+              </div>
+              <div class="lib-card__name">Rourkela Municipal Library and Cultural Centre</div>
+              <p class="lib-card__addr">Uditnagar Children&rsquo;s Park, 4, Main Rd, Udit Nagar, Rourkela, Odisha 769012</p>
+              <a class="lib-card__link" href="https://share.google/jcZOBjIMjwXX7UeSz" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-globe" aria-hidden="true"></i> Access: Open to the public</p>
+            </div>
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                <span class="lib-badge lib-badge--available"><i class="fas fa-check-circle" aria-hidden="true"></i> Available Now</span>
+              </div>
+              <div class="lib-card__name">Harekrushna Mahtab State Library</div>
+              <p class="lib-card__addr">7RGM+8H2, opp. Keshari Talkie, Unit 4, Bhouma Nagar, Bhubaneswar, Odisha 751001</p>
+              <a class="lib-card__link" href="https://share.google/UYnXRmHSBPY2XGMR3" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-globe" aria-hidden="true"></i> Access: Open to the public</p>
+            </div>
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+                <span class="lib-badge lib-badge--available"><i class="fas fa-check-circle" aria-hidden="true"></i> Available Now</span>
+              </div>
+              <div class="lib-card__name">Rourkela Institute of Management Studies</div>
+              <p class="lib-card__addr">C2M/166, Chhend Main Rd, beside KMIPS Institutional Area, Phase-2, Gopabandhu Nagar, Chhend Colony, Rourkela, Odisha 769015</p>
+              <a class="lib-card__link" href="https://share.google/PhMsU5csONeeNnv4w" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-id-card" aria-hidden="true"></i> Access: RIMS students &amp; alumni only</p>
+            </div>
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+                <span class="lib-badge lib-badge--available"><i class="fas fa-check-circle" aria-hidden="true"></i> Available Now</span>
+              </div>
+              <div class="lib-card__name">Chinmaya Vidyalaya (Odia Medium)</div>
+              <p class="lib-card__addr">6RXW+Q9C, Sector-7, Rourkela, Rourkela Industrialship, Odisha 769003</p>
+              <a class="lib-card__link" href="https://share.google/8lemiS80hr4lcYE39" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-id-card" aria-hidden="true"></i> Access: Students only</p>
+            </div>
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+                <span class="lib-badge lib-badge--available"><i class="fas fa-check-circle" aria-hidden="true"></i> Available Now</span>
+              </div>
+              <div class="lib-card__name">Chinmaya Vidyalaya E.M.</div>
+              <p class="lib-card__addr">Gopabandhu Nagar, Chhend Colony, Rourkela, Odisha 769015</p>
+              <a class="lib-card__link" href="https://share.google/XQLCWw6vVSTwKOcmt" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-id-card" aria-hidden="true"></i> Access: Students only</p>
+            </div>
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+                <span class="lib-badge lib-badge--soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</span>
+              </div>
+              <div class="lib-card__name">KIIT Central Library</div>
+              <p class="lib-card__addr">9R38+JGF, Chandaka Industrial Estate, Patia, Bhubaneswar, Odisha 751024</p>
+              <a class="lib-card__link" href="https://share.google/2IB98z7if77jtBKoZ" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-id-card" aria-hidden="true"></i> Access: KIIT students &amp; alumni only</p>
+            </div>
+
+            <div class="lib-card" data-state="karnataka">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                <span class="lib-badge lib-badge--soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</span>
+              </div>
+              <div class="lib-card__name">Government Public Digital Library</div>
+              <p class="lib-card__addr">32/1A, Kumarapalli, BEML Layout, Whitefield, Bengaluru, Karnataka 560066</p>
+              <a class="lib-card__link" href="https://share.google/W2pag2ua6yKHI5Wnl" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-globe" aria-hidden="true"></i> Access: Open to the public</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ============ THE GOODBYE I NEVER THOUGHT TO SAY ============ -->
+        <!-- Not released yet, so nothing here is live. This list mirrors
+             The Uncharted Romance's library list (same libraries, minus
+             RIMS, which received One Year, Many Lessons specifically) —
+             it's where copies are planned to go once the book launches,
+             so every card is marked Coming Soon. -->
+        <div class="lib-book-group" id="the-goodbye">
+          <div class="lib-book-head">
+            <img src="assets/img/book/the_goodbye_i_never_thought_to_say.png" alt="The Goodbye I Never Thought to Say — book cover">
+            <div>
+              <h3>The Goodbye I Never Thought to Say</h3>
+              <p>Not released yet &middot; 4 libraries planned</p>
+            </div>
+          </div>
+          <div class="lib-grid">
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                <span class="lib-badge lib-badge--soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</span>
+              </div>
+              <div class="lib-card__name">Rourkela Municipal Library and Cultural Centre</div>
+              <p class="lib-card__addr">Uditnagar Children&rsquo;s Park, 4, Main Rd, Udit Nagar, Rourkela, Odisha 769012</p>
+              <a class="lib-card__link" href="https://share.google/jcZOBjIMjwXX7UeSz" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-globe" aria-hidden="true"></i> Access: Open to the public</p>
+            </div>
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                <span class="lib-badge lib-badge--soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</span>
+              </div>
+              <div class="lib-card__name">Harekrushna Mahtab State Library</div>
+              <p class="lib-card__addr">7RGM+8H2, opp. Keshari Talkie, Unit 4, Bhouma Nagar, Bhubaneswar, Odisha 751001</p>
+              <a class="lib-card__link" href="https://share.google/UYnXRmHSBPY2XGMR3" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-globe" aria-hidden="true"></i> Access: Open to the public</p>
+            </div>
+
+            <div class="lib-card" data-state="odisha">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-graduation-cap"></i></span>
+                <span class="lib-badge lib-badge--soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</span>
+              </div>
+              <div class="lib-card__name">KIIT Central Library</div>
+              <p class="lib-card__addr">9R38+JGF, Chandaka Industrial Estate, Patia, Bhubaneswar, Odisha 751024</p>
+              <a class="lib-card__link" href="https://share.google/2IB98z7if77jtBKoZ" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-id-card" aria-hidden="true"></i> Access: KIIT students &amp; alumni only</p>
+            </div>
+
+            <div class="lib-card" data-state="karnataka">
+              <div class="lib-card__top">
+                <span class="lib-card__icon" aria-hidden="true"><i class="fas fa-landmark"></i></span>
+                <span class="lib-badge lib-badge--soon"><i class="fas fa-hourglass-half" aria-hidden="true"></i> Coming Soon</span>
+              </div>
+              <div class="lib-card__name">Government Public Digital Library</div>
+              <p class="lib-card__addr">32/1A, Kumarapalli, BEML Layout, Whitefield, Bengaluru, Karnataka 560066</p>
+              <a class="lib-card__link" href="https://share.google/W2pag2ua6yKHI5Wnl" target="_blank" rel="noopener noreferrer">
+                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> View on Google Maps
+              </a>
+              <p class="lib-card__access"><i class="fas fa-globe" aria-hidden="true"></i> Access: Open to the public</p>
+            </div>
+
+          </div>
+          <div class="lib-tip" style="margin-top:24px;">
+            <i class="fas fa-hourglass-half" aria-hidden="true"></i>
+            <p>This title hasn&rsquo;t released yet, so none of the above are live &mdash; the list reflects where copies are planned to go once it launches. <a href="the_good_bye_i_never_thought_to_say.html#notify-signup" style="color:#5956E9;">Get notified at launch</a>.</p>
+          </div>
+        </div>
+
+        <!-- Tip -->
+        <div class="lib-tip">
+          <i class="fas fa-hand-holding-heart" aria-hidden="true"></i>
+          <div>
+            <p style="margin:0 0 10px;"><strong>Don&rsquo;t see your library on this list?</strong> Most public and college libraries accept reader purchase requests or inter-library loan requests &mdash; ask your librarian to consider adding a title. And if a library near you has already added one of these books, let us know at <a href="mailto:subhankarrout.kiit@gmail.com" style="color:#5956E9;">subhankarrout.kiit@gmail.com</a> so it can be added here too.</p>
+            <p><strong>Most of the copies on this list were personally donated.</strong> Placing books directly in libraries is part of an ongoing effort to help these stories reach readers beyond regular retail channels. If your library, school, or community reading room would like to receive a copy, please write in at the same address &mdash; on request, a copy can be arranged for delivery wherever feasible.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ===================================================
+         §4  BUY INSTEAD CTA
+    =================================================== -->
+    <section class="book-cta-bar" aria-label="Buy a copy instead">
+      <div class="container">
+        <div class="book-cta-bar__inner">
+          <p class="book-cta-bar__eyebrow">Can&rsquo;t make it to a library?</p>
+          <h2 class="book-cta-bar__title">Get Your Own Copy,<br><em>Wherever You Are.</em></h2>
+          <p class="book-cta-bar__sub">Paperback and eBook editions ship worldwide through Amazon, Flipkart, Apple Books and Google Play.</p>
+          <div class="book-cta-bar__btns">
+            <a class="tp-btn" href="books.html">Shop All Books</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="tp-footer-area" role="contentinfo">
+    <div class="black-bg pt-130 pb-30">
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="tp-footer-widget">
+              <div class="tp-footer-widget__logo mb-30">
+                <a href="index.html"><img src="assets/img/logo/logo-white.png" alt="Subhankar Rout logo" width="140" height="40" loading="lazy"></a>
+              </div>
+              <nav class="tp-footer-widget__social-link" aria-label="Social media links">
+                <a href="https://linkedin.com/in/subhankarrout/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/subhankarrout.in/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/subhankarrout.in/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                <a href="https://behance.net/routsubhankar/" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="fab fa-behance" aria-hidden="true"></i></a>
+              </nav>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-2 col-md-6 d-flex justify-content-lg-center">
+            <div class="tp-footer-widget">
+              <div class="tp-footer-widget__title pb-15"><h3 class="footer-title">Useful Links</h3></div>
+              <nav class="tp-footer-widget__list" aria-label="Useful links">
+                <ul>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="about.html">About</a></li>
+                  <li><a href="pr.html">Press Release</a></li>
+                  <li><a href="https://www.imdb.com/name/nm14332046/" target="_blank" rel="noopener noreferrer">IMDb Profile <i class="fal fa-external-link-alt ext-icon" aria-hidden="true"></i></a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-2 col-md-6">
+            <div class="tp-footer-widget pl-20">
+              <div class="tp-footer-widget__title pb-15"><h3 class="footer-title">Publications</h3></div>
+              <nav class="tp-footer-widget__list" aria-label="Publications">
+                <ul>
+                  <li><a href="the_uncharted_romance.html">The Uncharted Romance</a></li>
+                  <li><a href="one_year_many_lessons.html">One Year, Many Lessons</a></li>
+                  <li><a href="the_good_bye_i_never_thought_to_say.html">The Goodbye I Never Thought to Say</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="tp-footer-widget">
+              <div class="tp-footer-widget__title pb-15"><h3 class="footer-title">Get Update</h3></div>
+              <div class="tp-footer-widget__input">
+                <iframe name="newsletter-frame" id="newsletter-frame" style="display:none;"
+                  onload="if(submitted){alert('Successfully Subscribed!')}{window.location.reload();}"></iframe>
+                <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScICZPA3CSLtSqmiNNhgq7ERnTxgB7XJeNwq7k-0xgDfRcIBw/formResponse" method="post" target="newsletter-frame" onsubmit="submitted=true">
+                  <input name="entry.1313508329" type="email" required placeholder="Enter Mail" aria-label="Your email address">
+                  <button type="submit" aria-label="Subscribe"><i class="fas fa-paper-plane" aria-hidden="true"></i></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tp-copyright-area">
+        <div class="container">
+          <div class="copyright-border pt-40">
+            <div class="row">
+              <div class="col-xl-6 col-lg-6 col-12">
+                <div class="tp-copyright-left text-center text-lg-start">
+                  <p>&copy; Copyright <span id="copyrightYear"></span>, All rights reserved</p>
+                </div>
+              </div>
+              <div class="col-xl-6 col-lg-6 col-12">
+                <div class="tp-copyright-right text-center text-lg-end">
+                  <a href="ChitraDesignSystem/index.html" class="d-none d-md-inline" target="_blank" rel="noopener noreferrer">Chitra Design System</a>
+                  <a href="ChitraDesignSystem/index.html" class="d-md-none" target="_blank" rel="noopener noreferrer">Chitra DS</a>
+                  <a href="privacy-policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <a class="scroll-top scroll-to-target d-md-none" data-target="html" href="#" aria-label="Back to top">
+    <i class="far fa-angle-double-up" aria-hidden="true"></i>
+  </a>
+
+  <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...args)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(args)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...a)=>target(prop,...a)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="d8z_zNMZtnWawsBTGQ_uJ";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+  </script>
+
+  <script src="assets/js/jquery.js"></script>
+  <script src="assets/js/waypoints.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/swiper-bundle.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script src="assets/js/magnific-popup.js"></script>
+  <script src="assets/js/counterup.js"></script>
+  <script src="assets/js/wow.js"></script>
+  <script src="assets/js/meanmenu.js"></script>
+  <script src="assets/js/isotope-pkgd.js"></script>
+  <script src="assets/js/imagesloaded-pkgd.js"></script>
+  <script src="assets/js/ajax-form.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="script.js"></script>
+
+  <script>
+    (function () {
+      var toggleBtn = document.getElementById('libFilterToggle');
+      var panel     = document.getElementById('libFilterPanel');
+      var resetBtn  = document.getElementById('libFilterReset');
+      if (!toggleBtn || !panel) return;
+
+      var bookPills  = panel.querySelectorAll('[data-filter="book"]');
+      var statePills = panel.querySelectorAll('[data-filter="state"]');
+      var groups     = document.querySelectorAll('.lib-book-group');
+
+      var active = { book: 'all', state: 'all' };
+
+      toggleBtn.addEventListener('click', function () {
+        var open = panel.classList.toggle('is-open');
+        toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+
+      function setActivePill(pillList, value) {
+        pillList.forEach(function (p) {
+          p.classList.toggle('active', p.getAttribute('data-value') === value);
+        });
+      }
+
+      function applyFilters() {
+        groups.forEach(function (group) {
+          var bookMatches = (active.book === 'all' || active.book === group.id);
+          if (!bookMatches) {
+            group.style.display = 'none';
+            return;
+          }
+
+          var cards = group.querySelectorAll('.lib-card');
+          if (cards.length === 0) {
+            // Notice-only groups (e.g. an unreleased title) aren't tied to a state
+            group.style.display = '';
+            return;
+          }
+
+          var visible = 0;
+          cards.forEach(function (card) {
+            var stateMatches = (active.state === 'all' || active.state === card.getAttribute('data-state'));
+            card.style.display = stateMatches ? '' : 'none';
+            if (stateMatches) visible++;
+          });
+          group.style.display = visible > 0 ? '' : 'none';
+        });
+
+        toggleBtn.classList.toggle('has-active-filter', active.book !== 'all' || active.state !== 'all');
+      }
+
+      bookPills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          active.book = pill.getAttribute('data-value');
+          setActivePill(bookPills, active.book);
+          applyFilters();
+          if (active.book !== 'all') {
+            var target = document.getElementById(active.book);
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      statePills.forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          active.state = pill.getAttribute('data-value');
+          setActivePill(statePills, active.state);
+          applyFilters();
+        });
+      });
+
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function () {
+          active = { book: 'all', state: 'all' };
+          setActivePill(bookPills, 'all');
+          setActivePill(statePills, 'all');
+          applyFilters();
+        });
+      }
+    })();
+  </script>
+
+</body>
+</html>

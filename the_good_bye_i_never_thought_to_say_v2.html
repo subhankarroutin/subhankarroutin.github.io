@@ -14,16 +14,46 @@
        THIS IS THE "AFTER RELEASE" TEMPLATE — not linked from nav/footer.
        Swap this file in for the_good_bye_i_never_thought_to_say.html on
        release day (23 September 2026), keeping the same filename so the
-       URL/SEO carries over. Before publishing, replace every placeholder
-       flagged with a "TODO" comment below:
-         - Hero + details-grid buy links (Amazon / Flipkart / iBooks / Play Books)
+       URL/SEO carries over.
+
+       DUMMY LINKS CURRENTLY IN THIS FILE — for layout/demo purposes only,
+       NOT real. Every one of these must be replaced before this file ever
+       goes live:
+         - Buy link (details-grid + final CTA "Order Your Copy" buttons):
+           https://linktr.ee/read.tgints
+         - Amazon (hero buy-bar):        https://amazon.com
+         - Flipkart (hero buy-bar):      https://flipkart.com
+         - Apple Books (hero buy-bar):   https://applebook.com
+         - Google Play (hero buy-bar):   https://google.com
+
+       Before publishing, also replace every placeholder flagged with a
+       "TODO" comment below:
          - Price (currently a placeholder ₹199 / ₹299, matching the other books)
          - ISBN + paperback page count in the Details tab
-         - Teaser tab (commented out until a teaser video exists)
+         - Teaser tab video (currently reusing the "One Year, Many Lessons"
+           teaser link as a placeholder — swap for this book's real teaser)
          - Book sample PDF (commented out until one exists)
          - Reader Reviews section (commented out — do NOT fill with fake
            reviews; only re-enable once real reader reviews come in)
-         - Review-collection CTA link in §10
+
+       Already real (not a dummy): the §10 review-collection link now
+       points to https://tr.ee/0ZeByFqzZX — no action needed there.
+
+       OTHER PAGES TO UPDATE ON RELEASE DAY (none of these were touched
+       as part of adding the dummy links above):
+         - the_good_bye_i_never_thought_to_say.html — replace its contents
+           with this file's contents (same filename, so the live URL and
+           any existing SEO carry over unchanged).
+         - books.html — the "Book 3" card for this title is still styled
+           as Coming Soon/Being Written (badge, meta row, CTA link/label).
+           Update it to match how the other two book cards look once real
+           price/links exist.
+         - book-library.html — the "The Goodbye I Never Thought to Say"
+           section currently lists 4 libraries all marked Coming Soon
+           (mirrors The Uncharted Romance's list, minus RIMS). That isn't
+           tied to the book's release date — flip each library's badge to
+           Available Now only once that specific library actually has a
+           copy in circulation.
   =================================================================== -->
 
   <script type="text/javascript">
@@ -206,21 +236,21 @@
 
         </div>
 
-        <!-- Platform buy-bar — TODO: replace # with real per-platform links once live -->
+        <!-- Platform buy-bar — DUMMY links, not real. Replace before this file ever goes live. -->
         <div class="book-hero__buy-bar hero-anim-5" role="list" aria-label="Available on">
-          <a class="book-hero__buy-item" href="#" target="_blank" rel="noopener noreferrer" role="listitem">
+          <a class="book-hero__buy-item" href="https://amazon.com" target="_blank" rel="noopener noreferrer" role="listitem">
             <i class="fab fa-amazon book-c-amazon" aria-hidden="true"></i>
             Amazon
           </a>
-          <a class="book-hero__buy-item" href="#" target="_blank" rel="noopener noreferrer" role="listitem">
+          <a class="book-hero__buy-item" href="https://flipkart.com" target="_blank" rel="noopener noreferrer" role="listitem">
             <i class="fa fa-shopping-cart book-c-flipkart" aria-hidden="true"></i>
             Flipkart
           </a>
-          <a class="book-hero__buy-item" href="#" target="_blank" rel="noopener noreferrer" role="listitem">
+          <a class="book-hero__buy-item" href="https://applebook.com" target="_blank" rel="noopener noreferrer" role="listitem">
             <i class="fab fa-apple book-c-apple" aria-hidden="true"></i>
             iBooks
           </a>
-          <a class="book-hero__buy-item" href="#" target="_blank" rel="noopener noreferrer" role="listitem">
+          <a class="book-hero__buy-item" href="https://google.com" target="_blank" rel="noopener noreferrer" role="listitem">
             <i class="fab fa-google-play book-c-google" aria-hidden="true"></i>
             Play Books
           </a>
@@ -298,8 +328,8 @@
               <span class="book-genre-tag">Hope</span>
             </div>
 
-            <!-- TODO: replace # with the real buy link (linktr.ee or direct retailer) -->
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <!-- DUMMY buy link, not real. Replace before this file ever goes live. -->
+            <a href="https://linktr.ee/read.tgints" target="_blank" rel="noopener noreferrer">
               <button class="tp-btn-yellow">Order Your Copy</button>
             </a>
           </div>
@@ -314,11 +344,9 @@
                   <li class="nav-item" role="presentation">
                     <button class="nav-links active" data-bs-toggle="tab" data-bs-target="#book-about" type="button" role="tab" aria-selected="true"><span>About Book</span></button>
                   </li>
-                  <!-- Teaser tab — uncomment once a teaser video exists
                   <li class="nav-item" role="presentation">
                     <button class="nav-links" data-bs-toggle="tab" data-bs-target="#book-teaser" type="button" role="tab" aria-selected="false"><span>Teaser</span></button>
                   </li>
-                  -->
                   <li class="nav-item" role="presentation">
                     <button class="nav-links" data-bs-toggle="tab" data-bs-target="#book-dets" type="button" role="tab" aria-selected="false"><span>Details</span></button>
                   </li>
@@ -338,13 +366,11 @@
                   <p>A novel that will stay with you long after the final page.</p>
                 </div>
 
-                <!-- Teaser tab-pane — uncomment once a teaser video exists
                 <div class="tab-pane fade" id="book-teaser" role="tabpanel">
                   <div class="tp-custom-accordio faq-accordio-border">
-                    <iframe class="youtube-video" src="" title="The Goodbye I Never Thought to Say — Official Teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-video" src="https://www.youtube.com/embed/H2UIHyROx-k" title="The Goodbye I Never Thought to Say — Official Teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                 </div>
-                -->
 
                 <div class="tab-pane fade" id="book-dets" role="tabpanel">
                   <div class="product__details-info table-responsive">
@@ -362,6 +388,10 @@
                         <tr><td class="add-info">Reading Age</td><td class="add-info-list">15 years and up</td></tr>
                         <tr><td class="add-info">Country of Origin</td><td class="add-info-list">India</td></tr>
                         <tr><td class="add-info">Net Quantity</td><td class="add-info-list">1 Piece</td></tr>
+                        <tr>
+                          <td class="add-info">Availability</td>
+                          <td class="add-info-list">Worldwide &mdash; Paperback via Amazon &amp; Flipkart (India, free delivery), with Amazon shipping internationally. eBook via Kindle, Apple Books &amp; Google Play, available globally.</td>
+                        </tr>
                         <!-- Book Sample row — uncomment once a sample PDF exists
                         <tr>
                           <td class="add-info">Book Sample</td>
@@ -426,6 +456,26 @@
                         </h2>
                         <div id="nc5" class="accordion-collapse collapse" aria-labelledby="nf5" data-bs-parent="#nurFaqAccordion">
                           <div class="accordion-body">Please refer to the official policies of Amazon, Flipkart, Kindle, Google Books, or Apple Books depending on where you purchase.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-items">
+                        <h2 class="accordion-header" id="nf6">
+                          <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nc6" aria-expanded="false" aria-controls="nc6">
+                            Is this book available outside India?
+                          </button>
+                        </h2>
+                        <div id="nc6" class="accordion-collapse collapse" aria-labelledby="nf6" data-bs-parent="#nurFaqAccordion">
+                          <div class="accordion-body">Yes. The paperback ships internationally via Amazon, and within India it&rsquo;s also available on Flipkart with free delivery. The eBook edition is available worldwide on Amazon Kindle, Apple Books, and Google Play Books &mdash; no shipping required.</div>
+                        </div>
+                      </div>
+                      <div class="accordion-items">
+                        <h2 class="accordion-header" id="nf7">
+                          <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nc7" aria-expanded="false" aria-controls="nc7">
+                            Will the paperback be available in a library?
+                          </button>
+                        </h2>
+                        <div id="nc7" class="accordion-collapse collapse" aria-labelledby="nf7" data-bs-parent="#nurFaqAccordion">
+                          <div class="accordion-body">Not yet, but it&rsquo;s on its way &mdash; copies are being placed in the same libraries that already carry The Uncharted Romance and One Year, Many Lessons. See current status on the <a href="book-library.html#the-goodbye" style="color:#5956E9;">Book Library</a> page, where each location will move from Coming Soon to Available Now as it&rsquo;s stocked.</div>
                         </div>
                       </div>
                     </div>
@@ -528,8 +578,8 @@
           <h2 class="book-cta-bar__title">Read the Story That<br><em>Doesn&rsquo;t Rush the Goodbye.</em></h2>
           <p class="book-cta-bar__sub">No borrowed endings. No easy answers. Just Varun, Natasha, and the truth that people don&rsquo;t fail love &mdash; situations do.</p>
           <div class="book-cta-bar__btns">
-            <!-- TODO: replace # with the real buy link -->
-            <a class="tp-btn" href="#" target="_blank" rel="noopener noreferrer">
+            <!-- DUMMY buy link, not real. Replace before this file ever goes live. -->
+            <a class="tp-btn" href="https://linktr.ee/read.tgints" target="_blank" rel="noopener noreferrer">
               Order Your Copy
             </a>
             <!-- Free-sample ghost button — uncomment once a sample PDF exists
@@ -543,9 +593,7 @@
     </section>
 
     <!-- ===================================================
-         §10  REVIEW CTA — TODO: point at a real review-collection
-         link (e.g. a Tally/Typeform link, same pattern as
-         the_uncharted_romance.html) before enabling
+         §10  REVIEW CTA
     =================================================== -->
     <div class="book-review">
       <div class="container">
@@ -561,9 +609,8 @@
               <p class="book-sect-hd__sub">Your words, honest and unfiltered, could be the reason a stranger picks this up on a hard day. The author reads every single review personally.</p>
             </div>
 
-            <!-- TODO: replace # with the real review-collection link -->
             <a class="tp-btn-lg-yellow"
-               href="#"
+               href="https://tr.ee/0ZeByFqzZX"
                target="_blank"
                rel="noopener noreferrer">
               Share Your Review
