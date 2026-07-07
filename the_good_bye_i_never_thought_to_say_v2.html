@@ -54,6 +54,23 @@
            tied to the book's release date — flip each library's badge to
            Available Now only once that specific library actually has a
            copy in circulation..
+         - about.html — still hardcodes the "2 books" count from before this
+           title existed. Two spots to change to "3"/"three" and name this
+           book alongside the other two:
+             1. §4 STORY section, "A Story of Creativity & Dedication" —
+                the paragraph reading "bestselling author of two books —
+                The Uncharted Romance and One Year, Many Lessons".
+             2. Same section's highlight-card grid — the card titled
+                "Published Author × 2" (book-open icon), whose body reads
+                "...two books, one relentless storyteller."
+           Also — the §5(ish) ROADMAP/JOURNEY section already has a
+           "Sep 2026 · The Goodbye I Never Thought to Say" milestone card
+           written and sitting inside an HTML comment, in BOTH the desktop
+           rj-card timeline (before the "End cap") and the mobile
+           rj-ml-item timeline (before .rj-ml-endcap). Just uncomment
+           both blocks on release day — no need to write them from scratch.
+           (index.html's §7 BOOK SPOTLIGHT "Other Books" row already links
+           this title, so nothing to add there.)
   =================================================================== -->
 
   <script type="text/javascript">
@@ -368,7 +385,7 @@
 
                 <div class="tab-pane fade" id="book-teaser" role="tabpanel">
                   <div class="tp-custom-accordio faq-accordio-border">
-                    <iframe class="youtube-video" src="https://www.youtube.com/embed/H2UIHyROx-k" title="The Goodbye I Never Thought to Say — Official Teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe class="youtube-video" src="https://www.youtube.com/embed/WH-6kSJpdPI?si=uG5i3nbscxI88PU1" title="The Goodbye I Never Thought to Say — Official Teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   </div>
                 </div>
 
@@ -438,6 +455,8 @@
                           <div class="accordion-body">Absolutely! The ebook is available on Amazon Kindle, Apple Books, and Google Play Books via the platform links above.</div>
                         </div>
                       </div>
+                      <!-- The 2 existing books are named/linked here. When a 3rd companion
+                           title exists, add it into this same answer (and update "Both" to "All"). -->
                       <div class="accordion-items">
                         <h2 class="accordion-header" id="nf4">
                           <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nc4" aria-expanded="false" aria-controls="nc4">
