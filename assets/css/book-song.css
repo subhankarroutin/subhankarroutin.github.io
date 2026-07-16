@@ -1,0 +1,130 @@
+/* ============================================================
+   BOOK SONG SECTION — "Not Every Goodbye"
+   Official song block on the_good_bye_i_never_thought_to_say.html
+   Loaded after book.css
+   ============================================================ */
+
+.book-song {
+  background: linear-gradient(160deg, #0b0718 0%, #1c0f3d 55%, #170b2e 100%);
+  padding: 120px 0 110px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Ambient glows */
+.book-song__glow--1 {
+  position: absolute; width: 640px; height: 640px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(89,86,233,.20) 0%, transparent 70%);
+  top: -180px; left: -140px; pointer-events: none;
+}
+.book-song__glow--2 {
+  position: absolute; width: 560px; height: 560px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(233,86,180,.12) 0%, transparent 70%);
+  bottom: -160px; right: -120px; pointer-events: none;
+}
+
+/* Head */
+.book-song__eyebrow {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 13px; font-weight: 700; letter-spacing: 3px;
+  text-transform: uppercase; color: rgba(255,255,255,.55);
+  margin-bottom: 18px;
+}
+.book-song__eyebrow-line { width: 28px; height: 1px; background: rgba(255,255,255,.35); }
+
+/* Animated equalizer bars beside the eyebrow */
+.book-song__eq { display: inline-flex; align-items: flex-end; gap: 3px; height: 16px; }
+.book-song__eq span {
+  width: 3px; border-radius: 2px;
+  background: linear-gradient(to top, #5956E9, #b28aff);
+  animation: bookSongEq 1.1s ease-in-out infinite;
+}
+.book-song__eq span:nth-child(1) { height: 60%; animation-delay: 0s; }
+.book-song__eq span:nth-child(2) { height: 100%; animation-delay: .25s; }
+.book-song__eq span:nth-child(3) { height: 45%; animation-delay: .5s; }
+.book-song__eq span:nth-child(4) { height: 80%; animation-delay: .12s; }
+@keyframes bookSongEq {
+  0%, 100% { transform: scaleY(.5); }
+  50%      { transform: scaleY(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .book-song__eq span { animation: none; }
+}
+
+.book-song__title {
+  font-size: clamp(30px, 4.4vw, 52px);
+  font-weight: 700; line-height: 1.18;
+  color: #fff; margin-bottom: 18px;
+}
+.book-song__title em { font-style: italic; color: #b28aff; }
+
+.book-song__sub {
+  font-size: 17px; line-height: 1.7;
+  color: rgba(255,255,255,.6);
+  max-width: 620px; margin: 0 auto 52px;
+}
+
+/* Video player */
+.book-song__player {
+  max-width: 860px; margin: 0 auto 48px;
+  border-radius: 18px; overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.55),
+    0 0 90px rgba(89,86,233,.28);
+}
+.book-song__player .youtube-video { display: block; border: 0; }
+
+/* Streaming platform chips */
+.book-song__listen-label {
+  font-size: 13px; font-weight: 700; letter-spacing: 2.5px;
+  text-transform: uppercase; color: rgba(255,255,255,.4);
+  margin-bottom: 20px;
+}
+.book-song__platforms {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 14px;
+}
+.book-song__platform {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 13px 26px; border-radius: 50px;
+  border: 1.5px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.05);
+  color: rgba(255,255,255,.82); font-size: 15px; font-weight: 600;
+  text-decoration: none; transition: all .3s ease;
+}
+.book-song__platform:hover {
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.4);
+  color: #fff; transform: translateY(-2px);
+}
+.book-song__platform i { font-size: 18px; }
+.book-song__platform .book-sc-spotify { color: #1db954; }
+.book-song__platform .book-sc-apple   { color: #fa6280; }
+.book-song__platform .book-sc-youtube { color: #ff4e45; }
+.book-song__platform .book-sc-amazon  { color: #ffa827; }
+.book-song__platform .book-sc-jiosaavn { color: #2bc5b4; }
+.book-song__platform .book-sc-gaana   { color: #e72c3c; }
+.book-song__platform .book-sc-instagram { color: #e1306c; }
+.book-song__platform .book-sc-more    { color: #b28aff; }
+
+/* Smart-link pill — filled variant */
+.book-song__platform--all {
+  background: #5956E9; border-color: #5956E9; color: #fff;
+}
+.book-song__platform--all .book-sc-more { color: #fff; }
+.book-song__platform--all:hover {
+  background: #6f6cf1; border-color: #6f6cf1;
+  box-shadow: 0 10px 30px rgba(89,86,233,.45);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .book-song { padding: 90px 0 80px; }
+}
+@media (max-width: 767px) {
+  .book-song { padding: 70px 0 64px; }
+  .book-song__sub { font-size: 15px; margin-bottom: 40px; }
+  .book-song__player { border-radius: 12px; margin-bottom: 38px; }
+  .book-song__platform { padding: 11px 20px; font-size: 14px; }
+}

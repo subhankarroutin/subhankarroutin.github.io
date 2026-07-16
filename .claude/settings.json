@@ -14,7 +14,15 @@
       "Bash(node -e \"require.resolve\\('playwright'\\)\")",
       "Bash(npm ls *)",
       "Bash(where node *)",
-      "Bash(git diff *)"
+      "Bash(git diff *)",
+      "Bash(git checkout *)",
+      "WebFetch(domain:www.youtube.com)",
+      "Bash(find /c/Users/subha/AppData/Local/Temp -maxdepth 3 -iname \"*.png\" -newermt \"-10 minutes\" 2>/dev/null)",
+      "Read(//c/Users/subha/AppData/Local/Temp/**)",
+      "Read(//c/Users/subha/AppData/Roaming/**)",
+      "Bash(find /c/Users/subha/AppData/Roaming/Code/User -maxdepth 6 -iname \"*.png\" -newermt \"-1 hour\" 2>/dev/null | head -20; echo \"---\"; find /d/Web/subhankarroutin.github.io -maxdepth 3 -iname \"*.png\" -newermt \"-1 hour\" 2>/dev/null)",
+      "Read(//c/Users/subha/AppData/Roaming/Code/User/**)",
+      "PowerShell(foreach \\($u in @\\(\"https://img.youtube.com/vi/6ExSiL_kE0w/maxresdefault.jpg\",\"https://img.youtube.com/vi/6ExSiL_kE0w/hqdefault.jpg\"\\)\\) { try { $r = Invoke-WebRequest -Uri $u -Method Head -UseBasicParsing -ErrorAction Stop; Write-Output \"$u -> $\\($r.StatusCode\\) $\\($r.Headers['Content-Length']\\) bytes\" } catch { Write-Output \"$u -> FAILED $\\($_.Exception.Message\\)\" } })"
     ],
     "additionalDirectories": [
       "C:\\Users\\subha\\Downloads\\SVG",

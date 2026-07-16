@@ -5893,7 +5893,7 @@ input:focus-visible,
   align-items: center;
   text-align: center;
   gap: 10px;
-  width: calc(25% - 12px);
+  width: calc(20% - 12.8px);
   min-width: 160px;
   padding: 32px 20px 26px;
   border-radius: 20px;
@@ -5926,8 +5926,8 @@ input:focus-visible,
   transition: color .2s;
 }
 .s4c-platform__cta i { font-size: 10px; }
-.s4c-platform:not(.s4c-platform--apple):hover .s4c-platform__cta { color: rgba(255,255,255,.8); }
-.s4c-platform:not(.s4c-platform--apple):active { transform: translateY(-2px); }
+.s4c-platform:hover .s4c-platform__cta { color: rgba(255,255,255,.8); }
+.s4c-platform:active { transform: translateY(-2px); }
 .s4c-platform:focus-visible {
   outline: 3px solid rgba(255,255,255,.7);
   outline-offset: 4px;
@@ -5945,7 +5945,7 @@ input:focus-visible,
 .s4c-platform--ytmusic  .s4c-platform__icon { background: rgba(255,0,0,.15);    color: #FF4040; }
 .s4c-platform--ytmusic:hover  { background: rgba(255,0,0,.07);    box-shadow: 0 18px 48px rgba(255,0,0,.2); }
 .s4c-platform--apple    .s4c-platform__icon { background: rgba(250,36,60,.15);  color: #FA243C; }
-.s4c-platform--apple    { opacity: .5; cursor: not-allowed; pointer-events: none; }
+.s4c-platform--apple:hover    { background: rgba(250,36,60,.07);  box-shadow: 0 18px 48px rgba(250,36,60,.2); }
 .s4c-platform--resso    .s4c-platform__icon { background: rgba(255,45,85,.15);  color: #FF2D55; }
 .s4c-platform--resso:hover    { background: rgba(255,45,85,.07);  box-shadow: 0 18px 48px rgba(255,45,85,.2); }
 
@@ -7939,7 +7939,7 @@ input:focus-visible,
   height: 80px;
   border-top: 4px solid var(--tp-theme-primary, #FFDC60);
   border-left: 4px solid var(--tp-theme-primary, #FFDC60);
-  border-radius: 12px 0 0 0;
+  border-radius: 38px 0 0 0; /* T = R(24) + S(14), concentric with .hm-ab2__photo-frame */
   z-index: 1;
   pointer-events: none;
 }
@@ -8068,7 +8068,7 @@ input:focus-visible,
   .hm-ab2__inner { padding: 0 20px; gap: 36px; }
   .hm-ab2__photo-frame img { height: 300px; }
   .hm-ab2__name { font-size: 36px; }
-  .hm-ab2__photo-accent { width: 56px; height: 56px; top: -10px; left: -10px; }
+  .hm-ab2__photo-accent { width: 56px; height: 56px; top: -10px; left: -10px; border-radius: 34px 0 0 0; }
   .hm-ab2__ftag { display: none; }
 }
 
