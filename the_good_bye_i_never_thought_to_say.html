@@ -39,6 +39,15 @@
 
   <link rel="stylesheet" href="assets/css/book.css">
   <link rel="stylesheet" href="assets/css/book-song.css">
+
+  <style>
+    /* Stack the song eyebrow (eq icon on top, label below) on narrow screens —
+       side-by-side wraps the label awkwardly next to the equalizer bars. */
+    @media (max-width: 767px) {
+      .book-song__eyebrow { flex-direction: column; gap: 10px; }
+      .book-song__eyebrow-line { display: none; }
+    }
+  </style>
 </head>
 
 <body class="book-page">
