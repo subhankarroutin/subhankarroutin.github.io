@@ -47,6 +47,14 @@
       .book-song__eyebrow { flex-direction: column; gap: 10px; }
       .book-song__eyebrow-line { display: none; }
     }
+
+    /* Light variant of the Final CTA band — this page only, base .book-cta-bar in book.css is untouched */
+    .book-cta-bar--light { background: var(--surface-1, #FAFAFA); }
+    .book-cta-bar--light::before { background: radial-gradient(circle, rgba(89,86,233,.08) 0%, transparent 70%); }
+    .book-cta-bar--light .book-cta-bar__eyebrow { color: var(--tp-theme-1, #5956E9); }
+    .book-cta-bar--light .book-cta-bar__title { color: var(--text-primary, #0D0D12); }
+    .book-cta-bar--light .book-cta-bar__title em { color: var(--tp-theme-1, #5956E9); }
+    .book-cta-bar--light .book-cta-bar__sub { color: var(--text-secondary, #6B7280); }
   </style>
 </head>
 
@@ -606,7 +614,7 @@
     <!-- ===================================================
          §9  FINAL CTA
     =================================================== -->
-    <section class="book-cta-bar" aria-label="Get your copy">
+    <section class="book-cta-bar book-cta-bar--light" aria-label="Get your copy">
       <div class="container">
         <div class="book-cta-bar__inner">
           <p class="book-cta-bar__eyebrow">A story worth the wait.</p>
