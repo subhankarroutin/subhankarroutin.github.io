@@ -1,4 +1,5 @@
-﻿<!doctype html>
+
+<!doctype html>
 <html class="no-js" lang="en">
 
 <head>
@@ -46,14 +47,6 @@
       .book-song__eyebrow { flex-direction: column; gap: 10px; }
       .book-song__eyebrow-line { display: none; }
     }
-
-    /* Light variant of the Final CTA band — this page only, base .book-cta-bar in book.css is untouched */
-    .book-cta-bar--light { background: var(--surface-1, #FAFAFA); }
-    .book-cta-bar--light::before { background: radial-gradient(circle, rgba(89,86,233,.08) 0%, transparent 70%); }
-    .book-cta-bar--light .book-cta-bar__eyebrow { color: var(--tp-theme-1, #5956E9); }
-    .book-cta-bar--light .book-cta-bar__title { color: var(--text-primary, #0D0D12); }
-    .book-cta-bar--light .book-cta-bar__title em { color: var(--tp-theme-1, #5956E9); }
-    .book-cta-bar--light .book-cta-bar__sub { color: var(--text-secondary, #6B7280); }
   </style>
 </head>
 
@@ -174,7 +167,7 @@
           <div>
             <div class="book-hero__kicker hero-anim-1">
               <span class="book-hero__kicker-dot" aria-hidden="true"></span>
-              Fiction &middot; Pre-Order Open &middot; Releases 24 July 2026
+              Fiction &middot; New Release
             </div>
 
             <h1 class="book-hero__title hero-anim-3">
@@ -196,7 +189,7 @@
 
             <div class="book-hero__book-wrap">
               <img class="book-hero__book-img" src="assets/img/book/the_goodbye_i_never_thought_to_say.png" alt="The Goodbye I Never Thought to Say — book cover">
-              <div class="book-book-badge"><strong>Pre</strong>Order</div>
+              <div class="book-book-badge"><strong>New</strong>Release</div>
             </div>
 
             <div class="book-hero__ftag book-hero__ftag--tl">📖 Contemporary Fiction</div>
@@ -207,13 +200,13 @@
 
         </div>
 
-        <!-- Platform buy-bar — Play Books, Amazon &amp; iBooks are live; Flipkart is a "#" placeholder, swap in the live listing URL once it goes up -->
-        <div class="book-hero__buy-bar hero-anim-5" role="list" aria-label="Pre-order on">
+        <!-- Platform buy-bar — Play Books, Amazon, iBooks &amp; Flipkart are all live -->
+        <div class="book-hero__buy-bar hero-anim-5" role="list" aria-label="Available on">
           <a class="book-hero__buy-item" href="https://link.amazon/B01Y0m9Lw" target="_blank" rel="noopener noreferrer" role="listitem">
             <i class="fab fa-amazon book-c-amazon" aria-hidden="true"></i>
             Amazon
           </a>
-          <a class="book-hero__buy-item" href="#" target="_blank" rel="noopener noreferrer" role="listitem">
+          <a class="book-hero__buy-item" href="https://dl.flipkart.com/dl/goodbye-never-thought-say/p/itm9a3bcac6511e1?pid=9789360385545&amp;lid=LSTBOK97893603855458SUWDM&amp;_refId=&amp;_appId=WA" target="_blank" rel="noopener noreferrer" role="listitem">
             <i class="fa fa-shopping-cart book-c-flipkart" aria-hidden="true"></i>
             Flipkart
           </a>
@@ -241,15 +234,15 @@
     <div class="book-award-ribbon" aria-hidden="true">
       <div class="book-award-ribbon__track">
         <!-- Repeated twice for seamless loop -->
-        <span class="book-award-ribbon__item"><i class="fas fa-feather-alt"></i> Pre-Order Open &middot; Subhankar Rout</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-feather-alt"></i> New Release &middot; Subhankar Rout</span>
         <span class="book-award-ribbon__item"><i class="fas fa-heart"></i> People Don&rsquo;t Fail Love. Situations Do.</span>
         <span class="book-award-ribbon__item"><i class="fas fa-book-open"></i> From the Author of The Uncharted Romance</span>
-        <span class="book-award-ribbon__item"><i class="fas fa-globe"></i> Releases 24 July 2026</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-globe"></i> Available Worldwide</span>
         <span class="book-award-ribbon__item"><i class="fab fa-amazon"></i> Amazon &middot; Flipkart &middot; Apple Books &middot; Google Play</span>
-        <span class="book-award-ribbon__item"><i class="fas fa-feather-alt"></i> Pre-Order Open &middot; Subhankar Rout</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-feather-alt"></i> New Release &middot; Subhankar Rout</span>
         <span class="book-award-ribbon__item"><i class="fas fa-heart"></i> A Story About Love, Timing &amp; Hidden Truths</span>
         <span class="book-award-ribbon__item"><i class="fas fa-book-open"></i> From the Author of The Uncharted Romance</span>
-        <span class="book-award-ribbon__item"><i class="fas fa-globe"></i> Releases 24 July 2026</span>
+        <span class="book-award-ribbon__item"><i class="fas fa-globe"></i> Available Worldwide</span>
         <span class="book-award-ribbon__item"><i class="fab fa-amazon"></i> Amazon &middot; Flipkart &middot; Apple Books &middot; Google Play</span>
       </div>
     </div>
@@ -298,7 +291,7 @@
             </div>
 
             <a href="https://linktr.ee/read.tgints" target="_blank" rel="noopener noreferrer">
-              <button class="tp-btn-yellow">Pre-Order Started</button>
+              <button class="tp-btn-yellow">Order Your Copy</button>
             </a>
           </div>
         </div>
@@ -375,22 +368,12 @@
                   <div class="tp-custom-accordio faq-accordio-border">
                     <div class="accordion" id="nurFaqAccordion">
                       <div class="accordion-items">
-                        <h2 class="accordion-header" id="nf0">
-                          <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#nc0" aria-expanded="true" aria-controls="nc0">
-                            When does the book release?
-                          </button>
-                        </h2>
-                        <div id="nc0" class="accordion-collapse collapse show" aria-labelledby="nf0" data-bs-parent="#nurFaqAccordion">
-                          <div class="accordion-body">The paperback and ebook both release worldwide on <strong>24 July 2026</strong>. Pre-order now and it will be delivered on release day.</div>
-                        </div>
-                      </div>
-                      <div class="accordion-items">
                         <h2 class="accordion-header" id="nf1">
-                          <button class="accordion-buttons collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#nc1" aria-expanded="false" aria-controls="nc1">
+                          <button class="accordion-buttons" type="button" data-bs-toggle="collapse" data-bs-target="#nc1" aria-expanded="true" aria-controls="nc1">
                             Is the listed paperback price inclusive of delivery charges?
                           </button>
                         </h2>
-                        <div id="nc1" class="accordion-collapse collapse" aria-labelledby="nf1" data-bs-parent="#nurFaqAccordion">
+                        <div id="nc1" class="accordion-collapse collapse show" aria-labelledby="nf1" data-bs-parent="#nurFaqAccordion">
                           <div class="accordion-body">Yes, the paperback price includes delivery charges for a hassle-free purchasing experience.</div>
                         </div>
                       </div>
@@ -401,7 +384,7 @@
                           </button>
                         </h2>
                         <div id="nc2" class="accordion-collapse collapse" aria-labelledby="nf2" data-bs-parent="#nurFaqAccordion">
-                          <div class="accordion-body">Click &ldquo;Pre-Order Started&rdquo; &mdash; you&rsquo;ll be redirected to Amazon or Flipkart for the paperback purchase.</div>
+                          <div class="accordion-body">Click &ldquo;Order Your Copy&rdquo; &mdash; you&rsquo;ll be redirected to Amazon or Flipkart for the paperback purchase.</div>
                         </div>
                       </div>
                       <div class="accordion-items">
@@ -451,7 +434,7 @@
                           </button>
                         </h2>
                         <div id="nc7" class="accordion-collapse collapse" aria-labelledby="nf7" data-bs-parent="#nurFaqAccordion">
-                          <div class="accordion-body">Not yet &mdash; but it&rsquo;s on its way to the same libraries that carry The Uncharted Romance and One Year, Many Lessons. See the full list, including addresses and maps, on the <a href="book-library.html#the-goodbye" style="color:#5956E9;">Book Library</a> page.</div>
+                          <div class="accordion-body">Yes &mdash; if you&rsquo;d like to check this book in a library, visit the <a href="book-library.html#the-goodbye" style="color:#5956E9;">Book Library</a> page for the full list, including addresses and maps.</div>
                         </div>
                       </div>
                     </div>
@@ -482,7 +465,7 @@
         <div class="book-song__eyebrow">
           <span class="book-song__eyebrow-line" aria-hidden="true"></span>
           <span class="book-song__eq" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
-          The Official Song &middot; Out Now
+          The Official Song
           <span class="book-song__eyebrow-line" aria-hidden="true"></span>
         </div>
 
@@ -490,15 +473,15 @@
 
         <p class="book-song__sub">
           For the first time, a book comes with its own original song &mdash; born from
-          Varun and Natasha&rsquo;s story. It&rsquo;s out now: watch the lyrical video, or
-          stream it on every major music platform.
+          Varun and Natasha&rsquo;s story. Watch the lyrical video, or stream it on
+          every major music platform.
         </p>
 
         <div class="book-song__player">
           <iframe class="youtube-video" src="https://www.youtube.com/embed/6ExSiL_kE0w?si=cUe36HwiesF5cBiD" title="Not Every Goodbye — Official Lyrical Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
-        <p class="book-song__listen-label">Streaming Now On</p>
+        <p class="book-song__listen-label" id="mp3song">Listen On</p>
         <div class="book-song__platforms" role="list" aria-label="Streaming platforms">
           <a class="book-song__platform" href="https://open.spotify.com/track/7juJw3u9N8fUpE0z1YWvAQ?si=vR34qf9aTImNBe9ThdB0Sg&amp;utm_source=copy-link" target="_blank" rel="noopener noreferrer" role="listitem">
             <i class="fab fa-spotify book-sc-spotify" aria-hidden="true"></i>
@@ -609,11 +592,118 @@
 
     
 
+    <!-- ===================================================
+         §8  READER REVIEWS
+    =================================================== -->
+    <section class="book-testimonials" aria-label="Reader reviews">
+      <div class="container">
+
+        <div class="book-sect-hd">
+          <div class="book-sect-hd__eyebrow">
+            <span class="book-sect-hd__dot" aria-hidden="true"></span>
+            Reader Voices
+          </div>
+          <h2 class="book-sect-hd__title">The First Readers<br><em>Have Started Talking.</em></h2>
+          <p class="book-sect-hd__sub">Real words from real readers &mdash; unfiltered and unedited.</p>
+        </div>
+
+        <!-- Featured review -->
+        <div class="book-feat-review">
+          <p class="book-feat-review__text">
+            &ldquo;I picked this up because the title sounded familiar, like something I&rsquo;d felt before but never put into words. By the middle of the book, I wasn&rsquo;t reading about Varun and Natasha anymore. I was remembering my own unfinished conversations. The writing is simple, but it sneaks up on you emotionally.&rdquo;
+          </p>
+          <div class="book-feat-review__footer">
+            <div class="book-feat-review__avatar" aria-hidden="true">DM</div>
+            <div>
+              <div class="book-feat-review__name">Divya Menon</div>
+              <div class="book-feat-review__stars" aria-label="5 out of 5 stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card grid -->
+        <div class="book-review-cards">
+
+          <div class="book-rc">
+            <span class="book-rc__mark" aria-hidden="true">"</span>
+            <p class="book-rc__text">What impressed me most was how believable the characters felt. Nobody is unrealistically perfect. Nobody delivers dramatic movie dialogues every page. They feel like actual people you might meet in Hyderabad, and that&rsquo;s exactly why the story works.</p>
+            <div class="book-rc__footer">
+              <div class="book-rc__avatar book-rc__av-v" aria-hidden="true">JC</div>
+              <div>
+                <div class="book-rc__name">Jatin Chawla</div>
+                <div class="book-rc__stars" aria-label="4 out of 5 stars">★★★★☆</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-rc">
+            <span class="book-rc__mark" aria-hidden="true">"</span>
+            <p class="book-rc__text">I usually read thrillers, not romance. This book was a complete surprise. It isn&rsquo;t really about romance at all. It&rsquo;s about timing, choices, and the things people carry long after relationships end. I finished it in one sitting.</p>
+            <div class="book-rc__footer">
+              <div class="book-rc__avatar book-rc__av-g" aria-hidden="true">RM</div>
+              <div>
+                <div class="book-rc__name">Rahul Mehra</div>
+                <div class="book-rc__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-rc">
+            <span class="book-rc__mark" aria-hidden="true">"</span>
+            <p class="book-rc__text">There were several moments where I had to stop reading because the scenes felt too real. The late-night phone calls, the awkward silences, the small gestures that mean everything &mdash; those details stayed with me. The ending hit me harder than I expected.</p>
+            <div class="book-rc__footer">
+              <div class="book-rc__avatar book-rc__av-a" aria-hidden="true">ST</div>
+              <div>
+                <div class="book-rc__name">Shreya Tiwari</div>
+                <div class="book-rc__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-rc">
+            <span class="book-rc__mark" aria-hidden="true">"</span>
+            <p class="book-rc__text">The Hyderabad setting was one of my favourite parts. As someone who has lived there for years, every location felt authentic. But beyond that, the emotions felt authentic too. This book understands loneliness in a way very few novels do.</p>
+            <div class="book-rc__footer">
+              <div class="book-rc__avatar book-rc__av-r" aria-hidden="true">KN</div>
+              <div>
+                <div class="book-rc__name">Karan Nair</div>
+                <div class="book-rc__stars" aria-label="4 out of 5 stars">★★★★☆</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-rc">
+            <span class="book-rc__mark" aria-hidden="true">"</span>
+            <p class="book-rc__text">I highlighted so many passages that my Kindle now looks ridiculous. Some lines felt like they had been taken directly from thoughts I never said out loud. That&rsquo;s rare. Very rare.</p>
+            <div class="book-rc__footer">
+              <div class="book-rc__avatar book-rc__av-b" aria-hidden="true">IP</div>
+              <div>
+                <div class="book-rc__name">Ishita Pradhan</div>
+                <div class="book-rc__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="book-rc">
+            <span class="book-rc__mark" aria-hidden="true">"</span>
+            <p class="book-rc__text">The last chapter left me sitting quietly for a long time. Not because it was shocking. Because it felt honest. This story doesn&rsquo;t rely on twists or drama. It relies on emotion, and it delivers.</p>
+            <div class="book-rc__footer">
+              <div class="book-rc__avatar book-rc__av-v" aria-hidden="true">YS</div>
+              <div>
+                <div class="book-rc__name">Yash Sethi</div>
+                <div class="book-rc__stars" aria-label="5 out of 5 stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- ===================================================
          §9  FINAL CTA
     =================================================== -->
-    <section class="book-cta-bar book-cta-bar--light" aria-label="Get your copy">
+    <section class="book-cta-bar" aria-label="Get your copy">
       <div class="container">
         <div class="book-cta-bar__inner">
           <p class="book-cta-bar__eyebrow">A story worth the wait.</p>
@@ -621,7 +711,7 @@
           <p class="book-cta-bar__sub">No borrowed endings. No easy answers. Just Varun, Natasha, and the truth that people don&rsquo;t fail love &mdash; situations do.</p>
           <div class="book-cta-bar__btns">
             <a class="tp-btn" href="https://linktr.ee/read.tgints" target="_blank" rel="noopener noreferrer">
-              Pre-Order Started
+              Order Your Copy
             </a>
             <!-- Free-sample ghost button — uncomment once a sample PDF exists
             <a class="book-ghost-btn" href="./assets/Goodbye-BookSample.pdf" target="_blank" rel="noopener noreferrer">
@@ -632,6 +722,41 @@
         </div>
       </div>
     </section>
+
+    <!-- ===================================================
+         §10  REVIEW CTA
+    =================================================== -->
+    <div class="book-review">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-xl-6 col-lg-7 col-12 text-center">
+
+            <div class="book-sect-hd">
+              <div class="book-sect-hd__eyebrow">
+                <span class="book-sect-hd__dot" aria-hidden="true"></span>
+                Your Voice
+              </div>
+              <h2 class="book-sect-hd__title">Finished it?<br><em>We&rsquo;d love to know what it did to you.</em></h2>
+              <p class="book-sect-hd__sub">Your words, honest and unfiltered, could be the reason a stranger picks this up on a hard day. The author reads every single review personally.</p>
+            </div>
+
+            <a class="tp-btn-lg-yellow"
+               href="https://tr.ee/0ZeByFqzZX"
+               target="_blank"
+               rel="noopener noreferrer">
+              Share Your Review
+            </a>
+
+            <div style="margin-top: 20px;">
+              <a href="books.html" style="color:#5956E9; font-weight:700; font-size:15px; text-decoration:none; display:inline-flex; align-items:center; gap:6px;">
+                Explore All Books <i class="far fa-arrow-right" aria-hidden="true"></i>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
 
   </main>
 
