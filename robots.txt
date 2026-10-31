@@ -1,0 +1,13 @@
+# robots.txt — www.subhankarrout.in
+User-agent: *
+Allow: /
+
+# Old builds, drafts and internal reference pages (not meant for search results)
+Disallow: /OLD%20Version%20-%20Archive/
+Disallow: /new-archive/
+Disallow: /ref.%20old/
+Disallow: /ChitraDesignSystem/
+Disallow: /the_good_bye_i_never_thought_to_say%20copy.html
+Disallow: /assets/mail.php
+
+Sitemap: https://www.subhankarrout.in/sitemap.xml
